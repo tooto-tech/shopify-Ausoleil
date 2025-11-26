@@ -928,6 +928,17 @@
         "padding-block-end": 0
       }
     },
+    "custom_liquid_jPPLLC": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "1111",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "hero_CYEYgK": {
       "type": "hero",
       "blocks": {
@@ -1026,6 +1037,7 @@
     "collection_list_LFWQwX",
     "product_list_MCD4cw",
     "section_Ncd7GN",
+    "custom_liquid_jPPLLC",
     "hero_CYEYgK"
   ]
 }

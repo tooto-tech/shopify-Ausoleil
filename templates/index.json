@@ -660,7 +660,11 @@
       ],
       "name": "产品系列列表",
       "settings": {
-        "collection_list": [],
+        "collection_list": [
+          "classic-style-everyday",
+          "modren-daujourdhui",
+          "lux"
+        ],
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "columns": 3,

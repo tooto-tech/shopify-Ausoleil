@@ -61,7 +61,9 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
+        "image_1": "shopify://shop_images/1-02_1x_1.png",
         "media_type_2": "image",
+        "image_2": "shopify://shop_images/1-04_1x_6f167e2d-bc3c-4e59-97be-52f7b8963715.png",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",

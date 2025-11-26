@@ -934,7 +934,7 @@
         "text_fMG6wt": {
           "type": "text",
           "settings": {
-            "text": "<h1>New arrivals</h1>",
+            "text": "<p>classicl / modern / lux</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -959,7 +959,7 @@
         "text_cJPCHP": {
           "type": "text",
           "settings": {
-            "text": "<p>Made with care and unconditionally loved by our customers.</p>",
+            "text": "<p>It’s time to take off the sunnies<br/>you’ve been wearing all day<br/><br/></p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -980,31 +980,16 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "button_z8w84d": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Shop now",
-            "link": "shopify://collections/all",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "text_fMG6wt",
-        "text_cJPCHP",
-        "button_z8w84d"
+        "text_cJPCHP"
       ],
       "name": "Banner",
       "settings": {
         "media_type_1": "image",
+        "image_1": "shopify://shop_images/179_2x_bfe82fa0-9187-4f66-9f37-29e0f3e20d60.webp",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,

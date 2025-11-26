@@ -565,7 +565,7 @@
               "settings": {
                 "text": "<h3>Shop by collection</h3>",
                 "width": "fit-content",
-                "max_width": "normal",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -676,7 +676,7 @@
         "max_collections": 4,
         "icons_style": "arrow",
         "icons_shape": "circle",
-        "section_width": "page-width",
+        "section_width": "full-width",
         "gap": 12,
         "color_scheme": "",
         "padding-block-start": 48,

@@ -693,7 +693,7 @@
           "settings": {
             "content_direction": "row",
             "vertical_on_mobile": false,
-            "horizontal_alignment": "space-between",
+            "horizontal_alignment": "center",
             "vertical_alignment": "center",
             "align_baseline": true,
             "horizontal_alignment_flex_direction_column": "flex-start",
@@ -862,7 +862,7 @@
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 3,
-        "columns": 4,
+        "columns": 3,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
         "columns_gap": 8,

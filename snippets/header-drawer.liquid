@@ -12,9 +12,13 @@
 {%- enddoc -%}
 
 {% liquid
-  assign block_settings = block.settings
+  if block
+    assign block_settings = block.settings
+  else
+    assign block_settings = section.settings
+  endif
   assign max_featured_items = 4
-  assign image_border_radius = block_settings.image_border_radius
+  assign image_border_radius = block_settings.image_border_radius | default: 0
 
   if block_settings.menu_style == 'featured_collections'
     assign ratio = block_settings.featured_collections_aspect_ratio
@@ -564,13 +568,18 @@
         style="--menu-drawer-animation-index: {{ linklist.links.size }};"
       >
         {% liquid
-          assign show_language = section.settings.show_language
-          if localization.available_languages.size <= 1
-            assign show_language = false
-          endif
+          if section
+            assign show_language = section.settings.show_language
+            if localization.available_languages.size <= 1
+              assign show_language = false
+            endif
 
-          assign show_country = section.settings.show_country
-          if localization.available_countries.size <= 1
+            assign show_country = section.settings.show_country
+            if localization.available_countries.size <= 1
+              assign show_country = false
+            endif
+          else
+            assign show_language = false
             assign show_country = false
           endif
         %}
@@ -578,7 +587,7 @@
           {% render 'drawer-localization',
             show_country: show_country,
             show_language: show_language,
-            country_style: section.settings.country_selector_style
+            country_style: section.settings.country_selector_style | default: false
           %}
         {%- endif -%}
       </div>
@@ -650,7 +659,7 @@
   }
 
   @media screen and (min-width: 750px) {
-    .header--desktop header-menu + .header__drawer header-drawer {
+    .header__drawer--mobile {
       display: none;
     }
   }

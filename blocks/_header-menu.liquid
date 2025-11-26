@@ -21,7 +21,9 @@
       {% render 'header-drawer',
         class: 'header__drawer--mobile',
         linklist: block_settings.menu,
-        data_header_drawer_type: 'mobile-drawer'
+        data_header_drawer_type: 'mobile-drawer',
+        block: block,
+        section: section
       %}
     </div>
 
@@ -55,23 +57,19 @@
       </div>
     {% endif %}
   {% else %}
-    <header-menu
-      ref="headerMenu"
-      class="header-menu mobile:hidden"
-      data-animation-delay="{{ animation_speed }}"
+    <div
+      class="header__drawer"
+      ref="headerDrawerContainer"
       {{ block.shopify_attributes }}
-      style="--submenu-animation-speed: {{ animation_speed }}ms;"
     >
-      <div class="header-menu__inner">
-        {%- render 'header-menu' %}
-      </div>
-
-      <script
-        src="{{ 'header-menu.js' | asset_url }}"
-        type="module"
-        fetchpriority="low"
-      ></script>
-    </header-menu>
+      {% render 'header-drawer',
+        class: 'header__drawer--desktop',
+        linklist: block_settings.menu,
+        data_header_drawer_type: 'desktop-drawer',
+        block: block,
+        section: section
+      %}
+    </div>
 {% endcase %}
 
 {% stylesheet %}

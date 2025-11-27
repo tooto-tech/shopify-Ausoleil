@@ -54,10 +54,16 @@
         --font-size: {{ settings.font_size }};
       {%- endif -%}
     {%- endif -%}
+    {%- if settings.font_size_mobile != blank -%}
+      --font-size-mobile: {{ settings.font_size_mobile }};
+    {%- endif -%}
     {%- if settings.weight != blank -%}
       --font-weight: {{ settings.weight }};
     {% else %}
       --font-weight: {{ settings.font | replace: 'family', 'weight' }};
+    {%- endif -%}
+    {%- if settings.weight_mobile != blank -%}
+      --font-weight-mobile: {{ settings.weight_mobile }};
     {%- endif -%}
     --font-family: {{ settings.font }};
     --text-transform: {{ settings.case }};

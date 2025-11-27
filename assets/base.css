@@ -2308,7 +2308,20 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 
 .custom-font-weight,
 .custom-font-weight > * {
-  font-weight: var(--weight);
+  font-weight: var(--font-weight);
+}
+
+/* 移动端字体尺寸和字重 */
+@media screen and (max-width: 749px) {
+  .custom-font-size,
+  .custom-font-size > * {
+    font-size: var(--font-size-mobile, var(--font-size));
+  }
+
+  .custom-typography,
+  .custom-typography > * {
+    font-weight: var(--font-weight-mobile, var(--font-weight));
+  }
 }
 
 /* Border override style */

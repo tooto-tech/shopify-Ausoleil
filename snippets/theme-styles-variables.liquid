@@ -101,6 +101,7 @@
     --font-h4--spacing: 0.25em;
     --font-h5--spacing: 0.25em;
     --font-h6--spacing: 0.25em;
+    --font-banner-title--spacing: 0.25em;
     --font-paragraph--spacing: 0.5em;
 
     /* Heading colors */
@@ -110,6 +111,7 @@
     --font-h4--color: var(--color-foreground-heading);
     --font-h5--color: var(--color-foreground-heading);
     --font-h6--color: var(--color-foreground-heading);
+    --font-banner-title--color: #ffffff;
 
     /** Z-Index / Layering */
     --layer-section-background: -2;
@@ -243,6 +245,22 @@
       endfor
 
       assign type_presets = "paragraph, h1, h2, h3, h4, h5, h6" | split: ", "
+
+      comment
+        Banner Title preset - custom Mont font
+      endcomment
+      assign banner_title_size = settings.type_size_banner_title | times: 1
+      assign banner_title_size_rem = banner_title_size | divided_by: 16.0
+      assign banner_title_line_height = settings.type_line_height_banner_title
+
+      echo '--font-size--banner-title: [size]rem;' | replace: '[size]', banner_title_size_rem
+      echo '--font-banner-title--size: var(--font-size--banner-title);'
+      echo '--font-banner-title--family: "Mont", var(--font-heading--family);'
+      echo '--font-banner-title--style: normal;'
+      echo '--font-banner-title--weight: 900;'
+      echo '--font-banner-title--case: none;'
+      echo '--font-banner-title--line-height: var(--line-height--[line_height]);' | replace: '[line_height]', banner_title_line_height
+      echo '--font-banner-title--letter-spacing: var(--letter-spacing--heading-normal);'
 
       for preset_name in type_presets
         assign preset_size = '--font-size--[preset_name]' | replace: '[preset_name]', preset_name

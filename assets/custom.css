@@ -1,8 +1,8 @@
-/* 自定义字体: BungeeSpice */
+/* 自定义字体: A019-SounsoQuality */
 @font-face {
-  font-family: 'BungeeSpice';
-  src: url('BungeeSpice-Regular.woff2') format('woff2'),
-       url('BungeeSpice-Regular.woff') format('woff');
+  font-family: 'A019-SounsoQuality';
+  src: url('A019-SounsoQuality.woff2') format('woff2'),
+       url('A019-SounsoQuality.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

@@ -3363,6 +3363,72 @@
     "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Impostoj kaj sendokostoj kalkulitaj ĉe la kaso.",
     "taxes_included": "Impostoj inkluzivitaj.",
     "taxes_included_shipping_at_checkout_with_policy_html": "Impostoj inkluzivitaj. Rabatoj kaj <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">sendokostoj</a> kalkulitaj ĉe la kaso.",
-    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Impostoj inkluzivitaj. Sendkostoj estas kalkulataj ĉe la kaso."
+    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Impostoj inkluzivitaj. Sendkostoj estas kalkulataj ĉe la kaso.",
+    "taxes_included_shipping_at_checkout_without_policy": "Impostoj inkluzivitaj. Rabatoj kaj sendokostoj kalkulitaj ĉe la kaso.",
+    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Impostoj inkluzivitaj. Sendkostoj estas kalkulataj ĉe la kaso.",
+    "unavailable": "Nedisponebla",
+    "use_fewer_filters_html": "Provu uzi malpli da filtriloj, aŭ <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">forigu ĉiujn filtrilojn</a> .",
+    "view_more_details": "Vidi pliajn detalojn",
+    "your_cart_is_empty": "Via ĉaro estas malplena",
+    "product_count": "Produkta nombro",
+    "errors": "Eraroj",
+    "wrong_password": "Malĝusta pasvorto",
+    "recipient_form_send_to": "Sendi al",
+    "recipient_form_email_label": "Retpoŝto de la ricevanto",
+    "recipient_form_email_label_my_email": "Mia retpoŝto",
+    "recipient_form_email_address": "Retpoŝtadreso de ricevanto",
+    "recipient_form_name_label": "Nomo de ricevanto (nedeviga)",
+    "recipient_form_message": "Mesaĝo (nedeviga)",
+    "recipient_form_characters_used": "{{ used_chars }} / {{ max_chars }} uzitaj signoj",
+    "recipient_form_send_on": "JJJJ-MM-TT",
+    "recipient_form_send_on_label": "Sendu plu (nedeviga)",
+    "recipient_form_fields_visible": "La kampoj de la ricevanto nun videblas",
+    "recipient_form_fields_hidden": "La kampoj de ricevantoj nun estas kaŝitaj",
+    "recipient_form_error": "Okazis eraro dum la sendo de la formularo",
+    "product_custom_property_character_count": "{{ used_chars }} / {{ max_chars }} uzitaj signoj"
+  },
+  "fields": {
+    "separator": "al"
+  },
+  "gift_cards": {
+    "issued": {
+      "how_to_use_gift_card": "Uzu la donackartan kodon interrete aŭ QR-kodon en la vendejo",
+      "title": "Jen via donackarta saldo de {{ value }} por {{ shop }} !",
+      "subtext": "Via donackarto",
+      "shop_link": "Vizitu la retan butikon",
+      "add_to_apple_wallet": "Aldoni al Apple Wallet",
+      "qr_image_alt": "QR-kodo — skanu por elaĉeti donackarton",
+      "copy_code": "Kopii donackartan kodon",
+      "expiration_date": "Eksvalidiĝas {{ expires_on }}",
+      "copy_code_success": "Kodo sukcese kopiita",
+      "expired": "Eksvalidiĝis"
+    }
+  },
+  "placeholders": {
+    "password": "Pasvorto",
+    "search": "Serĉi",
+    "product_title": "Produkta titolo",
+    "collection_title": "Kolekta titolo",
+    "blog_posts": "Blogaj Afiŝoj",
+    "blog_post_title": "Titolo",
+    "blog_post_author": "Aŭtoro",
+    "blog_post_date": "Dato",
+    "blog_post_description": "Eltiraĵo el la enhavo de via bloga afiŝo"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Aldoni al ĉaro",
+      "adding_to_cart": "Aldonante...",
+      "added_to_cart": "Aldonita al ĉaro",
+      "add_to_cart_error": "Eraro dum aldono al ĉaro",
+      "quantity_error_max": "Ĉi tiu ero havas maksimumon de {{ maximum }}",
+      "sold_out": "Elvendita",
+      "unavailable": "Nedisponebla",
+      "quantity": "Kvanto",
+      "quantity_increments": "Pliigoj de {{ increment }}",
+      "quantity_minimum": "Minimumo de {{ minimum }}",
+      "quantity_maximum": "Maksimumo de {{ maximum }}",
+      "in_cart": "en ĉaro"
+    }
   }
 }

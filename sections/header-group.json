@@ -19,6 +19,8 @@
           "static": true,
           "settings": {
             "hide_logo_on_home_page": false,
+            "logo_color": "#1226aa",
+            "logo_color_inverse": "#ffffff",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -68,7 +70,7 @@
         "enable_sticky_header": "always",
         "divider_width": 0,
         "divider_size": "page-width",
-        "border_width": 0.5,
+        "border_width": 0,
         "color_scheme_top": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "color_scheme_bottom": "",
         "color_scheme_transparent": "scheme-6",

@@ -1103,6 +1103,274 @@
           }
         }
       }
+    },
+    "ui_components": {
+      "december": "Decembro",
+      "monday": "Lundo",
+      "tuesday": "Mardo",
+      "wednesday": "Merkredo",
+      "thursday": "Ĵaŭdo",
+      "friday": "vendredo",
+      "saturday": "Sabato",
+      "sunday": "dimanĉo",
+      "tuesdayAbbreviation": "Mar",
+      "wednesdayAbbreviation": "Ni",
+      "thursdayAbbreviation": "Ĵaŭdo",
+      "showNextMonth": "Montri venontmonate, {{month}} {{year}}",
+      "showPreviousMonth": "Montri antaŭan monaton, {{month}} {{year}}",
+      "rangeStart": "Komenco de la intervalo",
+      "inRange": "Ene de la atingo",
+      "rangeEnd": "Fino de intervalo",
+      "autocompleteOptionsAvailable": {
+        "one": "{{count}} ero havebla",
+        "other": "{{count}} eroj haveblaj"
+      },
+      "removeItem": "Forigi {{label}}",
+      "removeTag": "Forigi etikedon",
+      "month": {
+        "one": "monato",
+        "other": "monatoj"
+      },
+      "mapClusterTitle": {
+        "one": "Areto de {{number}} markilo",
+        "other": "Areto de {{number}} markiloj"
+      },
+      "expandSheet": "Malfermi",
+      "qrCode": "QR-kodo",
+      "addFile": "Aldoni dosieron",
+      "dropzoneInvalidFileType": "Dosiertipo ne subtenata",
+      "dropzoneDraggedOver": "Alŝuti dosieron faligu"
+    },
+    "profile_preview_bar": {
+      "customize_button": "Agordi",
+      "hide_bar": "Kaŝi Stangon",
+      "navigate_to_admin": "Navigado al administranto",
+      "close_preview": "Fermi antaŭrigardon",
+      "previewing": "Vi antaŭrigardas:",
+      "saved_at": "Konservita {{date}} je {{time}}",
+      "viewing": "Vi rigardas:",
+      "not_available": "Profilaj datumoj ne haveblas",
+      "actions_button": "Agoj"
+    },
+    "active_inspector": {
+      "extension": {
+        "select": "Elektu la kromprogramon nomitan {{extensionName}}",
+        "unselect": "Malselektu la kromprogramon nomitan {{extensionName}}",
+        "move_down": "Movu etendaĵon al la sekva pozicio",
+        "move_up": "Movi etendaĵon al la antaŭa pozicio",
+        "remove": "Forigi etendaĵon",
+        "move_down_tooltip": "Movi al la sekva pozicio",
+        "move_up_tooltip": "Movi al antaŭa pozicio",
+        "remove_tooltip": "Forigi"
+      }
+    },
+    "editor": {
+      "link_new_tab_confirmation": "Ĉi tiu ligilo ne povas esti malfermita en la redaktilo. Ĝi malfermiĝos en nova fenestro ( {{resolved_to_link}} ). Alklaku OK por daŭrigi."
+    },
+    "settings": {
+      "title": "Agordoj",
+      "loading_accessibility_message": "Ŝarĝante agordan paĝon",
+      "log_out_everywhere": {
+        "title": "Elsaluti ĉie",
+        "description": "Se vi perdis aparaton aŭ havas zorgojn pri sekureco, elsalutu ĉie por certigi la sekurecon de via konto.",
+        "button": "Elsaluti ĉie",
+        "warning_message": "Vi ankaŭ estos elsalutita en ĉi tiu aparato."
+      }
+    },
+    "shop_ads": {
+      "title": "Ekskluzivaj ofertoj de la Butiko",
+      "subtitle": "Havebla por limigita tempo",
+      "button": "Esploru en Butiko",
+      "previous_button": "Antaŭa",
+      "next_button": "Sekva"
+    },
+    "knowledge_base": {
+      "self_serve_returns": {
+        "enabled": "Klientoj povas peti kaj administri redonojn mem.",
+        "disabled": "Klientoj devas kontakti la komerciston por peti redonon."
+      }
+    },
+    "subscriptions": {
+      "update_payment_instrument": {
+        "title": "Anstataŭigi pagmetodon",
+        "loading": "Ŝarĝante pagmetodojn",
+        "no_payment_methods_available": "Neniuj pagmetodoj haveblaj",
+        "select_new_payment_method": "Elektu novan pagmetodon",
+        "current_method": "Aktuala",
+        "cancel": "Nuligi",
+        "save": "Konservi",
+        "success": "Pagmetodo ĝisdatigita",
+        "use_new_payment_method": "+ Uzu novan pagmetodon"
+      },
+      "subscription_contracts": {
+        "title": "Uzu pagmetodon por ripetiĝantaj mendoj",
+        "more_items": {
+          "one": "{{count}} pli da produkto",
+          "other": "{{count}} pliaj produktoj"
+        },
+        "product_count": {
+          "one": "{{count}} produkto",
+          "other": "{{count}} produktoj"
+        },
+        "subscription_contracts_updated": "Ĝisdatigita {{succeeded}} el {{total}} abonoj",
+        "product_details": "Produktaj detaloj",
+        "load_more": "Ŝarĝi pli"
+      },
+      "updating_contracts": {
+        "one": "Ĝisdatigante {{count}} abonkontrakton...",
+        "other": "Ĝisdatigante {{count}} abonkontraktojn..."
+      },
+      "contracts_updated": {
+        "one": "Sukcese ĝisdatigita {{count}} abonkontrakto",
+        "other": "Sukcese ĝisdatigitaj {{count}} abonkontraktoj"
+      },
+      "contracts_update_failed": "Malsukcesis ĝisdatigi kelkajn abonkontraktojn",
+      "invalid_wallet_type_error": "Malvalida monujotipo."
+    },
+    "sign_in": {
+      "brand_logo_alt_text": "Logoo de %{shop_name}",
+      "processing": "Prilaborado…",
+      "step_one": {
+        "page_title": "Ensaluti - %{shop_name}",
+        "heading": "Ensaluti",
+        "subheading": "Enigu vian retpoŝtadreson kaj ni sendos al vi konfirmkodon",
+        "subheading_with_sign_in_options": "Elektu kiel vi volas ensaluti",
+        "input_field_label": "Retpoŝto",
+        "button": "Daŭrigi",
+        "or": "aŭ"
+      },
+      "step_two": {
+        "page_title": "Enigu kodon - %{shop_name}",
+        "heading": "Enigu kodon",
+        "subheading": "Sendita al %{email}",
+        "restart_link": "Ensaluti per malsama retpoŝtadreso",
+        "input_field_label": "6-cifera kodo",
+        "button": "Sendu"
+      },
+      "error": {
+        "invalid": {
+          "invalid_email": "Enigu validan retpoŝtadreson",
+          "invalid_code": "Enigu la ĝustan 6-ciferan kodon"
+        }
+      }
+    }
+  },
+  "accessibility": {
+    "account": "Konto",
+    "cart": "Ĉaro",
+    "cart_count": "Totalaj aĵoj en korbo",
+    "close_dialog": "Fermi dialogon",
+    "country_region": "Lando/Regiono",
+    "country_results_count": "{{ count }} rezultoj",
+    "decrease_quantity": "Malpliigu kvanton",
+    "discount": "Apliku rabato-kodon",
+    "discount_menu": "Rabatkodoj",
+    "discount_applied": "Aplikita rabato-kodo: {{ code }}",
+    "filters": "Filtriloj",
+    "filter_count": {
+      "one": "Filtrilo {{ count }} aplikita",
+      "other": "{{ count }} filtriloj aplikitaj"
+    },
+    "increase_quantity": "Pliigi kvanton",
+    "inventory_status": "Stokregistro-stato",
+    "localization_region_and_language": "Regiono- kaj lingvoselektilo",
+    "menu": "Menuo",
+    "new_window": "Malfermiĝas en nova fenestro.",
+    "quantity": "Kvanto",
+    "pause_video": "Paŭzi filmeton",
+    "play_model": "Ludi 3D-modelon",
+    "play_video": "Ludi filmeton",
+    "loading_product_recommendations": "Ŝarĝante produktorekomendojn",
+    "rating": "La takso de ĉi tiu produkto estas {{ rating }} el 5",
+    "remove_item": "Forigi {{ title}}",
+    "reset_search": "Restarigi serĉon",
+    "scroll_to": "Rulumu al {{ title }}",
+    "search_results_count": "{{ count }} serĉrezultoj trovitaj por \" {{ query }} \"",
+    "search_results_no_results": "Neniuj rezultoj trovitaj por \" {{ query }} \"",
+    "skip_to_product_info": "Salti al produktaj informoj",
+    "skip_to_results_list": "Salti al rezultolisto",
+    "skip_to_text": "Salti al enhavo",
+    "slide_status": "Diapozitivo {{ index }} de {{ length }}",
+    "slideshow_next": "Sekva lumbildo",
+    "slideshow_pause": "Paŭzi lumbildan prezenton",
+    "slideshow_play": "Ludi lumbildon",
+    "slideshow_previous": "Antaŭa lumbildo",
+    "unit_price": "Unuoprezo",
+    "find_country": "Trovu landon"
+  },
+  "actions": {
+    "add": "Aldoni",
+    "add_to_cart": "Aldoni al ĉaro",
+    "added": "Aldonita",
+    "apply": "Apliki",
+    "back": "Reen",
+    "choose": "Elektu",
+    "clear": "Klara",
+    "clear_all": "Forigi ĉion",
+    "close": "Fermi",
+    "open": "Malferma",
+    "continue_shopping": "Daŭrigu aĉeti",
+    "enter_password": "Enigu pasvorton",
+    "log_in_html": "Ĉu vi havas konton? <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">Ensalutu</a> por pagi pli rapide.",
+    "log_in": "Ensaluti",
+    "log_out": "Elsaluti",
+    "open_image_in_full_screen": "Malfermi bildon en plena ekrano",
+    "remove": "Forigi",
+    "remove_discount": "Forigi rabaton {{ code }}",
+    "show_all_options": "Montri ĉiujn opciojn",
+    "see_items": {
+      "one": "Vidu {{ count }} eron",
+      "other": "Vidu {{ count }} erojn"
+    },
+    "show_filters": "Filtrilo",
+    "show_less": "Montri malpli",
+    "show_more": "Montru pli",
+    "sign_in_options": "Aliaj ensalutaj opcioj",
+    "view_in_your_space": "Vidu en via spaco",
+    "view_all": "Vidi ĉiujn",
+    "more": "Pli",
+    "zoom": "Zomu",
+    "close_dialog": "Fermi dialogon",
+    "reset": "Restarigi",
+    "enter_using_password": "Enigu uzante pasvorton",
+    "sign_up": "Registriĝu",
+    "submit": "Sendu",
+    "view_store_information": "Vidi butikajn informojn",
+    "sort": "Ordigi"
+  },
+  "blocks": {
+    "contact_form": {
+      "name": "Nomo",
+      "email": "Retpoŝto",
+      "phone": "Telefono",
+      "comment": "Komento",
+      "post_success": "Dankon pro via kontakto. Ni respondos al vi kiel eble plej baldaŭ.",
+      "error_heading": "Bonvolu ĝustigi la jenon:"
+    },
+    "email_signup": {
+      "label": "Retpoŝto",
+      "placeholder": "Retpoŝtadreso",
+      "success": "Dankon pro abono!"
+    },
+    "filter": "Filtrilo",
+    "load_video": "Ŝargi filmeton: {{ description }}",
+    "sold_out": "Elvendita",
+    "payment_methods": "Pagmetodoj"
+  },
+  "blogs": {
+    "article": {
+      "comments_heading": {
+        "one": "{{ count }} komento",
+        "other": "{{ count }} komentoj"
+      }
+    },
+    "comment_form": {
+      "email": "Retpoŝto",
+      "error": "Komento malsukcesis afiŝiĝi, bonvolu trakti la jenon:",
+      "heading": "Lasi komenton",
+      "message": "Mesaĝo",
+      "moderated": "Bonvolu noti, ke komentoj devas esti aprobitaj antaŭ ol ili estas publikigitaj.",
+      "name": "Nomo"
     }
   }
 }

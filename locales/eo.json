@@ -1411,7 +1411,30 @@
       "qrCode": "QR-kodo",
       "addFile": "Aldoni dosieron",
       "dropzoneInvalidFileType": "Dosiertipo ne subtenata",
-      "dropzoneDraggedOver": "Alŝuti dosieron faligu"
+      "dropzoneDraggedOver": "Alŝuti dosieron faligu",
+      "clear": "Klara",
+      "clipboardCopied": "Kopiita",
+      "clipboardFailedToCopy": "Malsukcesis kopii",
+      "closeNotification": "Fermi",
+      "expandNotification": "Vidi pli",
+      "closeModal": "Fermi",
+      "submit": "Sendu",
+      "processing": "Prilaborado…",
+      "increase": "Pligrandigi {{type}}",
+      "decrease": "Malkresko {{type}}",
+      "minimumReached": "Minimumo de {{value}} atingita",
+      "maximumReached": "Maksimumo de {{value}} atingita",
+      "january": "Januaro",
+      "february": "Februaro",
+      "march": "Marto",
+      "april": "Aprilo",
+      "may": "Majo",
+      "june": "Junio",
+      "july": "Julio",
+      "august": "Aŭgusto",
+      "september": "Septembro",
+      "october": "oktobro",
+      "november": "Novembro"
     },
     "profile_preview_bar": {
       "customize_button": "Agordi",
@@ -1778,6 +1801,103 @@
       "due_on_date": "Limdato {{date}}",
       "due_on_fulfillment": "Pagenda je plenumo",
       "due_on_receipt": "Pagenda je ricevo"
+    },
+    "payment_methods": {
+      "link_expired": {
+        "message": "Ĉi tiu ligilo por ĝisdatigi vian pagmetodon eksvalidiĝis.",
+        "return_home_button": "Reiri al la ĉefpaĝo"
+      },
+      "update_success": {
+        "title": "Pagmetodo ĝisdatigita",
+        "done_button": "Daŭrigu aĉeti"
+      },
+      "card_fields": {
+        "card_number_label": "Kartnumero",
+        "card_number_placeholder": "Kartnumero",
+        "name_on_card_label": "Nomo sur karto",
+        "name_on_card_placeholder": "Nomo sur karto",
+        "card_expiry_label": "Finvalida dato (MM / JJ)",
+        "card_expiry_placeholder": "Finvalida dato (MM / JJ)",
+        "card_verification_value_label": "Sekureckodo",
+        "card_verification_value_placeholder": "Sekureckodo",
+        "card_start_label": "Eldondato (MM / JJ)",
+        "card_start_placeholder": "Eldondato (MM / JJ)",
+        "tooltip": {
+          "tooltip_accessibility_label": "Pliaj informoj",
+          "card_verification_value_explanation_amex": "4-cifera sekureckodo sur la fronto de via karto",
+          "card_verification_value_explanation_other": "3-cifera sekureckodo sur la dorso de via karto",
+          "card_verification_value_explanation": "3-cifera sekureckodo kutime trovebla sur la dorso de via karto. American Express-kartoj havas 4-ciferan kodon situantan sur la fronto.",
+          "card_security_notice": "Ĉiuj transakcioj estas sekuraj kaj ĉifritaj."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "Enigu vian nomon precize kiel ĝi estas skribita sur via karto",
+          "credit_card_number_invalid": "Enigu validan kartnumeron",
+          "credit_card_expiry_invalid": "Enigu validan karto-eksvalidiĝdaton",
+          "credit_card_verification_value_blank": "Enigu la CVV-on aŭ sekureckodon sur via karto"
+        },
+        "unavailable": {
+          "text": "Pagoj per kreditkartoj kaj debetkartoj nuntempe ne haveblas.",
+          "link_text": "Refreŝigu ĉi tiun paĝon",
+          "suffix": "aŭ provu denove poste."
+        }
+      },
+      "payment_delete": {
+        "title": "Forigi pagmetodon",
+        "description_without_replacement": "Ĉi tiu pagmetodo ne plu estos havebla por estontaj aĉetoj.",
+        "description_with_replacement": "Forigo de ĉi tiu pagmetodo influos antaŭrajtigitajn pagojn. Vi povas laŭvole anstataŭigi ĝin per alia pagmetodo por daŭre ricevi venontajn mendojn.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "Forigo de ĉi tiu pagmetodo influos antaŭrajtigitajn pagojn. Krom se vi elektas alternativan pagmetodon, ĉi tiu pagmetodo ankoraŭ estos ŝargita por iuj ajn elstaraj saldoj de ekzistantaj mendoj. Elektante alternativan pagmetodon, vi povos ricevi venontajn abonmendojn sen interrompo.",
+          "with_pending_orders": "Forigi ĉi tiun pagmetodon forigos ĝin de via konto kaj ne plu estos havebla por estontaj aĉetoj. Krom se vi elektas alternativan pagmetodon, ĝi ankoraŭ estos ŝargita por iuj ajn nepagitaj saldoj de ekzistantaj mendoj.",
+          "with_subscriptions": "Forigo de ĉi tiu pagmetodo influos antaŭrajtigitajn pagojn. Anstataŭigu ĝin per alternativa pagmetodo por daŭre ricevi venontajn mendojn."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Forigo de ĉi tiu pagmetodo influos antaŭrajtigitajn pagojn. Ĉi tiu pagmetodo ankoraŭ estos ŝargita por iuj ajn elstaraj saldoj de ekzistantaj mendoj, sed vi ne ricevos venontajn abonmendojn. Aldonu alternativan pagmetodon por daŭre ricevi abonmendojn.",
+          "with_pending_orders": "Forigo de ĉi tiu pagmetodo forigos ĝin de via konto kaj ne plu estos havebla por estontaj aĉetoj. Ĝi ankoraŭ estos ŝargita por iuj ajn nepagitaj saldoj de ekzistantaj mendoj.",
+          "with_subscriptions": "Forigo de ĉi tiu pagmetodo influos antaŭrajtigitajn pagojn. Aldonu alternativan pagmetodon por daŭre ricevi venontajn mendojn."
+        },
+        "payment_method_selector_placeholder": "Elektu anstataŭigan pagmetodon (nedeviga)",
+        "payment_method_selector_no_alternative_payment": "Neniu anstataŭiga metodo",
+        "replace_method_with_new_method_description": "Via {{currentPaymentMethodName}} estos forigita kaj anstataŭigita per via {{newPaymentMethodName}} .",
+        "error_when_deleting": "Ni petas pardonon, sed io misfunkciis kaj ni ne povis forigi ĉi tiun pagmetodon. Bonvolu provi denove poste aŭ refreŝigi la paĝon.",
+        "delete_and_replace_button": "Forigi kaj anstataŭigi",
+        "delete_and_replace_button_accessibility_label": "Forigu {{currentPaymentMethodName}} kaj anstataŭigu ĝin per {{newPaymentMethodName}} .",
+        "deleted_successfully": "Pagmetodo sukcese forigita.",
+        "loading_available_payment_methods_accessibility_label": "Ŝarĝante disponeblajn pagmetodojn"
+      },
+      "add_payment_method": {
+        "title": "Aldoni pagmetodon",
+        "payment_method_added_confirmation": "Pagmetodo aldonita",
+        "replace_mode_warning": "Forigo de ĉi tiu pagmetodo influos abonojn aŭ antaŭmendojn. Anstataŭigu ĝin per alternativa pagmetodo por daŭre ricevi venontajn mendojn.",
+        "choose_from_list": "Elektu el listo",
+        "add_new_button": "Aldoni novan",
+        "billing_address": {
+          "title": "Faktura adreso",
+          "add_billing_address_button": "Aldoni novan",
+          "add_billing_address_button_accessibility_label": "Aldoni novan fakturan adreson",
+          "choose_billing_address_from_list_button": "Elektu el listo",
+          "choose_billing_address_from_list_button_accessibility_label": "Elektu fakturan adreson el la listo",
+          "missing_billing_address_error_message": "Bonvolu specifi fakturan adreson",
+          "default_checkbox": "Agordi kiel defaŭltan pagmetodon"
+        }
+      },
+      "three_d_secure": {
+        "title": "3D Sekura"
+      }
+    },
+    "payment_method_brands": {
+      "visa": "Vizo",
+      "americanexpress": "Amerika Ekspreso",
+      "discover": "Malkovru",
+      "dinersclub": "Manĝantoj Klubo",
+      "maestro": "Majstro",
+      "hipercard": "Hiperkarto",
+      "laser": "Lasero",
+      "shoppay": "Butika Pago",
+      "storecredit": "Butika kredito",
+      "bogus": "Falsa"
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "Kuketo-preferoj"
     }
   },
   "accessibility": {

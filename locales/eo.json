@@ -1,0 +1,400 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "shopify": {
+    "sentence": {
+      "two_words_connector": " kaj ",
+      "last_word_connector": ", kaj "
+    },
+    "checkout": {
+      "address_management": {
+        "confirm_address_deletion": "Ĉu vi certas, ke vi volas forigi la adreson {{address}} ?"
+      },
+      "general": {
+        "page_title": "Kaso",
+        "error_page_title": "Eraro",
+        "skip_to_content": "Salti al enhavo",
+        "breadcrumb": "Panero",
+        "continue_button_label": "Daŭrigi",
+        "complete_purchase_button_label": "Kompleta mendo",
+        "pay_now_button_label": "Pagu nun",
+        "authenticate_purchase_button_label": "Aŭtentigi pagon",
+        "edit_link_label": "Redakti",
+        "all_rights_reserved": "Ĉiuj rajtoj rezervitaj %{shop_name}",
+        "print_policies_link_label": "Presi",
+        "cart": "Ĉaro",
+        "close_modal_label": "Fermi",
+        "close_notice_label": "Fermi",
+        "expand_notice_label": "Vidi pli",
+        "continue_to_shipping_method": "Daŭrigu la sendon",
+        "continue_to_payment_method": "Daŭrigu al pago",
+        "continue_to_review": "Revizia ordono",
+        "back_to_cart": "Reiri al ĉaro",
+        "back_to_contact_information": "Reen al informoj",
+        "back_to_shipping_method": "Reen al sendo",
+        "back_to_payment_method": "Reveno al pago",
+        "choose_shipping_method": "Elektu sendometodon",
+        "choose_payment_method": "Elektu pagmetodon",
+        "choose_billing_address": "Elektu fakturan adreson",
+        "contact_us_html": "Kontaktu nin por pliaj informoj",
+        "autocomplete_title": "Sugestoj",
+        "autocomplete_single_item": "1 aĵo havebla",
+        "autocomplete_multi_item": "{{number}} eroj haveblaj",
+        "autocomplete_close": "Fermi sugestojn",
+        "forwarding_indicator": {
+          "new_window": "Malfermiĝas en nova fenestro.",
+          "external": "Malfermas eksteran retejon.",
+          "external_and_new_window": "Malfermas eksteran retejon en nova fenestro."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - Kaso"
+        },
+        "tooltip_accessibility_label": "Pliaj informoj",
+        "qr_code": "QR-kodo",
+        "errors": {
+          "only_empty_terms_accepted": "Ĉi tiu politiko akceptas nur malplenajn terminojn.",
+          "session_identifier_not_unique_error": "Io okazis malĝuste kun via mendo, bonvolu provi pagi denove.",
+          "line_item_limit_reached": "La maksimuma nombro de linieroj estas atingita.",
+          "session_is_already_finished": "Ĉi tiu kas-sesio jam estas finita.",
+          "merchandise": {
+            "only_value_constraint": "Nur precizaj valoroj estas permesitaj en la var-enigo.",
+            "merchandise_not_found": "Produkto ne trovita.",
+            "merchandise_variant_not_found": "Produkta variaĵo ne trovita.",
+            "merchandise_not_applicable": "Produkta variaĵo ne aĉeteblas.",
+            "mixed_currencies": "La kaso enhavas liniojn kun malsamaj valutoj.",
+            "bundle_products_not_supported_for_b2b": "Pakigitaj aĵoj ne povas esti aldonitaj al B2B-mendoj por ĉi tiu loko.",
+            "gift_card_quantity_mismatch": "Kiam oni specifas donackartajn kodojn, la kvanto de la linia ero kaj la nombro de donackartaj kodoj devas kongrui.",
+            "gift_card_not_supported": "Donackartoj ne estas subtenataj ĉe ĉi tiu kaso.",
+            "gift_card_not_unique": "Donackarto kun kodo {{code}} aperas pli ol unufoje en ĉi tiu kaso. Kodoj estas formatitaj antaŭ komparo.",
+            "gift_card_used": "Donackarta kodo {{code}} jam estas asignita al donackarto. Kodoj estas formatitaj antaŭ komparo.",
+            "gift_card_invalid": "La donackarta kodo {{code}} estas malvalida.",
+            "gift_card_code_changed": "La kodo de donackarto {{proposed_code}} estis ŝanĝita al {{formatted_code}} por konformiĝi al la formatreguloj.",
+            "gift_card_with_attributes_not_supported": "Donackartoj kun kutimaj atributoj ne estas subtenataj ĉe ĉi tiu kaso.",
+            "gift_card_with_components_not_supported": "Donackartoj kun komponantoj ne estas subtenataj ĉe ĉi tiu kaso.",
+            "selling_plan_mismatch": "La abono estis ĝisdatigita.",
+            "selling_plan_not_supported": "Abonoj ne estas subtenataj.",
+            "selling_plan_not_supported_b2b": "Abonoj ne estas subtenataj por B2B-kasado.",
+            "price_mismatch": "La antaŭe proponita prezo por ĉi tiu varo estis malvalida kaj estis ĝisdatigita.",
+            "inventory_not_found": "Neniu stoko trovita por ĉi tiu varo.",
+            "product_not_published": "La produkto ne estas publikigita.",
+            "product_not_published_in_buyer_location": "La produkto ne estas publikigita en la loko de la aĉetanto.",
+            "duplicated_stable_id": "Ĉi tiu varlinio havas la saman stalo-identigilon kiel alia linio.",
+            "minimum_quantity_not_met": "La kvanto de iuj aĵoj ne plenumas la bezonatan minimumon.",
+            "maximum_quantity_exceeded": "La kvanto de iuj aĵoj superas la maksimumon permesitan.",
+            "quantity_increment_not_met": "La kvanto de iuj aĵoj ne plenumas la mendlimojn.",
+            "quantity_rules_not_met": "La kvanto de iuj aĵoj ne plenumas la mendlimojn.",
+            "bundle_requires_components": "Ĉi tiu pakaĵo da varoj ne havas komponantojn.",
+            "title_too_long": "La titolo de la varo estas tro longa.",
+            "title_empty": "La titolo de la varo estas malplena."
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "Firmaa kontakto ne havas aliron al la firmao.",
+            "customer_account_required": "Vi devas ensaluti por daŭrigi.",
+            "company_location_required": "Kliento devas elekti firmaan lokon por daŭrigi.",
+            "company_purchase_permission_required": "Kliento ne havas permeson fari mendojn al la kompanio.",
+            "personal_order_not_allowed": "Personaj mendoj ne estas permesitaj por ĉi tiu butiko.",
+            "lost_access_to_company": "Kliento perdis aliron al iu ajn kompanio.",
+            "contact_info_does_not_match_customer_account": "Kontaktinformoj devas kongrui kun la konto, al kiu vi ensalutiĝis.",
+            "phone_number_does_not_match_expected_pattern": "La specifita telefonnumero ne kongruas kun la atendata ŝablono.",
+            "email_required": "Retpoŝtadreso estas necesa kiam la varo estas aĉetita per abono.",
+            "email_domain_is_invalid": "Ĉi tiu specifita domajno ne povas esti solvita.",
+            "missing_contact_method": "Mankas valida kontaktmetodo.",
+            "checkout_completion_target_is_missing": "Mankas celo por kompletigi la kason.",
+            "invalid_customer_profile": "Malvalida klienta profilo estis provizita.",
+            "customer_profile_access_restricted": "La kasisto ne havas permeson aliri la klientan profilon.",
+            "checkout_completion_target_is_invalid_proc": "Malvalida celo por kompletigi la kason.",
+            "buyer_identity_presentment_currency_does_not_match": "Estis problemo prilaborante vian mendon. Provu denove post kelkaj minutoj."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "Ĉaro devas havi nur unu liverlinion.",
+            "wrong_number_of_delivery_lines": "Liverlinio devas esti specifita por ĉiu grupo de varoj.",
+            "external_delivery_promise_error": "Eraro pri ekstera liverpromeso.",
+            "options_instructions_invalid": "La specifitaj instrukcioj ne kongruas kun la atendata ŝablono.",
+            "destination_address_required": "Cela adreso estas necesa por daŭrigi.",
+            "pickup_points_unavailable": "Prenpunktoj nuntempe ne disponeblas.",
+            "local_pickup_delivery_line_detail_changed": "La nuna strategio de loka liverado de manĝaĵoj devas esti ŝanĝita por daŭri.",
+            "selected_pickup_option_no_longer_available": "La antaŭe elektita repren-opcio jam ne haveblas.",
+            "local_pickup_no_delivery_strategy_available": "Neniu disponebla strategio por liverado de preno por loka aĉeto trovita.",
+            "origin_location_id_required": "ID de origina loko estas necesa kiam la RETAIL-livermetodo estas petita.",
+            "invalid_origin_location_id": "Ne eblis trovi lokon kongruantan kun la identigilo de la origina loko."
+          },
+          "captcha": {
+            "token_invalid": "La donita captcha-ĵetono estis malvalida. Kompletigu novan captcha-ĵetonon por daŭrigi la kason.",
+            "token_not_valid_for_session": "La provizita captcha ne uzeblas por ĉi tiu kaso."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "La ricevita sumo devas esti en la butika valuto."
+          },
+          "checkout_source": {
+            "revoked": "Ĉi tiu kaso jam ne haveblas."
+          }
+        },
+        "full_price": "Plena prezo:",
+        "title": "Kaso - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Kaso",
+        "loading": "Ŝarĝante…",
+        "loading_title": "Kaso - {{shopName}}",
+        "google_map_title": "Google-mapo",
+        "confirm_order_button_label": "Konfirmu mendon",
+        "submit_order_button_label": "Sendu mendon",
+        "submit_for_review_button_label": "Sendu por revizio",
+        "submit_for_review_notice_label": "Pago ne estos pagenda ĝis via mendo estos reviziita.",
+        "continue_to_payment_plans_button_label": "Daŭrigu al pagplanoj",
+        "back_button_label": "Reveno",
+        "choose_delivery_strategy": "Elektu livermetodon",
+        "autocomplete_zero_item": "Neniuj eroj haveblaj",
+        "autocomplete_powered_by_google": "Funkciigita de {{brandName}}",
+        "submit": "Sendu",
+        "processing": "Prilaborado…",
+        "stepper": {
+          "increase": "Pligrandigi {{type}}",
+          "decrease": "Malkresko {{type}}",
+          "minimum_reached": "Minimumo de {{value}} atingita",
+          "maximum_reached": "Maksimumo de {{value}} atingita"
+        },
+        "remove_chip": "Forigi eron",
+        "remove_item": "Forigi %{label}",
+        "remove_tag": "Forigi etikedon",
+        "dates": {
+          "weekdays": {
+            "monday": "Lundo",
+            "tuesday": "Mardo",
+            "wednesday": "Merkredo",
+            "thursday": "Ĵaŭdo",
+            "friday": "vendredo",
+            "saturday": "Sabato",
+            "sunday": "dimanĉo"
+          },
+          "weekdays_abbreviation": {
+            "tuesday": "Mar",
+            "wednesday": "Ni",
+            "thursday": "Ĵaŭdo"
+          },
+          "months": {
+            "january": "Januaro",
+            "february": "Februaro",
+            "march": "Marto",
+            "april": "Aprilo",
+            "may": "Majo",
+            "june": "Junio",
+            "july": "Julio",
+            "august": "Aŭgusto",
+            "september": "Septembro",
+            "october": "oktobro",
+            "november": "Novembro",
+            "december": "Decembro"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "Montri antaŭan monaton, {{month}} {{year}}",
+          "show_next_month": "Montri venontmonate, {{month}} {{year}}",
+          "range_start": "Komenco de la intervalo",
+          "in_range": "Ene de la atingo",
+          "range_end": "Fino de intervalo"
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Areto de {{number}} markilo",
+            "other": "Areto de {{number}} markiloj"
+          }
+        },
+        "sheet": {
+          "expand": "Malfermi"
+        },
+        "dropzone": {
+          "add_file": "Aldoni dosieron",
+          "invalid_file_type": "Dosiertipo ne subtenata",
+          "dragged_over": "Alŝuti dosieron faligu"
+        }
+      },
+      "contact": {
+        "title": "Informoj",
+        "address_title": "Adreso",
+        "shipping_used_as_billing_notice": "Ĉi tio ankaŭ estos uzata kiel via faktura adreso por ĉi tiu mendo.",
+        "delivery_option_title": "Livermetodo",
+        "contact_method_title": "Kontakto",
+        "email_label": "Retpoŝto",
+        "email_rollup_accessibility_label": "Retpoŝtaj opcioj",
+        "email_placeholder": "Retpoŝto",
+        "email_or_phone_label": "Retpoŝto aŭ poŝtelefona numero",
+        "email_or_phone_placeholder": "Retpoŝto aŭ poŝtelefona numero",
+        "stored_addresses_label": "Konservitaj adresoj",
+        "available_addresses_label": "Haveblaj adresoj",
+        "new_address_label": "Uzu novan adreson",
+        "first_name_label": "Antaŭnomo",
+        "optional_first_name_label": "Antaŭnomo (nedeviga)",
+        "last_name_label": "Familia nomo",
+        "company_label": "Firmao",
+        "company_attention_label": "Firmao/Atento",
+        "optional_company_attention_label": "Firmao/Atento (nedeviga)",
+        "optional_company_label": "Firmao (nedeviga)",
+        "address1_label": "Adreso",
+        "address2_label": "Apartamento, suite, ktp.",
+        "optional_address2_label": "Loĝejo, suite, ktp. (laŭvole)",
+        "city_label": "Urbo",
+        "country_label": "Lando/Regiono",
+        "country_code": "Lando/Regiono-kodo",
+        "province_label": "Provinco",
+        "province_placeholder": "Provinco",
+        "county_label": "Distrikto",
+        "county_placeholder": "Distrikto",
+        "state_label": "Ŝtato",
+        "state_placeholder": "Ŝtato",
+        "region_label": "Regiono",
+        "region_placeholder": "Regiono",
+        "region_none": "Neniu elektita"
+      },
+      "order_summary": {
+        "payment_terms_totals": {
+          "due_today_next": "Pagebla hodiaŭ",
+          "due_later": "Sume ŝuldata %{due_at}",
+          "due_on_fulfillment": "Sume pagenda post plenumo",
+          "due_on_fulfillment_next": "Pagenda je plenumo",
+          "due_on_receipt": "Sume pagenda ĉe ricevo",
+          "due_later_checkout_to_draft": "Sume pagenda poste",
+          "total_paid": "Tute pagita"
+        },
+        "maximum_discount_code_limit_reached": "Vi atingis la maksimuman nombron de rabato-kodoj. Forigu ekzistantan kodon por uzi <strong style=\"text-transform:uppercase\">%{code}</strong> .",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> ne funkcias nuntempe. Kontaktu nin por helpo.",
+        "due_on_fulfillment": "Pagenda je plenumo",
+        "gift_card_masked": "•••• %{lastaj_karakteroj}",
+        "subscriptions": "Abonoj",
+        "duties_label": "Devoj",
+        "duties_and_taxes_label": "Imposto kaj impostoj",
+        "error_duties_tooltip": "Ĉi tiu mendo estas sendata el alia lando, do doganimpostoj kaj impostoj povas esti aldonataj dum liverado.",
+        "may_be_charged_on_delivery": "Povas esti ŝargita ĉe livero",
+        "total_updated_label_with_price": "Ĝisdatigita totala prezo: %{totalPrice}",
+        "updated_shipping_method": "Ĝisdatigita sendometodo: %{shipping_method}",
+        "recurring_payments": "Revenantaj Pagoj",
+        "recurring_total_multiple_label": "Ĉi tiu mendo havas ripetan koston por pluraj aĵoj.",
+        "deferred_total_due_date_label": "Suma ŝuldo {{date}}",
+        "deferred_total_due_date_label_next": "Pagdato %{date}",
+        "full_price": "Plena prezo: %{price}",
+        "custom_discount": "Propra rabato",
+        "expand_component_information": {
+          "one": "Montri %{count} elementon",
+          "other": "Montri %{count} erojn"
+        },
+        "collapse_component_information": {
+          "one": "Kaŝi %{count} elementon",
+          "other": "Kaŝi %{count} erojn"
+        },
+        "component_quantity_title": "%{kvanto} × %{produkta_titolo}",
+        "discount_discovery": {
+          "add_code": "Aldoni rabaton",
+          "merchandise_quantity_label": {
+            "one": "%{count} ero",
+            "other": "%{count} eroj"
+          }
+        },
+        "alternative_payment_currency_total": "Fakturita kiel %{amount_due}"
+      },
+      "shipping": {
+        "title": "Sendo",
+        "delivery_title": "Liverado",
+        "shipping_method_title": "Sendmetodo",
+        "shipping_method_rollup_accessibility_label": "Sendmetodoj",
+        "shipping_method_one_time_purchase_group_title": "Unufoja aĉeto",
+        "shipping_method_first_shipment_group_title": {
+          "one": "Unua sendaĵo",
+          "other": "Unuaj sendaĵoj"
+        },
+        "shipping_method_subscription_group_title": "Abono",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "Ripetiĝanta sendaĵo",
+          "other": "Revenantaj sendaĵoj"
+        },
+        "subscription_shipping": "Abonsendo",
+        "subscription_local_delivery": "Loka liverado de abono",
+        "subscription_pickup": "Abonpreno",
+        "waiting_on_rate_notice": "Akiri disponeblajn sendokostojn…",
+        "waiting_on_pickup_location_notice": "Akiri disponeblajn kolektlokojn…",
+        "no_rates_for_cart_or_destination_notice": "Ne estas disponeblaj sendometodoj por via ĉaro aŭ adreso",
+        "no_pickup_location_notice": "Almenaŭ unu el viaj produktoj ne estas havebla por reprenado.",
+        "no_rates_for_country_notice": "Neniu sendokosto trovita por ĉi tiu adreso.",
+        "no_rates_contact_notice": "Kontaktu nin por pliaj informoj",
+        "free_rate_label": "Senpaga",
+        "cheapest_rate_label": "Plej malmultekosta",
+        "please_enter_your_shipping_information_notice": "Bonvolu enigi viajn sendo-informojn.",
+        "estimated_delivery_date": {
+          "one": "%{count} labortago",
+          "other": "%{count} labortagoj"
+        },
+        "estimated_delivery_date_range": "%{minimum} ĝis %{maximum} labortagoj",
+        "delivery_date_range": "%{min_tempo}–%{max_tempo}",
+        "estimated_delivery_time": "Laŭtaksa liverado %{time}",
+        "estimated_delivery_time_range": "Laŭtaksa liverado %{min_time}–%{max_time}",
+        "delivery_today": "Samtaga liverado %{time}",
+        "delivery_tomorrow": "Liverado la sekvan tagon %{time}",
+        "two_day_delivery": "2-taga liverado %{time}",
+        "delivery": "Liverado %{time}",
+        "arrives_time": "Alvenas %{time}",
+        "arrives_time_range": "Alvenas %{min_time}–%{max_time}",
+        "estimated_time": "Taksite %{time}",
+        "estimated_time_range": "Takso %{min_time}–%{max_time}",
+        "default_description": "Sendas post 1 labortago",
+        "unbranded_default_description": "Preta por sendo",
+        "shipping_line_phone_label": "Poŝtelefona numero (deviga)",
+        "shipping_line_phone": "Via kuriero eble uzos ĉi tiun numeron por kontakti vin.",
+        "shipping_line_delivery_phone_label": "Poŝtelefona numero",
+        "shipping_line_delivery_phone": "Eble oni kontaktos vin kun ĝisdatigoj pri via liverado.",
+        "optional_shipping_line_delivery_instructions_label": "Liverinstrukcioj (nedevigaj)",
+        "shipping_line_delivery_instructions": "Enigu necesajn informojn kiel pordokodojn aŭ instrukciojn pri liverado.",
+        "other_method": {
+          "zero": "Neniuj aliaj metodoj haveblaj",
+          "one": "%{count} alia metodo havebla ĉe",
+          "other": "%{count} aliaj metodoj haveblaj ekde"
+        },
+        "shipping_rate_discounted_amount": "Estis: %{original_amount}. Nun: %{amount}",
+        "local_delivery": "Loka liverado",
+        "prime_not_available": {
+          "default": "Prime-liverado ne haveblas por via mendo. Viaj sendokostoj estis ĝisdatigitaj."
+        },
+        "subscription_delivery_description": {
+          "free_shipping_cycles": {
+            "one": "Senpaga sendo por %{count} pliaj sendoj",
+            "other": "Senpaga sendo por pliaj %{count} liveroj"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "Senpaga sendo por %{count} liverado",
+            "other": "Senpaga sendo por %{count} liveroj"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Senpaga sendo por %{count} pliaj sendokostoj, poste %{recurring_order_shipping_price}",
+            "other": "Senpaga sendo por %{count} pliaj sendoj, poste %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Senpaga sendo por %{count} liverado, poste %{recurring_order_shipping_price}",
+            "other": "Senpaga sendo por %{count} liveroj, poste %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} pli da liverado por %{shipping_price}",
+            "other": "%{count} pliaj liveroj por %{shipping_price} ĉiu"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "%{count} liverado por %{shipping_price}",
+            "other": "%{count} pliaj liveroj por %{shipping_price} ĉiu"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Senpaga sendo por la unua %{cycle}, sekvata de %{recurring_order_shipping_price}",
+            "other": "Senpaga sendo por la unua %{cycle}, sekvata de %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{shipping_price} por %{count} pliaj liveroj",
+            "other": "%{shipping_price} por %{count} pliaj liveroj (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{shipping_price} por %{count} liverado"
+          }
+        }
+      }
+    }
+  }
+}

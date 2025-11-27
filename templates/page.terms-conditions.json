@@ -11,23 +11,34 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "section_rFkeF3": {
+      "type": "section",
       "blocks": {
-        "heading": {
+        "text_XnzKmP": {
           "type": "text",
-          "name": "Title",
+          "name": "t:names.text",
           "settings": {
-            "text": "<h1>{{ closest.page.title }}</h1>",
+            "text": "<h3><strong>1. Acceptance of Terms</strong></h3><p>By accessing or using this website, you acknowledge and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please discontinue use of the website and all related services immediately.</p><h3><strong>2. Website Purpose</strong></h3><p>This website is intended solely for personal, non-commercial use to provide information about our premium business menswear and facilitate online purchases. Content may not be used for resale, promotional activities, or any profit-generating purposes without prior written authorization.</p><h3><strong>3. Account Registration and Responsibility</strong></h3><p>If you choose to create an account, you must ensure that all information provided—including your name, email, and contact details—is accurate, complete, and current. You are fully responsible for all activities and purchases made under your account, and you must keep your login credentials secure at all times.</p><h3><strong>4. Product Information and Pricing</strong></h3><p>We aim to provide accurate product descriptions, images, size guides, and pricing; however, we do not guarantee absolute accuracy. Prices, availability, and product details may change without prior notice. In the event of a clear pricing error caused by system malfunction or technical issues, we reserve the right to cancel affected orders.</p><h3><strong>5. Order Confirmation and Payment</strong></h3><p>By placing an order, you confirm that you are at least 18 years old and authorize us to charge your selected payment method. All orders are subject to verification, processing, and acceptance. We reserve the right to refuse or cancel an order if fraud is suspected, information is incorrect, or the item is unavailable.</p><h3><strong>6. Intellectual Property</strong></h3><p>All content on this website—including text, images, logos, designs, layouts, and software—is the exclusive property of our company or its licensors and is protected by copyright, trademark, and other intellectual property laws. Any reproduction, modification, distribution, or commercial use without prior written consent is strictly prohibited.</p><h3><strong>7. Disclaimer of Warranties</strong></h3><p>This website is provided on an “as is” and “as available” basis, without any express or implied warranties, including but not limited to merchantability, fitness for a particular purpose, or absence of viruses or harmful components. Your use of the site is solely at your own risk.</p><h3><strong>8. Indemnification</strong></h3><p>You agree to indemnify and hold harmless our company and its affiliates from any claims, losses, damages, liabilities, or expenses (including reasonable legal fees) arising from your violation of these Terms, misuse of the website, or infringement of third-party rights.</p><h3><strong>9. Governing Law and Dispute Resolution</strong></h3><p>These Terms are governed by and shall be interpreted in accordance with the laws of the People’s Republic of China. Any dispute arising from these Terms or your use of the website shall first be resolved through friendly negotiation. If no agreement is reached, the matter shall be submitted to the competent People’s Court in Shanghai.</p><h3><strong>10. Amendments to Terms</strong></h3><p>We may update or modify these Terms at any time. Changes take effect immediately upon being posted on the website. Continued use of the site after updates constitutes acceptance of the revised Terms. You are encouraged to review this page periodically for any changes.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "",
+            "color": "var(--color-foreground)",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -37,27 +48,43 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "page-content": {
-          "type": "page-content",
-          "settings": {},
-          "blocks": {}
         }
       },
       "block_order": [
-        "heading",
-        "page-content"
+        "text_XnzKmP"
       ],
+      "name": "内容区",
       "settings": {
         "content_direction": "column",
-        "gap": 32,
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "full-width",
+        "section_height": "small",
+        "section_height_custom": 50,
         "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 80
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "section_rFkeF3"
   ]
 }

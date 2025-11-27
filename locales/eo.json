@@ -292,7 +292,8 @@
           "due_on_fulfillment_next": "Pagenda je plenumo",
           "due_on_receipt": "Sume pagenda ĉe ricevo",
           "due_later_checkout_to_draft": "Sume pagenda poste",
-          "total_paid": "Tute pagita"
+          "total_paid": "Tute pagita",
+          "due_today": "Sume pagenda hodiaŭ"
         },
         "maximum_discount_code_limit_reached": "Vi atingis la maksimuman nombron de rabato-kodoj. Forigu ekzistantan kodon por uzi <strong style=\"text-transform:uppercase\">%{code}</strong> .",
         "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> ne funkcias nuntempe. Kontaktu nin por helpo.",
@@ -327,7 +328,122 @@
             "other": "%{count} eroj"
           }
         },
-        "alternative_payment_currency_total": "Fakturita kiel %{amount_due}"
+        "alternative_payment_currency_total": "Fakturita kiel %{amount_due}",
+        "discount_already_applied": "Rabato estis aplikita al ĉi tiu mendo. Vi ne povas aldoni plian rabaton.",
+        "cart_does_not_meet_discount_requirements_notice": "La rabato-kodo <strong style=\"text-transform:uppercase\">%{code}</strong> ne validas por la aĵoj en via korbo.",
+        "discount_requires_customer_notice": "Enigu viajn sendokodojn por apliki la rabato-kodon <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "Rabatkodo <strong style=\"text-transform:uppercase\">%{code}</strong> ne estas havebla al vi nuntempe",
+        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> rabato-kodo postulas elekteblan klienton",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Rabatkodo <strong style=\"text-transform:uppercase\">%{code}</strong> ne haveblas por via liveradreso",
+        "customer_already_used_once_per_customer_discount_notice": "La rabato-kodo <strong style=\"text-transform:uppercase\">%{code}</strong> jam estis uzita.",
+        "subtotal_label": "Subtotalo",
+        "subtotal_label_with_quantity": {
+          "one": "Subtotalo · %{count} ero",
+          "other": "Subtotalo · %{count} eroj"
+        },
+        "shipping_label": "Sendo",
+        "pickup_label": "Preno en vendejo",
+        "no_pickup_location": "Ne estas disponeblaj prenolokoj.",
+        "pickup_unavailable_banner_title": {
+          "one": "Neniuj vendejoj disponeblaj kun via varo",
+          "other": "Neniuj vendejoj disponeblaj kun viaj varoj"
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "Sendu al adreso",
+          "ship_to_address_instead_html": "%{link} anstataŭe"
+        },
+        "tip_label": "Konsileto",
+        "unconfirmed_label": "Nekonfirmita",
+        "calculating_shipping": "Kalkulante…",
+        "calculating": "Kalkulante…",
+        "shipping_default_value": "Kalkulita ĉe la sekva paŝo",
+        "shipping_discount_title": "Senda Rabato",
+        "shipping_pending_message": "Ankoraŭ ne havebla",
+        "shipping_policy_link": "sendokostoj",
+        "taxes_label": "Impostoj",
+        "estimated_taxes_label": "Laŭtaksaj impostoj",
+        "estimated_taxes_label_short": "Taksite",
+        "information_estimated_taxes_label": "Impostoj (taksitaj)",
+        "estimated_taxes_finalization_tooltip_content": "La fina imposto kaj sumo estos konfirmitaj per retpoŝto aŭ tekstmesaĝo post kiam vi faros vian mendon.",
+        "order_total_label": "Mendo Totalo",
+        "price_before_discount_aria_text": "Origina prezo",
+        "price_after_discount_aria_text": "Rabatita prezo",
+        "discount_code_aria_text": "Rabatkodo",
+        "total_savings": "Totalaj ŝparaĵoj",
+        "total_label": "Totalo",
+        "total_due_label": "Sume ŝuldata",
+        "total_paid_label": "Tute pagita",
+        "total_price_label": "Totala prezo",
+        "total_outstanding_label": "Sumo por pagi",
+        "deposit_label": "Deponaĵo",
+        "total_due_today_label": "Sume pagenda hodiaŭ",
+        "total_due_later_label": "Sume pagenda poste",
+        "partial_total_label": "Totalo",
+        "free_total_label": "Senpaga",
+        "free_shipping_total_label": "Senpaga",
+        "paid_label": "Pagita",
+        "payment_due_label": "Pago ŝuldata",
+        "vat_label_html": "Inkluzive de %{amount} en impostoj",
+        "duties_included_label": "La sumo inkluzivas impostojn kaj doganojn. Neniuj aldonaj kostoj por liverado.",
+        "discount_and_gift_card_savings_notice": "Post %{discount_amount} en rabatoj kaj %{gift_card_amount} en donackartoj",
+        "discount_savings_notice": "Post %{discount_amount} en rabatoj",
+        "gift_card_savings_notice": "Post %{gift_card_amount} en donackartoj",
+        "cost_table_title": "Kosto-resumo",
+        "cost_table_item_column_header": "Ero",
+        "cost_table_value_column_header": "Valoro",
+        "description_label": "Priskribo",
+        "price_label": "Prezo",
+        "price_per_item": {
+          "accessibility_label": "%{price} por ero",
+          "label": "%{price}/ĉiu"
+        },
+        "quantity_label": "Kvanto",
+        "product_change_label": "Ŝanĝo",
+        "product_image_label": "Produkta bildo",
+        "product_image_quantity_label": "Kvanto",
+        "scroll_order_summary": "Rulumu por pliaj eroj",
+        "expand_order_summary_short": "Montri",
+        "collapse_order_summary_short": "Kaŝi",
+        "expand_order_summary": "Montri mendan resumon",
+        "collapse_order_summary": "Kaŝi mendan resumon",
+        "original_price": "Origina prezo",
+        "sale_price": "Vendoprezo",
+        "total_updated_label": "Ĝisdatigita totala prezo:",
+        "order_total_updated_label": "Ĝisdatigita sumo",
+        "total_already_paid_label": "Pagita",
+        "unit_price": {
+          "accessible_separator": "po",
+          "per_item": {
+            "single": "%{price} ĉiu",
+            "one": "%{price} por %{count} ero",
+            "other": "%{price} por %{count} aĵoj"
+          },
+          "per_unit": {
+            "single": "%{prezo}/%{unuo}"
+          }
+        },
+        "gift_card_ending": "Donackarto finiĝanta per %{last_characters}",
+        "estimated_tax_label": "Taksa imposto",
+        "multiple_shipping_lines_label": "Sendkosto",
+        "recurring_subtotal_label": "Revenanta subtotalo",
+        "recurring_total_label": "Ripetiĝanta sumo",
+        "recurring_total_tooltip": "Ne inkluzivas sendokostojn, impostojn, doganojn aŭ iujn ajn aplikeblajn rabatojn.",
+        "confirmation_number_label": "Konfirmo #%{confirmation_number}",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> ne povis esti uzata kun viaj ekzistantaj rabatoj.",
+        "percent_off_shipping": "%{percent}% rabato por sendokostoj",
+        "amount_off_shipping": "%{amount} rabato por sendokostoj",
+        "deferred_payment_info": {
+          "title": "Pago de %{amount_due} estas pagenda je %{due_at}",
+          "description_html": "Por demandoj pri via mendo, %{contact_us}.",
+          "paid_today": "Sume pagita hodiaŭ",
+          "paid_today_next": "Pagite hodiaŭ",
+          "due_on_fulfillment_title": "Pago de %{amount_due} estas pagenda post plenumo",
+          "due_on_receipt_title": "Pago de %{amount_due} estas pagenda post ricevo"
+        },
+        "deferred_balance_info": {
+          "title": "La saldo de {{amount_due}} estas pagenda je {{due_at}}",
+          "due_on_fulfillment_title": "La resto de {{amount_due}} estas pagenda post plenumo."
+        }
       },
       "shipping": {
         "title": "Sendo",
@@ -424,14 +540,141 @@
             "other": "%{shipping_price} por %{count} pliaj liveroj (%{per_delivery_cost})"
           },
           "prepaid_order_one_cycle_delivery_not_included": {
-            "one": "%{shipping_price} por %{count} liverado"
+            "one": "%{shipping_price} por %{count} liverado",
+            "other": "%{shipping_price} por %{count} liveroj (%{per_delivery_cost})"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} por %{count} pliaj sendokostoj, sekvata de %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} por %{count} pliaj liveroj (%{per_delivery_cost}), sekvata de %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "one": "%{shipping_price} por %{count} liverado, sekvata de %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} por %{count} liveroj (%{per_delivery_cost}), sekvata de %{recurring_order_shipping_price}"
+          },
+          "subscription_free_with_frequency_label": "Senpaga sendo %{delivery_frequency}",
+          "prepaid_delivery_frequency": {
+            "one": "por %{count} liverado",
+            "other": "por %{count} liveroj"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "one": "ĉiutage",
+              "other": "ĉiujn %{count} tagojn"
+            },
+            "week": {
+              "one": "ĉiusemajne",
+              "other": "ĉiujn %{count} semajnojn"
+            },
+            "month": {
+              "one": "ĉiumonate",
+              "other": "ĉiujn %{count} monatojn"
+            },
+            "year": {
+              "one": "ĉiujare",
+              "other": "ĉiujn %{count} jarojn"
+            }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} por liverado",
+          "prepaid_shipping_price_label": "%{shipping_price} por livero x %{delivery_interval_count}",
+          "initial_order_discounted": "Unue la sendokosto %{discounted_shipping_cost}, poste %{frequency_description}",
+          "prepaid_initial_order_discounted": "Unua sendokosto %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "Unua sendokosto %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "Unue sendokosto %{discounted_shipping_price} %{prepaid_delivery_frequency}, poste %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Unue sendokosto %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), poste %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "Inkludita",
+          "recurring_order_shipping_price": "sekvata de %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "Unua mendo inkluzivita, sekvata de %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} por liverado), sekvata de %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Unua mendo senpaga",
+            "other": "Unuaj %{count} mendoj senpagaj"
+          },
+          "free_for_first_n_order": {
+            "one": "Por unua mendo",
+            "other": "Por la unuaj %{count} mendoj"
           }
-        }
+        },
+        "one_time_purchase_shipping": "Unufoja sendo",
+        "duties_and_taxes_title": "Imposto kaj impostoj",
+        "shipping_information_required_notice": "Sendinformoj estas bezonataj. {{link}} .",
+        "shipping_information_redirect_link": "Enigu viajn informojn ĉi tie",
+        "loading_progressive_rates": "Serĉante pliajn tarifojn…",
+        "no_other_methods_available": "Neniuj aliaj metodoj haveblaj",
+        "duties_and_taxes_options": {
+          "ddu_title": "Pagu ĉe livero",
+          "ddu_caption": "Kromaj kotizoj povas aplikiĝi",
+          "ddp_title": "Pagu nun",
+          "ddp_caption": "Neniuj aldonaj kostoj por liverado"
+        },
+        "shipping_method_combinations": {
+          "without_separator": "%{unuaMetodo}, %{duaMetodo}",
+          "with_separator": "%{ripozo}, %{nuna},",
+          "combination": "%{ripozo} kaj %{nuna}"
+        },
+        "shipping_used_as_billing_notice": "Ĉi tio ankaŭ estos uzata kiel via faktura adreso por ĉi tiu mendo.",
+        "address_update": "Ĝisdatigu adreson",
+        "shipping_address_title": "Sendu al",
+        "shipping_address_rollup_accessibility_label": "Sendu al adreso opcioj",
+        "add_address": "Uzu malsaman adreson",
+        "add_delivery_instructions": "Aldoni liverinstrukciojn",
+        "edit": "Redakti",
+        "delete": "Forigi",
+        "address_more": "Pliaj agoj por ĉi tiu adreso",
+        "address_edit": "Redakti adreson",
+        "address_delete": "Forigi adreson",
+        "address_confirm": "Ĉu vi certas, ke vi volas forigi ĉi tiun adreson el via konto?",
+        "address_default": "Agordi kiel defaŭltan",
+        "address_form": {
+          "add_address": "Aldoni adreson",
+          "save": "Konservi",
+          "cancel": "Nuligi",
+          "generic_error": "Estis problemo konservi vian adreson. Bonvolu provi denove.",
+          "one_time_address_subtitle": "Uzu unufojan adreson por ĉi tiu mendo"
+        },
+        "different_shipping_method_summary": "Enigu malsaman sendadreson por vidi disponeblajn sendometodojn",
+        "invalid_shipping_method_summary": "Enigu validan sendadreson por vidi disponeblajn sendometodojn",
+        "method_summary": {
+          "incomplete_address_entered": "Enigu kompletan sendadreson por vidi disponeblajn sendometodojn",
+          "incomplete_address_selected": "Elektu kompletan sendadreson por vidi disponeblajn sendometodojn"
+        },
+        "local_pickup": {
+          "search_address": "Serĉi adreson",
+          "rollup_title": "Prenloko",
+          "rollup_accessibility_label": "Elektoj por preni lokojn"
+        },
+        "missing_shipping_address": "Mankas senda adreso",
+        "split_shipping_merchandise_quantity_label_standard": "%{quantity} eroj",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} pli",
+        "split_shipping_merchandise_shipment_number": "Sendaĵo %{number} el %{total}",
+        "pre_order_ships_now": "Ŝipoj nun",
+        "pre_order_ships_later": "Ŝipoj poste",
+        "pre_order_ships_date": "Ŝipoj %{dato}",
+        "split_shipping_shipped_by_shop": "Sendita de %{shop_name}",
+        "split_shipping_multiple_shipment_label": "Multoblaj sendaĵoj",
+        "split_shipping_shipping_label": "Metodo",
+        "split_shipping_shipment_notice": "Via mendo alvenos en %{quantity_shipments}",
+        "split_shipping_first_shipment_notice": "Via unua mendo alvenos en %{quantity_shipments}",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} sendoj",
+        "split_shipping_multiple_shipment_notice": "Via mendo alvenos en pluraj sendoj",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "Via mendo alvenos en %{quantity} sendoj",
+        "split_shipping_more_shipping_options": "Pli da sendokostoj",
+        "split_shipping_shipment_number": "Sendaĵo %{number}",
+        "split_shipping_merchandise_quantity_label_inline_primary": "Kvanto: %{quantity}",
+        "split_shipping_merchandise_quantity_label_inline": "%{varo_titolo} ×%{kvanto}",
+        "split_shipping_option_free": "Senpaga sendo",
+        "split_shipping_option_lowest_price": "Plej malalta prezo",
+        "split_shipping_option_fastest": "Plej rapida",
+        "split_shipping_option_recommended": "Rekomendita",
+        "split_shipping_option_custom": "Kutimo"
       },
       "payment": {
         "store_credit": {
           "buying_gift_card": "Vi ne povas uzi butikkrediton por aĉeti donackarton",
-          "no_fixed_selling_plans": "Vi ne povas uzi butikkrediton kun prokrastitaj aĉetopcioj"
+          "no_fixed_selling_plans": "Vi ne povas uzi butikkrediton kun prokrastitaj aĉetopcioj",
+          "label": "Butika kredito",
+          "apply_label": "Apliki butikkrediton",
+          "add_label": "Aldoni butikkrediton",
+          "manage_label": "Administri butikkrediton"
         },
         "clear": "Klara",
         "billing_must_match_shipping_notice": "La faktura adreso de via pagmetodo devas kongrui kun la senda adreso.",
@@ -598,7 +841,115 @@
         "bank_account_generic_error": "Ne eblis aldoni bankkonton. Provu denove poste.",
         "separate_payments_label": "Viaj aĵoj estas de pli ol unu vendejo. Vi estos ŝargita en %{separate_payments_link}.",
         "separate_payments_text": "apartaj pagoj",
-        "payments": "Pagoj"
+        "payments": "Pagoj",
+        "crypto_modal": {
+          "error": {
+            "web_component_error": "Estis problemo ŝargi ĉi tiun paĝon"
+          }
+        },
+        "saved_by_payment_method": "Konservita de %{payment_method}",
+        "pay_with_payment_method": "Pagu per %{payment_method}",
+        "different_credit_card_label": "Uzu malsaman kreditkarton",
+        "same_billing_address_label": "Sama kiel la senda adreso",
+        "different_billing_address_label": "Uzu malsaman fakturan adreson",
+        "billing_address_associated_with_mandate": "Uzu adreson asociitan kun pagmetodo",
+        "billing_address_associated_with_mandate_info": "Se vi volas ŝanĝi vian fakturan adreson, bonvolu forigi kaj reenigi viajn kreditkartajn detalojn.",
+        "free_order_notice_html": "Via mendo estas <strong>senpaga</strong> . Neniu pago estas necesa.",
+        "express_checkout_free_order": "Vi ne estos ŝargita por senpaga mendo",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Via mendo estas kovrita de via donackarto.",
+          "other": "Via mendo estas kovrita de viaj donackartoj."
+        },
+        "offsite_gateway_redirect_hint": "Post alklako de “%{button_label}”, vi estos redirektita al %{gateway_label} por sekure kompletigi vian aĉeton.",
+        "offsite_gateway_review_page_redirect_hint": "Post kiam vi revizios vian mendon, vi estos redirektita al %{gateway_label} por sekure kompletigi vian aĉeton.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label} sume %{total_shop_price}",
+        "offsite_gateway_redirect_hint_no_button_label": "Post daŭrigo, vi estos redirektita al %{gateway_label} por sekure kompletigi vian aĉeton.",
+        "receiver_payment_experience_hint": "Post mendado, vi ricevos pagdetalojn. Faru la pagon ĉe Multibanco aŭ interrete ene de %{due_days} tagoj.",
+        "billing_address_title": "Faktura adreso",
+        "billing_address_rollup_accessibility_label": "Fakturadresaj opcioj",
+        "billing_address_description": "Elektu la adreson, kiu kongruas kun via karto aŭ pagmetodo.",
+        "billing_address_description_no_shipping_address": "Enigu la adreson, kiu kongruas kun via karto aŭ pagmetodo.",
+        "no_js_credit_card_fields_redirect_hint": "Vi estos redirektita por aldoni viajn paginformojn.",
+        "card_fields_container_prefix": "Kampa ujo por:",
+        "card_fields_unavailable_html": {
+          "one": "Pagoj per kreditkartoj kaj debetkartoj nuntempe ne haveblas.<br> <a href=\"%{current_url}\">Refreŝigu ĉi tiun paĝon</a> aŭ reprovu poste.",
+          "other": "Pagoj per kreditkartoj kaj debetkartoj nuntempe ne haveblas.<br> <a href=\"%{current_url}\">Refreŝigu ĉi tiun paĝon</a> aŭ provu alian pagmetodon."
+        },
+        "card_fields_processing_error": "Estis problemo prilaborante la pagon. Provu refreŝigi ĉi tiun paĝon aŭ kontroli vian retkonekton.",
+        "technical_error": "Pagoj ne povas esti prilaboritaj nun pro teknika problemo. Provu denove post kelkaj minutoj.",
+        "no_method_error": "Ĉi tiu vendejo nuntempe ne povas akcepti pagojn.",
+        "not_configured_error": "Ĉi tiu vendejo nuntempe ne povas akcepti pagojn.",
+        "missing_credit_card_error": "Enigu viajn kartajn detalojn por kompletigi la pagon",
+        "shop_pay_ideal_unavailable_error": "iDEAL ne haveblas por ĉi tiu mendo. Elektu alian pagmetodon.",
+        "payment_method_not_available_for_shipping_address_error": "Pagmetodo ne haveblas por la elektita liveradreso. Elektu alian pagmetodon.",
+        "billing_address_not_supported_for_payment_method_error": "Ĉi tiu pagmetodo ne haveblas por via faktura adreso kaj valuto. Bonvolu provi alian pagmetodon.",
+        "generic_incorrect_card_info": "Viaj pagdetaloj ne povis esti kontrolitaj. Kontrolu viajn kartdetalojn kaj provu denove.",
+        "sofort_label": "Banktranspago Sofort",
+        "paypal_wallet_label": "PayPal-Monujo",
+        "shop_pay_installments_label": "Butika Pago Partoj",
+        "paypal_modal": {
+          "order_contains_subscriptions": "Abono",
+          "order_contains_fixed_selling_plans": "La sumo eble ne inkluzivas impostojn, sendokostojn, prokrastitajn kostojn kaj iujn rabatojn. Daŭrigu al la kaso por la ŝuldata sumo hodiaŭ."
+        },
+        "klarna_pay_later_label": "Pagu poste per Klarna",
+        "klarna_pay_now_label": "Pagu nun per Klarna",
+        "giropay_label": "Giropago",
+        "multibanco_label": "Multibanko",
+        "eps_label": "eps-Superdivulgado",
+        "klarna_slice_it_label": "Financo kun Klarna",
+        "ideal_label": "ideala INTERKONSENTO",
+        "bank_picker_label": "Banko",
+        "afterpay_label": "Postpago",
+        "cashapppay_label": "Kontanta Aplikaĵo Pago",
+        "twint_label": "DUONO",
+        "mobilepay_label": "Poŝtelefona Pago",
+        "swish_label": "Ŝviĝo",
+        "kcp_creditcard_label": "KCP Kreditkarto",
+        "usdc_cashback_title": "1% kontantmono",
+        "usdc_cashback_additional_info": "Ricevu 1% reen en USDC rekte en vian monujon.",
+        "usdc_cashback_terms": "Kondiĉoj validas",
+        "purchase_options_card_update_agreement_label_html": "Ĝisdatigante vian pagmetodon, vi rajtigas pagojn por iu ajn ripetiĝanta aŭ prokrastita aĉeto laŭ <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">la nuliga politiko</a> de ĉi tiu vendejo.",
+        "subscription_card_update_agreement_label": "Ŝanĝi la pagmetodon ĝisdatigos vian abonon kaj estontajn ripetajn pagojn.",
+        "subscription_agreement_label": "Unu aŭ pluraj aĵoj en via ĉaro estas prokrastita aŭ abona aĉeto. Daŭrigante vian pagon, vi konsentas, ke via pagmetodo estos aŭtomate ŝargita laŭ la prezo kaj ofteco listigitaj sur ĉi tiu paĝo ĝis ĝi finiĝos aŭ vi nuligos. Ĉiuj nuligoj estas submetitaj al la %{cancelled}.",
+        "subscription_agreement_cancelled": "nuliga politiko",
+        "subscription_heading": "Aboninterkonsento",
+        "subscription_agreement_label_html": "Mi komprenas, ke mi konsentas pri abono. Ĝi renoviĝos laŭ la listigita prezo kaj ofteco ĝis ĝi finiĝos aŭ estos\n <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">nuligita</a> .\n",
+        "purchase_options_agreement_label": "Unu aŭ pluraj aĵoj en via ĉaro estas prokrastita aŭ ripetiĝanta aĉeto. Daŭrigante vian pagon, vi konsentas, ke via pagmetodo estos aŭtomate ŝargita laŭ la prezo kaj ofteco listigitaj sur ĉi tiu paĝo ĝis ĝi finiĝos aŭ vi nuligos. Ĉiuj nuligoj estas submetitaj al la %{cancellation_policy_label}.",
+        "purchase_options_agreement_label_html": "Mi komprenas, ke unu aŭ pluraj aĵoj en mia korbo estas prokrastita aŭ ripetiĝanta aĉeto. Daŭrigante, mi konsentas pri la \n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">nuliga politiko</a>\n kaj rajtigas vin ŝargi mian pagmetodon laŭ la prezoj, ofteco kaj datoj listigitaj sur ĉi tiu paĝo ĝis mia\n mendo estas plenumita aŭ mi nuligas, se permesite.\n",
+        "purchase_options_agreement_label_wallets": "Daŭrigante vian pagon, vi konsentas pri la estontaj kostoj listigitaj sur ĉi tiu paĝo kaj la nuliga politiko.",
+        "change_currency_section_description": "Elektu valutopcion",
+        "no_real_orders_dev_store": "Ĉi tiu vendejo ne povas akcepti verajn mendojn aŭ verajn pagojn.",
+        "waiting_on_payment_methods": "Akiri disponeblajn pagmetodojn...",
+        "apple_pay_payment_error": "Via pago ne povis esti kompletigita. Provu denove aŭ uzu alian pagmetodon.",
+        "taxes_not_included": "Impostoj ne inkluzivitaj",
+        "no_taxes_banner_content": "Impostoj ne estos ŝargitaj por ĉi tiu mendo. Post kiam vi kolektis la pagon, impostoj ne plu povas esti aldonitaj.",
+        "paypal": {
+          "connect": "Alklaku por konekti vian PayPal-konton"
+        },
+        "apple": {
+          "connect": "Alklaku por konekti vian Apple Pay-konton",
+          "not_available": "Apple Pay ne haveblas en ĉi tiu retumilo. Por konekti vian Apple Pay-konton, vi devos uzi Safari sur Apple-aparato."
+        },
+        "google": {
+          "connect": "Alklaku por konekti kun via Google Pay-konto",
+          "error_authorizing": "Eraro rajtigante pagon"
+        },
+        "account_connected": "Konto konektita.",
+        "mor_disclaimer_html": "Alklakante sube kaj kompletigante vian mendon, vi konsentas aĉeti vian(j)n aĵon(j)n de Global-e kiel registrita komercisto.\n por ĉi tiu transakcio, laŭ <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">la Kondiĉoj</a> de Global-e\n kaj <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Regularo pri Privateco</a> . Global-e estas internacia\n plenumada servoprovizanto al %{shop_name}\n",
+        "pending_payment": {
+          "due_notice": "Via pago de %{amount_due} estas pagenda je %{due_date}.",
+          "multibanco": {
+            "buyer_action_info": "Via pago de %{amount_due} estas pagenda.",
+            "instruction_html": "Faru vian pagon ĉe Multibanco aŭ interrete uzante la subajn detalojn. Por demandoj aŭ por ĝisdatigi pagdetalojn, %{contact_us}.",
+            "entity": "Ento",
+            "reference": "Referenco",
+            "amount": "Kvanto",
+            "find_nearest_atm": "Trovu Plej Proksiman ATM-on"
+          }
+        },
+        "update_payment_method": "Ĝisdatigu pagmetodon",
+        "order_covered_by_store_credit_notice": "Via mendo estas kovrita de via butika kredito.",
+        "order_covered_by_redeemables_notice": "Via mendo estas kovrita."
       },
       "thank_you": {
         "attempted_delivery_local_title": "Maltrafita livero",
@@ -1571,6 +1922,15 @@
         "manual_payment_gateway_label": "Manlibro",
         "billing_address_title": "Faktura adreso",
         "free_label": "Senpaga"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Pliaj informoj",
+          "shipping_credential_kr": "Persona Dogana Kodo",
+          "shipping_credential_cn": "Loĝanta ID-numero",
+          "tax_credential_it": "Fiska Kodo (nedeviga)",
+          "tax_email_it": "PEC (laŭvola)"
+        }
       }
     },
     "pagination": {

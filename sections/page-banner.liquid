@@ -60,16 +60,14 @@
   {%- endif -%}
 
   {%- if use_default_image -%}
-    {%- if section.settings.default_image_url != blank -%}
-      <img
-        src="{{ section.settings.default_image_url }}"
-        alt="Page Banner"
-        class="page-banner__image"
-        loading="eager"
-      >
-    {%- else -%}
-      {{ 'hero-apparel-1' | placeholder_svg_tag: 'page-banner__image' }}
-    {%- endif -%}
+    <img
+      src="{{ 'page-banner-default.webp' | asset_url }}"
+      alt="Page Banner"
+      class="page-banner__image"
+      loading="eager"
+      width="1920"
+      height="1080"
+    >
   {%- endif -%}
 {% endcapture %}
 
@@ -225,13 +223,7 @@
       "label": "t:settings.image",
       "visible_if": "{{ section.settings.media_type_1 == 'image' }}"
     },
-    {
-      "type": "text",
-      "id": "default_image_url",
-      "label": "Default image URL",
-      "info": "Used when no image is uploaded. Paste a Shopify CDN URL here.",
-      "visible_if": "{{ section.settings.image_1 == blank and section.settings.media_type_1 == 'image' }}"
-    },
+
     {
       "type": "video",
       "id": "video_1",
@@ -534,10 +526,7 @@
           }
         }
       },
-      "block_order": ["title", "description"],
-      "settings": {
-        "default_image_url": "https://cdn.shopify.com/s/files/1/0922/4024/9498/files/151_2x_2923cf13-7ffd-4676-a186-e2b7a8e46c76.webp"
-      }
+      "block_order": ["title", "description"]
     }
   ]
 }

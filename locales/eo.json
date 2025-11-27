@@ -680,6 +680,428 @@
       "review": {
         "title": "Recenzo",
         "review_title": "Kompletigu vian mendon"
+      },
+      "wallets": {
+        "errors": {
+          "invalid": {
+            "billing_must_match_shipping": "Devas kongrui kun la senda adreso",
+            "billing_zip": "Enigu validan fakturan adreson Poŝtkodon"
+          },
+          "missing": {
+            "first_name": "Enigu antaŭnomon",
+            "billing_first_name": "Enigu fakturan adreson antaŭnomo",
+            "last_name": "Enigu familian nomon",
+            "address1": "Enigu adreson",
+            "billing_address1": "Enigu fakturan adreson",
+            "address2": "Eniru apartamenton, suiteon, ktp.",
+            "billing_address2": "Enigu fakturan adreson: apartamento, apartamento, ktp.",
+            "city": "Eniru urbon",
+            "billing_city": "Enigu urbon de faktura adreso",
+            "province": "Elektu ŝtaton / provincon",
+            "billing_province": "Elektu fakturan adreson, ŝtaton / provincon",
+            "country": "Elektu landon/regionon",
+            "zip": "Enigu poŝtkodon",
+            "billing_zip": "Enigu fakturan adreson Poŝtkodon",
+            "phone": "Enigu telefonnumeron",
+            "contact_info": "Enigu kontaktinformojn"
+          },
+          "formatting": {
+            "name_contains_emojis": "Forigu emoji-on de via nomo",
+            "postal_code_contains_emoji": "Forigu emoji-on el via poŝtkodo",
+            "first_name_too_long": "La antaŭnomo enhavas tro multajn literojn",
+            "last_name_too_long": "Familia nomo enhavas tro multajn literojn",
+            "address_too_long": "Adreslinio estas tro longa"
+          },
+          "select_different_shipping_address_to_resolve_errors": "Via sendo-adreso estas malvalida. Elektu alian adreson aŭ uzu novan."
+        },
+        "scrim": {
+          "continue_purchase_in_window": "Daŭrigu vian aĉeton en la fenestro {{walletName}}",
+          "and_return_to_checkout": "kaj revenu al la Kaso",
+          "cancel": "Nuligi"
+        }
+      },
+      "note": {
+        "length_exceeds_maximum": "Malpligrandigu la grandecon de la noto al 5000 aŭ malpli da signoj."
+      },
+      "offsite_payment_failed": {
+        "title": "Eksterloka pago malsukcesis",
+        "payment_not_processed_title": "Pago malsukcesis",
+        "payment_not_processed_text": "Provu skani la QR-kodon denove. Se ĝi ankoraŭ ne funkcias, informu nian personaron kaj provu alian pagmetodon.",
+        "payment_link_expired_title": "Pagligilo eksvalidiĝis",
+        "payment_link_expired_text": "Provu skani la QR-kodon denove."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "La prezo de la donackarto devas esti pli granda ol 0.",
+            "gift_card_price_must_not_exceed_limit": "La prezo de la donackarto ne rajtas superi %{gift_card_limit}.",
+            "subtotal_limit_reached": "La maksimuma valoro de la liniaj eroj estas atingita.",
+            "signature_mismatch": "Nekongruas la subskribo de varoj por linio %{stable_id}."
+          }
+        }
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "La kaso enhavas nur malproksimajn varojn. Alidirekto al la malproksima butiko estas necesa por kompletigi la kason.",
+          "currency_mismatch": "Ĉi tiu aĵo ne povas esti aldonita al via ĉaro ĉar ĝi estas de vendejo kiu uzas malsaman valuton.",
+          "currency_mismatch_removal": "Artikolo estis forigita el via ĉaro ĉar ĝi estas el vendejo kiu uzas malsaman valuton.",
+          "max_remote_shops_exceeded": "Ĉi tiu produkto ne povas esti aldonita ĉar via ĉaro jam havas la maksimumon de aliaj vendejoj."
+        }
+      },
+      "units": {
+        "kilogram": "kilogramoj",
+        "ounce": "unco",
+        "pound": "funto",
+        "fluid_ounce": "likvaj uncoj",
+        "pint": "punkto",
+        "quart": "kvarto",
+        "gallon": "knabino",
+        "inch": "en",
+        "foot": "futoj",
+        "yard": "jardo",
+        "item": "ero"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "La adreso ne estas subtenata por la nuna membreco.",
+        "items_split_across_locations_unsupported": "Prime-liverado ne haveblas por via mendo. Viaj sendokostoj estis ĝisdatigitaj."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Navigado al Interreta Butiko"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Pliaj informoj pri %{context}",
+        "additional_payment_methods": "Pliaj pagmetodoj"
+      }
+    },
+    "pagination": {
+      "previous": "Antaŭa",
+      "next": "Sekva"
+    },
+    "links": {
+      "powered_by_shopify": "Funkciigita de Shopify",
+      "learn_more": "Lernu pli"
+    },
+    "feed": {
+      "more": "Pli"
+    },
+    "attributes": {
+      "email": "retpoŝto",
+      "password": "pasvorto",
+      "password_confirmation": "La konfirmo de pasvorto",
+      "first_name": "antaŭnomo",
+      "last_name": "familia nomo",
+      "body": "korpo",
+      "signature": "Adreso"
+    },
+    "addresses": {
+      "zip_code": "Poŝtkodo",
+      "postal_code": "Poŝtkodo",
+      "postcode": "Poŝtkodo",
+      "pincode": "Poŝtkodo",
+      "region": "Regiono",
+      "prefecture": "Prefektejo",
+      "province": "Provinco",
+      "state": "Ŝtato",
+      "state_and_territory": "Ŝtato/teritorio",
+      "county": "Distrikto",
+      "emirate": "Emirlando",
+      "governorate": "Gubernio",
+      "confirm": "Ĉu vi certas, ke vi volas forigi ĉi tiun adreson?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "Elstara",
+        "best_selling": "Plej bone vendata",
+        "az": "Alfabete, Arizono",
+        "za": "Alfabete, ZA",
+        "price_ascending": "Prezo, malalta al alta",
+        "price_descending": "Prezo, alta al malalta",
+        "date_ascending": "Dato, malnova al nova",
+        "date_descending": "Dato, nova al malnova"
+      }
+    },
+    "errors": {
+      "blank": "ne povas esti malplena",
+      "blocked_address": "Ĉi tiu loko ne estas subtenata"
+    },
+    "checkpoint": {
+      "submit_button_text": "Sendu"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Kutime preta post 1 horo",
+        "two_hours": "Kutime preta post 2 horoj",
+        "four_hours": "Kutime preta post 4 horoj",
+        "twenty_four_hours": "Kutime preta post 24 horoj",
+        "two_to_four_days": "Kutime preta post 2-4 tagoj",
+        "five_or_more_days": "Kutime preta post 5+ tagoj",
+        "zero_to_two_hours": "Kutime preta post 2 horoj",
+        "two_to_four_hours": "Kutime preta post 4 horoj",
+        "immediately": "Preta por reprenado nun",
+        "next_day": "Preta por reprenado la sekvan tagon"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Ĉi tiu aĵo estas ripetiĝanta aŭ prokrastita aĉeto. Daŭrigante, mi konsentas pri la %{cancellationPolicyLink} kaj rajtigas vin ŝargi mian pagmetodon laŭ la prezoj, ofteco kaj datoj listigitaj sur ĉi tiu paĝo ĝis mia mendo estos plenumita aŭ mi nuligos, se permesite.",
+      "buyer_consent_cart": "Unu aŭ pluraj el la aĵoj en via ĉaro estas ripetiĝanta aŭ prokrastita aĉeto. Daŭrigante, mi konsentas pri la %{cancellationPolicyLink} kaj rajtigas vin ŝargi mian pagmetodon laŭ la prezoj, ofteco kaj datoj listigitaj sur ĉi tiu paĝo ĝis mia mendo estos plenumita aŭ mi nuligos, se permesite.",
+      "cancellation_policy": "nuliga politiko"
+    }
+  },
+  "customer_accounts": {
+    "date": {
+      "humanize": {
+        "lessThanOneHourAgo": {
+          "one": "antaŭ {{count}} minuto",
+          "other": "antaŭ {{count}} minutoj"
+        },
+        "lessThanOneMinuteAgo": "Ĵus nun",
+        "yesterday": "Hieraŭ je {{time}}",
+        "today": "Hodiaŭ je {{time}}",
+        "tomorrow": "Morgaŭ je {{time}}"
+      }
+    },
+    "enable_javascript": "Por vidi vian konton, ebligu JavaScript en la agordoj de via retumilo aŭ ensalutu per alia retumilo.",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Kaŝi Konton menuon",
+        "label": "Konto",
+        "show_accessibility_label": "Montri Konto-menuon",
+        "nav_accessibility_label": "Navigado de kontoj",
+        "open_menu_accessibility_label": "Navigado de Malferma Konto",
+        "close_menu_accessibility_label": "Fermi Konton navigado",
+        "loading_message": "Ŝarĝante navigadon de konto"
+      },
+      "action_menu_accessibility_label": "Pliaj agoj",
+      "close_menu_accessibility_label": "Fermi ĉefan navigadon",
+      "contact_email_subject": "Kontaktu el {{shopName}} reta butiko",
+      "contact_link": "Kontaktaj informoj",
+      "delete_confirmation": {
+        "cancel": "Nuligi",
+        "delete": "Forigi"
+      },
+      "dismiss_toast": "Malakcepti",
+      "document_title": "{{sectionName}} - {{shopName}} - Konto",
+      "go_to_store_link": "Iri al la vendejo",
+      "loading_message": "Ŝarĝante",
+      "loading_policy_content_accessibility_label": "Ŝarĝante politiko-enhavon",
+      "log_out_link": "Elsaluti",
+      "logout_overlay_label": "Elsalutiĝante...",
+      "nav_label_accessibility_label": "Ĉefa navigado",
+      "navigation_accessibility_message": "Vi navigis al {{sectionName}}",
+      "open_menu_accessibility_label": "Malfermi ĉefan navigadon",
+      "orders_link_label": "Ordoj",
+      "shop_logo_accessibility_label": "emblemo {{shopName}}",
+      "subscriptions_link_label": "Abonoj",
+      "settings_link": "Agordoj",
+      "country_switcher_toast_message": "Lando ŝanĝita al {{countryName}}",
+      "switch_country": "Ŝanĝi landon",
+      "no_countries_found": "Neniuj landoj trovitaj",
+      "location_switcher_toast_message": "Loko ŝanĝita al {{locationName}}",
+      "switch_location": "Ŝanĝi lokon",
+      "no_locations_found": "Neniuj lokoj trovitaj",
+      "try_new_search": "Provu novan serĉon",
+      "view_details": "Vidi detalojn",
+      "company_location": "Firmaa loko",
+      "search": "Serĉi",
+      "skip_to_content": "Salti al enhavo"
+    },
+    "announcement_bar": {
+      "expand_label": "Malfermi anoncan breton",
+      "collapse_label": "Malfermi anoncan breton",
+      "close_label": "Fermi anoncbreton"
+    },
+    "account_information": {
+      "loading_accessibility_message": "Ŝarĝante kontinformojn",
+      "loading_finished_accessibility_message": "Konto-informoj ŝarĝiĝis",
+      "profile_card": {
+        "cancel": "Nuligi",
+        "cancel_accessibility_label": "Nuligi redaktadon de profilo",
+        "edit": "Redakti",
+        "edit_accessibility_label": "Redakti profilon",
+        "email_help_text": "Retpoŝto ne estas redaktebla",
+        "editable_email_help_text": "Ĉi tiu retpoŝtadreso estas uzata por ensaluto kaj ĝisdatigoj pri mendoj.",
+        "first_name": "Antaŭnomo",
+        "last_name": "Familia nomo",
+        "email": "Retpoŝto",
+        "no_name_provided_accessibility_label": "Neniu nomo aldonita",
+        "phone_number_help_text": "Telefonnumero ne estas redaktebla",
+        "save": "Konservi",
+        "save_accessibility_label": "Konservi profilon",
+        "title": "Profilo",
+        "errors": {
+          "name_too_long": "{{fieldName}} estas tro longa (maksimumo estas 255 signoj)",
+          "name_cannot_contain_url": "{{fieldName}} ne povas enhavi URL-on",
+          "name_cannot_contain_html_tags": "{{fieldName}} ne povas enhavi HTML-etikedojn",
+          "email_cant_be_blank": "Retpoŝto ne povas esti malplena",
+          "invalid_email_format": "Enigu validan retpoŝtadreson"
+        }
+      },
+      "verify_new_email_modal": {
+        "title": "Konfirmu retpoŝton",
+        "description": "Enigu la kodon senditan al {{email}}",
+        "one_time_password_label": "6-cifera kodo",
+        "email_resend_button": "Resendi kodon",
+        "email_resend_button_accessibility_label": "Resendi konfirmkodon",
+        "verify_button": "Konfirmu",
+        "verify_button_accessibility_label": "Konfirmu unufojan pasvorton",
+        "cancel_button": "Nuligi",
+        "cancel_button_accessibility_label": "Nuligi redaktadon de retpoŝto",
+        "email_resend_button_success_toast_message": "Konfirmkodo sendita",
+        "email_resend_button_error_banner_message": "Ne eblis sendi konfirmkodon"
+      },
+      "email_update_success_modal": {
+        "title": "Konfirmu retpoŝton",
+        "description": "Retpoŝto sukcese ĝisdatigita. Alidirektas al ensaluto."
+      },
+      "profile_update_confirmation_message": "Profilo ĝisdatigita",
+      "email_update_confirmation_message": "Retpoŝto ĝisdatigita al {{email}}",
+      "title": "Profilo",
+      "people": {
+        "pagination": {
+          "load_more": "Ŝarĝi pli",
+          "load_more_accessibility_label": "Ŝarĝi pli da homoj",
+          "loading_accessibility_label": "Ŝarĝante homojn"
+        }
+      },
+      "add_button": "Aldoni"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "Aranĝaj opcioj",
+      "list_title": "Ordoj",
+      "list_title_with_pending_orders": "Mendoj:",
+      "list_title_confirmed_orders_accessibility_label": "Mendoj: konfirmitaj",
+      "list_title_pending_orders_accessibility_label": "Mendoj: atendantaj",
+      "switch_order_type_pending_orders_accessibility_label": "Ŝanĝi mendotipon, nuntempe videblas atendantajn mendojn",
+      "switch_order_type_confirmed_orders_accessibility_label": "Ŝanĝi mendotipon, nuntempe videblas konfirmitaj mendoj",
+      "order_list": {
+        "column_headers": {
+          "order": "Ordo",
+          "total": "Totalo",
+          "actions_accessibility_label": "Agoj",
+          "products_accessibility_label": "Produktoj"
+        },
+        "delivered": "Liverita {{date}}",
+        "empty_state_order_source_description": "Nur mendoj faritaj per {{email}} aperos ĉi tie.",
+        "empty_state_subtitle": "Iru al la vendejo por fari mendon.",
+        "empty_state_title": "Ankoraŭ neniuj mendoj",
+        "empty_state_with_location_title": "Neniuj mendoj por {{locationName}}",
+        "empty_state_title_for_pending_orders": "Neniuj atendantaj mendoj",
+        "no_order_banner": "Por testi vian kromprogramon sur la paĝo Mendostato, kreu mendon.",
+        "estimated_shortform": "Establita {{date}}",
+        "estimated_delivery": "Atendita {{date}}",
+        "one_images_accessibility_label": "Mendo inkluzivas {{lineItemName1}}",
+        "two_images_accessibility_label": "Mendo inkluzivas {{lineItemName1}} , {{lineItemName2}}",
+        "three_images_accessibility_label": "La mendo inkluzivas {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}}",
+        "four_images_accessibility_label": "La mendo inkluzivas {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "La mendo inkluzivas {{lineItemName1}} , {{lineItemName2}} , kaj {{numberOfAdditionalProducts}} pliajn produktojn",
+        "more_than_four_products_accessibility_label": "La mendo inkluzivas {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , kaj {{numberOfAdditionalProducts}} pliajn produktojn.",
+        "plus_more": "+ {{numberOfAdditionalProducts}}",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} produktoj",
+        "carousel": {
+          "one_products_accessibility_label": "La mendo inkluzivas kvanton {{lineItemName1}} {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "La mendo inkluzivas kvanton {{lineItemName1}} {{lineItemQuantity1}} , kvanton {{lineItemName2}} {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "La mendo inkluzivas kvanton {{lineItemName1}} {{lineItemQuantity1}} , kvanton { {{lineItemName2}} {{lineItemQuantity2}} , kvanton {{lineItemName3}} {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "La mendo inkluzivas kvanton {{lineItemName1}} {{lineItemQuantity1}} , kvanton { {{lineItemName2}} {{lineItemName3}} {{lineItemQuantity2}} , kvanton {{lineItemQuantity3}} , kvanton {{lineItemName4}} {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "La mendo inkluzivas {{lineItemName1}} kvanton {{lineItemQuantity1}} , {{lineItemName2}} kvanton {{lineItemQuantity2}} , {{lineItemName3}} kvanton {{lineItemQuantity3}} , {{lineItemName4}} kvanton {{lineItemQuantity4}} , {{lineItemName5}} kvanton {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "La mendo inkluzivas {{lineItemName1}} kvanton {{lineItemQuantity1}} , {{lineItemName2}} kvanton {{lineItemQuantity2}} , {{lineItemName3}} kvanton {{lineItemQuantity3}} , {{lineItemName4}} kvanton {{lineItemQuantity4}} , {{lineItemName5}} kvanton {{lineItemQuantity5}} , {{lineItemName6}} kvanton {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "La mendo inkluzivas {{lineItemName1}} kvanton {{lineItemQuantity1}} , {{lineItemName2}} kvanton {{lineItemQuantity2}} , {{lineItemName3}} kvanton {{lineItemQuantity3}} , {{lineItemName4}} kvanton {{lineItemQuantity4}} , {{lineItemName5}} kvanton {{lineItemQuantity5}} , {{lineItemName6}} kvanton {{lineItemQuantity6}} kaj pli.",
+          "view_order_details": "Vidi mendodetalojn",
+          "previous": "Antaŭa",
+          "next": "Sekva"
+        },
+        "items": {
+          "one": "{{count}} ero",
+          "other": "{{count}} eroj"
+        },
+        "no_filtered_results_description": "Forigu aŭ ĝustigu filtrojn por vidi viajn mendojn",
+        "no_filtered_results_title": "Neniuj filtritaj rezultoj",
+        "order_link": "Vidi mendon {{name}}",
+        "order_number": "Mendo {{name}}",
+        "orders_title": "Konfirmita",
+        "pagination": {
+          "nav_accessibility_label": "Butonoj por navigado de mendoj",
+          "next": "Sekva",
+          "next_accessibility_label": "Sekvaj mendoj",
+          "previous": "Antaŭa",
+          "previous_accessibility_label": "Antaŭaj mendoj",
+          "load_more": "Ŝarĝi pli",
+          "load_more_accessibility_label": "Ŝarĝi pliajn mendojn"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Vidu mendon por detaloj",
+            "estimated_delivery": "Atendita {{date}}",
+            "last_updated": "Laste ĝisdatigita {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Laŭtaksa liverado {{date}}"
+          }
+        },
+        "payment_status": {
+          "gallery_view": {
+            "overdue": "Pago malfruiĝinta",
+            "due": "Pagdevo {{date}}",
+            "due_today": "Pago ŝuldata hodiaŭ",
+            "due_without_date": "Pago ŝuldata",
+            "due_on_fulfillment": "Pago ŝuldata post plenumo",
+            "pay_to_confirm": "Pagu por konfirmi",
+            "payment_not_due": "Pago ankoraŭ ne ŝuldata"
+          },
+          "list_view": {
+            "overdue": "Malfrua",
+            "due": "Limdato {{date}}",
+            "due_today": "Pagebla hodiaŭ",
+            "paid": "Pagita",
+            "due_without_date": "Pagenda",
+            "due_on_fulfillment": "Pagenda je plenumo",
+            "pay_to_confirm": "Pagu por konfirmi",
+            "payment_not_due": "Ankoraŭ ne ŝuldata"
+          }
+        },
+        "sort_by": "Ordigi laŭ: {{option}}",
+        "sort_hide_options_accessibility_label": "Kaŝi ordigajn opciojn por konfirmitaj mendoj.",
+        "sort_show_options_accessibility_label": "Montri ordigajn opciojn por konfirmitaj mendoj.",
+        "sort_currently_sorted_by_accessibility_label": "Nuntempe ordigita laŭ: {{option}}",
+        "sort_title": "Ordigi",
+        "sort": {
+          "date": {
+            "newest": "Plej nova ĝis plej malnova",
+            "oldest": "Plej malnova ĝis plej nova"
+          },
+          "location": {
+            "ascending": "Loko (Arizono)",
+            "descending": "Loko (ZA)"
+          },
+          "order_number": {
+            "ascending": "Mendnumero (malalta al alta)",
+            "descending": "Mendnumero (de alta ĝis malalta)"
+          },
+          "order_total": {
+            "ascending": "Mendsumo (malalta al alta)",
+            "descending": "Mendsumo (de alta ĝis malalta)"
+          }
+        },
+        "location_filter_picker": {
+          "all_location": "Ĉiuj lokoj",
+          "current_location": "Nuna loko",
+          "switch_view": "Ŝalti vidon"
+        },
+        "filter_title": "Filtrilo",
+        "filter": {
+          "clear_section": "Klara sekcio",
+          "clear_all": "Forigi ĉion",
+          "apply": "Apliki",
+          "date": {
+            "start_date": "Komencdato",
+            "end_date": "Findato",
+            "title": "Menddato",
+            "today": "Hodiaŭ",
+            "last_7_days": "Lastaj 7 tagoj",
+            "last_30_days": "Lastaj 30 tagoj"
+          }
+        }
       }
     }
   }

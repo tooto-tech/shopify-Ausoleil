@@ -249,7 +249,40 @@
         "state_placeholder": "Ŝtato",
         "region_label": "Regiono",
         "region_placeholder": "Regiono",
-        "region_none": "Neniu elektita"
+        "region_none": "Neniu elektita",
+        "prefecture_label": "Prefektejo",
+        "prefecture_placeholder": "Prefektejo",
+        "governorate_label": "Gubernio",
+        "governorate_placeholder": "Gubernio",
+        "emirate_label": "Emirlando",
+        "emirate_placeholder": "Emirlando",
+        "state_and_territory_label": "Ŝtato/teritorio",
+        "state_and_territory_placeholder": "Ŝtato/teritorio",
+        "phone_label": "Telefono",
+        "phone_rollup_accessibility_label": "Telefonaj opcioj",
+        "phone_country_code_label": "Telefonnumero landokodo",
+        "optional_phone_label": "Telefono (nedeviga)",
+        "phone_placeholder": "Telefono",
+        "phone_tooltip": "Se ni bezonas kontakti vin pri via mendo",
+        "zip_code_label": "Poŝtkodo",
+        "optional_zip_code_label": "Poŝtkodo (nedeviga)",
+        "zip_code_placeholder": "Poŝtkodo",
+        "postal_code_label": "Poŝtkodo",
+        "optional_postal_code_label": "Poŝtkodo (nedeviga)",
+        "postal_code_placeholder": "Poŝtkodo",
+        "postcode_label": "Poŝtkodo",
+        "optional_postcode_label": "Poŝtkodo (nedeviga)",
+        "postcode_placeholder": "Poŝtkodo",
+        "pincode_label": "PIN-kodo",
+        "optional_pincode_label": "PIN-kodo (nedeviga)",
+        "pincode_placeholder": "PIN-kodo",
+        "civic_number_warning": "Aldonu domnumeron se vi havas tian",
+        "optional_last_name_label": "Familia nomo (nedeviga)",
+        "different_shipping_address_label": "Sendu al alia adreso",
+        "different_shipping_address_text": "Uzu unufojan adreson por ĉi tiu mendo",
+        "change_company_location_link_label": "Ŝanĝi la lokon de la kompanio",
+        "change_location_link_label": "Ŝanĝi lokon",
+        "ship_to_company": "Sendu al {{companyName}}"
       },
       "order_summary": {
         "payment_terms_totals": {
@@ -927,6 +960,91 @@
         },
         "return_to_store": "Reiri al {{shopName}}",
         "return_to_store_simple": "Reveni al la vendejo"
+      },
+      "delivery_options": {
+        "free_total_label": "Senpaga",
+        "ship": "Ŝipo",
+        "ship_to_address": "Sendu al adreso",
+        "shipping_address": "Sendadreso",
+        "pick_up": "Prenu",
+        "pick_up_from_store": "Preno en vendejo",
+        "pick_up_locations": "Prenlokoj",
+        "pick_up_in_one_hour": "Kutime preta post 1 horo",
+        "pick_up_in_two_hours": "Kutime preta post 2 horoj",
+        "pick_up_in_four_hours": "Kutime preta post 4 horoj",
+        "pick_up_in_twenty_four_hours": "Kutime preta post 24 horoj",
+        "pick_up_in_two_to_four_days": "Kutime preta post 2-4 tagoj",
+        "pick_up_in_five_or_more_days": "Kutime preta post 5+ tagoj",
+        "pick_up_in_zero_to_two_hours": "Preta por reprenado post 2 horoj",
+        "pick_up_in_two_to_four_hours": "Preta por reprenado post 4 horoj",
+        "pick_up_immediately": "Preta por reprenado nun",
+        "pick_up_next_day": "Preta por reprenado la sekvan tagon",
+        "pickup_point_method_definition": "Sendu al kolektpunkto",
+        "retail_method_definition": "Podetala sendo",
+        "company_location_no_address_banner": "Mendoj sendataj al lokoj sen adreso estos senditaj por revizio.",
+        "none_method_definition": "Neniu sendo",
+        "subscription_pickup_information": "Ĉi tiu livermetodo validos por ĉiuj aĵoj en ĉi tiu mendo kaj por ĉiuj estontaj mendoj por ĉi tiu abono."
+      },
+      "customer_account": {
+        "not_user_label": "Ĉu ne %{first_name}?",
+        "have_an_account_label": "Ĉu vi havas konton?",
+        "sign_in_link_label": "Ensaluti",
+        "sign_out_link_label": "Elsaluti",
+        "save_my_information_label": "Konservu ĉi tiun informon por la sekva fojo",
+        "invalid_address": "La elektita adreso estas malvalida. %{update_address_link} aŭ elektu alian adreson.",
+        "incomplete_address": "La elektita adreso estas nekompleta. %{update_address_link} aŭ elektu alian adreson.",
+        "rollup_label": "Konto",
+        "rollup_accessibility_label": "Konto-opcioj",
+        "invalid_shipping_method_summary": "Elektu validan sendadreson por vidi disponeblajn sendometodojn",
+        "saved_address_option_description": {
+          "one": "Vi havas {{count}} konservitan adreson.",
+          "other": "Vi havas {{count}} konservitajn adresojn."
+        },
+        "saved_address_option_link": "Uzu konservitan adreson",
+        "saved_address_modal_title": "Uzu mian konservitan adreson"
+      },
+      "remote_merchandise_only": {
+        "title": "Kompletigu vian aĉeton",
+        "remote_only_notice": "Ĉi tiujn varojn vendas kaj sendas aliaj vendejoj. Kontrolu ĉe ĉiu vendejo por kompletigi vian aĉeton.",
+        "return_to_store_label": "Reveni al la vendejo",
+        "detail_item_label": {
+          "one": "{{count}} ero",
+          "other": "{{count}} eroj"
+        },
+        "checkout_on_shop_label": "Pagu ĉe %{shop_name}",
+        "single_shop_transition": "Redirektas vin al %{advertiser} por kompletigi vian aĉeton."
+      },
+      "stock": {
+        "page_title": "Stokregistro-problemoj",
+        "title": "Elĉerpita",
+        "items_unavailable_notice": "Kelkaj aĵoj jam ne haveblas.",
+        "product_column_header": "Produktoj",
+        "quantity_column_header": "Kvanto",
+        "price_column_header": "Prezo",
+        "status_column_header": "Statuso",
+        "removed_from_cart_notice": "Forigita el ĉaro",
+        "sold_out_label": "Elvendita",
+        "reduced_label": "Reduktita",
+        "reduced_with_quantity_label": "Nur %{quantity_available} restas",
+        "remove_from_cart_button_label": "Forigi el ĉaro",
+        "continue_shopping_button_label": "Daŭrigi",
+        "go_back_to_cart_button_label": "Reiru al mia ĉaro",
+        "remove": "Forigi",
+        "return_to_store_label": "Reveni al la vendejo",
+        "continue_cta_label": "Daŭrigi la kason",
+        "item_label": {
+          "one": "{{count}} ero",
+          "other": "{{count}} eroj"
+        },
+        "empty_cart_label": "Via ĉaro estas malplena",
+        "quantity_update": {
+          "page_title": "Kvanto-ĝisdatigo",
+          "title": "Kvanto-ĝisdatigo",
+          "description": "La disponeblaj kvantoj por ĉi tiuj aĵoj ŝanĝiĝis kaj estas ĝisdatigitaj en via korbo."
+        },
+        "unpurchasable_product": {
+          "title": "Neaĉetebla produkto"
+        }
       }
     },
     "pagination": {
@@ -1406,6 +1524,133 @@
           "invalid_email": "Enigu validan retpoŝtadreson",
           "invalid_code": "Enigu la ĝustan 6-ciferan kodon"
         }
+      }
+    },
+    "addresses": {
+      "billing_address_dropdown_placeholder": "Faktura adreso"
+    },
+    "address_form": {
+      "attention": "Atento",
+      "attention_company": "Firmao/atento",
+      "attention_help_text": "La nomo de persono aŭ fako",
+      "auto_complete_close_accessibility_label": "Fermi sugestojn",
+      "auto_complete_title": "Sugestoj",
+      "billing_address": "Uzi kiel fakturan adreson",
+      "cancel": "Nuligi",
+      "cancel_accessibility_label": "Nuligi redaktadon de adreso {{address}}",
+      "creation_success_notification": "Adreso aldonita",
+      "default_address": "Jen mia defaŭlta adreso",
+      "default_address_creation_success_notification": "Defaŭlta adreso aldonita",
+      "default_address_update_success_notification": "Defaŭlta adreso ĝisdatigita",
+      "loading_add_form_accessibility_message": "Ŝarĝante novan adresformularon",
+      "loading_edit_form_accessibility_message": "Ŝarĝante redaktan adresformularon",
+      "loading_form_accessibility_message": "Ŝarĝante adresformularon",
+      "loading_finished_accessibility_message": "Adresformularo ŝarĝiĝis",
+      "save": "Konservi",
+      "save_accessibility_label": "Konservi adreson {{address}}",
+      "section_title_accessibility_label": "Aldoni adreson",
+      "update_success_notification": "Adreso ĝisdatigita"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Firmaa nomo",
+        "company_card_section_accessibility_label": "Firmao"
+      },
+      "locations": {
+        "contact_email": "Retpoŝto",
+        "contact_list_title": "Homoj",
+        "contact_name": "Nomo",
+        "contact_permissions": "Permesoj",
+        "contact_phone_number": "Telefonnumero",
+        "location_picker_label": "Loknomo",
+        "location_picker_accessibility_label": "Loknomo: {{locationName}}",
+        "net_payment_terms_description": "{{name}} : pagoj ŝuldataj ene de {{numberOfDays}} tagoj",
+        "deposit_percentage": "deponejo de {{percentage}}",
+        "own_role_contact_name": "Vi",
+        "pagination": {
+          "load_more": "Ŝarĝi pli",
+          "load_more_accessibility_label": "Ŝargi pliajn lokojn"
+        },
+        "payment_details_title": "Pagdetaloj",
+        "payment_terms": "Pagkondiĉoj",
+        "permissions_label": "Viaj permesoj",
+        "permissions_title": "Permesoj",
+        "section_title": "Loko",
+        "shipping_address_required": "Aldonu sendadreson al ĉi tiu loko por komenci fari mendojn.",
+        "staff_and_permissions_title": "Kunlaborantaro kaj permesoj",
+        "tax_details_title": "Impostaj detaloj",
+        "tax_id": "Imposta identigilo",
+        "tax_exemptions": "Impostaj sendevigoj",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} pli",
+        "multiple_tax_exemptions_and": "kaj",
+        "tax_exemptions_modal_close": "Fermi",
+        "taxes_none": "Neniu",
+        "tax_exemptions_modal_button_accessibility_label": "Vidi ĉiujn impostajn sendevigojn"
+      },
+      "location_selection": {
+        "continue_to_store": "Daŭrigu konservi",
+        "description": "Se vi jam havas erojn en via ĉaro, ŝanĝo de lokoj povus influi la prezojn kaj kvantojn de la ĉaro.",
+        "description_switch_later": "Vi ĉiam povas ŝanĝi poste",
+        "list_accessibility_label": "Listo de lokoj",
+        "list_item_without_address_accessibility_label": "{{name}} : Neniu adreso",
+        "list_loading_accessibility_message": "Ŝarĝante liston de lokoj",
+        "list_loading_address_accessibility_message": "Ŝarĝante adreson por {{locationName}}",
+        "list_loading_finished_accessibility_message": "Listo de lokoj ŝarĝiĝis",
+        "loading_store_accessibility_message": "Irante al vendejo",
+        "no_location_title": "Nur personaj mendoj",
+        "no_location_description": "Vi jam ne plu rajtas fari mendojn por {{company}} . Vi ankoraŭ povas fari personajn mendojn.",
+        "no_locations_found": "Neniuj lokoj trovitaj",
+        "search": "Serĉu lokojn",
+        "search_location_title": "Elektu lokon",
+        "selection_cancel_button": "Nuligi",
+        "selection_confirmation_button": "Elektu lokon",
+        "selection_continue_button": "Daŭrigi",
+        "title": "Por kiu loko vi aĉetas?",
+        "title_choose_location": "Elektu lokon",
+        "clear_search": "Forigi serĉon",
+        "try_new_search": "Provu novan serĉon"
+      },
+      "addresses": {
+        "add_billing_address_button": "Aldoni fakturan adreson",
+        "add_billing_address_section_accessibility_label": "Aldoni fakturan adreson",
+        "add_shipping_address_button": "Aldoni sendadreson",
+        "add_shipping_address_section_accessibility_label": "Aldoni sendadreson",
+        "billing_address_card_title": "Faktura adreso",
+        "cancel_adding_billing_address_accessibility_label": "Nuligi aldonon de faktura adreso",
+        "cancel_adding_shipping_address_accessibility_label": "Nuligi aldonon de sendadreso",
+        "save_new_billing_address_accessibility_label": "Konservi fakturan adreson",
+        "save_new_shipping_address_accessibility_label": "Konservi sendadreson",
+        "shipping_address_card_title": "Sendadreso"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Kaŝi ĉion",
+          "show_all": "Montri ĉion",
+          "hide_all_accessibility_label": "Kaŝi ĉiujn mendojn en revizio",
+          "show_all_accessibility_label": "Montri ĉiujn mendojn en revizio",
+          "show_all_orders_in_review": "Montri ĉiujn mendojn en revizio",
+          "show_less_orders_in_review": "Montri malpli da mendoj en revizio",
+          "title": "Atendanta",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Vi ne havas atendantajn mendojn",
+            "pending_orders": {
+              "one": "Vi havas {{count}} atendantan mendon",
+              "other": "Vi havas {{count}} atendantajn mendojn"
+            },
+            "more_than_pagination_length": "Vi havas pli ol {{count}} atendantajn mendojn"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}} +",
+          "pagination": {
+            "nav_accessibility_label": "Navigaciaj butonoj por mendoj en revizio"
+          }
+        },
+        "order_list_column_headers_location": "Loko",
+        "order_list_column_headers_contact": "Kontakto",
+        "order_list_column_headers_status": "Statuso",
+        "removed_company_contact_tooltip": "Forigita de la kompanio"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "Konfirmita {{date}} de mendo {{draftOrderName}}"
       }
     }
   },

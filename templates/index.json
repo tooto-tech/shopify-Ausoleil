@@ -297,7 +297,6 @@
         "slide_xrE3gC",
         "slide_w7wyXP"
       ],
-      "disabled": true,
       "name": "t:names.slideshow",
       "settings": {
         "icons_style": "arrows_large",
@@ -2156,6 +2155,7 @@
         "group_wqzHbq",
         "group_e67V3P"
       ],
+      "disabled": true,
       "name": "t:names.split_showcase",
       "settings": {
         "content_direction": "row",
@@ -2303,6 +2303,7 @@
       "block_order": [
         "group_wMg4At"
       ],
+      "disabled": true,
       "name": "底部轮播上方的标题与文字",
       "settings": {
         "content_direction": "column",
@@ -2455,6 +2456,7 @@
           "block_order": []
         }
       },
+      "disabled": true,
       "name": "t:names.blog_posts_carousel",
       "settings": {
         "blog": "news",
@@ -3159,6 +3161,7 @@
         "group_dqqnzz",
         "group_MTcbkT"
       ],
+      "disabled": true,
       "name": "t:names.icons_with_text",
       "settings": {
         "content_direction": "row",

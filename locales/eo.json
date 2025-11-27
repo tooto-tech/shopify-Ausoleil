@@ -872,7 +872,22 @@
           "title": "Kontaktinformoj estas malvalidaj",
           "header": "Por ĝisdatigi viajn informojn, {{emailLink}} .",
           "email_link": "kontaktu nin"
-        }
+        },
+        "return_to_cart_link_text": "Reiri al ĉaro",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} por ĝisdatigi la kvantojn",
+        "subscription_changed": "Unu el viaj abonoj ŝanĝiĝis.",
+        "company_location_changed": "Via ĉaro estis ĝisdatigita. Reviziu vian mendon antaŭ ol sendi ĝin.",
+        "company_location_changed_product_removed": "Via ĉaro estis ĝisdatigita ĉar iuj produktoj ne haveblas ĉe ĉi tiu loko. Reviziu vian mendon antaŭ ol sendi ĝin.",
+        "violations_title": "{{violation}} mankas aŭ estas malvalida",
+        "individual_violations_title": {
+          "DeliveryViolations": "Sendadreso",
+          "PaymentViolations": "Faktura adreso",
+          "OtherViolations": "Mendo-Informoj",
+          "UnhandledViolations": "Mendo-Informoj"
+        },
+        "all_violations_content": "Telefonu aŭ sendu al ni {{emailLink}} mesaĝon por ĝisdatigi ĉi tiun informon kaj kompletigi vian mendon:",
+        "all_violations_email_link": "retpoŝto",
+        "editable_shipping_address_violations_message_title": "Aldonu ĉi tiujn informojn por kompletigi vian mendon:"
       },
       "review_address_modal": {
         "title": "Revizia adreso",
@@ -1044,6 +1059,163 @@
         },
         "unpurchasable_product": {
           "title": "Neaĉetebla produkto"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "week": {
+            "one": "semajno",
+            "other": "%{count} semajnoj"
+          },
+          "month": {
+            "one": "monato",
+            "other": "%{count} monatoj"
+          },
+          "year": {
+            "one": "jaro",
+            "other": "%{count} jaroj"
+          }
+        },
+        "recurring_totals": "%{total_price} ĉiun %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "Unua pago %{total_price_with_discount}, poste %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Unua pago %{total_price}",
+            "other": "Unuaj %{count} pagoj po %{total_price}"
+          },
+          "following_cycles": ", tiam %{total_price} ĉiun %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", poste %{count} pago je %{total_price}",
+            "other": ", tiam %{count} pagoj je %{total_price} ĉiu"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "Pagmetodoj",
+        "title": "Pagmetodoj",
+        "update_card_button_label": "Ĝisdatigu karton",
+        "delete_customer_mandate": {
+          "generic_error": "Estis problemo prilaborante vian peton.",
+          "success_message": "Via pagmetodo estis sukcese forigita"
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "Tro multaj provoj",
+          "description": "Bonvolu reprovi post kelkaj minutoj"
+        },
+        "line_to_check_out": "Vi estas en vico por eliri el la kaso",
+        "cart_summary_heading": "Via ĉaro",
+        "merchandise": {
+          "available": "Havebla",
+          "sold_out": "Elvendita"
+        },
+        "inventory": {
+          "partial_inventory_banner": "Parto de via ĉaro estas elvendita kaj ne estos aĉetebla ĉe la kaso.",
+          "sold_out": {
+            "heading": "Via ĉaro estas elvendita",
+            "storefront_body": "Reiru al la vendejo por daŭrigi aĉetadon",
+            "no_storefront_body": "Bedaŭrinde la aĵo, kiun vi volas aĉeti, jam ne haveblas.",
+            "link": "Reen al la vendejo"
+          }
+        },
+        "title": "Atendovico",
+        "time_to_checkout_title": "Tempo por kasi - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "Kalkulante laŭtaksan atendtempon",
+          "less_than_one": "Laŭtaksa atendtempo: Malpli ol minuto",
+          "one": "Laŭtaksa atendtempo: {{count}} minuto",
+          "other": "Laŭtaksa atendtempo: {{count}} minutoj"
+        },
+        "last_checked": "(Laste kontrolita: {{time}} )",
+        "footer": {
+          "heading": "Ne refreŝigu ĉi tiun paĝon, ĝi ĝisdatiĝos aŭtomate.",
+          "body": "Aĵoj en via ĉaro ne estas rezervitaj ĝis vi finas la kason."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Okazis problemo prilaborante vian peton, bonvolu kontakti la butikposedanton."
+      },
+      "no_address_location": {
+        "title": "Loko sen adreso",
+        "header": "Vi ne havas liveradreson por ĉi tiu loko",
+        "alt_header": "Mankas sendoadreso",
+        "message": "Kontaktu nin por aldoni adreson por ĉi tiu loko por kompletigi la kason.",
+        "email_us_button_label": "Sendu al ni retpoŝton"
+      },
+      "order_errors": {
+        "creation_failure": "Estis problemo kreante vian mendon. Provu denove, aŭ kontaktu nin por pliaj detaloj.",
+        "network_failure": "Via mendo ne povis esti sendita pro eraro en la reto. Kontrolu vian konekton kaj provu denove.",
+        "inventory_reservation_failure": "Kelkaj aĵoj jam ne haveblas."
+      },
+      "session_errors": {
+        "session_not_unique": "Estis problemo prilaborante vian mendon. Refreŝigu ĉi tiun paĝon por reveni al la vendejo.",
+        "session_already_finished": "Ĉi tiu mendo jam estis sendita. Vi povas reveni al la vendejo por komenci novan mendon."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "Estis problemo prilaborante vian mendon. Provu denove post kelkaj minutoj."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Fermita",
+        "business_hours": "Malfermhoroj",
+        "no_business_hours": "Neniuj malfermhoroj haveblaj",
+        "open_twenty_four_hours": "Malfermite 24/7",
+        "title": "Prenpunkto",
+        "or": "aŭ",
+        "search_button": "Serĉi",
+        "address_label": "Adreso",
+        "selector_tabs": "Elektilo de prenopunkto",
+        "selector_tab_map": "Mapo",
+        "selector_tab_list": "Listo",
+        "could_not_resolve_address": "Via adreso ne estis trovebla. Provu denove aŭ uzu alian adreson.",
+        "no_pickup_points_near_you": "Neniuj kolektpunktoj trovitaj proksime al la elektita adreso",
+        "no_pickup_points_near_location": "Neniuj kolektpunktoj trovitaj proksime al via loko",
+        "pickup_unavailable_banner_title": {
+          "one": "Neniuj kolektpunktoj disponeblas por via aĵo",
+          "other": "Neniuj kolektpunktoj disponeblas por viaj aĵoj"
+        },
+        "no_pickup_points_found": "Neniuj kolektpunktoj trovitaj",
+        "paginator": {
+          "next_accessibility_label": "Sekva paĝo",
+          "previous_accessibility_label": "Antaŭa paĝo",
+          "header": {
+            "one": "Montras %{first} - %{last} el %{count} poento",
+            "other": "Montras %{first} - %{last} el %{count} poentoj"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} el %{count} poento",
+            "other": "%{pickup_point_index} el %{count} poentoj"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} el %{count} poento",
+            "other": "%{first} - %{last} el %{count} poentoj"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} kolektpunkto proksime al via loko",
+          "other": "%{count} kolektpunktoj proksime de via loko"
+        },
+        "change": "Ŝanĝi lokon",
+        "waiting_on_pickup_point_location_notice": "Serĉante kolektpunktojn...",
+        "geolocation": {
+          "shared_location_button": "Uzu mian lokon",
+          "errors": {
+            "unsuported_by_browser": "Via retumilo ne subtenas geolokigon. Provu denove aŭ uzu alian retumilon.",
+            "permission_not_allowed": "Permesu dividi vian lokon.",
+            "permission_denied": "Ne eblis akiri vian lokon. Provu denove."
+          }
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Estis problemo kun nia kaso",
+          "message": "Refreŝigu ĉi tiun paĝon aŭ reprovu post kelkaj minutoj",
+          "action": {
+            "cta": "Refreŝigi paĝon"
+          },
+          "request_id": "Peto-ID: {{requestId}}"
         }
       }
     },

@@ -43,12 +43,12 @@
               "type": "spacer",
               "name": "t:names.spacer",
               "settings": {
-                "size": "pixel",
-                "percent_size": 100,
+                "size": "percent",
+                "percent_size": 88,
                 "pixel_size": 400,
                 "custom_mobile_size": true,
-                "size_mobile": "percent",
-                "percent_size_mobile": 4,
+                "size_mobile": "pixel",
+                "percent_size_mobile": 21,
                 "pixel_size_mobile": 236
               },
               "blocks": {}

@@ -29,6 +29,18 @@
   if section.settings.icons_style == 'none' or section.blocks.size <= 1
     assign show_arrows = false
   endif
+
+  assign custom_class = section.settings.custom_class | strip
+  if custom_class == blank
+    assign custom_class = 'slideshow-' | append: section.id
+  endif
+%}
+
+{% liquid
+  assign final_class = custom_class
+  if slideshow_class != blank
+    assign final_class = slideshow_class | append: ' ' | append: custom_class
+  endif
 %}
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
@@ -37,7 +49,7 @@
   style="{% render 'spacing-padding', settings: section.settings %}"
 >
   {% render 'slideshow',
-    class: slideshow_class,
+    class: final_class,
     controls: controls,
     show_arrows: show_arrows,
     icon_style: section.settings.icons_style,
@@ -45,7 +57,11 @@
     autoplay_speed: section.settings.autoplay_speed,
     slides: slides,
     slide_count: section.blocks.size,
-    slide_size: section.settings.slide_height
+    slide_size: section.settings.slide_height,
+    custom_class: custom_class,
+    slide_height: section.settings.slide_height,
+    slide_aspect_ratio_desktop: section.settings.slide_aspect_ratio_desktop,
+    slide_aspect_ratio_mobile: section.settings.slide_aspect_ratio_mobile
   %}
 </div>
 
@@ -158,6 +174,10 @@
           "label": "t:options.auto"
         },
         {
+          "value": "manual",
+          "label": "手动"
+        },
+        {
           "value": "small",
           "label": "t:options.small"
         },
@@ -172,6 +192,29 @@
       ],
       "default": "medium",
       "label": "t:settings.height"
+    },
+    {
+      "type": "text",
+      "id": "slide_aspect_ratio_desktop",
+      "label": "桌面端宽高比",
+      "info": "例如: 1440 / 640 或 2.25 (支持分数格式或小数格式)",
+      "default": "1440 / 640",
+      "visible_if": "{{ section.settings.slide_height == 'manual' }}"
+    },
+    {
+      "type": "text",
+      "id": "slide_aspect_ratio_mobile",
+      "label": "移动端宽高比",
+      "info": "例如: 750 / 850 或 0.88 (支持分数格式或小数格式)",
+      "default": "750 / 850",
+      "visible_if": "{{ section.settings.slide_height == 'manual' }}"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "自定义 CSS 类名",
+      "info": "用于样式隔离，留空将自动生成",
+      "default": ""
     },
     {
       "type": "header",

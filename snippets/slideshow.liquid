@@ -21,6 +21,10 @@
   @param {string} [arrows_position] - The position of the arrows, defaults to 'bottom'
   @param {string} [attributes] - Additional attributes to add to the slideshow component
   @param {boolean} [header] - The title of the slideshow
+  @param {string} [custom_class] - Custom CSS class for style isolation
+  @param {string} [slide_height] - Slide height setting (auto, manual, small, medium, large)
+  @param {string} [slide_aspect_ratio_desktop] - Desktop aspect ratio for manual mode
+  @param {string} [slide_aspect_ratio_mobile] - Mobile aspect ratio for manual mode
 
   @example
   {% render 'slideshow', slides: slides, slide_count: collection.products.size, ref: 'mobileSlideshow' %}
@@ -28,6 +32,96 @@
 
 {% assign class = class | strip %}
 {% assign style = style | strip %}
+{% liquid
+  assign custom_class = custom_class | default: '' | strip
+  if custom_class == blank and slide_height == 'manual'
+    assign custom_class = 'slideshow-manual'
+  endif
+%}
+
+{% if slide_height == 'manual' %}
+  {% liquid
+    assign desktop_input = slide_aspect_ratio_desktop | strip
+    assign mobile_input = slide_aspect_ratio_mobile | strip
+
+    # 解析桌面端宽高比
+    assign desktop_aspect_ratio = 2.25
+    if desktop_input != blank
+      # 检查是否是分数格式 (如 "1440 / 640" 或 "1440/640")
+      assign parts = desktop_input | split: '/'
+      if parts.size == 2
+        assign width_str = parts[0] | strip
+        assign height_str = parts[1] | strip
+        assign width_num = width_str | plus: 0
+        assign height_num = height_str | plus: 0
+        if height_num > 0
+          # 先乘以10000保持精度，然后除以高度，再除以10000
+          assign desktop_aspect_ratio_temp = width_num | times: 10000 | divided_by: height_num
+          assign desktop_aspect_ratio = desktop_aspect_ratio_temp | divided_by: 10000.0
+        endif
+      else
+        # 尝试直接作为数字解析
+        assign desktop_aspect_ratio = desktop_input | plus: 0.0
+        if desktop_aspect_ratio == 0
+          assign desktop_aspect_ratio = 2.25
+        endif
+      endif
+    endif
+
+    # 解析移动端宽高比
+    assign mobile_aspect_ratio = 0.8823529411764706
+    if mobile_input != blank
+      # 检查是否是分数格式
+      assign parts = mobile_input | split: '/'
+      if parts.size == 2
+        assign width_str = parts[0] | strip
+        assign height_str = parts[1] | strip
+        assign width_num = width_str | plus: 0
+        assign height_num = height_str | plus: 0
+        if height_num > 0
+          # 先乘以10000保持精度，然后除以高度，再除以10000
+          assign mobile_aspect_ratio_temp = width_num | times: 10000 | divided_by: height_num
+          assign mobile_aspect_ratio = mobile_aspect_ratio_temp | divided_by: 10000.0
+        endif
+      else
+        # 尝试直接作为数字解析
+        assign mobile_aspect_ratio = mobile_input | plus: 0.0
+        if mobile_aspect_ratio == 0
+          assign mobile_aspect_ratio = 0.8823529411764706
+        endif
+      endif
+    endif
+  %}
+  {% style %}
+    .{{ custom_class }} slideshow-slides[size="manual"] {
+      aspect-ratio: {{ desktop_aspect_ratio }} !important;
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+    }
+    .{{ custom_class }} slideshow-slides[size="manual"] > slideshow-slide {
+      aspect-ratio: {{ desktop_aspect_ratio }} !important;
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+    }
+    .{{ custom_class }} slideshow-slides[size="manual"] .slide__image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    @media screen and (max-width: 749px) {
+      .{{ custom_class }} slideshow-slides[size="manual"] {
+        aspect-ratio: {{ mobile_aspect_ratio }} !important;
+      }
+      .{{ custom_class }} slideshow-slides[size="manual"] > slideshow-slide {
+        aspect-ratio: {{ mobile_aspect_ratio }} !important;
+      }
+    }
+  {% endstyle %}
+{% endif %}
 
 <slideshow-component
   {% if ref != blank %}

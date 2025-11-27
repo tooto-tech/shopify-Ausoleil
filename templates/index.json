@@ -126,7 +126,7 @@
                     "text": "<p>It’s time to take off the sunnies<br/>you’ve been wearing all day<br/></p>",
                     "width": "100%",
                     "max_width": "normal",
-                    "alignment": "left",
+                    "alignment": "center",
                     "type_preset": "custom",
                     "font": "var(--font-body--family)",
                     "font_size": "3rem",

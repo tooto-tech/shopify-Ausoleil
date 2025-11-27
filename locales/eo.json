@@ -685,7 +685,18 @@
         "errors": {
           "invalid": {
             "billing_must_match_shipping": "Devas kongrui kun la senda adreso",
-            "billing_zip": "Enigu validan fakturan adreson Poŝtkodon"
+            "billing_zip": "Enigu validan fakturan adreson Poŝtkodon",
+            "shipping_address": "Enigu validan sendadreson",
+            "billing_address": "Enigu validan fakturan adreson",
+            "shipping_option": "Elektu validan sendokoston",
+            "email": "Enigu validan retpoŝtadreson",
+            "zone": "Enigu validan ŝtaton / provincon",
+            "billing_zone": "Enigu validan fakturan adreson, ŝtaton / provincon",
+            "emirate": "Enigu validan emirlandon",
+            "postal_code": "Enigu validan poŝtkodon",
+            "phone": "Enigu validan telefonnumeron",
+            "billing_phone": "Enigu validan fakturan adreson, telefonnumeron",
+            "reduction_code": "Enigu validan rabato-kodon aŭ donackarton"
           },
           "missing": {
             "first_name": "Enigu antaŭnomon",
@@ -712,13 +723,49 @@
             "last_name_too_long": "Familia nomo enhavas tro multajn literojn",
             "address_too_long": "Adreslinio estas tro longa"
           },
-          "select_different_shipping_address_to_resolve_errors": "Via sendo-adreso estas malvalida. Elektu alian adreson aŭ uzu novan."
+          "select_different_shipping_address_to_resolve_errors": "Via sendo-adreso estas malvalida. Elektu alian adreson aŭ uzu novan.",
+          "unavailable": {
+            "title": "{{walletName}} ne havebla",
+            "description": "{{walletName}} ne estis disponebla. Uzu alian pagmetodon aŭ provu denove poste.",
+            "instructions": "Estis problemo kun {{walletName}} . Reiru al la vendejo por provi denove aŭ pagu alimaniere.",
+            "unavailable_for_country": "{{walletName}} ne haveblas en {{countryName}} . Elektu alian pagmetodon por kompletigi vian aĉeton."
+          },
+          "unavailable_terminal": {
+            "instructions": "{{walletName}} nuntempe ne haveblas por via mendo. Por daŭrigi vian aĉeton, elektu alian kasmetodon."
+          },
+          "generic": "Estis problemo kun {{walletName}} . Provu denove aŭ uzu alian pagmetodon.",
+          "discount_code": "Ne eblas apliki ĉi tiun rabatan kodon. Bonvolu kontroli vian kodon kaj provi denove.",
+          "terminal": "Estis problemo kun {{walletName}} . Bonvolu uzi alian pagmetodon.",
+          "detour": {
+            "stock_problems": "Kelkaj aĵoj ne plu haveblas. Fermu {{walletName}} kaj provu denove.",
+            "price_change": "Kelkaj prezoj ŝanĝiĝis. Fermu {{walletName}} por revizii vian mendon kaj provu denove.",
+            "queue": "Vi estis metita en atendovicon por kaso. Fermu {{walletName}} por daŭrigi.",
+            "currency_change": "Vi ne povas uzi alian adreson kun {{walletName}} . Uzu la originalan adreson, aŭ provu alian pagmetodon."
+          },
+          "unsupported": {
+            "address": "La komercisto ne povas liveri al ĉi tiu adreso",
+            "wallet_is_unavailable": "Ne eblas uzi {{walletName}} kun ĉi tiu adreso. Elektu alian adreson aŭ fermu {{walletName}} por kompletigi vian aĉeton.",
+            "postal_code": "Ĉi tiu loko ne estas subtenata"
+          },
+          "outdated": {
+            "shipping_method": "La sendokostoj ŝanĝiĝis por via mendo. Reviziu vian elekton.",
+            "payment_terms": "La pagkondiĉoj ŝanĝiĝis. Bonvolu revizii vian mendon."
+          }
         },
         "scrim": {
           "continue_purchase_in_window": "Daŭrigu vian aĉeton en la fenestro {{walletName}}",
           "and_return_to_checkout": "kaj revenu al la Kaso",
           "cancel": "Nuligi"
-        }
+        },
+        "return_to_store": "Reveni al la vendejo",
+        "return_to_checkout": "Reiri al kaso",
+        "redirect_hint": "Vi estos petita ensaluti per {{walletName}} .",
+        "logged_in": "Konektita al {{email}}",
+        "shipping_line_label": "Sendo",
+        "payment_in_progress_title": "Pago en progreso",
+        "payment_in_progress_body": "Via pago estas prilaborata. Via mendo baldaŭ estos kompletigita.",
+        "call_to_action": "Pagu per {{walletName}}",
+        "redirection_notice": "Post alklako de \" {{buttonLabel}} \", vi estos redirektita al {{walletName}} por sekure kompletigi vian aĉeton."
       },
       "note": {
         "length_exceeds_maximum": "Malpligrandigu la grandecon de la noto al 5000 aŭ malpli da signoj."
@@ -773,6 +820,113 @@
       "tooltip": {
         "accessibility_label_context": "Pliaj informoj pri %{context}",
         "additional_payment_methods": "Pliaj pagmetodoj"
+      },
+      "notice_banner": {
+        "editable_shipping_address_violations_message_footer": "Por konstante ĝisdatigi la adreson por ĉi tiu loko, {{emailLink}} .",
+        "editable_shipping_address_violations_email_link": "kontaktu nin",
+        "shipping_address_incomplete_title": "Sendadreso estas nekompleta",
+        "calculating_shipping": "Sendkostoj ankoraŭ kalkulatas. Provu denove post kelkaj sekundoj. Vi ne estis ŝargita.",
+        "calculating_taxes": "Impostoj ankoraŭ kalkulatas. Provu denove post kelkaj sekundoj. Vi ne estis ŝargita.",
+        "generic_processing_error": {
+          "title": "Estis problemo pri la prilaborado de via mendo",
+          "body": "Vi ne estis ŝargita. Provu denove aŭ uzu alian pagmetodon."
+        },
+        "payment_method_not_available_with_payment_terms": "La pagmetodo, kiun vi elektis, ne plu haveblas, ĉar la pago por ĉi tiu mendo nun estas laŭ la kondiĉoj {{paymentTerms}}",
+        "payment_method_not_available_with_fulfillment_terms": "La pagmetodo, kiun vi elektis, ne plu haveblas, ĉar pago por ĉi tiu mendo nun estas pagenda je plenumo.",
+        "payment_method_not_available_with_fixed_terms": "La pagmetodo, kiun vi elektis, ne plu haveblas, ĉar pago por ĉi tiu mendo estas pagenda pli poste.",
+        "payment_method_not_available_with_review_requirement": "La pagmetodo, kiun vi elektis, ne plu haveblas, ĉar pago estos pagenda post kiam via mendo estos konfirmita.",
+        "contact_information": {
+          "title": "Kontaktinformoj estas malvalidaj",
+          "header": "Por ĝisdatigi viajn informojn, {{emailLink}} .",
+          "email_link": "kontaktu nin"
+        }
+      },
+      "review_address_modal": {
+        "title": "Revizia adreso",
+        "subtitle": {
+          "one": "Ĉi tiu mendo estos sendita al la adreso donita de {{merchant}} .",
+          "other": "Ĉi tiu mendo estos sendita al adreso provizita de {{merchant}} . Elektu sendadreson."
+        },
+        "subtitle_no_match": "Ĉi tiu adreso ne kongruas kun iu ajn el viaj konservitaj adresoj.",
+        "subtitle_must_use": "Via mendo estos sendita al ĉi tiu adreso.",
+        "continue": "Daŭrigu kun ĉi tiu adreso",
+        "use_saved_address": "Uzu malsaman adreson",
+        "return_to_cart": "Reiri al ĉaro"
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Recenzo",
+          "link_label": "Kondiĉoj de uzado {{partnerDisplayName}}"
+        }
+      },
+      "online_store_chat": {
+        "title": "Demandoj? Babilu kun ni"
+      },
+      "local_pickup": {
+        "location_address_search_label": "Adreso",
+        "location_information": {
+          "one": "Estas %{count} loko kun varoj proksime al vi",
+          "other": "Estas %{count} lokoj kun varoj proksime al vi"
+        },
+        "toggle_location": "Ŝanĝi lokon",
+        "or": "AŬ",
+        "cancel": "Nuligi",
+        "your_location": "via loko",
+        "search_button": "Trovu butikojn",
+        "no_stores_found": "Neniuj vendejoj trovitaj",
+        "all_stores_far_away": {
+          "title": "La plej proksimaj lokoj estas pli ol %{distance} for",
+          "description": "Elektu lokon aŭ %{ship_to_address_link}",
+          "ship_to_address_link": "sendi al adreso"
+        },
+        "selected_pickup_option_no_longer_available": {
+          "title": "Via antaŭe elektita loko jam ne estas disponebla.",
+          "description": "Elektu novan lokon aŭ %{ship_to_address_link}",
+          "ship_to_address_link": "sendi al adreso"
+        },
+        "could_not_resolve_address": "Via adreso ne estis trovebla. Provu denove aŭ uzu alian adreson.",
+        "paginator": {
+          "accessibility_label": "Loka prenopaĝigo",
+          "previous": "Antaŭa paĝo",
+          "next": "Sekva paĝo",
+          "label": {
+            "one": "%{first} - %{last} el %{count} vendejo",
+            "other": "%{first} - %{last} el %{count} vendejoj"
+          }
+        },
+        "reveal_more_label": {
+          "one": "Montri %{count} plian lokon",
+          "other": "Montru %{count} pliajn lokojn"
+        }
+      },
+      "captcha": {
+        "title": "Kompletigu la CAPTCHA-on por daŭrigi",
+        "errors": {
+          "not_solved": "Kompletigu la CAPTCHA-on por daŭrigi"
+        }
+      },
+      "clipboard": {
+        "copied": "Kopiita",
+        "failed_to_copy": "Malsukcesis kopii"
+      },
+      "discount_errors": {
+        "generic_error": "Via mendo ne povis esti prilaborita ĉar via rabato-kodo jam ne haveblas. Kontrolu la sumon de via mendo kaj provu denove."
+      },
+      "b2b_errors": {
+        "lost_b2b_purchasing_permissions": "Vi jam ne plu havas permeson fari B2B-mendojn. %{logout_url} por fari personan mendon anstataŭe.",
+        "log_out_link_text": "Elsaluti",
+        "lost_permissions_subtitle": "Vi jam ne plu havas permeson fari B2B-mendojn. Elsaluti por fari personan mendon.",
+        "lost_permissions_title": "Neniuj lokpermesoj"
+      },
+      "shop_pay_external": {
+        "title": "Butiko Pagi Kaso",
+        "errors": {
+          "problem_loading": "Problemo ŝargi Shop Pay",
+          "try_again_later": "Kontrolu vian konekton aŭ fermu ĉi tiun fenestron kaj provu denove post kelkaj momentoj.",
+          "checkout_has_expired": "Via kaso eksvalidiĝis. Fermu ĉi tiun fenestron kaj provu pagi denove de {{shopName}} ."
+        },
+        "return_to_store": "Reiri al {{shopName}}",
+        "return_to_store_simple": "Reveni al la vendejo"
       }
     },
     "pagination": {

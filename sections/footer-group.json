@@ -174,7 +174,7 @@
                     "horizontal_alignment": "flex-start",
                     "vertical_alignment": "center",
                     "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "horizontal_alignment_flex_direction_column": "flex-end",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 12,
                     "width": "fill",
@@ -232,7 +232,7 @@
               "type": "group",
               "name": "下方区域",
               "settings": {
-                "content_direction": "column",
+                "content_direction": "row",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
@@ -418,10 +418,10 @@
                   "type": "group",
                   "name": "图标列表",
                   "settings": {
-                    "content_direction": "column",
+                    "content_direction": "row",
                     "vertical_on_mobile": true,
                     "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
+                    "vertical_alignment": "flex-start",
                     "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
@@ -453,7 +453,76 @@
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "menu_TQWALD": {
+                      "type": "menu",
+                      "name": "t:names.menu",
+                      "settings": {
+                        "menu": "collection",
+                        "heading": "Collection",
+                        "menu_spacing": 12,
+                        "show_as_accordion": false,
+                        "accordion_icon": "caret",
+                        "accordion_dividers": false,
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "heading_preset": "h3",
+                        "link_preset": "paragraph",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "menu_8LRFJf": {
+                      "type": "menu",
+                      "name": "t:names.menu",
+                      "settings": {
+                        "menu": "support",
+                        "heading": "Support",
+                        "menu_spacing": 12,
+                        "show_as_accordion": false,
+                        "accordion_icon": "caret",
+                        "accordion_dividers": false,
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "heading_preset": "h3",
+                        "link_preset": "paragraph",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "menu_eckKBY": {
+                      "type": "menu",
+                      "name": "t:names.menu",
+                      "settings": {
+                        "menu": "about",
+                        "heading": "About",
+                        "menu_spacing": 12,
+                        "show_as_accordion": false,
+                        "accordion_icon": "caret",
+                        "accordion_dividers": false,
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "heading_preset": "h3",
+                        "link_preset": "paragraph",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "menu_TQWALD",
+                    "menu_8LRFJf",
+                    "menu_eckKBY"
+                  ]
                 }
               },
               "block_order": [

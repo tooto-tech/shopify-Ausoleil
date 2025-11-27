@@ -939,17 +939,6 @@
         "padding-block-end": 0
       }
     },
-    "custom_liquid_tUrFU8": {
-      "type": "custom-liquid",
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "{% assign current_variant = product.selected_or_first_available_variant %}\n\n{% if current_variant.inventory_management == 'shopify' and current_variant.inventory_quantity > 0 and current_variant.inventory_quantity < 10 %}\n  <div style=\"color: #d32f2f; border: 1px solid #d32f2f; background-color: #ffebee; padding: 10px; margin: 10px 0; font-weight: bold; text-align: center;\">\n    🔥 手慢无！当前库存仅剩 {{ current_variant.inventory_quantity }} 件\n  </div>\n{% endif %}",
-        "color_scheme": "",
-        "section_width": "page-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "custom_liquid_8CD76N": {
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
@@ -1051,6 +1040,17 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "custom_liquid_WXXLb9": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"text-align: center;\">\n  <!-- classic -->\n  <div style=\"\n    font-family: 'Dream Orphans';\n    font-size: 43.2px;\n    font-weight: normal;\n    line-height: normal;\n    letter-spacing: 0px;\n    color: #000000;\n  \">\n    classic\n  </div>\n\n  <!-- STYLE -->\n  <div style=\"\n    font-family: 'Dream Orphans';\n    font-size: 21.6px;\n    font-weight: bold;\n    line-height: normal;\n    letter-spacing: 0px;\n    color: #000000;\n  \">\n    STYLE\n  </div>\n\n  <!-- EVERYDAY -->\n  <div style=\"\n    font-family: 'Dream Orphans';\n    font-size: 14.4px;\n    font-weight: bold;\n    line-height: normal;\n    letter-spacing: 0px;\n    color: #000000;\n  \">\n    EVERYDAY\n  </div>\n</div>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
@@ -1060,8 +1060,8 @@
     "product_list_MCD4cw",
     "section_Ncd7GN",
     "custom_liquid_jPPLLC",
-    "custom_liquid_tUrFU8",
     "custom_liquid_8CD76N",
-    "hero_CYEYgK"
+    "hero_CYEYgK",
+    "custom_liquid_WXXLb9"
   ]
 }

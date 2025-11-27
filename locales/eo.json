@@ -560,7 +560,66 @@
         "deferred_balance_info": {
           "title": "La saldo de {{amount_due}} estas pagenda je {{due_at}}",
           "due_on_fulfillment_title": "La resto de {{amount_due}} estas pagenda post plenumo."
-        }
+        },
+        "title": "Mendresumo",
+        "group_title_label": "Parto de \"%{group_title}\"",
+        "for_add_on": "Por: %{group_title}",
+        "from_shop_heading": "De %{shop_name}",
+        "from_other_stores_heading": "De aliaj vendejoj",
+        "number_items": {
+          "one": "%{count} ero",
+          "other": "%{count} eroj"
+        },
+        "view_all_items": {
+          "one": "Vidi %{count} elementon",
+          "other": "Vidi ĉiujn %{count} erojn"
+        },
+        "more_items_modal": {
+          "search_item": "Serĉi",
+          "clear_search": "Forigi serĉon",
+          "empty_results": "Neniuj rezultoj trovitaj por \"%{searchText}\". Kontrolu la ortografion aŭ uzu alian vorton aŭ frazon.",
+          "number_items_shown": "%{shownNumber} el %{totalNumber} eroj"
+        },
+        "order_name_label": "Mendo %{name}",
+        "shopping_cart_label": "Aĉetĉaro",
+        "discount_title": "Rabato",
+        "discount_title_stacking": {
+          "one": "Rabato",
+          "other": "Rabatoj"
+        },
+        "discount_order_stacking": {
+          "one": "Mendo-rabato",
+          "other": "Mendaj rabatoj"
+        },
+        "discount_label": "Rabatkodo",
+        "discount_not_found": "Ne eblas trovi validan rabaton kongruantan kun la enigita kodo",
+        "discount_placeholder": "Rabatkodo",
+        "discount_code_applied": "Rabatkodo aplikita",
+        "discount_code_allocations_mismatch": "Via rabato-kodo <strong style=\"text-transform:uppercase\">%{code}</strong> ŝanĝiĝis. Kontrolu vian ĉaron kaj provu denove.",
+        "order_discounts_apply_to_local_shop": "Mendorabatoj validas nur por varoj de %{shop_name}",
+        "gift_card_applied": "Donackarto aplikita",
+        "enter_shipping_address": "Enigu sendadreson",
+        "gift_card_title": "Donackarto",
+        "gift_card_label": "Donackarto",
+        "gift_card_placeholder": "Donackarto",
+        "gift_card_and_discount_title": "Rabatkodo aŭ donackarto",
+        "gift_card_and_discount_label": "Rabatkodo aŭ donackarto",
+        "gift_card_and_discount_placeholder": "Rabatkodo aŭ donackarto",
+        "gift_cards_apply_to_local_shop": "Donackartoj validas nur por varoj de %{shop_name}",
+        "add_discount_or_gift_card": "Aldonu rabato-kodon aŭ donackarton",
+        "remove_gift_card_label": "Klara donackarto",
+        "remove_discount_label": "Forigi rabaton",
+        "return_restocking_fee_label": "Reproviza kotizo",
+        "return_shipping_fee_label": "Revensendo",
+        "free_shipping_discount_label": "Senpaga sendo",
+        "applied_free_shipping_discount_label": "Aplikita",
+        "apply_discount_button_label": "Apliki",
+        "applied_discount_message": "%{amount} rabato de la tuta mendoprezo",
+        "discount_has_been_applied": "Rabato aplikita",
+        "discount_has_been_removed": "Rabato estis forigita",
+        "gift_card_has_been_applied": "Donackarto estis aplikita",
+        "gift_card_has_been_removed": "Donackarto estis forigita",
+        "gift_card_subscriptions_notice": "Donackartoj validos nur por via unua pago"
       },
       "shipping": {
         "title": "Sendo",
@@ -1625,8 +1684,54 @@
           "description": "La disponeblaj kvantoj por ĉi tiuj aĵoj ŝanĝiĝis kaj estas ĝisdatigitaj en via korbo."
         },
         "unpurchasable_product": {
-          "title": "Neaĉetebla produkto"
-        }
+          "title": "Neaĉetebla produkto",
+          "header": "Kelkaj aĵoj estis forigitaj el via ĉaro",
+          "message": "Ĉi tiuj aĵoj ne haveblas por B2B-mendoj.",
+          "status_column_header": "Ne havebla"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Neaĉetebla produkto",
+          "header": "Kelkaj aĵoj estis forigitaj el via ĉaro",
+          "message": "Ĉi tiuj aĵoj ne estas haveblaj.",
+          "status_column_header": "Ne havebla"
+        },
+        "unfulfillable_product": {
+          "title": "Liverado ne havebla",
+          "message": {
+            "one": "%{delivery_method} jam ne haveblas por ĉi tiu ero.",
+            "other": "%{delivery_method} jam ne haveblas por ĉi tiuj aĵoj."
+          },
+          "default_message": {
+            "one": "La elektita livermetodo jam ne haveblas por ĉi tiu aĵo.",
+            "other": "La elektita livermetodo jam ne haveblas por ĉi tiuj aĵoj."
+          }
+        },
+        "unshippable_product": {
+          "title": "Neniu liverado havebla",
+          "header": {
+            "one": "Neniu liverado haveblas por %{count} ero",
+            "other": "Neniu liverado haveblas por %{count} aĵoj"
+          },
+          "message": {
+            "one": "Ĉi tiu aĵo estos forigita el via ĉaro ĉar ne ekzistas livermetodoj por via adreso.",
+            "other": "Ĉi tiuj aĵoj estos forigitaj el via ĉaro ĉar ne ekzistas livermetodoj por via adreso."
+          },
+          "status_column_header": "Neniu liverado"
+        },
+        "price_update": {
+          "title": "Preza ĝisdatigo",
+          "description": "Prezoj por ĉi tiuj aĵoj ŝanĝiĝis kaj estas ĝisdatigitaj en via ĉaro.",
+          "updated_price": "Ĝisdatigita prezo"
+        },
+        "price_and_quantity_update": {
+          "title": "Ĝisdatigo de prezo kaj kvanto",
+          "description": "Prezoj kaj disponeblaj kvantoj por ĉi tiuj aĵoj ŝanĝiĝis kaj estas ĝisdatigitaj en via ĉaro."
+        },
+        "out_of_stock": {
+          "description": "Ĉi tiuj aĵoj jam ne haveblas kaj estis forigitaj el via ĉaro.",
+          "items_unavailable": "Kelkaj aĵoj jam ne haveblas kaj estis forigitaj el via ĉaro."
+        },
+        "out_of_stock_in_context_label": "Ĉi tiu produkto ne haveblas en via lando/regiono."
       },
       "subscriptions": {
         "recurring_total_intervals": {
@@ -2127,6 +2232,53 @@
           "tax_credential_type_mx": "Fiska Reĝimo",
           "tax_credential_use_mx": "Uzo de CFDI",
           "shipping_credential_tw": "Nacia identigilo/VAT"
+        }
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Nehavebla produkto",
+          "other": "Nehaveblaj produktoj"
+        },
+        "products_not_available": {
+          "one": "Ĉi tiu produkto estos forigita el via ĉaro ĉar ĝi ne haveblas en via lando/regiono.",
+          "other": "Ĉi tiuj produktoj estos forigitaj el via ĉaro ĉar ili ne estas haveblaj en via lando/regiono."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "Ĉi tiu produkto ne haveblas en via lando/regiono.",
+          "other": "Ĉi tiuj produktoj ne haveblas en via lando/regiono."
+        },
+        "unavailable_label": "Nedisponebla"
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "Ĉi tiu produkto ne estas havebla por liverado al %{location_name}.",
+          "some_products_other": "Ĉi tiuj produktoj ne estas livereblaj al %{location_name}.",
+          "all_products_one": "La produkto en via ĉaro ne estas havebla por liverado al %{location_name}.",
+          "all_products_other": "La produktoj en via ĉaro ne estas haveblaj por liverado al %{location_name}."
+        },
+        "missing_country_fallback": "via lando",
+        "indeterminate_location_fallback": "via loko",
+        "cart_updated": "Via ĉaro estis ĝisdatigita.",
+        "change_address_only": "Ŝanĝu liveradreson por daŭrigi.",
+        "change_address_or_remove": "Ŝanĝi liveradreson aŭ %{remove_action}.",
+        "remove_items_action": {
+          "one": "forigi neatingeblan eron",
+          "other": "forigi neatingeblajn erojn"
+        },
+        "empty_cart_action": "malplenigu la ĉaron kaj revenu al la vendejo",
+        "unavailable_line_item": "%{produkto_nomo} / %{varianto_etikedo}"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Neniu liverado haveblas por %{count} ero",
+            "other": "Neniu liverado haveblas por %{count} aĵoj"
+          },
+          "message": {
+            "one": "Ĉi tiu aĵo estos forigita el via ĉaro ĉar ne ekzistas livermetodoj por via adreso.",
+            "other": "Ĉi tiuj aĵoj estos forigitaj el via ĉaro ĉar ne ekzistas livermetodoj por via adreso."
+          },
+          "label": "Neniu liverado"
         }
       }
     },

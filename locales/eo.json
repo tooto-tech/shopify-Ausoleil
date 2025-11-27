@@ -1527,7 +1527,48 @@
       }
     },
     "addresses": {
-      "billing_address_dropdown_placeholder": "Faktura adreso"
+      "billing_address_dropdown_placeholder": "Faktura adreso",
+      "add_button": "Aldoni adreson",
+      "add_button_text": "Aldoni",
+      "add_button_accessibility_label": "Aldoni adreson",
+      "back_button": "Reen",
+      "back_button_accessibility_label": "Reen al redaktado de adreso {{address}}",
+      "add_address_banner": "Aldonu adresojn uzeblajn ĉe la kaso",
+      "no_addresses_banner": "Neniuj adresoj aldonitaj",
+      "address_deleted_notification": "Adreso forigita",
+      "cancel_adding_address_accessibility_label": "Nuligi aldonadon de adreso",
+      "cancel_deletion_button": "Nuligi",
+      "cancel_deletion_button_accessibility_label": "Nuligi forigon de {{address}}",
+      "default_address": {
+        "title": "Defaŭlta adreso",
+        "title_accessibility_label": "Defaŭlta adreso: {{address}}"
+      },
+      "delete_button": "Forigi",
+      "delete_button_accessibility_label": "Forigi {{address}}",
+      "delete_confirmation_button": "Forigi adreson",
+      "delete_confirmation_button_accessibility_label": "Forigi {{address}}",
+      "delete_confirmation_message": "Ĉu forigi adreson? Ekzistantaj mendoj ne estas tuŝitaj.",
+      "delete_confirmation_title": "Ĉu forigi adreson?",
+      "delete_confirmation_description": "Ekzistantaj mendoj ne estas tuŝitaj.",
+      "edit_button": "Redakti",
+      "edit_button_accessibility_label": "Redakti {{address}}",
+      "edit_section_accessibility_label": "Redakti {{address}}",
+      "edit_modal_title": {
+        "default": "Redakti adreson",
+        "billing": "Redakti fakturan adreson",
+        "shipping": "Redakti sendadreson"
+      },
+      "loading_accessibility_message": "Ŝarĝante adreson",
+      "loading_addresses_accessibility_message": "Ŝarĝante adresojn",
+      "loading_billing_accessibility_message": "Ŝarĝante fakturan adreson",
+      "loading_finished_accessibility_message": "Nova paĝo de adresoj ŝarĝiĝis",
+      "loading_shipping_accessibility_message": "Ŝarĝante sendan adreson",
+      "pagination": {
+        "load_more": "Ŝarĝi pli",
+        "load_more_accessibility_label": "Ŝargi pliajn adresojn"
+      },
+      "save_new_address_accessibility_label": "Konservi adreson",
+      "title": "Adresoj"
     },
     "address_form": {
       "attention": "Atento",
@@ -1652,6 +1693,91 @@
       "draft_order_details": {
         "draft_order_subtitle": "Konfirmita {{date}} de mendo {{draftOrderName}}"
       }
+    },
+    "order_details": {
+      "returns": {
+        "exchange_header": "Interŝanĝaj eroj",
+        "exchange_subheader": "Ŝanĝindaĵoj estos aldonitaj al la mendo post kiam la redono estos kompletigita."
+      },
+      "shipping": {
+        "address": "Sendadreso",
+        "address_map_marker": "Sendadreso",
+        "method": "Sendmetodo",
+        "summary": "Sendo",
+        "free": "Senpaga",
+        "free_shipping_discount": "Senpaga sendo",
+        "one_time": "Unufoja sendo",
+        "subscription": "Abonsendo"
+      },
+      "pickup": {
+        "pickup": "Prenado",
+        "pickup_location": "Prenloko",
+        "pickup_point": "Prenpunkto"
+      },
+      "show_items": "Montri erojn",
+      "show_order_summary": "Montri mendan resumon",
+      "hide_order_summary": "Kaŝi mendan resumon",
+      "subtitle": "Konfirmita {{date}}",
+      "subtotal": "Subtotalo",
+      "summary_list_title_accessibility_label": "Mendi erojn",
+      "summary_title": "Mendresumo",
+      "summary_totals_title_accessibility_label": "Mendsumoj",
+      "shop_order_tracking": {
+        "download_shop_to_track": "Elŝutu Butikon por spuri pakaĵon",
+        "track_order_with_shop": "Spuri mendon per la Butiko",
+        "title_header": "Skanu per via telefono",
+        "real_time_delivery_updates": "La butiko sendos al vi realtempajn ĝisdatigojn pri liverado post kiam via mendo estos sendita."
+      },
+      "edit_summary": {
+        "added": "Aldonita",
+        "added_with_quantity": "Aldonita {{quantity}}",
+        "removed": "Forigita",
+        "removed_with_quantity": "Forigis {{quantity}}",
+        "updated_at": "Via mendo estis ĝisdatigita je {{date}}",
+        "returned": "Revenis",
+        "returned_with_quantities": "Redonis {{delta}} el {{total}}",
+        "removed_with_quantities": "Forigis {{delta}} el {{total}}",
+        "return_line_item_removed": "Forigita de reveno",
+        "return_line_item_removed_with_quantities": "Forigis {{delta}} de la reveno"
+      },
+      "shop_pay": {
+        "order_completed_with": "Mendo kompletigita kun",
+        "learn_more": "Lernu pli"
+      },
+      "taxes": "Impostoj",
+      "taxes_included": "Inkluzive de {{amount}} en impostoj",
+      "duties_and_taxes_included": "La sumo inkluzivas doganojn kaj impostojn. Neniuj aldonaj kostoj por liverado.",
+      "duties": "Devoj",
+      "ok_duties_tooltip": "Ĉi tiu mendo estas sendata el alia lando, do impostoj estis aldonitaj al via mendosumo.",
+      "error_duties_tooltip": "Ĉi tiu mendo estas sendata el alia lando, do doganimpostoj kaj impostoj povas esti aldonataj dum liverado.",
+      "zero_duties_tooltip": "Ĉi tiu mendo estas sendata el alia lando. Doganimpostoj ne estas ŝargitaj por mendoj de ĉi tiu valoro.",
+      "tip": "Konsileto",
+      "title": "Mendo {{name}}",
+      "total": "Totalo",
+      "unit_price": "{{price}} /ĉiu",
+      "pagination": {
+        "load_more": "Ŝarĝi pli",
+        "load_more_accessibility_label": "Ŝargi pliajn erojn",
+        "loading_accessibility_label": "Ŝarĝante erojn"
+      },
+      "login_to_view_all_order_details": "Ensalutu por vidi ĉiujn menddetalojn.",
+      "log_in": "Ensaluti",
+      "logged_in_account_no_permission_to_order": "Vi ensalutiĝis kiel {{email}} . Ĉi tiu konto ne havas permeson administri ĉi tiun mendon.",
+      "log_in_to_a_different_account": "Ensaluti al alia konto",
+      "fees": {
+        "restocking_fee": "Reproviza kotizo",
+        "return_shipping_fee": "Revensendo"
+      },
+      "vat_invoices": {
+        "title": "VAT-fakturoj"
+      },
+      "link_sent": "Ligilo sendita",
+      "cash_rounding": "Kontanta rondigo",
+      "adjusted_payment": "Adaptita pago",
+      "adjusted_total": "Adaptita totalo",
+      "due_on_date": "Limdato {{date}}",
+      "due_on_fulfillment": "Pagenda je plenumo",
+      "due_on_receipt": "Pagenda je ricevo"
     }
   },
   "accessibility": {

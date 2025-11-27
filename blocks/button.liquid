@@ -39,9 +39,238 @@
         {
           "value": "link",
           "label": "t:options.link"
+        },
+        {
+          "value": "button-custom",
+          "label": "自定义"
         }
       ],
       "default": "button"
+    },
+    {
+      "type": "header",
+      "content": "自定义样式",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#1a1a1a",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_hover",
+      "label": "背景颜色 (悬停)",
+      "default": "#333333",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文本颜色",
+      "default": "#ffffff",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "text_color_hover",
+      "label": "文本颜色 (悬停)",
+      "default": "#ffffff",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "边框颜色",
+      "default": "#1a1a1a",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "border_color_hover",
+      "label": "边框颜色 (悬停)",
+      "default": "#333333",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "边框宽度",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 1,
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "圆角",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 4,
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "header",
+      "content": "文本样式",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "font_size",
+      "label": "字体大小",
+      "options": [
+        {
+          "value": "",
+          "label": "默认"
+        },
+        {
+          "value": "0.75rem",
+          "label": "12px"
+        },
+        {
+          "value": "0.875rem",
+          "label": "14px"
+        },
+        {
+          "value": "1rem",
+          "label": "16px"
+        },
+        {
+          "value": "1.125rem",
+          "label": "18px"
+        },
+        {
+          "value": "1.25rem",
+          "label": "20px"
+        },
+        {
+          "value": "1.5rem",
+          "label": "24px"
+        }
+      ],
+      "default": "",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "font_size_mobile",
+      "label": "移动端字体大小",
+      "options": [
+        {
+          "value": "",
+          "label": "默认"
+        },
+        {
+          "value": "0.75rem",
+          "label": "12px"
+        },
+        {
+          "value": "0.875rem",
+          "label": "14px"
+        },
+        {
+          "value": "1rem",
+          "label": "16px"
+        },
+        {
+          "value": "1.125rem",
+          "label": "18px"
+        },
+        {
+          "value": "1.25rem",
+          "label": "20px"
+        }
+      ],
+      "default": "",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "字重",
+      "options": [
+        {
+          "value": "",
+          "label": "默认"
+        },
+        {
+          "value": "400",
+          "label": "Regular (400)"
+        },
+        {
+          "value": "500",
+          "label": "Medium (500)"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold (600)"
+        },
+        {
+          "value": "700",
+          "label": "Bold (700)"
+        }
+      ],
+      "default": "",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "text_transform",
+      "label": "文本转换",
+      "options": [
+        {
+          "value": "none",
+          "label": "无"
+        },
+        {
+          "value": "uppercase",
+          "label": "大写"
+        },
+        {
+          "value": "lowercase",
+          "label": "小写"
+        },
+        {
+          "value": "capitalize",
+          "label": "首字母大写"
+        }
+      ],
+      "default": "none",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "header",
+      "content": "内边距",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "padding_y",
+      "label": "上下内边距",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12,
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "padding_x",
+      "label": "左右内边距",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 24,
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
     },
     {
       "type": "header",

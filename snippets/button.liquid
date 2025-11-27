@@ -10,6 +10,26 @@
 
 {% assign block_settings = block.settings %}
 
+{% capture custom_style %}
+  {% render 'size-style', settings: block_settings %}
+  {% if block_settings.style_class == 'button-custom' %}
+    --btn-bg: {{ block_settings.bg_color }};
+    --btn-bg-hover: {{ block_settings.bg_color_hover }};
+    --btn-text: {{ block_settings.text_color }};
+    --btn-text-hover: {{ block_settings.text_color_hover }};
+    --btn-border-color: {{ block_settings.border_color }};
+    --btn-border-color-hover: {{ block_settings.border_color_hover }};
+    --btn-border-width: {{ block_settings.border_width }}px;
+    --btn-border-radius: {{ block_settings.border_radius }}px;
+    --btn-padding-y: {{ block_settings.padding_y }}px;
+    --btn-padding-x: {{ block_settings.padding_x }}px;
+    {% if block_settings.font_size != blank %}--btn-font-size: {{ block_settings.font_size }};{% endif %}
+    {% if block_settings.font_size_mobile != blank %}--btn-font-size-mobile: {{ block_settings.font_size_mobile }};{% endif %}
+    {% if block_settings.font_weight != blank %}--btn-font-weight: {{ block_settings.font_weight }};{% endif %}
+    --btn-text-transform: {{ block_settings.text_transform }};
+  {% endif %}
+{% endcapture %}
+
 <a
   {% if link == blank %}
     role="link"
@@ -22,7 +42,7 @@
     {{ block_settings.style_class }}
     {{ block_settings.style_class }}--{{ block.id }}
   "
-  style="{% render 'size-style', settings: block_settings %}"
+  style="{{ custom_style | strip_newlines }}"
   {%- if block_settings.open_in_new_tab -%}
     target="_blank"
     rel="noopener noreferrer"
@@ -40,6 +60,36 @@
     &:hover {
       color: var(--color-primary-hover);
       text-decoration-color: transparent;
+    }
+  }
+
+  .button-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: var(--btn-border-width) solid var(--btn-border-color);
+    border-radius: var(--btn-border-radius);
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    font-size: var(--btn-font-size, inherit);
+    font-weight: var(--btn-font-weight, inherit);
+    text-transform: var(--btn-text-transform, none);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      background-color: var(--btn-bg-hover);
+      color: var(--btn-text-hover);
+      border-color: var(--btn-border-color-hover);
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .button-custom {
+      font-size: var(--btn-font-size-mobile, var(--btn-font-size, inherit));
     }
   }
 {% endstylesheet %}

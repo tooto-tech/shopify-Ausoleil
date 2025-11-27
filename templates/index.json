@@ -128,7 +128,7 @@
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "custom",
-                    "font": "var(--font-body--family)",
+                    "font": "'A019-SounsoQuality', var(--font-heading--family)",
                     "font_size": "3rem",
                     "font_size_mobile": "1.375rem",
                     "weight": "",

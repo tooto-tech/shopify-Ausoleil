@@ -2331,7 +2331,88 @@
     },
     "errors": {
       "blank": "ne povas esti malplena",
-      "blocked_address": "Ĉi tiu loko ne estas subtenata"
+      "blocked_address": "Ĉi tiu loko ne estas subtenata",
+      "credit_card_session_expired": "La rajtigo de kreditkarto eksvalidiĝis, bonvolu enigi viajn paginformojn denove. Via karto ne estis ŝargita.",
+      "empty": "ne povas esti malplena",
+      "invalid_email": "devas esti valida retpoŝtadreso",
+      "discount_disabled": "Ĉi tiu rabato estas malŝaltita",
+      "discount_expired": "Ĉi tiu rabato ne plu validas",
+      "discount_limit_reached": "Ĉi tiu rabato atingis sian uzlimon",
+      "discount_not_found": "Ne eblas trovi validan rabaton kongruantan kun la enigita kodo",
+      "customer_already_used_once_per_customer_discount_notice": "Ĉi tiu rabato atingis sian uzlimon",
+      "gift_card_already_applied": "Kodo jam estis aplikita al via kaso",
+      "gift_card_code_invalid": "Kodo estas malvalida",
+      "gift_card_currency_mismatch": "Via donackarto estas en %{gift_card_currency}. Kontaktu nin por reeldoni ĝin en %{checkout_currency}.",
+      "gift_card_depleted": "Ne restas mono sur ĉi tiu donackarto",
+      "gift_card_disabled": "Donackarto estas malŝaltita",
+      "gift_card_expired": "Donackarto eksvalidiĝis",
+      "invalid": "estas malvalida",
+      "bad_domain": "enhavas malvalidan domajnan nomon",
+      "taken": "jam estis prenita",
+      "contains_html_tags": "ne povas enhavi HTML-etikedojn",
+      "too_short": "estas tro mallonga (minimumo estas %{count} signoj)",
+      "too_long": "estas tro longa (maksimumo estas %{count} signoj)",
+      "password_mismatch": "devas kongrui kun la donita pasvorto",
+      "contains_spaces": "komenciĝas aŭ finiĝas per spacetoj.",
+      "invalid_for_country": "ne validas por %{country}",
+      "invalid_for_country_and_province": "ne validas por %{province} kaj %{country}",
+      "invalid_province_in_country": "ne estas valida provinco en %{country}",
+      "invalid_state_in_country": "ne estas valida ŝtato en %{country}",
+      "invalid_region_in_country": "ne estas valida regiono en %{country}",
+      "less_than_or_equal_to": "devas esti malpli ol aŭ egala al %{count}",
+      "not_supported": "ne estas subtenata",
+      "full_name_required": "Enigu antaŭnomon kaj familian nomon",
+      "invalid_for_card_type": "ne validas",
+      "invalid_type": "bedaŭrinde, ni ne akceptas kartojn de ĉi tiu tipo",
+      "invalid_format": "formato ne validas",
+      "expired": "eksvalidiĝis",
+      "invalid_start_date_or_issue_number_for_debit": "valida komencdato aŭ numero de eldono estas necesa",
+      "invalid_expiry_year": "ne estas valida eksvalidiĝjaro",
+      "reset_password_html": "Ĉi tiu retpoŝtadreso jam estas asociita kun konto. Se ĉi tiu konto estas via, vi povas <a href=\"/account/login#recover\">restarigi vian pasvorton.</a>",
+      "verify_email": "Ni sendis retpoŝton al %{customer_email}, bonvolu alklaki la ligilon por konfirmi vian retpoŝtadreson.",
+      "product_not_available": "produkto ne estas publikigita por ĉi tiu kliento.",
+      "shop_404": {
+        "title": "Kreu Retejon por Komerco kaj Vendu Interrete! Programaro por Komerco de Shopify",
+        "heros": {
+          "store_unavailable": "Bedaŭrinde, ĉi tiu vendejo nuntempe ne estas disponebla.",
+          "store_not_exist": "Ĉi tiu vendejo ne ekzistas.",
+          "no_storefront": "Ĉi tiu vendejo ankoraŭ ne havas retejon."
+        },
+        "links": {
+          "explore_other_stores": "Esploru aliajn butikojn",
+          "start_free_trial": "Komencu senpagan provon"
+        },
+        "owner_ctas": {
+          "header": "Ĉu vi estas la butikposedanto?",
+          "fix_domain": "Finu la agordon de via nova retadreso, iru al %{domain_settings_link}. Alklaku \"Konekti domajnon\" kaj enigu: %{domain}.<br> Se vi havas problemojn eniri vian butikon, provu la paĝon %{forgot_your_store_link}.",
+          "fix_domain_link_text": "viaj domajnaj agordoj",
+          "forgot_your_store_link_text": "forgesis vian butikon",
+          "add_storefront": "Vi povas agordi vian retejon aldonante la kanalon \"Interreta Butiko\" en via %{admin_link}. Se vi havas problemojn eniri vian butikon, provu la paĝon %{forgot_your_store_link}.",
+          "admin_link_text": "administranto"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Vendu persone",
+            "caption": "Akiru la funkciojn, kiujn vi bezonas por funkciigi vian podetalan butikon, ĉu vi komencas aŭ pligrandigas ĝin.",
+            "link_text": "Komencu senpagan provon"
+          },
+          "open_a_store": {
+            "header": "Malfermu novan Shopify-butikon",
+            "caption": "Komencu 3-tagan senpagan provon, poste daŭrigu por 1 USD/monate dum la sekvaj 3 monatoj.",
+            "link_text": "Registriĝu nun"
+          },
+          "editions": {
+            "header": "Rigardu Shopify-Eldonojn",
+            "caption": "Kun pli ol 100 produktaj ĝisdatigoj, vi povas esti pli produktema kaj kreiva, kaj potenca en komerco ol vi iam ajn imagis.",
+            "link_text": "Esploru la plej novajn eldonojn"
+          },
+          "store_owner": {
+            "header": "Ĉu vi estas la butikposedanto?",
+            "caption": "Ĉu vi havas problemojn eniri vian butikon? Provu la funkcion %{forgot_your_store_link}. Se vi volas reaktivigi vian butikon, kontaktu %{shopify_support_link}.",
+            "shopify_support_link_text": "Shopify-subteno"
+          }
+        }
+      }
     },
     "checkpoint": {
       "submit_button_text": "Sendu"
@@ -2354,6 +2435,61 @@
       "buyer_consent_product": "Ĉi tiu aĵo estas ripetiĝanta aŭ prokrastita aĉeto. Daŭrigante, mi konsentas pri la %{cancellationPolicyLink} kaj rajtigas vin ŝargi mian pagmetodon laŭ la prezoj, ofteco kaj datoj listigitaj sur ĉi tiu paĝo ĝis mia mendo estos plenumita aŭ mi nuligos, se permesite.",
       "buyer_consent_cart": "Unu aŭ pluraj el la aĵoj en via ĉaro estas ripetiĝanta aŭ prokrastita aĉeto. Daŭrigante, mi konsentas pri la %{cancellationPolicyLink} kaj rajtigas vin ŝargi mian pagmetodon laŭ la prezoj, ofteco kaj datoj listigitaj sur ĉi tiu paĝo ĝis mia mendo estos plenumita aŭ mi nuligos, se permesite.",
       "cancellation_policy": "nuliga politiko"
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Eraro pri restarigo de pasvorto",
+        "subscribe_error": "Aboni eraron",
+        "unsubscribe_error": "Eraro pri malabonado",
+        "no_account_found": "Neniu konto trovita kun tiu retpoŝtadreso.",
+        "invalid_credentials": "Malĝusta retpoŝtadreso aŭ pasvorto.",
+        "denylisted_reset_password": "Via konto ne estis alirebla ĉar la nuna pasvorto ne estas sekura. Vi ricevos retpoŝton por ĝisdatigi vian pasvorton.",
+        "signup_disabled": "Kreado de klientkonto estas malŝaltita."
+      },
+      "address": {
+        "updated": "Sukcese ĝisdatigita adreso.",
+        "error_updating": "Eraro ĝisdatigante adreson",
+        "created": "Sukcese kreita adreso",
+        "error_creating": "Eraro kreante adreson.",
+        "deleted": "Sukcese forigita adreso",
+        "error_deleting": "Eraro dum forigo de adreso."
+      },
+      "line_item": {
+        "item_status": {
+          "add_variant": "Aldonita %{delta}",
+          "increment_item": "Aldonita %{delta}",
+          "decrement_item": "Forigis %{delta} el %{total}",
+          "decrement_fulfilled_line_item": "Redonis %{delta} el %{total}",
+          "decrement_return_line_item": "Forigis %{delta} de la reveno"
+        }
+      },
+      "order": {
+        "not_available": "Ĉi tiu mendo ne estas havebla",
+        "financial_status": {
+          "authorized": "Rajtigita",
+          "pending": "Atendanta",
+          "paid": "Pagita",
+          "unpaid": "Senpaga",
+          "voided": "Malplenigita",
+          "partially_paid": "Parte pagita",
+          "partially_refunded": "Parte repagita",
+          "refunded": "Repagita",
+          "expired": "Eksvalidiĝis"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Plenumita",
+          "complete": "Kompleta",
+          "partial": "Parta",
+          "unfulfilled": "Neplenumita",
+          "restocked": "Replenigita"
+        },
+        "transaction_status": {
+          "success": "Sukceso",
+          "pending": "Atendanta",
+          "failure": "Fiasko",
+          "error": "Eraro"
+        }
+      }
     }
   },
   "customer_accounts": {

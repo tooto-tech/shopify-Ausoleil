@@ -17,6 +17,8 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/1-02_1x_5fb8457a-fee1-4ba2-858d-a1bbf0bdaeb7.png",
+            "use_mobile_image": true,
+            "image_mobile_1": "shopify://shop_images/130_2x_e6d56a6d-af79-44a3-840f-94f8bfceb948.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -157,6 +159,7 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/171_1x_2.png",
+            "use_mobile_image": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",

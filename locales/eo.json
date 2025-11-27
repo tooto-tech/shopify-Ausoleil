@@ -394,6 +394,292 @@
             "one": "%{shipping_price} por %{count} liverado"
           }
         }
+      },
+      "payment": {
+        "store_credit": {
+          "buying_gift_card": "Vi ne povas uzi butikkrediton por aĉeti donackarton",
+          "no_fixed_selling_plans": "Vi ne povas uzi butikkrediton kun prokrastitaj aĉetopcioj"
+        },
+        "clear": "Klara",
+        "billing_must_match_shipping_notice": "La faktura adreso de via pagmetodo devas kongrui kun la senda adreso.",
+        "same_billing_address_checkbox_label": "Uzu sendadreson kiel fakturan adreson",
+        "location_billing_address_label": "Loka faktura adreso",
+        "fact_billing_address_label": "Faktura adreso",
+        "location_shipping_address_label": "Loko, sendoadreso",
+        "use_order_billing_address_label": "Uzi mendan fakturan adreson",
+        "use_location_billing_address_label": "Uzi la fakturan adreson de la loko",
+        "use_location_shipping_address_label": "Uzu la sendan adreson de la loko",
+        "no_working_method_error": "Ĉi tiu vendejo ne povas akcepti pagojn nuntempe. Refreŝigu ĉi tiun paĝon aŭ revenu poste.",
+        "brand_not_available": "Ĉi tiu vendejo ne akceptas {{brand}} . Bonvolu uzi alian karton por pagi.",
+        "shipping_rate_updated": "Haveblaj sendometodoj estis ĝisdatigitaj. Konfirmu vian elekton antaŭ ol pagi.",
+        "billing_address_invalid_phone": "Ĝisdatigu la telefonnumeron en via faktura adreso por {{label}} {{last_digits}} por daŭrigi.",
+        "billing_address_invalid_phone_no_card": "Ĝisdatigu la telefonnumeron en via faktura adreso por daŭrigi.",
+        "preview_not_available": {
+          "title": "Antaŭrigardo ne havebla",
+          "content": "Ne zorgu, ĉi tiu rapida kaso funkcias por viaj klientoj.",
+          "button": "Bone"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Enigu validan eldondaton",
+              "issue_number": "Enigu validan emisian numeron"
+            },
+            "invalid": {
+              "verification_value": "Enigu validan CVV-on aŭ sekureckodon"
+            }
+          }
+        },
+        "simulated_checkout": "Antaŭrigardo baldaŭ",
+        "simulated_express_checkout": "Monujoj ne estas haveblaj en la antaŭrigardo de la redaktilo pro via regiono aŭ retumilo.",
+        "vaulting_agreement_label": "Konservu miajn paginformojn ĉe %{company} por pli rapida kaso.",
+        "business_customer_vaulting_payment_label": "Konservu ĉi tiun pagmetodon ĉe la kaso kaj rajtigu %{company} ŝargi ĝin por estontaj aĉetoj por ĉi tiu loko. Ĉiuj kontaktoj asignitaj al ĉi tiu loko povas uzi la pagmetodon.",
+        "business_customer_with_bank_account_vaulting_payment_label": "Konservu ĉi tiun pagmetodon ĉe la kaso kaj rajtigu %{company} debeti vian konton por estontaj aĉetoj, kiujn vi aprobas por ĉi tiu loko, ĝis vi nuligos. Ĉiuj kontaktoj asignitaj al ĉi tiu loko povas uzi la pagmetodon.",
+        "purchase_options_and_vaulting_agreement_label": "Unu aŭ pluraj aĵoj en via ĉaro estas prokrastita aŭ abona aĉeto. Daŭrigante vian pagon, vi konsentas, ke via pagmetodo estos aŭtomate ŝargita laŭ la prezo kaj ofteco listigitaj sur ĉi tiu paĝo ĝis ĝi finiĝos aŭ vi nuligos. Ĉiuj nuligoj estas submetitaj al la %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "nuliga politiko",
+        "use_different_credit_card_label": "Uzu alian karton",
+        "saved_credit_card": "Via konservita kreditkarto",
+        "saved_credit_card_info": "Lastaj kvar ciferoj",
+        "saved_credit_card_cvv_verification": "Por konfirmo, bonvolu enigi la sekureckodon de via karto.",
+        "saved_credit_card_actions": {
+          "edit": "Redakti",
+          "delete": "Forigi"
+        },
+        "saved_credit_cards_modal": {
+          "view_all_label": "Vidi ĉiujn konservitajn kartojn",
+          "done": "Finita",
+          "cancel": "Nuligi"
+        },
+        "add_credit_card_modal": {
+          "title": "Aldoni karton",
+          "save": "Konservi",
+          "cancel": "Nuligi"
+        },
+        "delete_credit_card_modal": {
+          "title": "Forigi karton",
+          "confirmation": "Ĉu vi certas, ke vi volas forigi la {{brandName}} finiĝantan per {{lastDigits}} ?",
+          "cancel": "Nuligi",
+          "delete": "Forigi"
+        },
+        "edit_credit_card_modal": {
+          "title": "Redakti karton",
+          "done": "Finita",
+          "cancel": "Nuligi",
+          "description": "Vi povas modifi nur la fakturan adreson de via karto.",
+          "fields": {
+            "default": "Agordi kiel defaŭltan",
+            "card_number": "Kartnumero",
+            "expiry": "Finvalida dato",
+            "security_code": "Sekureckodo",
+            "name": "Nomo sur karto",
+            "billing": "Fakturi al"
+          }
+        },
+        "expired_cards_info": {
+          "one": "Ekzistas %{count} eksvalidiĝinta karto, kiun vi povas vidi kaj redakti en via konto.",
+          "other": "Estas %{count} eksvalidiĝintaj kartoj, kiujn vi povas vidi kaj redakti en via konto."
+        },
+        "local_payment_method_receiver_notice": "Post mendado, vi ricevos pagdetalojn. Faru la pagon ĉe bankomaton aŭ interrete ene de {{dueDays}} tagoj.",
+        "order_edit_banner_title": "Pago de {{amount_owed}} estas necesa",
+        "order_edit_banner_subtitle": "Via mendo {{order_number}} estis ĝisdatigita. Kontrolu ĉi tiujn ŝanĝojn, poste pagu por konfirmi vian mendon.",
+        "order_edit_banner_items_added": {
+          "one": "Aldonita",
+          "other": "Aldonita %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Forigita",
+          "with_quantities": "Forigis {{delta}} de {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Redonis {{quantity}}",
+          "with_quantities": "Redonis {{delta}} el {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Forigita de reveno",
+          "with_quantities": "Forigis {{delta}} de la reveno"
+        },
+        "order_edit_banner_single_item_added": "Aldonita",
+        "order_edit_banner_multiple_items_added": "Aldonita {{amount}}",
+        "order_edit_banner_single_item_removed": "Forigita",
+        "order_edit_banner_multiple_items_removed": "Forigis {{amount}}",
+        "order_edit_banner_single_item_returned": "Revenis",
+        "order_edit_banner_multiple_items_returned": "Redonis {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "Forigita de reveno",
+        "order_edit_banner_multiple_items_return_line_item_removed": "Forigis {{amount}} el la redono",
+        "order_edit_banner_updated_order_label": "Ĝisdatigita ordo",
+        "gift_card_wrapper": {
+          "heading": "Donackarto",
+          "apply_gift_card_label": "Apliki donackarton",
+          "apply_another_gift_card_label": "Apliku alian donackarton",
+          "gift_card_label": "Donackarto %{identifier}",
+          "payment_tag": "Donackarto",
+          "add_label": "Aldonu donackarton",
+          "manage_label": "Administri donackartojn"
+        },
+        "gift_card_store_credit": {
+          "add_label": "Aldonu donackarton aŭ butikkrediton",
+          "manage_label": "Administri donackartojn aŭ butikkrediton"
+        },
+        "gift_card_checkbox_label": "Apliki donackarton",
+        "custom_onsite_payment_method_modal": {
+          "title": "Konfirmo de Pago Laŭmenda Surloke"
+        },
+        "markets_pro_disclaimer_label": "Alklakante sube kaj kompletigante vian mendon, vi konsentas aĉeti vian(j)n aĵon(j)n de Global-e kiel registrita komercisto por ĉi tiu transakcio, laŭ la %{markets_pro_terms} kaj %{privacy_policy} de Global-e. Global-e estas internacia plenumada servoprovizanto por %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Kondiĉoj kaj Regularoj",
+        "markets_pro_disclaimer_privacy_policy": "Regularo pri Privateco",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Kondiĉoj de la Komercisto de Rekordoj",
+        "markets_pro_disclaimer_privacy_policy_title": "Regularo pri Privateco de Komercisto de Rekordoj",
+        "markets_pro_disclaimer_label_express_checkout": "Aĉetante, vi konsentas pri la %{markets_pro_terms} kaj %{privacy_policy} de Global-e, nia internacia servoprovizanto.",
+        "markets_pro_disclaimer_express_terms_and_conditions": "terminoj",
+        "markets_pro_disclaimer_express_privacy_policy": "privateca politiko",
+        "purchase_order_number": {
+          "title": "PO-numero",
+          "label": "PO-numero (nedeviga)"
+        },
+        "alternative_payment_currency_total_notice": "Noto: oni fakturos al vi %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "Noto: la konvertita sumo estas %{amount_due}."
+      },
+      "thank_you": {
+        "attempted_delivery_local_title": "Maltrafita livero",
+        "attempted_delivery_local_description_html": "Ni ne povis liveri vian mendon. Por plani alian liveradon, %{contact_us}.",
+        "delivered": "Liverita",
+        "delivered_title": "Via mendo estis liverita",
+        "delivered_description_html": "Via mendo estis liverita al la adreso, kiun vi provizis. Se vi ne ricevis ĝin, aŭ se vi havas aliajn problemojn, %{contact_us}.",
+        "delivered_local_title": "Via mendo estis liverita",
+        "delivered_local_description_html": "Ĉu vi ne ricevis vian mendon? %{let_us_know}.",
+        "choose_payment_method_later": "Elektu pagmetodon poste",
+        "picked_up_title": "Via mendo estis prenita",
+        "picked_up_description_html": "Via mendo estis prenita ĉe %{location_name} je %{date}.",
+        "contact_us": "Kontaktu nin",
+        "contact_us_lowercase": "kontaktu nin",
+        "contact_us_html": "Ĉu vi bezonas helpon? %{contact_us}",
+        "updated_time": "Ĝisdatigita antaŭ %{time_ago}",
+        "failure": "Ne liverita",
+        "failed_title": "Via mendo ne povis esti liverita",
+        "failed_contact_merchant": "Kontaktu %{company} por aranĝi la liveradon.",
+        "failed_contact_merchant_no_company": "Kontaktu nin por aranĝi liveradon.",
+        "non_shippable_title": "Via mendo estas kompleta",
+        "let_us_know": "Sciigu nin",
+        "login_title": "Ensalutu por vidi ĉiujn menddetalojn",
+        "login_description": "Vi povas trovi vian mendonumeron en la kvitanco, kiun vi ricevis per retpoŝto.",
+        "login_description_phone": "Vi trovos vian mendonumeron en la kvitanco, kiun vi ricevis per tekstmesaĝo.",
+        "login_not_customer_html": "Ĉu ne %{name}? Vi povas %{link}",
+        "login_reorder_link_text": {
+          "one": "aĉetu ankaŭ ĉi tiun produkton",
+          "other": "aĉetu ankaŭ ĉi tiujn produktojn"
+        },
+        "customer_information_hidden_fields_message": "Ensalutu por vidi ĉiujn informojn pri klientoj.",
+        "cancelled_title": "Via mendo estis nuligita",
+        "cancelled_description": "Via mendo estis nuligita je %{date}. Kontaktu nin se vi havas demandojn.",
+        "order_number_label": "Mendnumero",
+        "customer_validation_error": "Enigu validan retpoŝtadreson aŭ mendonumeron.",
+        "customer_validation_error_phone": "Enigu validan telefonnumeron aŭ mendnumeron.",
+        "login": "Ensaluti",
+        "unfulfilled_items_title": "Preparante por sendo",
+        "unfulfilled_items_description": "Ni nuntempe preparas ĉi tiujn erojn por sendo.",
+        "marker": {
+          "current": "Aktuala sendloko",
+          "shipping": "Sendadreso"
+        },
+        "pick_up_in_store_marker": {
+          "current": "Aktuala sendloko",
+          "shipping": "Prenloko"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "Aĵoj en ĉi tiu sendaĵo",
+          "unfulfilled_table_title": "Aĵoj prepariĝantaj por sendo",
+          "product_image_label": "Produkta bildo",
+          "description_label": "Priskribo",
+          "quantity_label": "Kvanto"
+        },
+        "order_updates_description_missing": "Vi ne ricevas ĝisdatigojn pri sendo.",
+        "order_updates_subscribe_to_email_notifications": "Ricevu ĝisdatigojn pri sendo per retpoŝto",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Ricevu ĝisdatigojn pri sendo per retpoŝto aŭ tekstmesaĝo",
+        "order_updates_subscribe_to_phone_notifications": "Ricevu ĝisdatigojn pri sendo per tekstmesaĝo",
+        "order_updates_submit_subscription": "Sendu",
+        "track_shipment": "Spuri sendaĵon",
+        "other_options": "Aliaj opcioj",
+        "delivery_information_label": "Informoj pri liverado:",
+        "gift_card_sent_confirmation": "Donackartoj senditaj",
+        "qr_code": {
+          "send_link_to_phone": "Aŭ sendu ligilon al via telefono",
+          "title": "Spuri per via telefono"
+        },
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "Skanu per via telefono"
+          },
+          "sms": {
+            "title": "Aŭ sendu ligilon al via telefono"
+          }
+        },
+        "view_business_customer_account": "Vidi konton",
+        "breadcrumbs_submitted": "Submetita",
+        "breadcrumbs_in_review": "En revizio",
+        "breadcrumbs_confirmed": "Konfirmita",
+        "missing_shipping_address_banner": {
+          "title": "La mendo ne havas liveradreson",
+          "text_html": "%{contact_us} por aldoni vian adreson",
+          "contact_us": "Kontaktu nin"
+        },
+        "first_payment_complete": "Unua pago kompleta",
+        "in_store_purchase": "Aĉeto en vendejo",
+        "company_location_section_title": "Firmao kaj loko",
+        "thank_you_ready_for_picked_up": "Via mendo estis prenita ĉe %{address}.",
+        "ready_for_delivery": "Preta por livero",
+        "order_updates_subscribe_to_email_notifications_failed": "Ni ne povas konservi ĉi tiun retpoŝtadreson por ĝisdatigoj. Bonvolu provi denove aŭ uzi alian retpoŝtadreson.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "La retpoŝtadreso, kiun vi enmetis, jam ekzistas.",
+        "subscriptions_management": {
+          "title": "Abono",
+          "description": "Daŭrigu al via konto por vidi kaj administri viajn abonojn.",
+          "button_label": "Administri vian abonon"
+        },
+        "manage_order_label": "Administru vian mendon",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "Vi ricevos tekstmesaĝon kun via donackarto post kelkaj minutoj.",
+          "other": "Vi ricevos tekstmesaĝon kun viaj donackartoj post kelkaj minutoj."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Vi ricevos retpoŝton kun via donackarto post kelkaj minutoj.",
+          "other": "Vi ricevos retpoŝton kun viaj donackartoj post kelkaj minutoj."
+        },
+        "gift_card_email_title": {
+          "one": "Donackarto estis sendita retpoŝte",
+          "other": "Donackartoj estis senditaj retpoŝte"
+        },
+        "gift_card_text_title": {
+          "one": "Donackarto estis sendita per tekstmesaĝo",
+          "other": "Donackartoj estis senditaj per tekstmesaĝo"
+        },
+        "resend_gift_cards_by_email": "Resendi retpoŝton",
+        "resend_gift_cards_by_text": "Resendi tekstmesaĝon",
+        "gift_card_resent_confirmation": {
+          "one": "Donackarto estis resendita.",
+          "other": "Donackartoj estis resenditaj."
+        },
+        "gift_card_resend_failure": {
+          "one": "Estis problemo resendi vian donackarton. Provu denove aŭ kontaktu nin.",
+          "other": "Estis problemo resendi viajn donackartojn. Provu denove aŭ kontaktu nin."
+        },
+        "vat_invoices": {
+          "title": "VAT-fakturoj"
+        },
+        "verify_shop_account_title": "Konfirmu vian Butikan konton",
+        "verify_shop_account_message": "Viaj informoj estis konservitaj ĉe la Butiko, kontrolu vian konton por aŭtomate uzi ilin en milionoj da vendejoj.",
+        "verify_shop_account_cta": "Konfirmu vian konton",
+        "verify_shop_account_confirmation": "Kasaj detaloj konservitaj",
+        "announcement": {
+          "close": "Fermi",
+          "expand": "Malfermi",
+          "collapse": "Kolapso"
+        }
+      },
+      "vaulted": {
+        "change_button": "Ŝanĝo"
+      },
+      "review": {
+        "title": "Recenzo",
+        "review_title": "Kompletigu vian mendon"
       }
     }
   }

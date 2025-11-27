@@ -110,10 +110,270 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "section_GRwHMT": {
+      "type": "section",
+      "blocks": {
+        "accordion_NWNwDM": {
+          "type": "accordion",
+          "name": "t:names.accordion",
+          "settings": {
+            "icon": "caret",
+            "dividers": true,
+            "type_preset": "h5",
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "accordion_row_jjCGwE": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How are sunglasses measured?",
+                "open_by_default": true,
+                "icon": "none",
+                "width": 200
+              },
+              "blocks": {
+                "text_bkeJ7p": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "nowrap",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_bkeJ7p"
+              ]
+            },
+            "accordion_row_P6rAGh": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How to choose sunglasses size",
+                "open_by_default": true,
+                "icon": "none",
+                "width": 200
+              },
+              "blocks": {
+                "text_nF3B8B": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "nowrap",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_nF3B8B"
+              ]
+            },
+            "accordion_row_ykzgUB": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What is 'temple length' on glasses?",
+                "open_by_default": true,
+                "icon": "none",
+                "width": 200
+              },
+              "blocks": {
+                "text_9RnaaE": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "nowrap",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_9RnaaE"
+              ]
+            },
+            "accordion_row_THHFKe": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Which glasses or sunglasses suit my face?",
+                "open_by_default": true,
+                "icon": "none",
+                "width": 200
+              },
+              "blocks": {
+                "text_mMzFVz": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "nowrap",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_mMzFVz"
+              ]
+            },
+            "accordion_row_hNLBXX": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "I am not sure which product suits me. Can you recommend the best style?",
+                "open_by_default": true,
+                "icon": "none",
+                "width": 200
+              },
+              "blocks": {
+                "text_YgY8JW": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "nowrap",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_YgY8JW"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_jjCGwE",
+            "accordion_row_P6rAGh",
+            "accordion_row_ykzgUB",
+            "accordion_row_THHFKe",
+            "accordion_row_hNLBXX"
+          ]
+        }
+      },
+      "block_order": [
+        "accordion_NWNwDM"
+      ],
+      "name": "t:names.faq_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
     }
   },
   "order": [
     "main",
-    "hero_KaV9hF"
+    "hero_KaV9hF",
+    "section_GRwHMT"
   ]
 }

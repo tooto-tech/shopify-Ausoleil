@@ -55,7 +55,7 @@
     data-testid="header-logo"
     style="--header-logo-image-height: {{ logo_height }}px; --header-logo-image-height-mobile: {{ logo_height_mobile }}px;"
   >
-    <span class="header-logo__svg-wrapper">
+    <span class="header-logo__svg-wrapper" {% if block_settings.logo_color != blank %}style="--header-logo-color: {{ block_settings.logo_color }};"{% endif %}>
       {{- 'logo.svg' | inline_asset_content -}}
     </span>
   </span>
@@ -66,7 +66,7 @@
       data-testid="header-logo-inverse"
       style="--header-logo-image-height: {{ logo_height }}px; --header-logo-image-height-mobile: {{ logo_height_mobile }}px;"
     >
-      <span class="header-logo__svg-wrapper">
+      <span class="header-logo__svg-wrapper" {% if block_settings.logo_color_inverse != blank %}style="--header-logo-color: {{ block_settings.logo_color_inverse }};"{% endif %}>
         {{- 'logo.svg' | inline_asset_content -}}
       </span>
     </span>
@@ -129,6 +129,8 @@
     display: inline-block;
     height: var(--header-logo-image-height-mobile);
     width: auto;
+    /* Logo 独立颜色，不受 color scheme 影响 */
+    color: var(--header-logo-color, currentColor);
 
     @media screen and (min-width: 750px) {
       height: var(--header-logo-image-height);
@@ -169,6 +171,22 @@
       "id": "hide_logo_on_home_page",
       "label": "t:settings.hide_logo_on_home_page",
       "info": "t:info.hide_logo_on_home_page_help"
+    },
+    {
+      "type": "header",
+      "content": "Logo Color"
+    },
+    {
+      "type": "color",
+      "id": "logo_color",
+      "label": "Logo color (default)",
+      "default": "#1226AA"
+    },
+    {
+      "type": "color",
+      "id": "logo_color_inverse",
+      "label": "Logo color (transparent header)",
+      "default": "#ffffff"
     },
     {
       "type": "header",

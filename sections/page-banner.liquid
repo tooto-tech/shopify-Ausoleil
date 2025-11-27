@@ -1,6 +1,7 @@
 {% liquid
   assign media_count = 0
   assign media_1 = 'none'
+  assign use_default_image = false
 
   if section.settings.image_1 != blank and section.settings.media_type_1 == 'image'
     assign media_1 = 'image'
@@ -9,6 +10,13 @@
   if section.settings.video_1 != blank and section.settings.media_type_1 == 'video'
     assign media_1 = 'video'
     assign media_count = media_count | plus: 1
+  endif
+
+  comment
+    如果没有上传图片，使用默认背景图
+  endcomment
+  if media_count == 0 and section.settings.media_type_1 == 'image'
+    assign use_default_image = true
   endif
 
   assign sizes = '100vw'
@@ -51,8 +59,17 @@
     </div>
   {%- endif -%}
 
-  {% if media_count == 0 %}
-    {{ 'hero-apparel-1' | placeholder_svg_tag: 'page-banner__image' }}
+  {%- if use_default_image -%}
+    {%- if section.settings.default_image_url != blank -%}
+      <img
+        src="{{ section.settings.default_image_url }}"
+        alt="Page Banner"
+        class="page-banner__image"
+        loading="eager"
+      >
+    {%- else -%}
+      {{ 'hero-apparel-1' | placeholder_svg_tag: 'page-banner__image' }}
+    {%- endif -%}
   {%- endif -%}
 {% endcapture %}
 
@@ -207,6 +224,13 @@
       "id": "image_1",
       "label": "t:settings.image",
       "visible_if": "{{ section.settings.media_type_1 == 'image' }}"
+    },
+    {
+      "type": "text",
+      "id": "default_image_url",
+      "label": "Default image URL",
+      "info": "Used when no image is uploaded. Paste a Shopify CDN URL here.",
+      "visible_if": "{{ section.settings.image_1 == blank and section.settings.media_type_1 == 'image' }}"
     },
     {
       "type": "video",
@@ -496,7 +520,7 @@
         "title": {
           "type": "text",
           "settings": {
-            "text": "<p>Page Title</p>",
+            "text": "<p>FAQ</p>",
             "type_preset": "h1",
             "max_width": "narrow"
           }
@@ -504,13 +528,16 @@
         "description": {
           "type": "text",
           "settings": {
-            "text": "<p>Add your page description here</p>",
+            "text": "<p>Below you will find some of our most frequently asked questions. If you have further questions about something not listed below</p>",
             "max_width": "narrow",
             "padding-block-end": 32
           }
         }
       },
-      "block_order": ["title", "description"]
+      "block_order": ["title", "description"],
+      "settings": {
+        "default_image_url": "https://cdn.shopify.com/s/files/1/0922/4024/9498/files/151_2x_2923cf13-7ffd-4676-a186-e2b7a8e46c76.webp"
+      }
     }
   ]
 }

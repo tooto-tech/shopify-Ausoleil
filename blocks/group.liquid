@@ -90,6 +90,10 @@
         {
           "value": "flex-end",
           "label": "t:options.bottom"
+        },
+        {
+          "value": "stretch",
+          "label": "拉伸"
         }
       ],
       "default": "center",
@@ -143,6 +147,10 @@
         {
           "value": "space-between",
           "label": "t:options.space_between"
+        },
+        {
+          "value": "stretch",
+          "label": "拉伸"
         }
       ],
       "default": "center",
@@ -157,6 +165,23 @@
       "step": 1,
       "unit": "px",
       "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_gap",
+      "label": "启用移动端间隔",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "label": "移动端间隔",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 12,
+      "visible_if": "{{ block.settings.enable_mobile_gap == true }}"
     },
     {
       "type": "header",
@@ -388,6 +413,23 @@
     },
     {
       "type": "checkbox",
+      "id": "custom_mobile_border_radius",
+      "label": "自定义移动端圆角半径",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "border_radius_mobile",
+      "label": "移动端圆角半径",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_border_radius == true }}"
+    },
+    {
+      "type": "checkbox",
       "id": "toggle_overlay",
       "label": "t:settings.background_overlay"
     },
@@ -455,6 +497,90 @@
       "visible_if": "{{ false }}"
     },
     {
+      "type": "text",
+      "id": "custom_class_name",
+      "label": "自定义类名",
+      "info": "输入自定义 CSS 类名（不需要加点），例如：my-custom-class"
+    },
+    {
+      "type": "header",
+      "content": "动画设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_aos_animation",
+      "label": "开启动画",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "aos_animation_type",
+      "label": "动画类型",
+      "options": [
+        {
+          "value": "fade",
+          "label": "淡入"
+        },
+        {
+          "value": "fade-up",
+          "label": "淡入向上"
+        },
+        {
+          "value": "fade-down",
+          "label": "淡入向下"
+        },
+        {
+          "value": "fade-left",
+          "label": "淡入向左"
+        },
+        {
+          "value": "fade-right",
+          "label": "淡入向右"
+        },
+        {
+          "value": "zoom-in",
+          "label": "放大进入"
+        },
+        {
+          "value": "zoom-out",
+          "label": "缩小进入"
+        },
+        {
+          "value": "flip-up",
+          "label": "向上翻转"
+        },
+        {
+          "value": "flip-down",
+          "label": "向下翻转"
+        },
+        {
+          "value": "flip-left",
+          "label": "向左翻转"
+        },
+        {
+          "value": "flip-right",
+          "label": "向右翻转"
+        },
+        {
+          "value": "slide-up",
+          "label": "向上滑动"
+        }
+      ],
+      "default": "fade-up",
+      "visible_if": "{{ block.settings.enable_aos_animation == true }}"
+    },
+    {
+      "type": "range",
+      "id": "aos_animation_delay",
+      "label": "动画延迟",
+      "min": 0,
+      "max": 3000,
+      "step": 50,
+      "unit": "ms",
+      "default": 0,
+      "visible_if": "{{ block.settings.enable_aos_animation == true }}"
+    },
+    {
       "type": "header",
       "content": "t:content.padding"
     },
@@ -497,6 +623,62 @@
       "step": 1,
       "unit": "px",
       "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_mobile_padding",
+      "label": "自定义移动端填充",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "移动端填充",
+      "info": "仅在移动设备上应用这些填充值",
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "移动端顶部",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "移动端底部",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "移动端左侧",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "移动端右侧",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
     }
   ],
   "presets": [

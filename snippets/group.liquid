@@ -11,6 +11,13 @@
   {% render 'group', children: children, settings: block.settings, shopify_attributes: block.shopify_attributes %}
 {%- enddoc -%}
 
+{% liquid
+  assign custom_class = settings.custom_class_name | strip
+  assign has_mobile_padding = settings.custom_mobile_padding
+  assign has_mobile_gap = settings.enable_mobile_gap
+  assign has_mobile_border_radius = settings.custom_mobile_border_radius
+%}
+
 <div
   class="
     group-block
@@ -20,14 +27,34 @@
     spacing-style
     size-style
     {% if settings.inherit_color_scheme == false %} color-{{ settings.color_scheme }}{% endif %}
+    {% if has_mobile_padding %} group-block--custom-mobile-padding{% endif %}
+    {% if has_mobile_gap %} group-block--custom-mobile-gap{% endif %}
+    {% if has_mobile_border_radius %} group-block--custom-mobile-border-radius{% endif %}
     {{ class }}
+    {{ custom_class }}
   "
   style="
     {% render 'border-override', settings: settings %}
     {% render 'spacing-style', settings: settings %}
     {% render 'size-style', settings: settings %}
+    {% if has_mobile_padding %}
+      --padding-block-start-mobile: {{ settings.padding-block-start-mobile }}px;
+      --padding-block-end-mobile: {{ settings.padding-block-end-mobile }}px;
+      --padding-inline-start-mobile: {{ settings.padding-inline-start-mobile }}px;
+      --padding-inline-end-mobile: {{ settings.padding-inline-end-mobile }}px;
+    {% endif %}
+    {% if has_mobile_gap %}
+      --gap-mobile: {{ settings.gap_mobile }}px;
+    {% endif %}
+    {% if has_mobile_border_radius %}
+      --border-radius-mobile: {{ settings.border_radius_mobile }}px;
+    {% endif %}
     {{ style }}
   "
+  {% if settings.enable_aos_animation %}
+    data-aos="{{ settings.aos_animation_type }}"
+    data-aos-delay="{{ settings.aos_animation_delay }}"
+  {% endif %}
   {{ shopify_attributes }}
   data-testid="group-block"
 >
@@ -86,5 +113,23 @@
   /* Needs the .group-block__link ~ to be specific enough to take effect. */
   .group-block__link ~ .group-block-content--design-mode {
     pointer-events: auto;
+  }
+
+  /* 移动端自定义样式 */
+  @media screen and (max-width: 749px) {
+    .group-block--custom-mobile-padding.spacing-style {
+      padding-block-start: var(--padding-block-start-mobile) !important;
+      padding-block-end: var(--padding-block-end-mobile) !important;
+      padding-inline-start: var(--padding-inline-start-mobile) !important;
+      padding-inline-end: var(--padding-inline-end-mobile) !important;
+    }
+
+    .group-block--custom-mobile-gap .group-block-content {
+      gap: var(--gap-mobile) !important;
+    }
+
+    .group-block--custom-mobile-border-radius.border-style {
+      border-radius: var(--border-radius-mobile) !important;
+    }
   }
 {% endstylesheet %}

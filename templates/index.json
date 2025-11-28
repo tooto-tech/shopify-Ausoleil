@@ -648,7 +648,7 @@
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
-                "font": "var(--font-body--family)",
+                "font": "var(--font-subheading--family)",
                 "font_size": "1rem",
                 "font_size_mobile": "0.8125rem",
                 "weight": "300",

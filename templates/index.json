@@ -161,7 +161,7 @@
                     "text_color": "#ffffff",
                     "text_color_hover": "#ffffff",
                     "border_color": "#ffffff",
-                    "border_color_hover": "#333333",
+                    "border_color_hover": "#ffffff",
                     "border_width": 1,
                     "border_radius": 50,
                     "font_size": "0.875rem",

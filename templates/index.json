@@ -2103,6 +2103,7 @@
         "left_width": 45,
         "min_height": 600,
         "mobile_left_height": 300,
+        "min_height_mobile": 350,
         "autoplay": true,
         "autoplay_delay": 3000,
         "speed": 500,
@@ -2951,7 +2952,8 @@
         ".pss-slide__progress-track {background: rgba(255, 255, 255, 0.2);}",
         ".pss-slide__progress-fill {background: #ffffff;}",
         " /* 控制文本位置 */.pss-slide__right-content {display: flex; flex-direction: column; height: 100%; align-items: center;}",
-        " /* 让Winter靠下,底部的价格自然靠下 */.text-block--AT1FpSVVSbklVYlhUe__text_f9JEWi {margin-top: auto;}"
+        " /* 让Winter靠下,底部的价格自然靠下 */.text-block--AT1FpSVVSbklVYlhUe__text_f9JEWi {margin-top: auto;}",
+        ".pss-swiper {width: 95%;}"
       ],
       "name": "Product Showcase Swiper",
       "settings": {
@@ -2959,6 +2961,7 @@
         "left_width": 45,
         "min_height": 900,
         "mobile_left_height": 500,
+        "min_height_mobile": 600,
         "autoplay": false,
         "autoplay_delay": 3000,
         "speed": 500,

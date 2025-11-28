@@ -115,3 +115,8 @@ product-price .price-save {
     color: var(--save-color-mobile, var(--save-color, inherit));
   }
 }
+
+/* 去除product的原价显示 */
+product-price .compare-at-price{
+  display: none;
+}

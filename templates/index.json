@@ -1835,7 +1835,7 @@
             "image_PJ44Lf": {
               "type": "image",
               "settings": {
-                "image": "shopify://shop_images/181_2x_7916a806-f32c-47ae-a7d0-5d8576bc704f.webp",
+                "image": "shopify://shop_images/2669_2x_096774fb-3dd6-473d-9188-c630a2f1c263.webp",
                 "link": "",
                 "image_ratio": "adapt",
                 "image_ratio_mobile": "",
@@ -1904,7 +1904,7 @@
           "type": "_pss-slide",
           "name": "PSS 幻灯片",
           "settings": {
-            "left_image": "shopify://shop_images/180_2x_f468d1a0-18af-4570-833b-454ff6f08c2d.webp",
+            "left_image": "shopify://shop_images/2669_2x_096774fb-3dd6-473d-9188-c630a2f1c263.webp",
             "use_mobile_image": false,
             "toggle_overlay": false,
             "overlay_color": "#00000026",
@@ -1925,7 +1925,7 @@
             "image_WqnMxi": {
               "type": "image",
               "settings": {
-                "image": "shopify://shop_images/2665_2x_a8149bca-c53b-4c33-8ee4-3061ae9c921a.webp",
+                "image": "shopify://shop_images/2669_2x_096774fb-3dd6-473d-9188-c630a2f1c263.webp",
                 "link": "",
                 "image_ratio": "adapt",
                 "image_ratio_mobile": "",

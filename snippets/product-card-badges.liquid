@@ -10,12 +10,20 @@
 {%- enddoc -%}
 
 {%- liquid
-  # 默认值设置
-  assign show_badges = block_settings.show_badges | default: true
-  assign show_sold_out_badge = block_settings.show_sold_out_badge | default: true
-  assign show_sale_badge = block_settings.show_sale_badge | default: true
-  assign custom_badge_text = block_settings.custom_badge_text | default: ''
-  assign custom_badge_color_scheme = block_settings.custom_badge_color_scheme | default: 'scheme-1'
+  # 默认值设置 - 检查 block_settings 是否存在
+  if block_settings != blank
+    assign show_badges = block_settings.show_badges
+    assign show_sold_out_badge = block_settings.show_sold_out_badge
+    assign show_sale_badge = block_settings.show_sale_badge
+    assign custom_badge_text = block_settings.custom_badge_text
+    assign custom_badge_color_scheme = block_settings.custom_badge_color_scheme | default: 'scheme-1'
+  else
+    assign show_badges = true
+    assign show_sold_out_badge = true
+    assign show_sale_badge = true
+    assign custom_badge_text = ''
+    assign custom_badge_color_scheme = 'scheme-1'
+  endif
 -%}
 
 {%- if show_badges -%}
@@ -40,15 +48,13 @@
       </div>
     {%- endif -%}
 
-    {%- comment -%} 自定义标签 {%- endcomment -%}
+    {%- comment -%} 自定义标签（有自定义标签时不显示 Sale 标签） {%- endcomment -%}
     {%- if custom_badge_text != blank and product.available -%}
       <div class="product-badges__badge product-badges__badge--rectangle color-{{ custom_badge_color_scheme }}">
         {{ custom_badge_text }}
       </div>
-    {%- endif -%}
-
-    {%- comment -%} Sale 标签 {%- endcomment -%}
-    {%- if is_on_sale and show_sale_badge -%}
+    {%- elsif is_on_sale and show_sale_badge -%}
+      {%- comment -%} Sale 标签（仅在没有自定义标签时显示） {%- endcomment -%}
       <div class="product-badges__badge product-badges__badge--rectangle color-{{ settings.badge_sale_color_scheme }}">
         {{ 'content.product_badge_sale' | t }}
       </div>

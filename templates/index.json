@@ -1019,12 +1019,12 @@
           "name": "t:names.header",
           "static": true,
           "settings": {
-            "content_direction": "row",
+            "content_direction": "column",
             "vertical_on_mobile": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
             "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
             "width": "fill",
@@ -1085,6 +1085,43 @@
               },
               "blocks": {}
             },
+            "text_xwWkpq": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>where precision meets innovation.   Curated styles that redefine modern menswear, blending timeless cuts with season-defining details.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "'Mont', var(--font-heading--family)",
+                "font_size": "0.875rem",
+                "font_size_mobile": "0.8125rem",
+                "weight": "300",
+                "weight_mobile": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "letter_spacing_custom": "",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            },
             "product_list_button_jrkjed": {
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
@@ -1102,6 +1139,7 @@
           },
           "block_order": [
             "text_4LnV6X",
+            "text_xwWkpq",
             "product_list_button_jrkjed"
           ]
         },

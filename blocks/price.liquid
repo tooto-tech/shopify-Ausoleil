@@ -42,13 +42,10 @@
     {% render 'typography-style', settings: block_settings %}
     {% render 'spacing-style', settings: block_settings %}
     --width: {{ block_settings.width }};
-    {% if block_settings.price_font != blank %}--price-font: {{ block_settings.price_font }};{% endif %}
     {% if block_settings.price_font_size != blank %}--price-font-size: {{ block_settings.price_font_size }};{% endif %}
     {% if block_settings.price_color != blank %}--price-color: {{ block_settings.price_color }};{% endif %}
-    {% if block_settings.compare_price_font != blank %}--compare-price-font: {{ block_settings.compare_price_font }};{% endif %}
     {% if block_settings.compare_price_font_size != blank %}--compare-price-font-size: {{ block_settings.compare_price_font_size }};{% endif %}
     {% if block_settings.compare_price_color != blank %}--compare-price-color: {{ block_settings.compare_price_color }};{% endif %}
-    {% if block_settings.save_font != blank %}--save-font: {{ block_settings.save_font }};{% endif %}
     {% if block_settings.save_font_size != blank %}--save-font-size: {{ block_settings.save_font_size }};{% endif %}
     {% if block_settings.save_color != blank %}--save-color: {{ block_settings.save_color }};{% endif %}
     {% if block_settings.price_font_size_mobile != blank %}--price-font-size-mobile: {{ block_settings.price_font_size_mobile }};{% endif %}
@@ -156,46 +153,6 @@
     {
       "type": "header",
       "content": "价格样式"
-    },
-    {
-      "type": "select",
-      "id": "price_font",
-      "label": "价格字体",
-      "options": [
-        { "value": "", "label": "默认" },
-        { "value": "var(--font-body--family)", "label": "正文字体" },
-        { "value": "var(--font-subheading--family)", "label": "副标题字体" },
-        { "value": "var(--font-heading--family)", "label": "标题字体" },
-        { "value": "var(--font-accent--family)", "label": "强调字体" }
-      ],
-      "default": ""
-    },
-    {
-      "type": "select",
-      "id": "compare_price_font",
-      "label": "原价字体",
-      "options": [
-        { "value": "", "label": "默认" },
-        { "value": "var(--font-body--family)", "label": "正文字体" },
-        { "value": "var(--font-subheading--family)", "label": "副标题字体" },
-        { "value": "var(--font-heading--family)", "label": "标题字体" },
-        { "value": "var(--font-accent--family)", "label": "强调字体" }
-      ],
-      "default": ""
-    },
-    {
-      "type": "select",
-      "id": "save_font",
-      "label": "折扣字体",
-      "options": [
-        { "value": "", "label": "默认" },
-        { "value": "var(--font-body--family)", "label": "正文字体" },
-        { "value": "var(--font-subheading--family)", "label": "副标题字体" },
-        { "value": "var(--font-heading--family)", "label": "标题字体" },
-        { "value": "var(--font-accent--family)", "label": "强调字体" }
-      ],
-      "default": "",
-      "visible_if": "{{ block.settings.show_save == true }}"
     },
     {
       "type": "select",

@@ -1,5 +1,3 @@
-
-
 {% render 'divider', id: block.id, settings: block.settings, attributes: true %}
 
 {% schema %}
@@ -67,6 +65,12 @@
       "step": 1,
       "unit": "px",
       "default": 0
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "t:settings.custom_class",
+      "info": "t:info.custom_class"
     }
   ],
   "presets": [

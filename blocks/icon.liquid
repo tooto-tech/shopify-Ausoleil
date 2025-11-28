@@ -21,7 +21,7 @@
 {%- if block_settings.link != blank -%}
   <a
     href="{{ block_settings.link }}"
-    class="text-inherit icon-block-wrapper icon-block-wrapper-{{ block.id }}"
+    class="text-inherit icon-block-wrapper icon-block-wrapper-{{ block.id }} {{ block_settings.custom_class }}"
     style="{{ icon_style }}"
     {% if block_settings.open_in_new_tab %}
       target="_blank" rel="noopener"
@@ -30,7 +30,10 @@
     {{ icon }}
   </a>
 {%- else -%}
-  <span class="icon-block-wrapper icon-block-wrapper-{{ block.id }}" style="{{ icon_style }}">
+  <span
+    class="icon-block-wrapper icon-block-wrapper-{{ block.id }} {{ block_settings.custom_class }}"
+    style="{{ icon_style }}"
+  >
     {{ icon }}
   </span>
 {%- endif -%}
@@ -384,6 +387,12 @@
       "id": "open_in_new_tab",
       "label": "t:settings.open_new_tab",
       "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "t:settings.custom_class",
+      "info": "t:info.custom_class"
     }
   ],
   "presets": [

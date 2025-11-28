@@ -1796,6 +1796,42 @@
             "see_more_link": ""
           },
           "blocks": {
+            "product_title_Jf3iWT": {
+              "type": "product-title",
+              "name": "t:names.title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "font_size_mobile": "",
+                "weight": "",
+                "weight_mobile": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "letter_spacing_custom": "",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            },
             "image_PJ44Lf": {
               "type": "image",
               "settings": {
@@ -1859,6 +1895,7 @@
             }
           },
           "block_order": [
+            "product_title_Jf3iWT",
             "image_PJ44Lf",
             "text_KTdaKr"
           ]

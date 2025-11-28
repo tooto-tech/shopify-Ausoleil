@@ -1877,9 +1877,9 @@
               "type": "text",
               "settings": {
                 "text": "<p>Verdant Avant-Garde Sunglasses192001</p>",
-                "width": "fit-content",
+                "width": "100%",
                 "max_width": "normal",
-                "alignment": "left",
+                "alignment": "center",
                 "type_preset": "custom",
                 "font": "'Mont', var(--font-heading--family)",
                 "font_size": "1rem",

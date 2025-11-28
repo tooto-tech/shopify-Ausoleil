@@ -3,18 +3,49 @@
 {% liquid
   assign block_settings = block.settings
   assign ratio = 1
+  assign ratio_mobile = null
 
   case block_settings.image_ratio
     when 'landscape'
       assign ratio = '16 / 9'
     when 'portrait'
       assign ratio = '4 / 5'
+    when 'square'
+      assign ratio = '1 / 1'
     when 'adapt'
       assign ratio = block_settings.image.aspect_ratio
   endcase
 
+  case block_settings.image_ratio_mobile
+    when 'landscape'
+      assign ratio_mobile = '16 / 9'
+    when 'portrait'
+      assign ratio_mobile = '4 / 5'
+    when 'square'
+      assign ratio_mobile = '1 / 1'
+    when 'adapt'
+      assign ratio_mobile = block_settings.image.aspect_ratio
+  endcase
+
   if ratio == 0 or ratio == null
     assign ratio = 1
+  endif
+
+  if ratio_mobile == 0 or ratio_mobile == null
+    assign ratio_mobile = ratio
+  endif
+%}
+
+{% liquid
+  assign has_mobile_border_radius = block_settings.custom_mobile_border_radius
+  assign image_class = 'image-block__image border-style'
+  if has_mobile_border_radius
+    assign image_class = image_class | append: ' image-block__image--custom-mobile-border-radius'
+  endif
+
+  assign placeholder_class = 'placeholder-image border-style size-style'
+  if has_mobile_border_radius
+    assign placeholder_class = placeholder_class | append: ' placeholder-image--custom-mobile-border-radius'
   endif
 %}
 
@@ -24,13 +55,22 @@
 
 {% capture style %}
   --ratio: {{ ratio }};
+  {% if ratio_mobile %}
+    --ratio-mobile: {{ ratio_mobile }};
+  {% endif %}
   {% render 'size-style', settings: block_settings %}
   {% render 'spacing-style', settings: block_settings %}
 {% endcapture %}
 
 {% capture image_border_style %}
   --ratio: {{ ratio }};
+  {% if ratio_mobile %}
+    --ratio-mobile: {{ ratio_mobile }};
+  {% endif %}
   {% render 'border-override', settings: block_settings %}
+  {% if has_mobile_border_radius %}
+    --border-radius-mobile: {{ block_settings.border_radius_mobile }}px;
+  {% endif %}
 {% endcapture %}
 
 {% liquid
@@ -49,12 +89,12 @@
         width: block_settings.image.width,
         widths: widths,
         height: block_settings.image.height,
-        class: 'image-block__image border-style',
+        class: image_class,
         style: image_border_style,
         sizes: sizes
     }}
   {%- else -%}
-    <div class="placeholder-image border-style size-style" style="{{ image_border_style }}">
+    <div class="{{ placeholder_class }}" style="{{ image_border_style }}">
       {{ 'detailed-apparel-1' | placeholder_svg_tag: 'hero__image' }}
     </div>
   {%- endif -%}
@@ -107,6 +147,25 @@
     object-fit: cover;
     aspect-ratio: var(--ratio);
   }
+
+  /* 移动端自定义样式 */
+  @media screen and (max-width: 749px) {
+    .placeholder-image {
+      aspect-ratio: var(--ratio-mobile, var(--ratio));
+    }
+
+    .image-block__image {
+      aspect-ratio: var(--ratio-mobile, var(--ratio));
+    }
+
+    .image-block__image--custom-mobile-border-radius.border-style {
+      border-radius: var(--border-radius-mobile, var(--border-radius)) !important;
+    }
+
+    .placeholder-image--custom-mobile-border-radius.border-style {
+      border-radius: var(--border-radius-mobile, var(--border-radius)) !important;
+    }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -151,6 +210,34 @@
       ],
       "default": "adapt",
       "label": "t:settings.aspect_ratio"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio_mobile",
+      "label": "移动端纵横比",
+      "options": [
+        {
+          "value": "",
+          "label": "与桌面相同"
+        },
+        {
+          "value": "adapt",
+          "label": "t:options.auto"
+        },
+        {
+          "value": "portrait",
+          "label": "t:options.portrait"
+        },
+        {
+          "value": "square",
+          "label": "t:options.square"
+        },
+        {
+          "value": "landscape",
+          "label": "t:options.landscape"
+        }
+      ],
+      "default": ""
     },
     {
       "type": "select",
@@ -282,6 +369,23 @@
       "step": 1,
       "unit": "px",
       "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_mobile_border_radius",
+      "label": "自定义移动端圆角半径",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "border_radius_mobile",
+      "label": "移动端圆角半径",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_border_radius == true }}"
     },
     {
       "type": "header",

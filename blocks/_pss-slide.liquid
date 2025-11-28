@@ -1,6 +1,6 @@
 {%- comment -%}
   Product Showcase Swiper - Slide Block
-  - 左侧：图片 + See More 链接
+  - 左侧：图片 + 居中图标/文本 + See More 链接
   - 右侧：可添加任意 blocks
 {%- endcomment -%}
 
@@ -50,6 +50,31 @@
         {% render 'overlay', settings: block_settings %}
       {%- endif -%}
 
+      <!-- 左侧居中内容：图标 + 文本 -->
+      {%- if block_settings.center_icon != blank or block_settings.center_text != blank -%}
+        <div class="pss-slide__left-center">
+          {%- if block_settings.center_icon != blank -%}
+            <img
+              src="{{ block_settings.center_icon | image_url: width: 400 }}"
+              alt="{{ block_settings.center_icon.alt | default: '' | escape }}"
+              class="pss-slide__left-icon"
+              style="width: {{ block_settings.icon_width }}px; max-width: {{ block_settings.icon_width_mobile }}px;"
+              width="{{ block_settings.center_icon.width }}"
+              height="{{ block_settings.center_icon.height }}"
+            >
+          {%- endif -%}
+          {%- if block_settings.center_text != blank -%}
+            <p class="pss-slide__left-text" style="
+              font-size: {{ block_settings.text_size }};
+              font-weight: {{ block_settings.text_weight }};
+              color: {{ block_settings.text_color }};
+              letter-spacing: {{ block_settings.text_letter_spacing }};
+              margin-top: {{ block_settings.text_margin_top }}px;
+            ">{{ block_settings.center_text }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
       <!-- See More 链接在左侧底部 -->
       {%- if block_settings.see_more_text != blank -%}
         <a href="{{ block_settings.see_more_link }}" class="pss-slide__see-more">
@@ -93,7 +118,7 @@
   "settings": [
     {
       "type": "header",
-      "content": "左侧图片"
+      "content": "左侧背景图片"
     },
     {
       "type": "image_picker",
@@ -150,7 +175,101 @@
     },
     {
       "type": "header",
-      "content": "See More 链接（左侧底部）"
+      "content": "左侧居中图标"
+    },
+    {
+      "type": "image_picker",
+      "id": "center_icon",
+      "label": "图标"
+    },
+    {
+      "type": "range",
+      "id": "icon_width",
+      "label": "图标宽度（桌面端）",
+      "min": 40,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "icon_width_mobile",
+      "label": "图标宽度（移动端）",
+      "min": 30,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "左侧居中文本"
+    },
+    {
+      "type": "text",
+      "id": "center_text",
+      "label": "文本内容"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "文字大小",
+      "options": [
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" },
+        { "value": "1.25rem", "label": "20px" },
+        { "value": "1.5rem", "label": "24px" },
+        { "value": "2rem", "label": "32px" }
+      ],
+      "default": "1rem"
+    },
+    {
+      "type": "select",
+      "id": "text_weight",
+      "label": "字重",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi Bold (600)" },
+        { "value": "700", "label": "Bold (700)" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "text_letter_spacing",
+      "label": "字间距",
+      "options": [
+        { "value": "normal", "label": "正常" },
+        { "value": "0.05em", "label": "稍宽" },
+        { "value": "0.1em", "label": "宽" },
+        { "value": "0.2em", "label": "很宽" }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "range",
+      "id": "text_margin_top",
+      "label": "文本与图标间距",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "See More 链接（左下角）"
     },
     {
       "type": "text",

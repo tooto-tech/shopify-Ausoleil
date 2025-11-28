@@ -1390,7 +1390,7 @@
             "type_preset": "custom",
             "font": "'DolceVitaLight', var(--font-heading--family)",
             "font_size": "3rem",
-            "font_size_mobile": "",
+            "font_size_mobile": "1.4375rem",
             "weight": "",
             "weight_mobile": "",
             "line_height": "normal",
@@ -1405,7 +1405,7 @@
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 32,
+            "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0,
             "custom_mobile_padding": false,
@@ -1421,6 +1421,7 @@
         "text_fMG6wt",
         "text_cJPCHP"
       ],
+      "disabled": true,
       "name": "Banner",
       "settings": {
         "media_type_1": "image",
@@ -1476,7 +1477,6 @@
       "block_order": [
         "icon_k6mAWU"
       ],
-      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -1630,7 +1630,7 @@
                 "price_font_size": "",
                 "price_color": "",
                 "compare_price_font_size": "",
-                "compare_price_color": "",
+                "compare_price_color": "#ffffff",
                 "save_font_size": "",
                 "save_color": "",
                 "price_font_size_mobile": "",
@@ -1641,7 +1641,7 @@
                 "save_color_mobile": "",
                 "type_preset": "h6",
                 "width": "100%",
-                "alignment": "left",
+                "alignment": "center",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
@@ -1666,7 +1666,7 @@
       "block_order": [
         "text_BdQkcQ"
       ],
-      "disabled": true,
+      "custom_css": [],
       "name": "Classic STYLE EVERYDAY",
       "settings": {
         "product": "verdant-avant-garde-olive-sunglasses-garde-192001",
@@ -1724,7 +1724,6 @@
       "block_order": [
         "button_iMFYDy"
       ],
-      "disabled": true,
       "name": "Shop More",
       "settings": {
         "content_direction": "column",
@@ -2275,7 +2274,6 @@
       "block_order": [
         "group_grEp9A"
       ],
-      "disabled": true,
       "name": "t:names.hero_bottom_aligned",
       "settings": {
         "media_type_1": "image",

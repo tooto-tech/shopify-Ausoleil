@@ -1,7 +1,12 @@
-
-
 {% assign block_settings = block.settings %}
 {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
+
+{% capture icon_style %}
+  --icon-width: {{ block_settings.width }}px;
+  {% if block_settings.height > 0 %}--icon-height: {{ block_settings.height }}px;{% endif %}
+  {% if block_settings.width_mobile > 0 %}--icon-width-mobile: {{ block_settings.width_mobile }}px;{% endif %}
+  {% if block_settings.height_mobile > 0 %}--icon-height-mobile: {{ block_settings.height_mobile }}px;{% endif %}
+{% endcapture %}
 
 {% capture icon %}
   {% render 'icon-or-image',
@@ -16,7 +21,8 @@
 {%- if block_settings.link != blank -%}
   <a
     href="{{ block_settings.link }}"
-    class="text-inherit"
+    class="text-inherit icon-block-wrapper icon-block-wrapper-{{ block.id }}"
+    style="{{ icon_style }}"
     {% if block_settings.open_in_new_tab %}
       target="_blank" rel="noopener"
     {% endif %}
@@ -24,7 +30,9 @@
     {{ icon }}
   </a>
 {%- else -%}
-  {{ icon }}
+  <span class="icon-block-wrapper icon-block-wrapper-{{ block.id }}" style="{{ icon_style }}">
+    {{ icon }}
+  </span>
 {%- endif -%}
 
 {% stylesheet %}
@@ -34,8 +42,30 @@
     flex-shrink: 0;
   }
 
+  .icon-block-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .icon-block__media {
-    height: auto;
+    width: var(--icon-width, auto);
+    height: var(--icon-height, auto);
+    flex-shrink: 0;
+  }
+
+  .icon-block__media img,
+  .icon-block__media svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 749px) {
+    .icon-block__media {
+      width: var(--icon-width-mobile, var(--icon-width, auto));
+      height: var(--icon-height-mobile, var(--icon-height, auto));
+    }
   }
 {% endstylesheet %}
 
@@ -294,14 +324,55 @@
       "label": "t:settings.image_icon"
     },
     {
+      "type": "header",
+      "content": "桌面端尺寸"
+    },
+    {
       "type": "range",
       "id": "width",
-      "label": "t:settings.width",
+      "label": "宽度",
       "min": 12,
       "max": 200,
       "step": 2,
       "unit": "px",
       "default": 24
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "label": "高度",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "info": "0 表示自动高度"
+    },
+    {
+      "type": "header",
+      "content": "移动端尺寸"
+    },
+    {
+      "type": "range",
+      "id": "width_mobile",
+      "label": "移动端宽度",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "info": "0 表示使用桌面端宽度"
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "label": "移动端高度",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "info": "0 表示自动高度"
     },
     {
       "type": "url",

@@ -155,7 +155,7 @@
       .pss-slide__left-img--mobile { display: block; }
       .pss-slide__left-icon { width: var(--icon-width-mobile, 80px); }
       .pss-slide__left-text { font-size: var(--text-size-mobile); font-weight: var(--text-weight-mobile, var(--text-weight)); margin-top: var(--text-margin-top-mobile); }
-      .pss-slide__right { padding: 40px 20px; }
+      .pss-slide__right { padding: 40px 20px; min-height: {{ section.settings.min_height_mobile }}px; }
         .pss-slide__see-more {
       bottom: 15px;
       left: 50%;
@@ -217,6 +217,16 @@
       "step": 25,
       "unit": "px",
       "default": 300
+    },
+    {
+      "type": "range",
+      "id": "min_height_mobile",
+      "label": "右侧最小高度（移动端）",
+      "min": 200,
+      "max": 600,
+      "step": 25,
+      "unit": "px",
+      "default": 350
     },
     {
       "type": "header",

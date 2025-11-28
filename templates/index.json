@@ -1090,9 +1090,9 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>where precision meets innovation.   Curated styles that redefine modern menswear, blending timeless cuts with season-defining details.</p>",
-                "width": "fit-content",
+                "width": "100%",
                 "max_width": "normal",
-                "alignment": "left",
+                "alignment": "center",
                 "type_preset": "custom",
                 "font": "'Mont', var(--font-heading--family)",
                 "font_size": "0.875rem",

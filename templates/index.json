@@ -1776,28 +1776,34 @@
     "product_showcase_swiper_CePYch": {
       "type": "product-showcase-swiper",
       "blocks": {
-        "showcase_JgeaEJ": {
-          "type": "showcase",
+        "slide_dKcxaG": {
+          "type": "slide",
           "settings": {
-            "lifestyle_image": "shopify://shop_images/180_2x_f468d1a0-18af-4570-833b-454ff6f08c2d.webp",
-            "product_image": "shopify://shop_images/2665_2x_a8149bca-c53b-4c33-8ee4-3061ae9c921a.webp",
-            "product": "verdant-avant-garde-olive-sunglasses-garde-192002",
-            "see_more_label": "See More",
-            "see_more_link": ""
+            "left_image": "shopify://shop_images/171_2x_1.webp",
+            "right_image": "shopify://shop_images/2663_2x_a90a998d-b07d-4d3e-928a-18dcf6a34aab.webp",
+            "title": "",
+            "subtitle": "",
+            "product": "",
+            "button_label": "",
+            "link": ""
           }
         },
-        "showcase_NDamLE": {
-          "type": "showcase",
+        "slide_k93CyC": {
+          "type": "slide",
           "settings": {
+            "left_image": "shopify://shop_images/180_2x_f468d1a0-18af-4570-833b-454ff6f08c2d.webp",
+            "right_image": "shopify://shop_images/2665_2x_a8149bca-c53b-4c33-8ee4-3061ae9c921a.webp",
+            "title": "",
+            "subtitle": "",
             "product": "",
-            "see_more_label": "See More",
-            "see_more_link": ""
+            "button_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "showcase_JgeaEJ",
-        "showcase_NDamLE"
+        "slide_dKcxaG",
+        "slide_k93CyC"
       ],
       "name": "Product Showcase Swiper",
       "settings": {

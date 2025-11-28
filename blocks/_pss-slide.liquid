@@ -1,6 +1,8 @@
 {%- comment -%}
   Product Showcase Swiper - Slide Block
-  支持在右侧添加任意 blocks
+  左右两侧都支持添加 blocks
+  - 左侧：图片背景 + 可叠加内容
+  - 右侧：产品展示内容
 {%- endcomment -%}
 
 {%- assign block_settings = block.settings -%}
@@ -8,7 +10,7 @@
 
 {% capture children %}
   <div class="pss-slide__container">
-    <!-- 左侧图片 -->
+    <!-- 左侧 -->
     <div class="pss-slide__left">
       {%- if block_settings.left_image != blank -%}
         {%- liquid
@@ -48,9 +50,18 @@
       {%- if block_settings.toggle_overlay -%}
         {% render 'overlay', settings: block_settings %}
       {%- endif -%}
+
+      <!-- 左侧内容层 -->
+      <div class="pss-slide__left-content" style="
+        align-items: {{ block_settings.left_horizontal_alignment }};
+        justify-content: {{ block_settings.left_vertical_alignment }};
+        padding: {{ block_settings.left_padding_top }}px {{ block_settings.left_padding_right }}px {{ block_settings.left_padding_bottom }}px {{ block_settings.left_padding_left }}px;
+      ">
+        {% content_for 'blocks' %}
+      </div>
     </div>
 
-    <!-- 右侧内容 -->
+    <!-- 右侧 -->
     <div class="pss-slide__right" style="
       {%- if block_settings.right_bg_color != blank -%}background-color: {{ block_settings.right_bg_color }};{%- endif -%}
       padding: {{ block_settings.right_padding_top }}px {{ block_settings.right_padding_right }}px {{ block_settings.right_padding_bottom }}px {{ block_settings.right_padding_left }}px;
@@ -62,11 +73,11 @@
       {%- endif -%}
 
       <div class="pss-slide__right-content" style="
-        align-items: {{ block_settings.horizontal_alignment }};
-        justify-content: {{ block_settings.vertical_alignment }};
+        align-items: {{ block_settings.right_horizontal_alignment }};
+        justify-content: {{ block_settings.right_vertical_alignment }};
         gap: {{ block_settings.content_gap }}px;
       ">
-        {% content_for 'blocks' %}
+        {%- comment -%} 右侧内容通过 group block 添加 {%- endcomment -%}
       </div>
 
       <!-- 进度条 -->
@@ -91,12 +102,12 @@
   "settings": [
     {
       "type": "header",
-      "content": "左侧图片"
+      "content": "左侧背景图片"
     },
     {
       "type": "image_picker",
       "id": "left_image",
-      "label": "图片"
+      "label": "背景图片"
     },
     {
       "type": "checkbox",
@@ -121,7 +132,7 @@
       "id": "overlay_color",
       "label": "遮罩颜色",
       "alpha": true,
-      "default": "#00000026",
+      "default": "#00000040",
       "visible_if": "{{ block.settings.toggle_overlay }}"
     },
     {
@@ -148,16 +159,15 @@
     },
     {
       "type": "header",
-      "content": "右侧设置"
+      "content": "左侧内容布局"
     },
     {
-      "type": "color",
-      "id": "right_bg_color",
-      "label": "右侧背景色"
+      "type": "paragraph",
+      "content": "在此幻灯片下添加 blocks（如 text、image、group）会显示在左侧"
     },
     {
       "type": "select",
-      "id": "horizontal_alignment",
+      "id": "left_horizontal_alignment",
       "label": "水平对齐",
       "options": [
         { "value": "flex-start", "label": "左" },
@@ -168,7 +178,78 @@
     },
     {
       "type": "select",
-      "id": "vertical_alignment",
+      "id": "left_vertical_alignment",
+      "label": "垂直对齐",
+      "options": [
+        { "value": "flex-start", "label": "顶部" },
+        { "value": "center", "label": "居中" },
+        { "value": "flex-end", "label": "底部" }
+      ],
+      "default": "flex-end"
+    },
+    {
+      "type": "range",
+      "id": "left_padding_top",
+      "label": "上内边距",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "left_padding_bottom",
+      "label": "下内边距",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "left_padding_left",
+      "label": "左内边距",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "left_padding_right",
+      "label": "右内边距",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "右侧设置"
+    },
+    {
+      "type": "color",
+      "id": "right_bg_color",
+      "label": "右侧背景色"
+    },
+    {
+      "type": "select",
+      "id": "right_horizontal_alignment",
+      "label": "水平对齐",
+      "options": [
+        { "value": "flex-start", "label": "左" },
+        { "value": "center", "label": "居中" },
+        { "value": "flex-end", "label": "右" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "right_vertical_alignment",
       "label": "垂直对齐",
       "options": [
         { "value": "flex-start", "label": "顶部" },
@@ -244,22 +325,7 @@
   ],
   "presets": [
     {
-      "name": "PSS 幻灯片",
-      "blocks": [
-        {
-          "type": "image",
-          "settings": {
-            "width": "custom",
-            "custom_width": 60
-          }
-        },
-        {
-          "type": "text",
-          "settings": {
-            "text": "<p>产品标题</p>"
-          }
-        }
-      ]
+      "name": "PSS 幻灯片"
     }
   ]
 }

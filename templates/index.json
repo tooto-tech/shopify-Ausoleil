@@ -920,7 +920,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "Shop Now",
-                    "link": "shopify://collections/classic-style-everyday",
+                    "link": "{{ closest.collection.url }}",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "bg_color": "#1a1a1a",

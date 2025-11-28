@@ -1048,29 +1048,40 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_list_text_iL9Nmw": {
-              "type": "_product-list-text",
-              "name": "t:names.collection_title",
+            "text_4LnV6X": {
+              "type": "text",
+              "name": "t:names.text",
               "settings": {
                 "text": "<h3>New Arrivals</h3>",
-                "width": "100%",
+                "width": "fit-content",
                 "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "'Mont', var(--font-heading--family)",
+                "font_size": "3.5rem",
+                "font_size_mobile": "1.75rem",
+                "weight": "900",
+                "weight_mobile": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
+                "letter_spacing_custom": "",
                 "case": "none",
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
+                "custom_color": "#121821",
+                "custom_color_mobile": "#121821",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             },
@@ -1090,7 +1101,7 @@
             }
           },
           "block_order": [
-            "product_list_text_iL9Nmw",
+            "text_4LnV6X",
             "product_list_button_jrkjed"
           ]
         },

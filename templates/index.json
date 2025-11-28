@@ -1180,23 +1180,23 @@
               "type": "product-title",
               "name": "t:names.product_title",
               "settings": {
-                "width": "fit-content",
-                "max_width": "narrow",
-                "alignment": "left",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
                 "type_preset": "custom",
-                "font": "var(--font-subheading--family)",
-                "font_size": "0.875rem",
-                "font_size_mobile": "0.75rem",
-                "weight": "",
-                "weight_mobile": "",
+                "font": "'Mont', var(--font-heading--family)",
+                "font_size": "1rem",
+                "font_size_mobile": "0.875rem",
+                "weight": "900",
+                "weight_mobile": "900",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "letter_spacing_custom": "",
                 "case": "none",
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
-                "custom_color": "#000000",
-                "custom_color_mobile": "#000000",
+                "custom_color": "#121821",
+                "custom_color_mobile": "#121821",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -1229,7 +1229,7 @@
                 "compare_price_color": "#ffffff",
                 "save_font_size": "",
                 "save_color": "",
-                "price_font_size_mobile": "0.875rem",
+                "price_font_size_mobile": "1rem",
                 "price_color_mobile": "#000000",
                 "compare_price_font_size_mobile": "",
                 "compare_price_color_mobile": "rgba(0,0,0,0)",
@@ -1237,7 +1237,7 @@
                 "save_color_mobile": "",
                 "type_preset": "h6",
                 "width": "100%",
-                "alignment": "left",
+                "alignment": "center",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
@@ -1259,7 +1259,6 @@
           ]
         }
       },
-      "disabled": true,
       "custom_css": [
         ".product-badges__badge {background: #1226aa; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}"
       ],
@@ -2203,9 +2202,9 @@
               "name": "t:names.product_card_media",
               "settings": {
                 "show_badges": true,
-                "show_sold_out_badge": true,
-                "show_sale_badge": true,
-                "custom_badge_text": "",
+                "show_sold_out_badge": false,
+                "show_sale_badge": false,
+                "custom_badge_text": "NEW",
                 "custom_badge_color_scheme": "scheme-1",
                 "image_ratio": "adapt",
                 "border": "none",
@@ -2226,7 +2225,7 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "custom",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "font_size_mobile": "",
@@ -2304,6 +2303,9 @@
       },
       "block_order": [
         "group_jzKAbL"
+      ],
+      "custom_css": [
+        ".product-badges__badge {background: #1226aa; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 8px; text-align: center;}"
       ],
       "name": "MODERN",
       "settings": {

@@ -66,6 +66,12 @@
       --text-corner-radius: {{ block_settings.corner_radius }}px;
       --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
     {% endif %}
+    {% if block_settings.custom_mobile_padding %}
+      --padding-block-start-mobile: {{ block_settings.padding-block-start-mobile }}px;
+      --padding-block-end-mobile: {{ block_settings.padding-block-end-mobile }}px;
+      --padding-inline-start-mobile: {{ block_settings.padding-inline-start-mobile }}px;
+      --padding-inline-end-mobile: {{ block_settings.padding-inline-end-mobile }}px;
+    {% endif %}
   "
 
   {{ block.shopify_attributes }}
@@ -224,6 +230,13 @@
     .custom-color,
     .custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {
       color: var(--color-mobile, var(--color));
+    }
+
+    .text-block.spacing-style {
+      padding-block-start: var(--padding-block-start-mobile, var(--padding-block-start, 0));
+      padding-block-end: var(--padding-block-end-mobile, var(--padding-block-end, 0));
+      padding-inline-start: var(--padding-inline-start-mobile, var(--padding-inline-start, 0));
+      padding-inline-end: var(--padding-inline-end-mobile, var(--padding-inline-end, 0));
     }
   }
 {% endstylesheet %}

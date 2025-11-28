@@ -1,7 +1,8 @@
 {%- comment -%}
   Product Showcase Swiper
-  - 使用 slide_group 作为分隔符来分组
-  - left_content 和 right_content blocks 会被分配到对应的 slide
+  - 支持两种 block 类型：
+    1. slide - 简单模式，通过 settings 配置
+    2. _pss-slide - 高级模式，支持嵌套 blocks
 {%- endcomment -%}
 
 <div class="pss-section" style="background-color: {{ section.settings.bg_color }};">
@@ -9,13 +10,13 @@
     <div class="swiper-wrapper">
       {%- for block in section.blocks -%}
         {%- if block.type == 'slide' -%}
+          {%- comment -%} 简单模式 - 兼容旧数据 {%- endcomment -%}
           <div class="swiper-slide pss-slide" {{ block.shopify_attributes }}>
             <div class="pss-slide__container">
-              <!-- 左侧 -->
               <div class="pss-slide__left">
                 {%- if block.settings.left_image != blank -%}
                   <img
-                    src="{{ block.settings.left_image | image_url: width: 1200 }}"
+                    src="{{ block.settings.left_image | image_url: width: 1500 }}"
                     alt="{{ block.settings.left_image.alt | escape }}"
                     class="pss-slide__left-img"
                     loading="lazy"
@@ -23,77 +24,65 @@
                     height="{{ block.settings.left_image.height }}"
                   >
                 {%- else -%}
-                  <div class="pss-slide__placeholder">
-                    {{ 'image' | placeholder_svg_tag }}
-                  </div>
+                  <div class="pss-slide__placeholder">{{ 'image' | placeholder_svg_tag }}</div>
                 {%- endif -%}
               </div>
-
-              <!-- 右侧 -->
               <div class="pss-slide__right">
                 {%- if block.settings.see_more_text != blank -%}
                   <a href="{{ block.settings.see_more_link }}" class="pss-slide__see-more">
                     {{ block.settings.see_more_text }}
                   </a>
                 {%- endif -%}
-
-                {%- if block.settings.right_image != blank -%}
-                  <div class="pss-slide__product-image">
-                    {%- if block.settings.product != blank -%}
-                      <a href="{{ block.settings.product.url }}">
-                    {%- endif -%}
-                    <img
-                      src="{{ block.settings.right_image | image_url: width: 600 }}"
-                      alt="{{ block.settings.right_image.alt | escape }}"
-                      class="pss-slide__product-img"
-                      loading="lazy"
-                      width="{{ block.settings.right_image.width }}"
-                      height="{{ block.settings.right_image.height }}"
-                    >
-                    {%- if block.settings.product != blank -%}
-                      </a>
-                    {%- endif -%}
-                  </div>
-                {%- elsif block.settings.product != blank and block.settings.product.featured_image != blank -%}
-                  <div class="pss-slide__product-image">
-                    <a href="{{ block.settings.product.url }}">
+                <div class="pss-slide__right-content">
+                  {%- if block.settings.right_image != blank -%}
+                    <div class="pss-slide__product-image">
+                      {%- if block.settings.product != blank -%}<a href="{{ block.settings.product.url }}">{%- endif -%}
                       <img
-                        src="{{ block.settings.product.featured_image | image_url: width: 600 }}"
-                        alt="{{ block.settings.product.title | escape }}"
+                        src="{{ block.settings.right_image | image_url: width: 600 }}"
+                        alt="{{ block.settings.right_image.alt | escape }}"
                         class="pss-slide__product-img"
-                        loading="lazy"
-                        width="{{ block.settings.product.featured_image.width }}"
-                        height="{{ block.settings.product.featured_image.height }}"
+                        width="{{ block.settings.right_image.width }}"
+                        height="{{ block.settings.right_image.height }}"
                       >
-                    </a>
-                  </div>
-                {%- endif -%}
-
-                {%- if block.settings.product != blank -%}
-                  <h3 class="pss-slide__title">
-                    <a href="{{ block.settings.product.url }}">{{ block.settings.product.title }}</a>
-                  </h3>
-                  <div class="pss-slide__price">
-                    {%- render 'price', product_resource: block.settings.product, show_unit_price: false -%}
-                  </div>
-                {%- elsif block.settings.custom_title != blank -%}
-                  <h3 class="pss-slide__title">{{ block.settings.custom_title }}</h3>
-                  {%- if block.settings.custom_price != blank -%}
-                    <div class="pss-slide__price">{{ block.settings.custom_price }}</div>
+                      {%- if block.settings.product != blank -%}</a>{%- endif -%}
+                    </div>
+                  {%- elsif block.settings.product != blank and block.settings.product.featured_image != blank -%}
+                    <div class="pss-slide__product-image">
+                      <a href="{{ block.settings.product.url }}">
+                        <img
+                          src="{{ block.settings.product.featured_image | image_url: width: 600 }}"
+                          alt="{{ block.settings.product.title | escape }}"
+                          class="pss-slide__product-img"
+                          width="{{ block.settings.product.featured_image.width }}"
+                          height="{{ block.settings.product.featured_image.height }}"
+                        >
+                      </a>
+                    </div>
                   {%- endif -%}
-                {%- endif -%}
+                  {%- if block.settings.product != blank -%}
+                    <h3 class="pss-slide__title">
+                      <a href="{{ block.settings.product.url }}">{{ block.settings.product.title }}</a>
+                    </h3>
+                    <div class="pss-slide__price">
+                      {%- render 'price', product_resource: block.settings.product, show_unit_price: false -%}
+                    </div>
+                  {%- elsif block.settings.custom_title != blank -%}
+                    <h3 class="pss-slide__title">{{ block.settings.custom_title }}</h3>
+                    {%- if block.settings.custom_price != blank -%}
+                      <div class="pss-slide__price">{{ block.settings.custom_price }}</div>
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+                <div class="pss-slide__progress">
+                  <div class="pss-slide__progress-track"><div class="pss-slide__progress-fill"></div></div>
+                </div>
               </div>
             </div>
           </div>
         {%- endif -%}
       {%- endfor -%}
-    </div>
-
-    <!-- 进度条 -->
-    <div class="pss-progress">
-      <div class="pss-progress__track" id="pss-track-{{ section.id }}">
-        <div class="pss-progress__fill" id="pss-fill-{{ section.id }}"></div>
-      </div>
+      {%- comment -%} 高级模式 - 渲染 _pss-slide blocks {%- endcomment -%}
+      {% content_for 'blocks' %}
     </div>
   </div>
 </div>
@@ -101,194 +90,98 @@
 <script>
   (function() {
     function init() {
-      if (typeof Swiper === 'undefined') {
-        setTimeout(init, 100);
-        return;
-      }
-
+      if (typeof Swiper === 'undefined') { setTimeout(init, 100); return; }
       var el = document.getElementById('pss-{{ section.id }}');
       if (!el) return;
-
-      var slides = el.querySelectorAll('.swiper-slide');
+      var slides = el.querySelectorAll('.swiper-slide.pss-slide:not(.swiper-slide-duplicate)');
       var count = slides.length;
       if (count === 0) return;
 
-      var track = document.getElementById('pss-track-{{ section.id }}');
-      var fill = document.getElementById('pss-fill-{{ section.id }}');
-      var segW = window.innerWidth <= 749 ? 35 : 70;
-
-      if (track) track.style.width = (count * segW) + 'px';
-      if (fill) fill.style.width = segW + 'px';
+      var autoplayConfig = false;
+      {% if section.settings.autoplay %}
+      autoplayConfig = { delay: {{ section.settings.autoplay_delay | default: 4000 }}, disableOnInteraction: false };
+      {% endif %}
 
       var swiper = new Swiper(el, {
         slidesPerView: 1,
         spaceBetween: 0,
+        loop: {{ section.settings.loop | default: true }} && count >= 2,
         speed: {{ section.settings.speed | default: 500 }},
-        loop: {% if section.settings.loop %}true{% else %}false{% endif %},
-        {% if section.settings.autoplay %}
-        autoplay: {
-          delay: {{ section.settings.autoplay_delay | default: 4000 }},
-          disableOnInteraction: false
-        },
-        {% endif %}
+        autoplay: autoplayConfig,
+        observer: true,
+        observeParents: true
       });
 
-      function updateProgress() {
-        if (!fill) return;
-        var idx = swiper.realIndex || 0;
-        fill.style.transform = 'translateX(' + (idx * segW) + 'px)';
+      var segD = 70, segM = 35;
+      var getSeg = function() { return window.innerWidth <= 749 ? segM : segD; };
+      var tracks = [], fills = [];
+      slides.forEach(function(s) {
+        var t = s.querySelector('.pss-slide__progress-track');
+        var f = s.querySelector('.pss-slide__progress-fill');
+        if (t && f) { tracks.push(t); fills.push(f); }
+      });
+
+      function layout() {
+        var w = getSeg(), total = count * w;
+        tracks.forEach(function(t) { t.style.width = total + 'px'; });
+        fills.forEach(function(f) { f.style.width = w + 'px'; });
       }
-
-      updateProgress();
-      swiper.on('slideChange', updateProgress);
-
-      if (track) {
-        track.addEventListener('click', function(e) {
-          var rect = track.getBoundingClientRect();
-          var x = e.clientX - rect.left;
-          var target = Math.floor(x / segW);
-          if (target >= 0 && target < count) {
-            swiper.slideToLoop(target);
-          }
+      function update() {
+        var w = getSeg();
+        var idx = swiper.realIndex !== undefined ? swiper.realIndex : (swiper.activeIndex % count);
+        fills.forEach(function(f) { f.style.transform = 'translateX(' + (idx * w) + 'px)'; });
+      }
+      tracks.forEach(function(t) {
+        t.addEventListener('click', function(e) {
+          var rect = t.getBoundingClientRect();
+          var target = Math.floor((e.clientX - rect.left) / getSeg());
+          if (target >= 0 && target < count) { swiper.slideToLoop ? swiper.slideToLoop(target) : swiper.slideTo(target); }
         });
-      }
-
-      window.addEventListener('resize', function() {
-        segW = window.innerWidth <= 749 ? 35 : 70;
-        if (track) track.style.width = (count * segW) + 'px';
-        if (fill) fill.style.width = segW + 'px';
-        updateProgress();
       });
-    }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
+      layout(); update();
+      swiper.on('slideChange', update);
+      window.addEventListener('resize', function() { layout(); update(); });
     }
+    document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
   })();
 </script>
 
 <style>
-  .pss-section {
-    width: 100%;
-    padding: 0;
-  }
-  .pss-swiper {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
+  .pss-section { width: 100%; }
+  .pss-swiper { width: 100%; position: relative; overflow: hidden; }
   .pss-slide__container {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: {{ section.settings.left_width }}% 1fr;
+    min-height: {{ section.settings.min_height }}px;
   }
-  .pss-slide__left {
-    position: relative;
-  }
-  .pss-slide__left-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .pss-slide__placeholder {
-    width: 100%;
-    height: 400px;
-    background: rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .pss-slide__placeholder svg {
-    width: 100px;
-    opacity: 0.3;
-  }
-  .pss-slide__right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 40px;
-    position: relative;
-  }
-  .pss-slide__see-more {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    font-size: 14px;
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .pss-slide__see-more:hover {
-    opacity: 0.7;
-  }
-  .pss-slide__product-image {
-    max-width: 320px;
-    margin-bottom: 24px;
-  }
-  .pss-slide__product-img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .pss-slide__title {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0 0 12px;
-    text-align: center;
-  }
-  .pss-slide__title a {
-    color: #000;
-    text-decoration: none;
-  }
-  .pss-slide__price {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  /* 进度条 */
-  .pss-progress {
-    display: flex;
-    justify-content: center;
-    padding: 30px 0;
-  }
-  .pss-progress__track {
-    height: 2px;
-    background: rgba(0, 0, 0, 0.2);
-    position: relative;
-    cursor: pointer;
-  }
-  .pss-progress__fill {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background: #000;
-    transition: transform 0.3s ease;
-  }
-  /* 移动端 */
+  .pss-slide__left { position: relative; width: 100%; height: 100%; overflow: hidden; }
+  .pss-slide__left-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pss-slide__left-img--mobile { display: none; }
+  .pss-slide__placeholder { width: 100%; height: 100%; min-height: 400px; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; }
+  .pss-slide__placeholder svg { width: 100px; opacity: 0.3; }
+  .pss-slide__right { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 40px; }
+  .pss-slide__see-more { position: absolute; top: 30px; right: 40px; font-size: 14px; color: #000; text-decoration: none; font-weight: 500; z-index: 10; }
+  .pss-slide__see-more:hover { opacity: 0.7; }
+  .pss-slide__right-content { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; }
+  .pss-slide__product-image { max-width: 320px; margin-bottom: 24px; }
+  .pss-slide__product-img { width: 100%; height: auto; display: block; }
+  .pss-slide__title { font-size: 16px; font-weight: 500; margin: 0 0 12px; text-align: center; }
+  .pss-slide__title a { color: #000; text-decoration: none; }
+  .pss-slide__price { font-size: 16px; text-align: center; margin-bottom: 20px; }
+  .pss-slide__progress { width: 100%; display: flex; justify-content: center; padding: 24px 0; margin-top: auto; }
+  .pss-slide__progress-track { height: 2px; background: rgba(0,0,0,0.2); position: relative; cursor: pointer; }
+  .pss-slide__progress-fill { position: absolute; left: 0; top: 0; height: 100%; background: #000; transition: transform 0.3s ease; }
+
   @media (max-width: 749px) {
-    .pss-slide__container {
-      grid-template-columns: 1fr;
-    }
-    .pss-slide__left {
-      height: 300px;
-    }
-    .pss-slide__right {
-      padding: 40px 20px;
-    }
-    .pss-slide__see-more {
-      top: 15px;
-      right: 20px;
-    }
-    .pss-slide__product-image {
-      max-width: 220px;
-    }
-    .pss-progress__track {
-      height: 1px;
-    }
+    .pss-slide__container { grid-template-columns: 1fr; min-height: auto; }
+    .pss-slide__left { height: {{ section.settings.mobile_left_height }}px; }
+    .pss-slide__left-img--desktop { display: none; }
+    .pss-slide__left-img--mobile { display: block; }
+    .pss-slide__right { padding: 40px 20px; }
+    .pss-slide__see-more { top: 15px; right: 20px; }
+    .pss-slide__product-image { max-width: 220px; }
+    .pss-slide__progress-track { height: 1px; }
   }
 </style>
 
@@ -296,12 +189,55 @@
 {
   "name": "Product Showcase Swiper",
   "tag": "section",
+  "blocks": [
+    {
+      "type": "_pss-slide"
+    }
+  ],
   "settings": [
+    {
+      "type": "header",
+      "content": "布局设置"
+    },
     {
       "type": "color",
       "id": "bg_color",
       "label": "背景颜色",
       "default": "#F5F5EF"
+    },
+    {
+      "type": "range",
+      "id": "left_width",
+      "label": "左侧宽度",
+      "min": 30,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "最小高度（桌面端）",
+      "min": 400,
+      "max": 900,
+      "step": 50,
+      "unit": "px",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "mobile_left_height",
+      "label": "左侧图片高度（移动端）",
+      "min": 200,
+      "max": 500,
+      "step": 25,
+      "unit": "px",
+      "default": 300
+    },
+    {
+      "type": "header",
+      "content": "轮播设置"
     },
     {
       "type": "checkbox",
@@ -317,7 +253,8 @@
       "max": 9000,
       "step": 500,
       "unit": "ms",
-      "default": 4000
+      "default": 4000,
+      "visible_if": "{{ section.settings.autoplay }}"
     },
     {
       "type": "range",
@@ -336,66 +273,9 @@
       "default": true
     }
   ],
-  "blocks": [
-    {
-      "type": "slide",
-      "name": "幻灯片",
-      "settings": [
-        {
-          "type": "header",
-          "content": "左侧图片"
-        },
-        {
-          "type": "image_picker",
-          "id": "left_image",
-          "label": "图片"
-        },
-        {
-          "type": "header",
-          "content": "右侧内容"
-        },
-        {
-          "type": "image_picker",
-          "id": "right_image",
-          "label": "产品图片（可选，留空则使用产品主图）"
-        },
-        {
-          "type": "product",
-          "id": "product",
-          "label": "关联产品（动态显示名称和价格）"
-        },
-        {
-          "type": "text",
-          "id": "custom_title",
-          "label": "自定义标题（无产品时使用）"
-        },
-        {
-          "type": "text",
-          "id": "custom_price",
-          "label": "自定义价格（无产品时使用）"
-        },
-        {
-          "type": "header",
-          "content": "See More 链接"
-        },
-        {
-          "type": "text",
-          "id": "see_more_text",
-          "label": "文字",
-          "default": "See More"
-        },
-        {
-          "type": "url",
-          "id": "see_more_link",
-          "label": "链接"
-        }
-      ]
-    }
-  ],
   "presets": [
     {
-      "name": "Product Showcase Swiper",
-      "blocks": [{ "type": "slide" }, { "type": "slide" }]
+      "name": "Product Showcase Swiper"
     }
   ]
 }

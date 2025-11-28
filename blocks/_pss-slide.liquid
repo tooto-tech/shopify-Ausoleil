@@ -1,0 +1,266 @@
+{%- comment -%}
+  Product Showcase Swiper - Slide Block
+  支持在右侧添加任意 blocks
+{%- endcomment -%}
+
+{%- assign block_settings = block.settings -%}
+{%- assign block_index = section.blocks | find_index: 'id', block.id -%}
+
+{% capture children %}
+  <div class="pss-slide__container">
+    <!-- 左侧图片 -->
+    <div class="pss-slide__left">
+      {%- if block_settings.left_image != blank -%}
+        {%- liquid
+          assign left_img = block_settings.left_image
+          assign left_mobile_img = block_settings.left_image_mobile | default: left_img
+          assign loading_type = 'lazy'
+          if block_index == 0
+            assign loading_type = 'eager'
+          endif
+        -%}
+        <img
+          src="{{ left_img | image_url: width: 1500 }}"
+          srcset="{{ left_img | image_url: width: 750 }} 750w, {{ left_img | image_url: width: 1200 }} 1200w, {{ left_img | image_url: width: 1500 }} 1500w"
+          sizes="(max-width: 749px) 100vw, 45vw"
+          alt="{{ left_img.alt | escape }}"
+          class="pss-slide__left-img pss-slide__left-img--desktop"
+          loading="{{ loading_type }}"
+          width="{{ left_img.width }}"
+          height="{{ left_img.height }}"
+        >
+        {%- if block_settings.use_mobile_image and block_settings.left_image_mobile != blank -%}
+          <img
+            src="{{ left_mobile_img | image_url: width: 750 }}"
+            alt="{{ left_mobile_img.alt | escape }}"
+            class="pss-slide__left-img pss-slide__left-img--mobile"
+            loading="{{ loading_type }}"
+            width="{{ left_mobile_img.width }}"
+            height="{{ left_mobile_img.height }}"
+          >
+        {%- endif -%}
+      {%- else -%}
+        <div class="pss-slide__placeholder">
+          {{ 'image' | placeholder_svg_tag }}
+        </div>
+      {%- endif -%}
+
+      {%- if block_settings.toggle_overlay -%}
+        {% render 'overlay', settings: block_settings %}
+      {%- endif -%}
+    </div>
+
+    <!-- 右侧内容 -->
+    <div class="pss-slide__right" style="
+      {%- if block_settings.right_bg_color != blank -%}background-color: {{ block_settings.right_bg_color }};{%- endif -%}
+      padding: {{ block_settings.right_padding_top }}px {{ block_settings.right_padding_right }}px {{ block_settings.right_padding_bottom }}px {{ block_settings.right_padding_left }}px;
+    ">
+      {%- if block_settings.see_more_text != blank -%}
+        <a href="{{ block_settings.see_more_link }}" class="pss-slide__see-more">
+          {{ block_settings.see_more_text }}
+        </a>
+      {%- endif -%}
+
+      <div class="pss-slide__right-content" style="
+        align-items: {{ block_settings.horizontal_alignment }};
+        justify-content: {{ block_settings.vertical_alignment }};
+        gap: {{ block_settings.content_gap }}px;
+      ">
+        {% content_for 'blocks' %}
+      </div>
+
+      <!-- 进度条 -->
+      <div class="pss-slide__progress">
+        <div class="pss-slide__progress-track">
+          <div class="pss-slide__progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endcapture %}
+
+<div class="swiper-slide pss-slide" {{ block.shopify_attributes }}>
+  {{ children }}
+</div>
+
+{% schema %}
+{
+  "name": "PSS 幻灯片",
+  "tag": null,
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "header",
+      "content": "左侧图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "图片"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_mobile_image",
+      "label": "使用移动端图片",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image_mobile",
+      "label": "移动端图片",
+      "visible_if": "{{ block.settings.use_mobile_image }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_overlay",
+      "label": "图片遮罩",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "遮罩颜色",
+      "alpha": true,
+      "default": "#00000026",
+      "visible_if": "{{ block.settings.toggle_overlay }}"
+    },
+    {
+      "type": "select",
+      "id": "overlay_style",
+      "label": "遮罩样式",
+      "options": [
+        { "value": "solid", "label": "纯色" },
+        { "value": "gradient", "label": "渐变" }
+      ],
+      "default": "solid",
+      "visible_if": "{{ block.settings.toggle_overlay }}"
+    },
+    {
+      "type": "select",
+      "id": "gradient_direction",
+      "label": "渐变方向",
+      "options": [
+        { "value": "to top", "label": "向上" },
+        { "value": "to bottom", "label": "向下" }
+      ],
+      "default": "to top",
+      "visible_if": "{{ block.settings.toggle_overlay and block.settings.overlay_style == 'gradient' }}"
+    },
+    {
+      "type": "header",
+      "content": "右侧设置"
+    },
+    {
+      "type": "color",
+      "id": "right_bg_color",
+      "label": "右侧背景色"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment",
+      "label": "水平对齐",
+      "options": [
+        { "value": "flex-start", "label": "左" },
+        { "value": "center", "label": "居中" },
+        { "value": "flex-end", "label": "右" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "垂直对齐",
+      "options": [
+        { "value": "flex-start", "label": "顶部" },
+        { "value": "center", "label": "居中" },
+        { "value": "flex-end", "label": "底部" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "label": "内容间距",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "right_padding_top",
+      "label": "上内边距",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "right_padding_bottom",
+      "label": "下内边距",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "right_padding_left",
+      "label": "左内边距",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "right_padding_right",
+      "label": "右内边距",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "See More 链接"
+    },
+    {
+      "type": "text",
+      "id": "see_more_text",
+      "label": "文字"
+    },
+    {
+      "type": "url",
+      "id": "see_more_link",
+      "label": "链接"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PSS 幻灯片",
+      "blocks": [
+        {
+          "type": "image",
+          "settings": {
+            "width": "custom",
+            "custom_width": 60
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "text": "<p>产品标题</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

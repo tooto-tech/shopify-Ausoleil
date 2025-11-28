@@ -2130,7 +2130,8 @@
         "pss_slide_BKENKH"
       ],
       "custom_css": [
-        ".pss-swiper {width: 95%;}"
+        ".pss-swiper {width: 95%;}",
+        ".pss-slide__left-text{width: 120%;}"
       ],
       "name": "Product Showcase Swiper",
       "settings": {

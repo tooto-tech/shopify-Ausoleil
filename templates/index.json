@@ -1676,7 +1676,9 @@
       "block_order": [
         "text_BdQkcQ"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".product-badges__badge {background: #121821; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}"
+      ],
       "name": "Classic STYLE EVERYDAY",
       "settings": {
         "product": "verdant-avant-garde-olive-sunglasses-garde-192001",

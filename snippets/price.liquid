@@ -94,3 +94,9 @@
     {% render 'unit-price', price: unit_price, measurement: selected_variant.unit_price_measurement %}
   {%- endif -%}
 </div>
+<style>
+  {% comment %} 去除物品重量显示 {% endcomment %}
+.unit-price{
+display:none;
+}
+</style>

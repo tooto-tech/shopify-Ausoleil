@@ -7,7 +7,6 @@
 {%- assign block_settings = block.settings -%}
 {%- assign block_index = section.blocks | find_index: 'id', block.id -%}
 
- 
 {% capture children %}
   <div class="pss-slide__container">
     <!-- 左侧图片 -->
@@ -93,6 +92,16 @@
       {%- if block_settings.right_bg_color != blank -%}background-color: {{ block_settings.right_bg_color }};{%- endif -%}
       padding: {{ block_settings.right_padding_top }}px {{ block_settings.right_padding_right }}px {{ block_settings.right_padding_bottom }}px {{ block_settings.right_padding_left }}px;
     ">
+      {%- if block_settings.right_bg_image != blank -%}
+        <img
+          src="{{ block_settings.right_bg_image | image_url: width: 1200 }}"
+          alt=""
+          class="pss-slide__right-bg"
+          loading="lazy"
+          width="{{ block_settings.right_bg_image.width }}"
+          height="{{ block_settings.right_bg_image.height }}"
+        >
+      {%- endif -%}
       <div class="pss-slide__right-content" style="
         align-items: {{ block_settings.horizontal_alignment }};
         justify-content: {{ block_settings.vertical_alignment }};
@@ -347,9 +356,15 @@
       "content": "右侧设置"
     },
     {
+      "type": "image_picker",
+      "id": "right_bg_image",
+      "label": "右侧背景图片"
+    },
+    {
       "type": "color",
       "id": "right_bg_color",
-      "label": "右侧背景色"
+      "label": "右侧背景色",
+      "info": "如果设置了背景图片，背景色会显示在图片下方"
     },
     {
       "type": "select",

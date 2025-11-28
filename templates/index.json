@@ -1341,30 +1341,6 @@
         "padding-block-end": 0
       }
     },
-    "custom_liquid_jPPLLC": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "<div style=\"background-color: #f4f4f4; padding: 15px; text-align: center; border-radius: 5px; margin-bottom: 20px;\">\n  {% if customer %}\n    <p style=\"margin: 0; font-size: 16px;\">\n      👋 欢迎回来, <strong>{{ customer.first_name }}</strong>! \n      <a href=\"{{ routes.account_url }}\" style=\"text-decoration: underline;\">查看我的账户</a>\n    </p>\n  {% else %}\n    <p style=\"margin: 0; font-size: 16px;\">\n      加入我们可以享受更多优惠！ \n      <a href=\"{{ routes.account_login_url }}\" style=\"font-weight: bold;\">登录</a> 或 \n      <a href=\"{{ routes.account_register_url }}\" style=\"font-weight: bold;\">注册</a>\n    </p>\n  {% endif %}\n</div>",
-        "color_scheme": "",
-        "section_width": "page-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "custom_liquid_8CD76N": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "<div style=\"background-color: #000000; color: #ffffff; padding: 12px; text-align: center; font-size: 14px; letter-spacing: 1px;\">\n  🎉 限时优惠：使用代码 <strong>SAVE20</strong> 享受全场 8 折！\n  <br>\n  <span style=\"font-size: 12px; opacity: 0.8;\">(满 $50 包邮)</span>\n</div>",
-        "color_scheme": "",
-        "section_width": "page-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "hero_CYEYgK": {
       "type": "hero",
       "blocks": {
@@ -1375,10 +1351,10 @@
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
-            "type_preset": "h1",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "font_size_mobile": "",
+            "type_preset": "custom",
+            "font": "'DreamOrphans', var(--font-heading--family)",
+            "font_size": "0.875rem",
+            "font_size_mobile": "0.875rem",
             "weight": "",
             "weight_mobile": "",
             "line_height": "normal",
@@ -1407,13 +1383,13 @@
         "text_cJPCHP": {
           "type": "text",
           "settings": {
-            "text": "<p>It’s time to take off the sunnies<br/>you’ve been wearing all day<br/><br/></p>",
+            "text": "<p>It’s time to take off the sunnies<br/>you’ve been wearing all day</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "type_preset": "custom",
+            "font": "'DolceVitaLight', var(--font-heading--family)",
+            "font_size": "3rem",
             "font_size_mobile": "",
             "weight": "",
             "weight_mobile": "",
@@ -1445,7 +1421,6 @@
         "text_fMG6wt",
         "text_cJPCHP"
       ],
-      "disabled": true,
       "name": "Banner",
       "settings": {
         "media_type_1": "image",
@@ -1463,7 +1438,7 @@
         "vertical_alignment": "center",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 16,
         "section_width": "page-width",
         "section_height": "large",
@@ -4236,8 +4211,6 @@
     "collection_list_LFWQwX",
     "product_list_MCD4cw",
     "section_Ncd7GN",
-    "custom_liquid_jPPLLC",
-    "custom_liquid_8CD76N",
     "hero_CYEYgK",
     "section_ydCNaQ",
     "product_recommendations_JMiADH",

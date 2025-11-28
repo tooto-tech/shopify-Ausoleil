@@ -670,7 +670,7 @@
             "open_in_new_tab": false,
             "placeholder": "",
             "custom_class_name": "",
-            "enable_aos_animation": true,
+            "enable_aos_animation": false,
             "aos_animation_type": "fade",
             "aos_animation_delay": 1150,
             "padding-block-start": 0,

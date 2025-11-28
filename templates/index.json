@@ -401,6 +401,7 @@
         "slide_xrE3gC",
         "slide_w7wyXP"
       ],
+      "disabled": true,
       "name": "t:names.slideshow",
       "settings": {
         "icons_style": "arrows_large",
@@ -688,6 +689,7 @@
         "group_YT7ptY",
         "group_XCNFLh"
       ],
+      "disabled": true,
       "name": "t:names.multicolumn",
       "settings": {
         "content_direction": "row",
@@ -971,6 +973,7 @@
       "block_order": [
         "group_Dy77NB"
       ],
+      "disabled": true,
       "custom_css": [
         ".collection-card__link {background-color: white;}"
       ],
@@ -1248,6 +1251,9 @@
           ]
         }
       },
+      "custom_css": [
+        ".product-badges__badge {background: #1226aa; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}"
+      ],
       "name": "New Arrivals",
       "settings": {
         "collection": "new-arrivals",
@@ -1279,22 +1285,22 @@
             "label": "Shop More",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
-            "style_class": "button",
-            "bg_color": "#1a1a1a",
-            "bg_color_hover": "#333333",
-            "text_color": "#ffffff",
+            "style_class": "button-custom",
+            "bg_color": "rgba(0,0,0,0)",
+            "bg_color_hover": "rgba(0,0,0,0)",
+            "text_color": "#000000",
             "text_color_hover": "#ffffff",
             "border_color": "#1a1a1a",
             "border_color_hover": "#333333",
             "border_width": 1,
-            "border_radius": 4,
-            "font_family": "",
-            "font_size": "",
-            "font_size_mobile": "",
+            "border_radius": 64,
+            "font_family": "var(--font-heading--family)",
+            "font_size": "0.875rem",
+            "font_size_mobile": "0.8125rem",
             "font_weight": "",
             "text_transform": "none",
-            "padding_y": 12,
-            "padding_x": 24,
+            "padding_y": 8,
+            "padding_x": 34,
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
@@ -1306,7 +1312,6 @@
       "block_order": [
         "button_hVciNh"
       ],
-      "disabled": true,
       "name": "Shop More",
       "settings": {
         "content_direction": "column",

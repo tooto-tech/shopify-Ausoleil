@@ -118,7 +118,7 @@
     grid-template-columns: {{ section.settings.left_width }}% 1fr;
     min-height: {{ section.settings.min_height }}px;
   }
-  
+
   .pss-slide__left { position: relative; width: 100%; height: 100%; overflow: hidden; }
   .pss-slide__left-img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .pss-slide__left-img--mobile { display: none; }
@@ -128,13 +128,25 @@
   .pss-slide__left-icon { width: var(--icon-width, 120px); height: auto; display: block; }
   .pss-slide__left-text { margin: 0; text-align: center; font-family: var(--text-font); font-size: var(--text-size); font-weight: var(--text-weight); color: var(--text-color); letter-spacing: var(--text-letter-spacing); margin-top: var(--text-margin-top); }
   .pss-slide__right { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 40px; }
-  .pss-slide__see-more { position: absolute; bottom: 30px; left: 40px; font-size: 14px; color: #fff; text-decoration: none; font-weight: 500; z-index: 10; }
+  .pss-slide__see-more {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Mont;
+  font-size: 16px;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-decoration: underline;
+  z-index: 10;
+}
   .pss-slide__see-more:hover { opacity: 0.7; }
   .pss-slide__right-content { flex: 1; display: flex; flex-direction: column; width: 100%; }
   .pss-slide__progress { width: 100%; display: flex; justify-content: center; padding: 24px 0; margin-top: auto; }
   .pss-slide__progress-track { height: 2px; background: rgba(0,0,0,0.2); position: relative; cursor: pointer; }
   .pss-slide__progress-fill { position: absolute; left: 0; top: 0; height: 100%; background: #000; transition: transform 0.3s ease; }
 
+  
   @media (max-width: 749px) {
     .pss-slide__container { grid-template-columns: 1fr; min-height: auto; }
     .pss-slide__left { height: {{ section.settings.mobile_left_height }}px; }
@@ -143,7 +155,14 @@
     .pss-slide__left-icon { width: var(--icon-width-mobile, 80px); }
     .pss-slide__left-text { font-size: var(--text-size-mobile); font-weight: var(--text-weight-mobile, var(--text-weight)); margin-top: var(--text-margin-top-mobile); }
     .pss-slide__right { padding: 40px 20px; }
-    .pss-slide__see-more { bottom: 15px; left: 20px; }
+      .pss-slide__see-more {
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: 900;
+    text-decoration: underline;
+  }
     .pss-slide__progress-track { height: 1px; }
   }
 </style>

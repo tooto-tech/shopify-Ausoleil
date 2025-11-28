@@ -1788,7 +1788,7 @@
             "center_icon": "shopify://shop_images/logo.svg",
             "icon_width": 150,
             "icon_width_mobile": 80,
-            "center_text": "Aussie Soul TimeBy Rock And Wave",
+            "center_text": "Aussie Soul Time By Rock And Wave",
             "text_font": "'DolceVitaLight', var(--font-heading--family)",
             "text_size": "2.5rem",
             "text_size_mobile": "0.875rem",

@@ -1793,8 +1793,8 @@
             "content_gap": 16,
             "right_padding_top": 60,
             "right_padding_bottom": 60,
-            "right_padding_left": 120,
-            "right_padding_right": 40
+            "right_padding_left": 60,
+            "right_padding_right": 60
           },
           "blocks": {
             "icon_qbzPGB": {

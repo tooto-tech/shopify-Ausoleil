@@ -405,6 +405,13 @@
       "visible_if": "{{ block.settings.type_preset == 'custom' }}"
     },
     {
+      "type": "text",
+      "id": "letter_spacing_custom",
+      "label": "自定义字间距",
+      "info": "可输入例如 0.1em、2px、0.05em，留空则使用上方字间距设置",
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
+    },
+    {
       "type": "select",
       "id": "case",
       "label": "t:settings.case",

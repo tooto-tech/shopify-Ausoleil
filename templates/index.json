@@ -2104,7 +2104,7 @@
         "min_height": 600,
         "mobile_left_height": 300,
         "min_height_mobile": 350,
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_delay": 3000,
         "speed": 500,
         "loop": false

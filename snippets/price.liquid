@@ -5,11 +5,13 @@
   @param {product} product_resource - The product to render
   @param {boolean} [show_unit_price] - Whether to show the unit price
   @param {boolean} [show_sale_price_first] - Whether to show the sale price first
+  @param {object} [price_settings] - Price block settings for custom styling
 {%- enddoc -%}
 
 {%- liquid
   assign show_unit_price = show_unit_price | default: false
   assign show_sale_price_first = show_sale_price_first | default: false
+  assign price_settings = price_settings | default: nil
   assign selected_variant = product_resource.selected_or_first_available_variant
   assign price = selected_variant.price
   assign compare_at_price = selected_variant.compare_at_price
@@ -64,6 +66,21 @@
       <span class="compare-at-price">{{- compare_at_price -}}</span>
     </span>
   {% endif %}
+
+  {% if price_settings.show_save and show_compare_price %}
+    {%- liquid
+      assign save_amount = selected_variant.compare_at_price | minus: selected_variant.price
+      if product.handle == closest.product.handle and settings.currency_code_enabled_product_pages
+        assign save_amount_formatted = save_amount | money_with_currency
+      elsif product.handle != closest.product.handle and settings.currency_code_enabled_product_cards
+        assign save_amount_formatted = save_amount | money_with_currency
+      else
+        assign save_amount_formatted = save_amount | money
+      endif
+    -%}
+    <span class="price-save">SAVE {{ save_amount_formatted }}</span>
+  {% endif %}
+
   {%- if selected_variant.unit_price and show_unit_price %}
     {%- liquid
       if product.handle == closest.product.handle and settings.currency_code_enabled_product_pages

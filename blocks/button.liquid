@@ -122,6 +122,47 @@
     },
     {
       "type": "select",
+      "id": "font_family",
+      "label": "字体",
+      "options": [
+        {
+          "value": "",
+          "label": "默认"
+        },
+        {
+          "value": "var(--font-body--family)",
+          "label": "正文字体"
+        },
+        {
+          "value": "var(--font-heading--family)",
+          "label": "标题字体"
+        },
+        {
+          "value": "var(--font-accent--family)",
+          "label": "强调字体"
+        },
+        {
+          "value": "'A019-SounsoQuality', var(--font-heading--family)",
+          "label": "A019-SounsoQuality（本地字体）"
+        },
+        {
+          "value": "'DolceVitaLight', var(--font-heading--family)",
+          "label": "DolceVitaLight（本地字体）"
+        },
+        {
+          "value": "'DreamOrphans', var(--font-heading--family)",
+          "label": "DreamOrphans（本地字体）"
+        },
+        {
+          "value": "'Mont', var(--font-heading--family)",
+          "label": "Mont（本地字体）"
+        }
+      ],
+      "default": "",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "select",
       "id": "font_size",
       "label": "字体大小",
       "options": [

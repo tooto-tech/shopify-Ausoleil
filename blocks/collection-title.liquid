@@ -1,5 +1,3 @@
-
-
 {% if closest.collection == blank %}
   {% assign text = 'placeholders.collection_title' | t %}
   {% assign collection_title = '<p>' | append: text | append: '</p>' %}
@@ -134,6 +132,22 @@
         {
           "value": "var(--font-accent--family)",
           "label": "t:options.accent"
+        },
+        {
+          "value": "'A019-SounsoQuality', var(--font-heading--family)",
+          "label": "A019-SounsoQuality（本地字体）"
+        },
+        {
+          "value": "'DolceVitaLight', var(--font-heading--family)",
+          "label": "DolceVitaLight（本地字体）"
+        },
+        {
+          "value": "'DreamOrphans', var(--font-heading--family)",
+          "label": "DreamOrphans（本地字体）"
+        },
+        {
+          "value": "'Mont', var(--font-heading--family)",
+          "label": "Mont（本地字体）"
         }
       ],
       "default": "var(--font-body--family)",
@@ -218,6 +232,150 @@
     },
     {
       "type": "select",
+      "id": "font_size_mobile",
+      "label": "移动端尺寸",
+      "options": [
+        {
+          "value": "",
+          "label": "t:options.default"
+        },
+        {
+          "value": "0.75rem",
+          "label": "12px"
+        },
+        {
+          "value": "0.875rem",
+          "label": "14px"
+        },
+        {
+          "value": "1rem",
+          "label": "16px"
+        },
+        {
+          "value": "1.125rem",
+          "label": "18px"
+        },
+        {
+          "value": "1.25rem",
+          "label": "20px"
+        },
+        {
+          "value": "1.375rem",
+          "label": "22px"
+        },
+        {
+          "value": "1.5rem",
+          "label": "24px"
+        },
+        {
+          "value": "1.625rem",
+          "label": "26px"
+        },
+        {
+          "value": "1.75rem",
+          "label": "28px"
+        },
+        {
+          "value": "1.875rem",
+          "label": "30px"
+        },
+        {
+          "value": "2rem",
+          "label": "32px"
+        },
+        {
+          "value": "2.25rem",
+          "label": "36px"
+        },
+        {
+          "value": "2.5rem",
+          "label": "40px"
+        }
+      ],
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "字重",
+      "options": [
+        {
+          "value": "",
+          "label": "t:options.default"
+        },
+        {
+          "value": "300",
+          "label": "Light (300)"
+        },
+        {
+          "value": "400",
+          "label": "Regular (400)"
+        },
+        {
+          "value": "500",
+          "label": "Medium (500)"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold (600)"
+        },
+        {
+          "value": "700",
+          "label": "Bold (700)"
+        },
+        {
+          "value": "800",
+          "label": "Extra Bold (800)"
+        },
+        {
+          "value": "900",
+          "label": "Black (900)"
+        }
+      ],
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "weight_mobile",
+      "label": "移动端字重",
+      "options": [
+        {
+          "value": "",
+          "label": "t:options.default"
+        },
+        {
+          "value": "300",
+          "label": "Light (300)"
+        },
+        {
+          "value": "400",
+          "label": "Regular (400)"
+        },
+        {
+          "value": "500",
+          "label": "Medium (500)"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold (600)"
+        },
+        {
+          "value": "700",
+          "label": "Bold (700)"
+        },
+        {
+          "value": "800",
+          "label": "Extra Bold (800)"
+        },
+        {
+          "value": "900",
+          "label": "Black (900)"
+        }
+      ],
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
       "id": "line_height",
       "label": "t:settings.line_height",
       "options": [
@@ -256,6 +414,13 @@
         }
       ],
       "default": "normal",
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
+    },
+    {
+      "type": "text",
+      "id": "letter_spacing_custom",
+      "label": "自定义字间距",
+      "info": "可输入例如 0.1em、2px、0.05em，留空则使用上方字间距设置",
       "visible_if": "{{ block.settings.type_preset == 'custom' }}"
     },
     {
@@ -315,6 +480,20 @@
       ],
       "default": "var(--color-foreground)",
       "visible_if": "{{ block.settings.type_preset != 'rte' }}"
+    },
+    {
+      "type": "color",
+      "id": "custom_color",
+      "label": "自定义颜色",
+      "info": "设置后将覆盖上方颜色选项",
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "custom_color_mobile",
+      "label": "移动端自定义颜色",
+      "info": "留空则使用桌面端颜色",
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
     },
     {
       "type": "header",

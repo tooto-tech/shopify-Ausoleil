@@ -44,13 +44,26 @@
     {% render 'typography-style', settings: block_settings %}
     {% render 'spacing-style', settings: block_settings %}
     --width: {{ block_settings.width }};
+    {% if block_settings.price_font_size != blank %}--price-font-size: {{ block_settings.price_font_size }};{% endif %}
+    {% if block_settings.price_color != blank %}--price-color: {{ block_settings.price_color }};{% endif %}
+    {% if block_settings.compare_price_font_size != blank %}--compare-price-font-size: {{ block_settings.compare_price_font_size }};{% endif %}
+    {% if block_settings.compare_price_color != blank %}--compare-price-color: {{ block_settings.compare_price_color }};{% endif %}
+    {% if block_settings.save_font_size != blank %}--save-font-size: {{ block_settings.save_font_size }};{% endif %}
+    {% if block_settings.save_color != blank %}--save-color: {{ block_settings.save_color }};{% endif %}
+    {% if block_settings.price_font_size_mobile != blank %}--price-font-size-mobile: {{ block_settings.price_font_size_mobile }};{% endif %}
+    {% if block_settings.price_color_mobile != blank %}--price-color-mobile: {{ block_settings.price_color_mobile }};{% endif %}
+    {% if block_settings.compare_price_font_size_mobile != blank %}--compare-price-font-size-mobile: {{ block_settings.compare_price_font_size_mobile }};{% endif %}
+    {% if block_settings.compare_price_color_mobile != blank %}--compare-price-color-mobile: {{ block_settings.compare_price_color_mobile }};{% endif %}
+    {% if block_settings.save_font_size_mobile != blank %}--save-font-size-mobile: {{ block_settings.save_font_size_mobile }};{% endif %}
+    {% if block_settings.save_color_mobile != blank %}--save-color-mobile: {{ block_settings.save_color_mobile }};{% endif %}
   "
   {{ block.shopify_attributes }}
 >
   {% render 'price',
     show_unit_price: true,
     product_resource: product_resource,
-    show_sale_price_first: block_settings.show_sale_price_first
+    show_sale_price_first: block_settings.show_sale_price_first,
+    price_settings: block_settings
   %}
 
   {% if block_settings.show_tax_info %}
@@ -132,6 +145,152 @@
       "id": "show_tax_info",
       "label": "t:settings.show_tax_info",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_save",
+      "label": "显示折扣（SAVE XXX）",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "价格样式"
+    },
+    {
+      "type": "select",
+      "id": "price_font_size",
+      "label": "现价字体大小（桌面端）",
+      "options": [
+        { "value": "", "label": "默认" },
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" },
+        { "value": "1.25rem", "label": "20px" },
+        { "value": "1.5rem", "label": "24px" },
+        { "value": "2rem", "label": "32px" },
+        { "value": "2.5rem", "label": "40px" },
+        { "value": "3rem", "label": "48px" },
+        { "value": "3.5rem", "label": "56px" },
+        { "value": "4rem", "label": "64px" }
+      ],
+      "default": ""
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "现价颜色（桌面端）"
+    },
+    {
+      "type": "select",
+      "id": "compare_price_font_size",
+      "label": "原价字体大小（桌面端）",
+      "options": [
+        { "value": "", "label": "默认" },
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" },
+        { "value": "1.25rem", "label": "20px" },
+        { "value": "1.5rem", "label": "24px" },
+        { "value": "2rem", "label": "32px" },
+        { "value": "2.5rem", "label": "40px" },
+        { "value": "3rem", "label": "48px" }
+      ],
+      "default": ""
+    },
+    {
+      "type": "color",
+      "id": "compare_price_color",
+      "label": "原价颜色（桌面端）"
+    },
+    {
+      "type": "select",
+      "id": "save_font_size",
+      "label": "折扣字体大小（桌面端）",
+      "options": [
+        { "value": "", "label": "默认" },
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" },
+        { "value": "1.25rem", "label": "20px" },
+        { "value": "1.5rem", "label": "24px" }
+      ],
+      "default": "",
+      "visible_if": "{{ block.settings.show_save == true }}"
+    },
+    {
+      "type": "color",
+      "id": "save_color",
+      "label": "折扣颜色（桌面端）",
+      "visible_if": "{{ block.settings.show_save == true }}"
+    },
+    {
+      "type": "header",
+      "content": "移动端价格样式"
+    },
+    {
+      "type": "select",
+      "id": "price_font_size_mobile",
+      "label": "现价字体大小（移动端）",
+      "options": [
+        { "value": "", "label": "默认" },
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" },
+        { "value": "1.25rem", "label": "20px" },
+        { "value": "1.5rem", "label": "24px" },
+        { "value": "2rem", "label": "32px" },
+        { "value": "2.5rem", "label": "40px" }
+      ],
+      "default": ""
+    },
+    {
+      "type": "color",
+      "id": "price_color_mobile",
+      "label": "现价颜色（移动端）"
+    },
+    {
+      "type": "select",
+      "id": "compare_price_font_size_mobile",
+      "label": "原价字体大小（移动端）",
+      "options": [
+        { "value": "", "label": "默认" },
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" },
+        { "value": "1.25rem", "label": "20px" },
+        { "value": "1.5rem", "label": "24px" }
+      ],
+      "default": ""
+    },
+    {
+      "type": "color",
+      "id": "compare_price_color_mobile",
+      "label": "原价颜色（移动端）"
+    },
+    {
+      "type": "select",
+      "id": "save_font_size_mobile",
+      "label": "折扣字体大小（移动端）",
+ns": [
+        { "value": "", "label": "默认" },
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" }
+      ],
+      "default": "",
+      "visible_if": "{{ block.settings.show_save == true }}"
+    },
+    {
+      "type": "color",
+      "id": "save_color_mobile",
+      "label": "折扣颜色（移动端）",
+      "visible_if": "{{ block.settings.show_save == true }}"
     },
     {
       "type": "header",

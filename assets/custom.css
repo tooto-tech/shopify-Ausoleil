@@ -13,3 +13,36 @@
     box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.24);
   }
 }
+
+/* 价格自定义样式 */
+product-price .price {
+  font-size: var(--price-font-size, inherit);
+  color: var(--price-color, inherit);
+}
+
+product-price .compare-at-price {
+  font-size: var(--compare-price-font-size, inherit);
+  color: var(--compare-price-color, inherit);
+}
+
+product-price .price-save {
+  font-size: var(--save-font-size, inherit);
+  color: var(--save-color, inherit);
+}
+
+@media screen and (max-width: 749px) {
+  product-price .price {
+    font-size: var(--price-font-size-mobile, var(--price-font-size, inherit));
+    color: var(--price-color-mobile, var(--price-color, inherit));
+  }
+
+  product-price .compare-at-price {
+    font-size: var(--compare-price-font-size-mobile, var(--compare-price-font-size, inherit));
+    color: var(--compare-price-color-mobile, var(--compare-price-color, inherit));
+  }
+
+  product-price .price-save {
+    font-size: var(--save-font-size-mobile, var(--save-font-size, inherit));
+    color: var(--save-color-mobile, var(--save-color, inherit));
+  }
+}

@@ -1,157 +1,92 @@
-<div class="product-showcase-swiper-section" data-testid="product-showcase-swiper">
+{%- comment -%}
+  Product Showcase Swiper Section
+  - 左右两侧都可以添加自定义块
+  - 支持进度条导航
+  - 支持自动播放和循环
+{%- endcomment -%}
+
+<div class="product-showcase-swiper-section">
   <div class="swiper product-showcase-swiper" id="product-showcase-swiper-{{ section.id }}">
     <div class="swiper-wrapper">
-      {% if section.blocks.size == 0 %}
-        {%- comment -%} 空状态提示 - 仅在编辑器中显示 {%- endcomment -%}
-        <div class="swiper-slide product-showcase-slide">
-          <div class="product-showcase-slide__container">
-            <div class="product-showcase-slide__left">
-              <div class="product-showcase-slide__placeholder">
-                {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
-              </div>
-            </div>
-            <div class="product-showcase-slide__right">
-              <div class="product-showcase-slide__empty-state">
-                <p>请添加 "Product Showcase" block 并配置产品和图片</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endif %}
       {% for block in section.blocks %}
-        {% if block.type == 'showcase' %}
+        {% if block.type == 'slide' %}
           <div class="swiper-slide product-showcase-slide" {{ block.shopify_attributes }}>
             <div class="product-showcase-slide__container">
-              <!-- 左侧生活方式图片 -->
+              <!-- 左侧区域 -->
               <div class="product-showcase-slide__left">
-                {% if block.settings.lifestyle_image != blank %}
-                  <div
-                    class="product-showcase-slide__lifestyle-image"
-                    data-aos="fade-up"
-                    data-aos-delay="0"
-                  >
-                    {%- liquid
-                      assign lifestyle_image = block.settings.lifestyle_image
-                      assign image_widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                      assign image_sizes = '(min-width: 750px) 50vw, 100vw'
-                      if forloop.first
-                        assign loading_type = 'eager'
-                      else
-                        assign loading_type = 'lazy'
-                      endif
-                      assign lifestyle_alt = lifestyle_image.alt | escape
-                      if lifestyle_alt == blank
-                        assign lifestyle_alt = block.settings.title | escape
-                      endif
-                    -%}
-                    {{
-                      lifestyle_image
-                      | image_url: width: 1500
-                      | image_tag:
-                        loading: loading_type,
-                        widths: image_widths,
-                        sizes: image_sizes,
-                        alt: lifestyle_alt,
-                        class: 'product-showcase-slide__lifestyle-img'
-                    }}
+                {% if block.settings.left_image != blank %}
+                  {{
+                    block.settings.left_image
+                    | image_url: width: 1500
+                    | image_tag:
+                      loading: 'lazy',
+                      class: 'product-showcase-slide__img',
+                      alt: block.settings.left_image.alt
+                  }}
+                {% else %}
+                  <div class="product-showcase-slide__placeholder">
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
                   </div>
                 {% endif %}
               </div>
 
-              <!-- 右侧产品信息 -->
+              <!-- 右侧区域 -->
               <div class="product-showcase-slide__right">
-                {% if block.settings.product != blank %}
-                  {% assign product = block.settings.product %}
-
-                  {% if block.settings.see_more_link != blank and block.settings.see_more_label != blank %}
-                    <a
-                      href="{{ block.settings.see_more_link }}"
-                      class="product-showcase-slide__see-more"
-                      data-aos="fade-down"
-                      data-aos-delay="80"
-                    >
-                      {{ block.settings.see_more_label | default: 'See More' }}
+                {% if block.settings.right_image != blank %}
+                  {% if block.settings.link != blank %}
+                    <a href="{{ block.settings.link }}" class="product-showcase-slide__link">
+                  {% endif %}
+                  {{
+                    block.settings.right_image
+                    | image_url: width: 800
+                    | image_tag:
+                      loading: 'lazy',
+                      class: 'product-showcase-slide__product-img',
+                      alt: block.settings.right_image.alt
+                  }}
+                  {% if block.settings.link != blank %}
                     </a>
                   {% endif %}
-                  {%- liquid
-                    assign custom_product_image = block.settings.product_image
-                  -%}
+                {% endif %}
 
-                  {% if custom_product_image != blank or product.featured_media != blank %}
-                    <div
-                      class="product-showcase-slide__product-image"
-                      data-aos="fade-up"
-                      data-aos-delay="100"
-                    >
-                      {%- liquid
-                        assign product_image = custom_product_image
-                        if product_image == blank and product.featured_media != blank
-                          assign product_image = product.featured_media
-                        endif
+                {% if block.settings.title != blank %}
+                  <h3 class="product-showcase-slide__title">
+                    {% if block.settings.link != blank %}
+                      <a href="{{ block.settings.link }}">{{ block.settings.title }}</a>
+                    {% else %}
+                      {{ block.settings.title }}
+                    {% endif %}
+                  </h3>
+                {% endif %}
 
-                        assign image_widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                        assign image_sizes = '(min-width: 750px) 50vw, 100vw'
+                {% if block.settings.subtitle != blank %}
+                  <p class="product-showcase-slide__subtitle">{{ block.settings.subtitle }}</p>
+                {% endif %}
 
-                        assign product_alt = ''
-                        if custom_product_image != blank and custom_product_image.alt != blank
-                          assign product_alt = custom_product_image.alt | escape
-                        elsif product.featured_media != blank and product.featured_media.alt != blank
-                          assign product_alt = product.featured_media.alt | escape
-                        endif
-
-                        if product_alt == ''
-                          assign product_alt = product.title | escape
-                        endif
-                      -%}
-                      <a
-                        href="{{ product.url }}"
-                        class="product-showcase-slide__product-link"
-                        aria-label="{{ product.title | escape }}"
-                      >
-                        {{
-                          product_image
-                          | image_url: width: 1500
-                          | image_tag:
-                            loading: loading_type,
-                            widths: image_widths,
-                            sizes: image_sizes,
-                            alt: product_alt,
-                            class: 'product-showcase-slide__product-img'
-                        }}
-                      </a>
-                    </div>
-                  {% endif %}
-
-                  {% if product.title != blank %}
-                    <h3
-                      class="product-showcase-slide__title"
-                      data-aos="fade-up"
-                      data-aos-delay="160"
-                    >
-                      <a href="{{ product.url }}" class="product-showcase-slide__title-link">{{ product.title }}</a>
-                    </h3>
-                  {% endif %}
-
-                  <div
-                    class="product-showcase-slide__price"
-                    data-aos="fade-up"
-                    data-aos-delay="220"
-                  >
+                {% if block.settings.product != blank %}
+                  {% assign product = block.settings.product %}
+                  <div class="product-showcase-slide__price">
                     {% render 'price', product_resource: product, show_unit_price: false %}
                   </div>
+                {% endif %}
 
-                  <!-- 进度条放在产品信息内部 -->
-                  <div class="product-showcase-slide__progress">
-                    <div class="product-showcase-slide__progress-track">
-                      <div class="product-showcase-slide__progress-fill" data-index="{{ forloop.index0 }}"></div>
-                    </div>
-                  </div>
+                {% if block.settings.button_label != blank and block.settings.link != blank %}
+                  <a href="{{ block.settings.link }}" class="product-showcase-slide__button">
+                    {{ block.settings.button_label }}
+                  </a>
                 {% endif %}
               </div>
             </div>
           </div>
         {% endif %}
       {% endfor %}
+    </div>
+
+    <!-- 进度条 -->
+    <div class="product-showcase-swiper__progress">
+      <div class="product-showcase-swiper__progress-track">
+        <div class="product-showcase-swiper__progress-fill"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -160,237 +95,111 @@
   (function() {
     'use strict';
 
-    function initProductShowcaseSwiper() {
-      // 仅等待 Swiper 库加载
+    function initSwiper() {
       if (typeof Swiper === 'undefined') {
-        setTimeout(initProductShowcaseSwiper, 100);
+        setTimeout(initSwiper, 100);
         return;
       }
 
       const swiperEl = document.querySelector('#product-showcase-swiper-{{ section.id }}');
-      if (!swiperEl) {
-        console.warn('Product showcase swiper element not found');
-        return;
+      if (!swiperEl) return;
+
+      const slides = swiperEl.querySelectorAll('.swiper-slide');
+      const slidesCount = slides.length;
+      if (slidesCount === 0) return;
+
+      const progressTrack = swiperEl.querySelector('.product-showcase-swiper__progress-track');
+      const progressFill = swiperEl.querySelector('.product-showcase-swiper__progress-fill');
+
+      // 进度条配置
+      const segmentWidth = window.innerWidth <= 749 ? 35 : 70;
+      const totalWidth = slidesCount * segmentWidth;
+
+      if (progressTrack && progressFill) {
+        progressTrack.style.width = totalWidth + 'px';
+        progressFill.style.width = segmentWidth + 'px';
       }
-      // 计算真实 slides 数量（排除 duplicate）
-      const realSlides = swiperEl.querySelectorAll('.swiper-slide.product-showcase-slide:not(.swiper-slide-duplicate)');
-      const realSlidesCount = realSlides.length;
 
-      let autoplayConfig = false;
-      {% if section.settings.autoplay %}
-        autoplayConfig = {
-          delay: {{ section.settings.autoplay_delay | default: 3000 }},
-          disableOnInteraction: false,
-        };
-      {% endif %}
-
-      const shouldLoop = {{ section.settings.loop | default: true }};
-      const canLoop = shouldLoop && realSlidesCount >= 2;
-
-      // 简单的 Swiper 初始化：autoplay 只控制轮播，不再驱动进度条动画
+      // Swiper 配置
       const swiper = new Swiper(swiperEl, {
         slidesPerView: 1,
-        slidesPerGroup: 1,
         spaceBetween: 0,
-        loop: canLoop,
+        loop: {{ section.settings.loop | default: true }},
         speed: {{ section.settings.speed | default: 500 }},
-        autoplay: autoplayConfig,
-        touchReleaseOnEdges: true,
-        preventInteractionOnTransition: true,
-        observer: true,
-        observeParents: true
+        {% if section.settings.autoplay %}
+        autoplay: {
+          delay: {{ section.settings.autoplay_delay | default: 3000 }},
+          disableOnInteraction: false,
+        },
+        {% endif %}
       });
 
-      // 当前 slide 内 AOS 动效触发（与其他 section 保持一致）
-      function runSlideAnimations(swiperInstance) {
-        if (!swiperInstance) return;
-        const slides = swiperInstance.slides;
-        if (!slides || swiperInstance.activeIndex == null) return;
+      // 更新进度条位置
+      function updateProgress() {
+        if (!progressFill) return;
+        const realIndex = swiper.realIndex || 0;
+        progressFill.style.transform = 'translateX(' + (realIndex * segmentWidth) + 'px)';
+      }
 
-        const activeSlide = slides[swiperInstance.activeIndex];
-        if (!activeSlide) return;
-
-        const elements = activeSlide.querySelectorAll('[data-aos]');
-        elements.forEach(function(el) {
-          el.classList.remove('aos-animate');
-          void el.offsetWidth;
-          el.classList.add('aos-animate');
+      // 点击进度条切换
+      if (progressTrack) {
+        progressTrack.addEventListener('click', function(e) {
+          const rect = progressTrack.getBoundingClientRect();
+          const clickX = e.clientX - rect.left;
+          const targetIndex = Math.floor(clickX / segmentWidth);
+          if (targetIndex >= 0 && targetIndex < slidesCount) {
+            swiper.slideToLoop(targetIndex);
+          }
         });
       }
 
-      // 每个 slide 内部的进度条：轨道宽度 = 总数量 * 段宽度，小块在轨道上左右移动
-      const segmentWidthDesktop = 70;
-      const segmentWidthMobile = 35;
-      const getSegmentWidth = () => (window.innerWidth <= 749 ? segmentWidthMobile : segmentWidthDesktop);
+      updateProgress();
+      swiper.on('slideChange', updateProgress);
 
-      const tracks = [];
-      const fills = [];
-      realSlides.forEach(function(slide) {
-        const track = slide.querySelector('.product-showcase-slide__progress-track');
-        const fill = slide.querySelector('.product-showcase-slide__progress-fill');
-        if (track && fill) {
-          tracks.push(track);
-          fills.push(fill);
-        }
-      });
-
-      function layoutProgressBars() {
-        const segWidth = getSegmentWidth();
-        const totalWidth = Math.max(1, realSlidesCount) * segWidth;
-
-        tracks.forEach(function(track) {
-          track.style.width = totalWidth + 'px';
-        });
-
-        fills.forEach(function(fill) {
-          fill.style.width = segWidth + 'px';
-        });
-      }
-
-      // 更新每个 slide 内部进度条的小块位置
-      function updateSlideProgress(swiperInstance) {
-        if (!swiperInstance || !fills.length) return;
-
-        const segWidth = getSegmentWidth();
-        const realIndex = (swiperInstance.realIndex !== undefined && swiperInstance.realIndex >= 0)
-          ? swiperInstance.realIndex
-          : (swiperInstance.activeIndex % realSlidesCount);
-
-        const offset = realIndex * segWidth;
-        // 所有进度条都显示相同的位置
-        fills.forEach(function(fill) {
-          fill.style.transform = 'translateX(' + offset + 'px)';
-        });
-      }
-
-      // 点击任意 slide 内的进度条轨道，根据点击位置切换到对应 slide
-      tracks.forEach(function(track) {
-        track.addEventListener('click', function(event) {
-          const rect = track.getBoundingClientRect();
-          const clickX = event.clientX - rect.left;
-          const segWidth = getSegmentWidth();
-          const totalWidth = Math.max(1, realSlidesCount) * segWidth;
-          if (!totalWidth) return;
-
-          let targetIndex = Math.floor(clickX / totalWidth * realSlidesCount);
-          if (targetIndex < 0) targetIndex = 0;
-          if (targetIndex > realSlidesCount - 1) targetIndex = realSlidesCount - 1;
-
-          try {
-            if (typeof swiper.slideToLoop === 'function') {
-              swiper.slideToLoop(targetIndex);
-            } else if (typeof swiper.slideTo === 'function') {
-              swiper.slideTo(targetIndex);
-            }
-          } catch (e) {}
-
-          updateSlideProgress(swiper);
-        });
-      });
-
-      // 初始化布局与进度
-      layoutProgressBars();
-      updateSlideProgress(swiper);
-      runSlideAnimations(swiper);
-
-      // Swiper 切换和窗口尺寸变化时更新进度/布局
-      swiper.on('slideChange', function() {
-        updateSlideProgress(swiper);
-        runSlideAnimations(swiper);
-      });
-
+      // 响应式更新
       window.addEventListener('resize', function() {
-        layoutProgressBars();
-        updateSlideProgress(swiper);
+        const newSegmentWidth = window.innerWidth <= 749 ? 35 : 70;
+        const newTotalWidth = slidesCount * newSegmentWidth;
+        if (progressTrack) progressTrack.style.width = newTotalWidth + 'px';
+        if (progressFill) progressFill.style.width = newSegmentWidth + 'px';
       });
     }
 
-    // 懒加载：仅当该 section 进入视口附近时才初始化 swiper
-    function setupLazyInit() {
-      const targetSection = document.querySelector('[data-testid="product-showcase-swiper"]');
-      if (!targetSection) {
-        // 找不到目标节点时直接初始化，避免功能缺失
-        setTimeout(initProductShowcaseSwiper, 100);
-        return;
-      }
-
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(function(entries, obs) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              // 一旦进入视口（含预加载阈值）就初始化，并停止观察
-              setTimeout(initProductShowcaseSwiper, 100);
-              obs.unobserve(entry.target);
-            }
-          });
-        }, {
-          root: null,
-          // 提前一点开始初始化，减少用户看到时的空白时间
-          rootMargin: '0px 0px 200px 0px',
-          threshold: 0.1
-        });
-
-        observer.observe(targetSection);
-      } else {
-        // 老设备 / 老浏览器：退回到原来的 DOM Ready 后直接初始化逻辑
-        setTimeout(initProductShowcaseSwiper, 100);
-      }
-    }
-
-    // 确保 DOM 完全加载后再挂载懒加载逻辑
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        setupLazyInit();
-      });
+      document.addEventListener('DOMContentLoaded', initSwiper);
     } else {
-      setupLazyInit();
+      initSwiper();
     }
   })();
 </script>
 
 {% stylesheet %}
   .product-showcase-swiper-section {
-    position: relative;
     width: 100%;
     background-color: #f5f5ef;
-    padding: 0;
   }
 
   .product-showcase-swiper {
     width: 100%;
-    margin: 0 auto;
-    padding: 0 0 70px;
     position: relative;
-  }
-
-  .product-showcase-slide {
-    position: relative;
-    width: 100%;
-    height: auto;
+    padding-bottom: 60px;
   }
 
   .product-showcase-slide__container {
     display: grid;
-        grid-template-columns: 45% 55%;
-
-    gap: 0;
-  align-items: start;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
   }
 
   .product-showcase-slide__left {
-    position: relative;
     width: 100%;
-
+    height: 100%;
   }
 
-  .product-showcase-slide__lifestyle-image {
+  .product-showcase-slide__left .product-showcase-slide__img {
     width: 100%;
-    position: relative;
-  }
-
-  .product-showcase-slide__lifestyle-img {
-    width: 100%;
-   height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
   }
 
@@ -398,7 +207,7 @@
     width: 100%;
     height: 100%;
     min-height: 400px;
-    background-color: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -406,178 +215,111 @@
 
   .product-showcase-slide__placeholder .placeholder-svg {
     width: 50%;
-    height: auto;
     opacity: 0.3;
   }
 
-  .product-showcase-slide__empty-state {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 14px;
-  }
-
   .product-showcase-slide__right {
-    position: relative;
-    width: 100%;
-
-    background-color: transparent;
-    padding: 80px 60px 60px;
-    padding: 150px 92px 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
   }
 
-  .product-showcase-slide__see-more {
-    position: absolute;
-    top: 64px;
-    right: 92px;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 24px;
-    color: #000000;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-    font-weight: 600;
-  }
-
-  .product-showcase-slide__see-more:hover {
-    opacity: 0.7;
-  }
-
-  .product-showcase-slide__product-image {
-    width: 100%;
-    max-width: 380px;
-    margin: 0 auto 40px;
-    position: relative;
-  }
-  @media (min-width: 1440px) {
-    .product-showcase-slide__product-image {
-      margin: 0;
-    }
-  }
   .product-showcase-slide__product-img {
+    max-width: 300px;
     width: 100%;
     height: auto;
-    object-fit: contain;
-    display: block;
+    margin-bottom: 20px;
   }
 
   .product-showcase-slide__title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 24px;
-    color: #000000;
-    margin: 0 0 16px 0;
-    text-align: center;
-    width: 100%;
-    max-width: 285px;
-  }
-  .product-showcase-slide__title > a {
+    margin: 0 0 10px;
     color: #000;
-    width: 100%;
   }
+
+  .product-showcase-slide__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .product-showcase-slide__subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 15px;
+  }
+
   .product-showcase-slide__price {
     font-size: 16px;
-    font-weight: normal;
-    line-height: 24px;
-    color: #000000;
-    margin: 0 0 24px 0;
-    text-align: center;
-    width: 100%;
+    margin-bottom: 20px;
   }
 
-  /* 进度条样式 - 在每个slide内部 */
-  .product-showcase-slide__progress {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    padding-top: 24px;
+  .product-showcase-slide__button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s;
   }
 
-  .product-showcase-slide__progress-track {
-    position: relative;
+  .product-showcase-slide__button:hover {
+    opacity: 0.8;
+  }
+
+  .product-showcase-slide__link {
+    display: block;
+  }
+
+  /* 进度条 */
+  .product-showcase-swiper__progress {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .product-showcase-swiper__progress-track {
     height: 2px;
-    min-width: 70px;
-    background-color: rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    position: relative;
   }
 
-  .product-showcase-slide__progress-fill {
+  .product-showcase-swiper__progress-fill {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    width: 70px;
-    background-color: #000000;
-    transform-origin: left center;
-    opacity: 1;
+    background: #000;
     transition: transform 0.3s ease;
   }
 
-  @media screen and (max-width: 749px) {
-    .product-showcase-swiper {
-      padding: 0;
-    }
-    .product-showcase-swiper-section {
-      padding: 0;
-    }
-
+  /* 移动端 */
+  @media (max-width: 749px) {
     .product-showcase-slide__container {
       grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
       min-height: auto;
     }
 
     .product-showcase-slide__left {
-      order: 1;
+      height: 300px;
     }
 
     .product-showcase-slide__right {
-      padding: 40px 20px 45px;
-
-      order: 2;
+      padding: 30px 20px;
     }
 
-    .product-showcase-slide__see-more {
-      top: 20px;
-      right: 20px;
+    .product-showcase-slide__product-img {
+      max-width: 200px;
     }
 
-    .product-showcase-slide__product-image {
-      margin-bottom: 24px;
-      max-width: 250px;
-    }
-    .product-showcase-slide__title {
-      font-size: 13px;
-      line-height: 18px;
-      width: 170px;
-    }
-    .product-showcase-slide__price {
-      font-size: 13px;
-      line-height: 13px;
-    }
-    /* Mobile: thinner progress and shorter segments */
-    .product-showcase-slide__progress-track {
+    .product-showcase-swiper__progress-track {
       height: 1px;
-      min-width: 35px;
-      background-color: rgba(0, 0, 0, 0.25);
-    }
-
-    .product-showcase-slide__progress-fill {
-      height: 100%;
-      width: 35px;
-      background-color: #000000;
     }
   }
 {% endstylesheet %}
@@ -586,29 +328,27 @@
 {
   "name": "Product Showcase Swiper",
   "tag": "section",
-  "class": "product-showcase-swiper-section",
   "settings": [
     {
       "type": "checkbox",
       "id": "autoplay",
-      "label": "Autoplay",
+      "label": "自动播放",
       "default": true
     },
     {
       "type": "range",
       "id": "autoplay_delay",
-      "label": "Autoplay Delay",
+      "label": "自动播放间隔",
       "min": 2000,
-      "max": 9000,
+      "max": 9500,
       "step": 500,
       "unit": "ms",
-      "default": 3000,
-      "visible_if": "{{ section.settings.autoplay }}"
+      "default": 4000
     },
     {
       "type": "range",
       "id": "speed",
-      "label": "Transition Speed",
+      "label": "切换速度",
       "min": 300,
       "max": 1000,
       "step": 100,
@@ -618,43 +358,57 @@
     {
       "type": "checkbox",
       "id": "loop",
-      "label": "Loop",
+      "label": "循环播放",
       "default": true
     }
   ],
   "blocks": [
     {
-      "type": "showcase",
-      "name": "Product Showcase",
+      "type": "slide",
+      "name": "幻灯片",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "lifestyle_image",
-          "label": "Lifestyle Image",
-          "info": "Left side lifestyle image"
+          "type": "header",
+          "content": "左侧区域"
         },
         {
           "type": "image_picker",
-          "id": "product_image",
-          "label": "Custom Product Image",
-          "info": "Optional: Override the product image on the right side. If not set, the product's featured image will be used."
+          "id": "left_image",
+          "label": "左侧图片"
+        },
+        {
+          "type": "header",
+          "content": "右侧区域"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image",
+          "label": "右侧图片"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "副标题"
         },
         {
           "type": "product",
           "id": "product",
-          "label": "Product",
-          "info": "Select the product to display"
+          "label": "关联产品（用于显示价格）"
         },
         {
           "type": "text",
-          "id": "see_more_label",
-          "label": "See More Label",
-          "default": "See More"
+          "id": "button_label",
+          "label": "按钮文字"
         },
         {
           "type": "url",
-          "id": "see_more_link",
-          "label": "See More Link"
+          "id": "link",
+          "label": "链接"
         }
       ]
     }
@@ -662,14 +416,7 @@
   "presets": [
     {
       "name": "Product Showcase Swiper",
-      "blocks": [
-        {
-          "type": "showcase"
-        },
-        {
-          "type": "showcase"
-        }
-      ]
+      "blocks": [{ "type": "slide" }, { "type": "slide" }]
     }
   ]
 }

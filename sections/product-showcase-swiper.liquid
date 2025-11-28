@@ -1,6 +1,23 @@
 <div class="product-showcase-swiper-section" data-testid="product-showcase-swiper">
   <div class="swiper product-showcase-swiper" id="product-showcase-swiper-{{ section.id }}">
     <div class="swiper-wrapper">
+      {% if section.blocks.size == 0 %}
+        {%- comment -%} 空状态提示 - 仅在编辑器中显示 {%- endcomment -%}
+        <div class="swiper-slide product-showcase-slide">
+          <div class="product-showcase-slide__container">
+            <div class="product-showcase-slide__left">
+              <div class="product-showcase-slide__placeholder">
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            </div>
+            <div class="product-showcase-slide__right">
+              <div class="product-showcase-slide__empty-state">
+                <p>请添加 "Product Showcase" block 并配置产品和图片</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
       {% for block in section.blocks %}
         {% if block.type == 'showcase' %}
           <div class="swiper-slide product-showcase-slide" {{ block.shopify_attributes }}>
@@ -381,6 +398,32 @@
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+
+  .product-showcase-slide__placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-showcase-slide__placeholder .placeholder-svg {
+    width: 50%;
+    height: auto;
+    opacity: 0.3;
+  }
+
+  .product-showcase-slide__empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
   }
 
   .product-showcase-slide__right {

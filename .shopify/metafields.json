@@ -1,7 +1,28 @@
 {
   "article": [],
   "blog": [],
-  "collection": [],
+  "collection": [
+    {
+      "key": "img",
+      "namespace": "collection",
+      "name": "产品系列图标",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "url",
+      "namespace": "custom",
+      "name": "产品系列链接",
+      "description": "",
+      "type": {
+        "name": "link",
+        "category": "LINK"
+      }
+    }
+  ],
   "company": [],
   "company_location": [],
   "location": [],

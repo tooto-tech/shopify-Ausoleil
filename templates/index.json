@@ -771,7 +771,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "icon_MBkmF6": {
+            "icon_Td8FCb": {
               "type": "icon",
               "name": "t:names.icon",
               "settings": {
@@ -824,7 +824,7 @@
             }
           },
           "block_order": [
-            "icon_MBkmF6",
+            "icon_Td8FCb",
             "text_HXBxUh"
           ]
         },
@@ -905,7 +905,7 @@
                     "icon": "price_tag",
                     "image_upload": "{{ closest.collection.metafields.collection.img.value }}",
                     "width": 148,
-                    "height": 134,
+                    "height": 0,
                     "width_mobile": 0,
                     "height_mobile": 0,
                     "link": "",

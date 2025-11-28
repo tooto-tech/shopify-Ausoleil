@@ -58,18 +58,22 @@
               src="{{ block_settings.center_icon | image_url: width: 400 }}"
               alt="{{ block_settings.center_icon.alt | default: '' | escape }}"
               class="pss-slide__left-icon"
-              style="width: {{ block_settings.icon_width }}px; max-width: {{ block_settings.icon_width_mobile }}px;"
               width="{{ block_settings.center_icon.width }}"
               height="{{ block_settings.center_icon.height }}"
+              style="--icon-width: {{ block_settings.icon_width }}px; --icon-width-mobile: {{ block_settings.icon_width_mobile }}px;"
             >
           {%- endif -%}
           {%- if block_settings.center_text != blank -%}
             <p class="pss-slide__left-text" style="
-              font-size: {{ block_settings.text_size }};
-              font-weight: {{ block_settings.text_weight }};
-              color: {{ block_settings.text_color }};
-              letter-spacing: {{ block_settings.text_letter_spacing }};
-              margin-top: {{ block_settings.text_margin_top }}px;
+              --text-font: {{ block_settings.text_font }};
+              --text-size: {{ block_settings.text_size }};
+              --text-size-mobile: {{ block_settings.text_size_mobile }};
+              --text-weight: {{ block_settings.text_weight }};
+              --text-weight-mobile: {{ block_settings.text_weight_mobile | default: block_settings.text_weight }};
+              --text-color: {{ block_settings.text_color }};
+              --text-letter-spacing: {{ block_settings.text_letter_spacing }};
+              --text-margin-top: {{ block_settings.text_margin_top }}px;
+              --text-margin-top-mobile: {{ block_settings.text_margin_top_mobile }}px;
             ">{{ block_settings.center_text }}</p>
           {%- endif -%}
         </div>
@@ -213,8 +217,24 @@
     },
     {
       "type": "select",
+      "id": "text_font",
+      "label": "字体",
+      "options": [
+        { "value": "var(--font-body--family)", "label": "正文字体" },
+        { "value": "var(--font-heading--family)", "label": "标题字体" },
+        { "value": "var(--font-subheading--family)", "label": "副标题字体" },
+        { "value": "var(--font-accent--family)", "label": "强调字体" },
+        { "value": "'A019-SounsoQuality', var(--font-heading--family)", "label": "A019-SounsoQuality" },
+        { "value": "'DolceVitaLight', var(--font-heading--family)", "label": "DolceVitaLight" },
+        { "value": "'DreamOrphans', var(--font-heading--family)", "label": "DreamOrphans" },
+        { "value": "'Mont', var(--font-heading--family)", "label": "Mont" }
+      ],
+      "default": "var(--font-body--family)"
+    },
+    {
+      "type": "select",
       "id": "text_size",
-      "label": "文字大小",
+      "label": "文字大小（桌面端）",
       "options": [
         { "value": "0.75rem", "label": "12px" },
         { "value": "0.875rem", "label": "14px" },
@@ -222,22 +242,52 @@
         { "value": "1.125rem", "label": "18px" },
         { "value": "1.25rem", "label": "20px" },
         { "value": "1.5rem", "label": "24px" },
-        { "value": "2rem", "label": "32px" }
+        { "value": "2rem", "label": "32px" },
+        { "value": "2.5rem", "label": "40px" }
       ],
       "default": "1rem"
     },
     {
       "type": "select",
-      "id": "text_weight",
-      "label": "字重",
+      "id": "text_size_mobile",
+      "label": "文字大小（移动端）",
       "options": [
+        { "value": "0.625rem", "label": "10px" },
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" },
+        { "value": "1.25rem", "label": "20px" }
+      ],
+      "default": "0.875rem"
+    },
+    {
+      "type": "select",
+      "id": "text_weight",
+      "label": "字重（桌面端）",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi Bold (600)" },
+        { "value": "700", "label": "Bold (700)" },
+        { "value": "900", "label": "Black (900)" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "select",
+      "id": "text_weight_mobile",
+      "label": "字重（移动端）",
+      "options": [
+        { "value": "", "label": "与桌面端相同" },
         { "value": "300", "label": "Light (300)" },
         { "value": "400", "label": "Regular (400)" },
         { "value": "500", "label": "Medium (500)" },
         { "value": "600", "label": "Semi Bold (600)" },
         { "value": "700", "label": "Bold (700)" }
       ],
-      "default": "400"
+      "default": ""
     },
     {
       "type": "color",
@@ -260,12 +310,22 @@
     {
       "type": "range",
       "id": "text_margin_top",
-      "label": "文本与图标间距",
+      "label": "文本与图标间距（桌面端）",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_margin_top_mobile",
+      "label": "文本与图标间距（移动端）",
       "min": 0,
       "max": 40,
       "step": 4,
       "unit": "px",
-      "default": 16
+      "default": 12
     },
     {
       "type": "header",

@@ -1779,11 +1779,11 @@
           "settings": {
             "left_image": "shopify://shop_images/171_2x_1.webp",
             "right_image": "shopify://shop_images/2663_2x_a90a998d-b07d-4d3e-928a-18dcf6a34aab.webp",
-            "title": "达瓦达瓦",
-            "subtitle": "达娃大",
             "product": "verdant-avant-garde-olive-sunglasses-garde-192002",
-            "button_label": "伟大哇",
-            "link": ""
+            "custom_title": "",
+            "custom_price": "",
+            "see_more_text": "See More",
+            "see_more_link": ""
           }
         },
         "slide_k93CyC": {
@@ -1791,11 +1791,11 @@
           "settings": {
             "left_image": "shopify://shop_images/180_2x_f468d1a0-18af-4570-833b-454ff6f08c2d.webp",
             "right_image": "shopify://shop_images/2665_2x_a8149bca-c53b-4c33-8ee4-3061ae9c921a.webp",
-            "title": "",
-            "subtitle": "",
-            "product": "",
-            "button_label": "",
-            "link": ""
+            "product": "verdant-avant-garde-olive-sunglasses-garde-192002",
+            "custom_title": "",
+            "custom_price": "",
+            "see_more_text": "See More",
+            "see_more_link": ""
           }
         }
       },
@@ -1805,6 +1805,7 @@
       ],
       "name": "Product Showcase Swiper",
       "settings": {
+        "bg_color": "#f5f5ef",
         "autoplay": true,
         "autoplay_delay": 3000,
         "speed": 500,

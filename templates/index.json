@@ -2810,7 +2810,7 @@
                 "text": "<p>Winter stand-up collar zipper bread jacket</p>",
                 "width": "fit-content",
                 "max_width": "normal",
-                "alignment": "left",
+                "alignment": "center",
                 "type_preset": "custom",
                 "font": "'Mont', var(--font-heading--family)",
                 "font_size": "1rem",
@@ -2893,7 +2893,7 @@
         ".pss-slide__progress-track {background: rgba(255, 255, 255, 0.2);}",
         ".pss-slide__progress-fill {background: #ffffff;}",
         " /* 控制文本位置 */.pss-slide__right-content {display: flex; flex-direction: column; height: 100%; align-items: center;}",
-        "/* 让Winter靠下,底部的价格自然靠下 */.text-block--AT1FpSVVSbklVYlhUe__text_f9JEWi {margin-top: auto;}"
+        " /* 让Winter靠下,底部的价格自然靠下 */.text-block--AT1FpSVVSbklVYlhUe__text_f9JEWi {margin-top: auto;}"
       ],
       "name": "Product Showcase Swiper",
       "settings": {

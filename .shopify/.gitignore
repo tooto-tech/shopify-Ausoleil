@@ -1,0 +1,6 @@
+# Ignore the entire .shopify directory
+.shopify/
+
+# Ignore everything inside shopify-careoflord-tooto-main/
+shopify-careoflord-tooto-main/
+

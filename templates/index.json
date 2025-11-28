@@ -1248,6 +1248,9 @@
           ]
         }
       },
+      "custom_css": [
+        ".product-badges__badge {background: #1226aa; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center}"
+      ],
       "name": "New Arrivals",
       "settings": {
         "collection": "new-arrivals",

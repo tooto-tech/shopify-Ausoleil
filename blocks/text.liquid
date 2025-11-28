@@ -482,6 +482,20 @@
       "visible_if": "{{ block.settings.type_preset != 'rte' }}"
     },
     {
+      "type": "color",
+      "id": "custom_color",
+      "label": "自定义颜色",
+      "info": "设置后将覆盖上方颜色选项",
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "custom_color_mobile",
+      "label": "移动端自定义颜色",
+      "info": "留空则使用桌面端颜色",
+      "visible_if": "{{ block.settings.type_preset == 'custom' }}"
+    },
+    {
       "type": "header",
       "content": "t:content.appearance"
     },

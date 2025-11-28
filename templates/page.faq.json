@@ -11,132 +11,8 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "content_direction": "column",
-        "gap": 32,
-        "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 80
-      }
-    },
-    "hero_KaV9hF": {
-      "type": "hero",
       "blocks": {
-        "text_k6MNaG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>FAQ</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "'Mont', var(--font-heading--family)",
-            "font_size": "3.5rem",
-            "font_size_mobile": "1.75rem",
-            "weight": "900",
-            "weight_mobile": "900",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "letter_spacing_custom": "",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "custom_color": "",
-            "custom_color_mobile": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0
-          },
-          "blocks": {}
-        },
-        "text_VtjTpL": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Below you will find some of our most frequently asked questions. If you have further questions about something not listed below</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "custom",
-            "font": "'Mont', var(--font-heading--family)",
-            "font_size": "0.875rem",
-            "font_size_mobile": "0.8125rem",
-            "weight": "300",
-            "weight_mobile": "300",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "letter_spacing_custom": "",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "custom_color": "",
-            "custom_color_mobile": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 88,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_k6MNaG",
-        "text_VtjTpL"
-      ],
-      "name": "banner",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/151_2x_2923cf13-7ffd-4676-a186-e2b7a8e46c76.webp",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "large",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-5",
-        "toggle_overlay": true,
-        "overlay_color": "#00000026",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 0,
-        "padding-block-end": 100
-      }
-    },
-    "section_GRwHMT": {
-      "type": "section",
-      "blocks": {
-        "accordion_NWNwDM": {
+        "accordion_rrrUjz": {
           "type": "accordion",
           "name": "t:names.accordion",
           "settings": {
@@ -155,7 +31,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "accordion_row_jjCGwE": {
+            "accordion_row_fQKjcU": {
               "type": "_accordion-row",
               "settings": {
                 "heading": "How are sunglasses measured?",
@@ -164,12 +40,12 @@
                 "width": 200
               },
               "blocks": {
-                "text_bkeJ7p": {
+                "text_cQHWQf": {
                   "type": "text",
                   "settings": {
                     "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
-                    "width": "100%",
-                    "max_width": "normal",
+                    "width": "fit-content",
+                    "max_width": "none",
                     "alignment": "left",
                     "type_preset": "custom",
                     "font": "var(--font-body--family)",
@@ -202,10 +78,10 @@
                 }
               },
               "block_order": [
-                "text_bkeJ7p"
+                "text_cQHWQf"
               ]
             },
-            "accordion_row_P6rAGh": {
+            "accordion_row_QDXQV6": {
               "type": "_accordion-row",
               "settings": {
                 "heading": "How to choose sunglasses size",
@@ -214,7 +90,7 @@
                 "width": 200
               },
               "blocks": {
-                "text_nF3B8B": {
+                "text_XqFWAD": {
                   "type": "text",
                   "settings": {
                     "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
@@ -252,10 +128,10 @@
                 }
               },
               "block_order": [
-                "text_nF3B8B"
+                "text_XqFWAD"
               ]
             },
-            "accordion_row_ykzgUB": {
+            "accordion_row_qLchjH": {
               "type": "_accordion-row",
               "settings": {
                 "heading": "What is 'temple length' on glasses?",
@@ -264,7 +140,7 @@
                 "width": 200
               },
               "blocks": {
-                "text_9RnaaE": {
+                "text_Ka99Vw": {
                   "type": "text",
                   "settings": {
                     "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
@@ -302,10 +178,10 @@
                 }
               },
               "block_order": [
-                "text_9RnaaE"
+                "text_Ka99Vw"
               ]
             },
-            "accordion_row_THHFKe": {
+            "accordion_row_9mPzkp": {
               "type": "_accordion-row",
               "settings": {
                 "heading": "Which glasses or sunglasses suit my face?",
@@ -314,7 +190,7 @@
                 "width": 200
               },
               "blocks": {
-                "text_mMzFVz": {
+                "text_4DwyQ3": {
                   "type": "text",
                   "settings": {
                     "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
@@ -352,10 +228,10 @@
                 }
               },
               "block_order": [
-                "text_mMzFVz"
+                "text_4DwyQ3"
               ]
             },
-            "accordion_row_hNLBXX": {
+            "accordion_row_n6JHK4": {
               "type": "_accordion-row",
               "settings": {
                 "heading": "I am not sure which product suits me. Can you recommend the best style?",
@@ -364,7 +240,7 @@
                 "width": 200
               },
               "blocks": {
-                "text_YgY8JW": {
+                "text_6t9jCM": {
                   "type": "text",
                   "settings": {
                     "text": "<p><br/>•  The frames of your sunglasses will have four measurements. These are eye size, bridge size, temple size, and vertical eye size. We measure these in millimetres (mm). You'll find them on the inside of the sunglasses' arm, usually in this order: eye size, bridge size, temple size. Vertical eye size is usually omitted, and temple size sometimes is too. If you can't find these measurements on the sunglasses' arm, check under the bridge.<br/><br/>•  Eye size measures the horizontal width of the frames lenses. Bridge size refers to the distance between the lenses. We measure temple size from one side of the temple to the other. This measurement includes the bend in the frame, too. Vertical eye size refers to the height of the lens. It is only of particular importance if your lenses are multifocal.<br/><br/>•  Be aware that most of the time, eyeglass frame are smaller than sunglass frames. This is not always the case, but it seems to be the general trend. If you're looking for sunglasses in a style like your eyeglasses they'll be similar sizes. Also note that sunglass frames with a curve to them (wrapped frames) tend to fit a wider range of people.<br/><br/></p>",
@@ -402,55 +278,32 @@
                 }
               },
               "block_order": [
-                "text_YgY8JW"
+                "text_6t9jCM"
               ]
             }
           },
           "block_order": [
-            "accordion_row_jjCGwE",
-            "accordion_row_P6rAGh",
-            "accordion_row_ykzgUB",
-            "accordion_row_THHFKe",
-            "accordion_row_hNLBXX"
+            "accordion_row_fQKjcU",
+            "accordion_row_QDXQV6",
+            "accordion_row_qLchjH",
+            "accordion_row_9mPzkp",
+            "accordion_row_n6JHK4"
           ]
         }
       },
       "block_order": [
-        "accordion_NWNwDM"
+        "accordion_rrrUjz"
       ],
-      "name": "t:names.faq_section",
       "settings": {
         "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
         "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
         "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 40,
+        "padding-block-end": 80
       }
     }
   },
   "order": [
-    "main",
-    "hero_KaV9hF",
-    "section_GRwHMT"
+    "main"
   ]
 }

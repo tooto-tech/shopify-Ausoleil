@@ -1774,30 +1774,232 @@
     "product_showcase_swiper_CePYch": {
       "type": "product-showcase-swiper",
       "blocks": {
-        "slide_dKcxaG": {
+        "pss_slide_QfhY46": {
           "type": "_pss-slide",
+          "name": "PSS 幻灯片",
           "settings": {
-            "left_image": "shopify://shop_images/171_2x_1.webp",
-            "see_more_text": "See More",
+            "left_image": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
+            "use_mobile_image": false,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "right_bg_color": "",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "content_gap": 16,
+            "right_padding_top": 60,
+            "right_padding_bottom": 60,
+            "right_padding_left": 40,
+            "right_padding_right": 40,
+            "see_more_text": "",
             "see_more_link": ""
-          }
+          },
+          "blocks": {
+            "product_title_Jf3iWT": {
+              "type": "product-title",
+              "name": "t:names.title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "font_size_mobile": "",
+                "weight": "",
+                "weight_mobile": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "letter_spacing_custom": "",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            },
+            "image_PJ44Lf": {
+              "type": "image",
+              "settings": {
+                "image": "shopify://shop_images/181_2x_7916a806-f32c-47ae-a7d0-5d8576bc704f.webp",
+                "link": "",
+                "image_ratio": "adapt",
+                "image_ratio_mobile": "",
+                "width": "custom",
+                "custom_width": 60,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "custom_mobile_border_radius": false,
+                "border_radius_mobile": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_KTdaKr": {
+              "type": "text",
+              "settings": {
+                "text": "<p>产品标题</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "font_size_mobile": "",
+                "weight": "",
+                "weight_mobile": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "letter_spacing_custom": "",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_title_Jf3iWT",
+            "image_PJ44Lf",
+            "text_KTdaKr"
+          ]
         },
-        "slide_k93CyC": {
+        "pss_slide_9TEjd7": {
           "type": "_pss-slide",
+          "name": "PSS 幻灯片",
           "settings": {
             "left_image": "shopify://shop_images/180_2x_f468d1a0-18af-4570-833b-454ff6f08c2d.webp",
-            "see_more_text": "See More",
+            "use_mobile_image": false,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "right_bg_color": "#ffffff",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "content_gap": 16,
+            "right_padding_top": 60,
+            "right_padding_bottom": 60,
+            "right_padding_left": 40,
+            "right_padding_right": 40,
+            "see_more_text": "SHOW MORE",
             "see_more_link": ""
-          }
+          },
+          "blocks": {
+            "image_WqnMxi": {
+              "type": "image",
+              "settings": {
+                "image": "shopify://shop_images/2665_2x_a8149bca-c53b-4c33-8ee4-3061ae9c921a.webp",
+                "link": "",
+                "image_ratio": "adapt",
+                "image_ratio_mobile": "",
+                "width": "custom",
+                "custom_width": 60,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "custom_mobile_border_radius": false,
+                "border_radius_mobile": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_cyBzUa": {
+              "type": "text",
+              "settings": {
+                "text": "<p>产品标题</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "font_size_mobile": "",
+                "weight": "",
+                "weight_mobile": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "letter_spacing_custom": "",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_WqnMxi",
+            "text_cyBzUa"
+          ]
         }
       },
       "block_order": [
-        "slide_dKcxaG",
-        "slide_k93CyC"
+        "pss_slide_QfhY46",
+        "pss_slide_9TEjd7"
       ],
       "name": "Product Showcase Swiper",
       "settings": {
         "bg_color": "#f5f5ef",
+        "left_width": 45,
+        "min_height": 600,
+        "mobile_left_height": 300,
         "autoplay": true,
         "autoplay_delay": 3000,
         "speed": 500,

@@ -2101,9 +2101,9 @@
       "settings": {
         "bg_color": "#ffffff",
         "left_width": 45,
-        "min_height": 600,
-        "mobile_left_height": 300,
-        "min_height_mobile": 350,
+        "min_height": 900,
+        "mobile_left_height": 500,
+        "min_height_mobile": 600,
         "autoplay": false,
         "autoplay_delay": 3000,
         "speed": 500,

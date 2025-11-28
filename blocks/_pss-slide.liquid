@@ -1,8 +1,7 @@
 {%- comment -%}
   Product Showcase Swiper - Slide Block
-  左右两侧都支持添加 blocks
-  - 左侧：图片背景 + 可叠加内容
-  - 右侧：产品展示内容
+  - 左侧：图片 + See More 链接
+  - 右侧：可添加任意 blocks
 {%- endcomment -%}
 
 {%- assign block_settings = block.settings -%}
@@ -10,7 +9,7 @@
 
 {% capture children %}
   <div class="pss-slide__container">
-    <!-- 左侧 -->
+    <!-- 左侧图片 -->
     <div class="pss-slide__left">
       {%- if block_settings.left_image != blank -%}
         {%- liquid
@@ -51,33 +50,25 @@
         {% render 'overlay', settings: block_settings %}
       {%- endif -%}
 
-      <!-- 左侧内容层 -->
-      <div class="pss-slide__left-content" style="
-        align-items: {{ block_settings.left_horizontal_alignment }};
-        justify-content: {{ block_settings.left_vertical_alignment }};
-        padding: {{ block_settings.left_padding_top }}px {{ block_settings.left_padding_right }}px {{ block_settings.left_padding_bottom }}px {{ block_settings.left_padding_left }}px;
-      ">
-        {% content_for 'blocks' %}
-      </div>
-    </div>
-
-    <!-- 右侧 -->
-    <div class="pss-slide__right" style="
-      {%- if block_settings.right_bg_color != blank -%}background-color: {{ block_settings.right_bg_color }};{%- endif -%}
-      padding: {{ block_settings.right_padding_top }}px {{ block_settings.right_padding_right }}px {{ block_settings.right_padding_bottom }}px {{ block_settings.right_padding_left }}px;
-    ">
+      <!-- See More 链接在左侧底部 -->
       {%- if block_settings.see_more_text != blank -%}
         <a href="{{ block_settings.see_more_link }}" class="pss-slide__see-more">
           {{ block_settings.see_more_text }}
         </a>
       {%- endif -%}
+    </div>
 
+    <!-- 右侧内容 -->
+    <div class="pss-slide__right" style="
+      {%- if block_settings.right_bg_color != blank -%}background-color: {{ block_settings.right_bg_color }};{%- endif -%}
+      padding: {{ block_settings.right_padding_top }}px {{ block_settings.right_padding_right }}px {{ block_settings.right_padding_bottom }}px {{ block_settings.right_padding_left }}px;
+    ">
       <div class="pss-slide__right-content" style="
-        align-items: {{ block_settings.right_horizontal_alignment }};
-        justify-content: {{ block_settings.right_vertical_alignment }};
+        align-items: {{ block_settings.horizontal_alignment }};
+        justify-content: {{ block_settings.vertical_alignment }};
         gap: {{ block_settings.content_gap }}px;
       ">
-        {%- comment -%} 右侧内容通过 group block 添加 {%- endcomment -%}
+        {% content_for 'blocks' %}
       </div>
 
       <!-- 进度条 -->
@@ -102,12 +93,12 @@
   "settings": [
     {
       "type": "header",
-      "content": "左侧背景图片"
+      "content": "左侧图片"
     },
     {
       "type": "image_picker",
       "id": "left_image",
-      "label": "背景图片"
+      "label": "图片"
     },
     {
       "type": "checkbox",
@@ -159,73 +150,17 @@
     },
     {
       "type": "header",
-      "content": "左侧内容布局"
+      "content": "See More 链接（左侧底部）"
     },
     {
-      "type": "paragraph",
-      "content": "在此幻灯片下添加 blocks（如 text、image、group）会显示在左侧"
+      "type": "text",
+      "id": "see_more_text",
+      "label": "文字"
     },
     {
-      "type": "select",
-      "id": "left_horizontal_alignment",
-      "label": "水平对齐",
-      "options": [
-        { "value": "flex-start", "label": "左" },
-        { "value": "center", "label": "居中" },
-        { "value": "flex-end", "label": "右" }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "select",
-      "id": "left_vertical_alignment",
-      "label": "垂直对齐",
-      "options": [
-        { "value": "flex-start", "label": "顶部" },
-        { "value": "center", "label": "居中" },
-        { "value": "flex-end", "label": "底部" }
-      ],
-      "default": "flex-end"
-    },
-    {
-      "type": "range",
-      "id": "left_padding_top",
-      "label": "上内边距",
-      "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "default": 40
-    },
-    {
-      "type": "range",
-      "id": "left_padding_bottom",
-      "label": "下内边距",
-      "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "default": 60
-    },
-    {
-      "type": "range",
-      "id": "left_padding_left",
-      "label": "左内边距",
-      "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "default": 40
-    },
-    {
-      "type": "range",
-      "id": "left_padding_right",
-      "label": "右内边距",
-      "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "default": 40
+      "type": "url",
+      "id": "see_more_link",
+      "label": "链接"
     },
     {
       "type": "header",
@@ -238,7 +173,7 @@
     },
     {
       "type": "select",
-      "id": "right_horizontal_alignment",
+      "id": "horizontal_alignment",
       "label": "水平对齐",
       "options": [
         { "value": "flex-start", "label": "左" },
@@ -249,7 +184,7 @@
     },
     {
       "type": "select",
-      "id": "right_vertical_alignment",
+      "id": "vertical_alignment",
       "label": "垂直对齐",
       "options": [
         { "value": "flex-start", "label": "顶部" },
@@ -307,20 +242,6 @@
       "step": 10,
       "unit": "px",
       "default": 40
-    },
-    {
-      "type": "header",
-      "content": "See More 链接"
-    },
-    {
-      "type": "text",
-      "id": "see_more_text",
-      "label": "文字"
-    },
-    {
-      "type": "url",
-      "id": "see_more_link",
-      "label": "链接"
     }
   ],
   "presets": [

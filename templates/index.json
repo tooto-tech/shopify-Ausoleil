@@ -1955,58 +1955,48 @@
             "text_VnjkNi"
           ]
         },
-        "pss_slide_9TEjd7": {
+        "pss_slide_BKENKH": {
           "type": "_pss-slide",
           "name": "PSS 幻灯片",
           "settings": {
-            "left_image": "shopify://shop_images/2669_2x_096774fb-3dd6-473d-9188-c630a2f1c263.webp",
+            "left_image": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
             "use_mobile_image": true,
-            "left_image_mobile": "shopify://shop_images/171_2x_1.webp",
+            "left_image_mobile": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "see_more_text": "SHOW MORE",
+            "see_more_text": "See More",
             "see_more_link": "",
-            "right_bg_color": "#ffffff",
+            "right_bg_color": "#f3f4f6",
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
             "content_gap": 16,
             "right_padding_top": 60,
             "right_padding_bottom": 60,
-            "right_padding_left": 40,
+            "right_padding_left": 120,
             "right_padding_right": 40
           },
           "blocks": {
-            "image_WqnMxi": {
-              "type": "image",
+            "icon_P9j9ek": {
+              "type": "icon",
+              "name": "t:names.icon",
               "settings": {
-                "image": "shopify://shop_images/2669_2x_096774fb-3dd6-473d-9188-c630a2f1c263.webp",
+                "icon": "price_tag",
+                "image_upload": "shopify://shop_images/classic-logo.svg",
+                "width": 112,
+                "height": 0,
+                "width_mobile": 0,
+                "height_mobile": 0,
                 "link": "",
-                "image_ratio": "adapt",
-                "image_ratio_mobile": "",
-                "width": "custom",
-                "custom_width": 60,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "custom_mobile_border_radius": false,
-                "border_radius_mobile": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "open_in_new_tab": false
               },
               "blocks": {}
             },
-            "text_cyBzUa": {
-              "type": "text",
+            "product_title_gxE6eG": {
+              "type": "product-title",
+              "name": "t:names.title",
               "settings": {
-                "text": "<p>产品标题</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -2038,17 +2028,118 @@
                 "padding-inline-end-mobile": 0
               },
               "blocks": {}
+            },
+            "image_6QyNKC": {
+              "type": "image",
+              "settings": {
+                "image": "shopify://shop_images/19WBPBDBDFUOO_D_45_DETAIL_2_1x_2x_aff447ce-e8a5-420e-ba5c-7d9162d6721f.webp",
+                "link": "",
+                "image_ratio": "adapt",
+                "image_ratio_mobile": "",
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 31,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "custom_mobile_border_radius": false,
+                "border_radius_mobile": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_WdFr4T": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Verdant Avant-Garde Sunglasses192001</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "'Mont', var(--font-heading--family)",
+                "font_size": "1rem",
+                "font_size_mobile": "0.875rem",
+                "weight": "900",
+                "weight_mobile": "900",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "letter_spacing_custom": "",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            },
+            "text_ij9m7T": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>$240</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "'Mont', var(--font-heading--family)",
+                "font_size": "1.25rem",
+                "font_size_mobile": "1rem",
+                "weight": "300",
+                "weight_mobile": "300",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "letter_spacing_custom": "",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "image_WqnMxi",
-            "text_cyBzUa"
+            "icon_P9j9ek",
+            "product_title_gxE6eG",
+            "image_6QyNKC",
+            "text_WdFr4T",
+            "text_ij9m7T"
           ]
         }
       },
       "block_order": [
         "pss_slide_QfhY46",
-        "pss_slide_9TEjd7"
+        "pss_slide_BKENKH"
       ],
       "name": "Product Showcase Swiper",
       "settings": {

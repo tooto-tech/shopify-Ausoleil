@@ -719,7 +719,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "custom_class": ""
       }
     },
     "collection_list_LFWQwX": {
@@ -1346,7 +1347,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "custom_class": ""
       }
     },
     "hero_CYEYgK": {
@@ -1512,7 +1514,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "custom_class": ""
       }
     },
     "product_recommendations_JMiADH": {
@@ -1768,7 +1771,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "custom_class": ""
       }
     },
     "product_showcase_swiper_CePYch": {
@@ -2688,7 +2692,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "custom_class": ""
       }
     },
     "product_showcase_swiper_z79WVN": {
@@ -3207,7 +3212,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "custom_class": ""
       }
     },
     "featured_blog_posts_W7ifGF": {
@@ -4245,7 +4251,6 @@
         "group_dqqnzz",
         "group_MTcbkT"
       ],
-      "disabled": true,
       "name": "t:names.icons_with_text",
       "settings": {
         "content_direction": "row",
@@ -4272,7 +4277,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "custom_class": "my-custom-texticon"
       }
     }
   },

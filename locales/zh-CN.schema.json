@@ -194,6 +194,7 @@
     "cover_image": "封面图片",
     "custom_minimum_height": "自定义最小高度",
     "custom_width": "自定义宽度",
+    "custom_class": "自定义 CSS 类名",
     "enable_video_looping": "视频循环",
     "favicon": "网站图标",
     "font_family": "字体系列",
@@ -1007,6 +1008,7 @@
     "faq": "常见问题"
   },
   "info": {
+    "custom_class": "添加自定义 CSS 类名用于样式设置，例如 my-custom-texticon",
     "video_alt_text": "为辅助技术用户描述视频",
     "video_autoplay": "视频将默认静音",
     "video_external": "使用 YouTube 或 Vimeo URL",

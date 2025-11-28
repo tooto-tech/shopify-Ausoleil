@@ -1,0 +1,633 @@
+
+
+<div class="product-showcase-swiper-section" data-testid="product-showcase-swiper">
+  <div class="swiper product-showcase-swiper" id="product-showcase-swiper-{{ section.id }}">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% if block.type == 'showcase' %}
+          <div class="swiper-slide product-showcase-slide" {{ block.shopify_attributes }}>
+            <div class="product-showcase-slide__container">
+              <!-- 左侧生活方式图片 -->
+              <div class="product-showcase-slide__left">
+                {% if block.settings.lifestyle_image != blank %}
+                  <div
+                    class="product-showcase-slide__lifestyle-image"
+                    data-aos="fade-up"
+                    data-aos-delay="0"
+                  >
+                    {%- liquid
+                      assign lifestyle_image = block.settings.lifestyle_image
+                      assign image_widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                      assign image_sizes = '(min-width: 750px) 50vw, 100vw'
+                      if forloop.first
+                        assign loading_type = 'eager'
+                      else
+                        assign loading_type = 'lazy'
+                      endif
+                      assign lifestyle_alt = lifestyle_image.alt | escape
+                      if lifestyle_alt == blank
+                        assign lifestyle_alt = block.settings.title | escape
+                      endif
+                    -%}
+                    {{
+                      lifestyle_image
+                      | image_url: width: 1500
+                      | image_tag:
+                        loading: loading_type,
+                        widths: image_widths,
+                        sizes: image_sizes,
+                        alt: lifestyle_alt,
+                        class: 'product-showcase-slide__lifestyle-img'
+                    }}
+                  </div>
+                {% endif %}
+              </div>
+
+              <!-- 右侧产品信息 -->
+              <div class="product-showcase-slide__right">
+                {% if block.settings.product != blank %}
+                  {% assign product = block.settings.product %}
+
+                  {% if block.settings.see_more_link != blank and block.settings.see_more_label != blank %}
+                    <a
+                      href="{{ block.settings.see_more_link }}"
+                      class="product-showcase-slide__see-more"
+                      data-aos="fade-down"
+                      data-aos-delay="80"
+                    >
+                      {{ block.settings.see_more_label | default: "See More" }}
+                    </a>
+                  {% endif %}
+                  {%- liquid
+                    assign custom_product_image = block.settings.product_image
+                  -%}
+
+                  {% if custom_product_image != blank or product.featured_media != blank %}
+                    <div
+                      class="product-showcase-slide__product-image"
+                      data-aos="fade-up"
+                      data-aos-delay="100"
+                    >
+                      {%- liquid
+                        assign product_image = custom_product_image
+                        if product_image == blank and product.featured_media != blank
+                          assign product_image = product.featured_media
+                        endif
+
+                        assign image_widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                        assign image_sizes = '(min-width: 750px) 50vw, 100vw'
+
+                        assign product_alt = ''
+                        if custom_product_image != blank and custom_product_image.alt != blank
+                          assign product_alt = custom_product_image.alt | escape
+                        elsif product.featured_media != blank and product.featured_media.alt != blank
+                          assign product_alt = product.featured_media.alt | escape
+                        endif
+
+                        if product_alt == ''
+                          assign product_alt = product.title | escape
+                        endif
+                      -%}
+                      <a href="{{ product.url }}" class="product-showcase-slide__product-link" aria-label="{{ product.title | escape }}">
+                        {{
+                          product_image
+                          | image_url: width: 1500
+                          | image_tag:
+                            loading: loading_type,
+                            widths: image_widths,
+                            sizes: image_sizes,
+                            alt: product_alt,
+                            class: 'product-showcase-slide__product-img'
+                        }}
+                      </a>
+                    </div>
+                  {% endif %}
+
+                  {% if product.title != blank %}
+                    <h3
+                      class="product-showcase-slide__title"
+                      data-aos="fade-up"
+                      data-aos-delay="160"
+                    >
+                      <a href="{{ product.url }}" class="product-showcase-slide__title-link">{{ product.title }}</a>
+                    </h3>
+                  {% endif %}
+
+                  <div
+                    class="product-showcase-slide__price"
+                    data-aos="fade-up"
+                    data-aos-delay="220"
+                  >
+                    {% render 'price', product_resource: product, show_unit_price: false %}
+                  </div>
+
+                  <!-- 进度条放在产品信息内部 -->
+                  <div class="product-showcase-slide__progress">
+                    <div class="product-showcase-slide__progress-track">
+                      <div class="product-showcase-slide__progress-fill" data-index="{{ forloop.index0 }}"></div>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  function initProductShowcaseSwiper() {
+    // 仅等待 Swiper 库加载
+    if (typeof Swiper === 'undefined') {
+      setTimeout(initProductShowcaseSwiper, 100);
+      return;
+    }
+
+    const swiperEl = document.querySelector('#product-showcase-swiper-{{ section.id }}');
+    if (!swiperEl) {
+      console.warn('Product showcase swiper element not found');
+      return;
+    }
+    // 计算真实 slides 数量（排除 duplicate）
+    const realSlides = swiperEl.querySelectorAll('.swiper-slide.product-showcase-slide:not(.swiper-slide-duplicate)');
+    const realSlidesCount = realSlides.length;
+
+    let autoplayConfig = false;
+    {% if section.settings.autoplay %}
+      autoplayConfig = {
+        delay: {{ section.settings.autoplay_delay | default: 3000 }},
+        disableOnInteraction: false,
+      };
+    {% endif %}
+
+    const shouldLoop = {{ section.settings.loop | default: true }};
+    const canLoop = shouldLoop && realSlidesCount >= 2;
+
+    // 简单的 Swiper 初始化：autoplay 只控制轮播，不再驱动进度条动画
+    const swiper = new Swiper(swiperEl, {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      loop: canLoop,
+      speed: {{ section.settings.speed | default: 500 }},
+      autoplay: autoplayConfig,
+      touchReleaseOnEdges: true,
+      preventInteractionOnTransition: true,
+      observer: true,
+      observeParents: true
+    });
+
+    // 当前 slide 内 AOS 动效触发（与其他 section 保持一致）
+    function runSlideAnimations(swiperInstance) {
+      if (!swiperInstance) return;
+      const slides = swiperInstance.slides;
+      if (!slides || swiperInstance.activeIndex == null) return;
+
+      const activeSlide = slides[swiperInstance.activeIndex];
+      if (!activeSlide) return;
+
+      const elements = activeSlide.querySelectorAll('[data-aos]');
+      elements.forEach(function(el) {
+        el.classList.remove('aos-animate');
+        void el.offsetWidth;
+        el.classList.add('aos-animate');
+      });
+    }
+
+    // 每个 slide 内部的进度条：轨道宽度 = 总数量 * 段宽度，小块在轨道上左右移动
+    const segmentWidthDesktop = 70;
+    const segmentWidthMobile = 35;
+    const getSegmentWidth = () => (window.innerWidth <= 749 ? segmentWidthMobile : segmentWidthDesktop);
+
+    const tracks = [];
+    const fills = [];
+    realSlides.forEach(function(slide) {
+      const track = slide.querySelector('.product-showcase-slide__progress-track');
+      const fill = slide.querySelector('.product-showcase-slide__progress-fill');
+      if (track && fill) {
+        tracks.push(track);
+        fills.push(fill);
+      }
+    });
+
+    function layoutProgressBars() {
+      const segWidth = getSegmentWidth();
+      const totalWidth = Math.max(1, realSlidesCount) * segWidth;
+
+      tracks.forEach(function(track) {
+        track.style.width = totalWidth + 'px';
+      });
+
+      fills.forEach(function(fill) {
+        fill.style.width = segWidth + 'px';
+      });
+    }
+
+    // 更新每个 slide 内部进度条的小块位置（无倒计时，仅根据当前索引移动）
+    function updateSlideProgress(swiperInstance) {
+      if (!swiperInstance || !fills.length) return;
+
+      const segWidth = getSegmentWidth();
+      const realIndex = (swiperInstance.realIndex !== undefined && swiperInstance.realIndex >= 0)
+        ? swiperInstance.realIndex
+        : (swiperInstance.activeIndex % realSlidesCount);
+
+      const offset = realIndex * segWidth;
+      fills.forEach(function(fill) {
+        fill.style.transform = 'translateX(' + offset + 'px)';
+      });
+    }
+
+    // 点击任意 slide 内的进度条轨道，根据点击位置切换到对应 slide
+    tracks.forEach(function(track) {
+      track.addEventListener('click', function(event) {
+        const rect = track.getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        const segWidth = getSegmentWidth();
+        const totalWidth = Math.max(1, realSlidesCount) * segWidth;
+        if (!totalWidth) return;
+
+        let targetIndex = Math.floor(clickX / totalWidth * realSlidesCount);
+        if (targetIndex < 0) targetIndex = 0;
+        if (targetIndex > realSlidesCount - 1) targetIndex = realSlidesCount - 1;
+
+        try {
+          if (typeof swiper.slideToLoop === 'function') {
+            swiper.slideToLoop(targetIndex);
+          } else if (typeof swiper.slideTo === 'function') {
+            swiper.slideTo(targetIndex);
+          }
+        } catch (e) {}
+
+        updateSlideProgress(swiper);
+      });
+    });
+
+    // 初始化布局与进度
+    layoutProgressBars();
+    updateSlideProgress(swiper);
+    runSlideAnimations(swiper);
+
+    // Swiper 切换和窗口尺寸变化时更新进度/布局
+    swiper.on('slideChange', function() {
+      updateSlideProgress(swiper);
+      runSlideAnimations(swiper);
+    });
+
+    window.addEventListener('resize', function() {
+      layoutProgressBars();
+      updateSlideProgress(swiper);
+    });
+  }
+
+  // 懒加载：仅当该 section 进入视口附近时才初始化 swiper
+  function setupLazyInit() {
+    const targetSection = document.querySelector('[data-testid="product-showcase-swiper"]');
+    if (!targetSection) {
+      // 找不到目标节点时直接初始化，避免功能缺失
+      setTimeout(initProductShowcaseSwiper, 100);
+      return;
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(function(entries, obs) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            // 一旦进入视口（含预加载阈值）就初始化，并停止观察
+            setTimeout(initProductShowcaseSwiper, 100);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        // 提前一点开始初始化，减少用户看到时的空白时间
+        rootMargin: '0px 0px 200px 0px',
+        threshold: 0.1
+      });
+
+      observer.observe(targetSection);
+    } else {
+      // 老设备 / 老浏览器：退回到原来的 DOM Ready 后直接初始化逻辑
+      setTimeout(initProductShowcaseSwiper, 100);
+    }
+  }
+
+  // 确保 DOM 完全加载后再挂载懒加载逻辑
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setupLazyInit();
+    });
+  } else {
+    setupLazyInit();
+  }
+})();
+</script>
+
+{% stylesheet %}
+.product-showcase-swiper-section {
+  position: relative;
+  width: 100%;
+  background-color: #F5F5EF;
+  padding: 0;
+}
+
+.product-showcase-swiper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-showcase-slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.product-showcase-slide__container {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 600px;
+}
+
+.product-showcase-slide__left {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  max-height: 90vh;
+}
+
+.product-showcase-slide__lifestyle-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.product-showcase-slide__lifestyle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-showcase-slide__right {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 150px 92px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 90vh;
+  min-height: 600px; /* 确保有足够高度 */
+}
+
+.product-showcase-slide__see-more {
+  position: absolute;
+  top: 64px;
+  right: 92px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  font-weight: 600;
+}
+
+.product-showcase-slide__see-more:hover {
+  opacity: 0.7;
+}
+
+.product-showcase-slide__product-image {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+@media(min-width: 1440px){
+  .product-showcase-slide__product-image{
+    margin: 0;
+  }
+}
+.product-showcase-slide__product-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.product-showcase-slide__title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #000000;
+  margin: 0 0 16px 0;
+  text-align: center;
+  width: 100%;
+  max-width: 285px;
+}
+.product-showcase-slide__title>a{
+  color: #000;
+  width: 100%;
+}
+.product-showcase-slide__price {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #000000;
+  margin: 0 0 24px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* 进度条样式 - 在每个slide内部 */
+.product-showcase-slide__progress {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.product-showcase-slide__progress-track {
+  position: relative;
+  height: 2px;
+  min-width: 70px;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-showcase-slide__progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 70px;
+  background-color: #000000;
+  transform-origin: left center;
+  opacity: 0.35;
+  transition: opacity 0.25s ease;
+}
+
+.product-showcase-slide__progress-fill.is-active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 749px) {
+  .product-showcase-swiper{
+    padding: 0;
+  }
+  .product-showcase-swiper-section {
+    padding: 0;
+  }
+
+  .product-showcase-slide__container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .product-showcase-slide__right {
+    padding: 75px 20px 45px;
+  }
+
+  .product-showcase-slide__see-more {
+    top: 20px;
+    right: 20px;
+  }
+
+  .product-showcase-slide__product-image {
+    margin-bottom: 24px;
+    max-width: 250px;
+  }
+  .product-showcase-slide__title{
+    font-size: 13px;
+    line-height: 18px;
+    width: 170px;
+  }
+  .product-showcase-slide__price{
+    font-size: 13px;
+    line-height: 13px;
+  }
+  /* Mobile: thinner progress and shorter segments */
+  .product-showcase-slide__progress-track {
+    height: 1px;
+    min-width: 35px;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .product-showcase-slide__progress-fill {
+    height: 100%;
+    width: 35px;
+    background-color: #000000;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product Showcase Swiper",
+  "tag": "section",
+  "class": "product-showcase-swiper-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_delay",
+      "label": "Autoplay Delay",
+      "min": 2000,
+      "max": 9000,
+      "step": 500,
+      "unit": "ms",
+      "default": 3000,
+      "visible_if": "{{ section.settings.autoplay }}"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Transition Speed",
+      "min": 300,
+      "max": 1000,
+      "step": 100,
+      "unit": "ms",
+      "default": 500
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "showcase",
+      "name": "Product Showcase",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "lifestyle_image",
+          "label": "Lifestyle Image",
+          "info": "Left side lifestyle image"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Custom Product Image",
+          "info": "Optional: Override the product image on the right side. If not set, the product's featured image will be used."
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product",
+          "info": "Select the product to display"
+        },
+        {
+          "type": "text",
+          "id": "see_more_label",
+          "label": "See More Label",
+          "default": "See More"
+        },
+        {
+          "type": "url",
+          "id": "see_more_link",
+          "label": "See More Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Showcase Swiper",
+      "blocks": [
+        {
+          "type": "showcase"
+        },
+        {
+          "type": "showcase"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

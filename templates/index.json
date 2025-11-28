@@ -1607,7 +1607,6 @@
         "group_MnfbNm",
         "group_fpNiFN"
       ],
-      "disabled": true,
       "name": "t:names.split_showcase",
       "settings": {
         "content_direction": "row",
@@ -1635,6 +1634,31 @@
         "gradient_direction": "to top",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "product_showcase_swiper_d4XFQm": {
+      "type": "product-showcase-swiper",
+      "blocks": {
+        "showcase_anxrnR": {
+          "type": "showcase",
+          "settings": {
+            "lifestyle_image": "shopify://shop_images/180_2x_f468d1a0-18af-4570-833b-454ff6f08c2d.webp",
+            "product_image": "shopify://shop_images/2665_2x_a8149bca-c53b-4c33-8ee4-3061ae9c921a.webp",
+            "product": "",
+            "see_more_label": "See More",
+            "see_more_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "showcase_anxrnR"
+      ],
+      "name": "Product Showcase Swiper",
+      "settings": {
+        "autoplay": true,
+        "autoplay_delay": 3000,
+        "speed": 500,
+        "loop": true
       }
     },
     "hero_aq6Dhk": {
@@ -3407,6 +3431,7 @@
     "product_recommendations_JMiADH",
     "section_cHa8Uk",
     "section_EKhHmn",
+    "product_showcase_swiper_d4XFQm",
     "hero_aq6Dhk",
     "product_recommendations_UeTETw",
     "section_BKjenb",

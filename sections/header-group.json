@@ -88,7 +88,7 @@
         "text_EDGwDQ": {
           "type": "text",
           "settings": {
-            "text": "<p>TERMS ＆ CONDITIONS</p>",
+            "text": "<p>FAQ</p>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",

@@ -1779,14 +1779,15 @@
           "name": "PSS 幻灯片",
           "settings": {
             "left_image": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
-            "use_mobile_image": false,
+            "use_mobile_image": true,
+            "left_image_mobile": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
             "see_more_text": "See More",
             "see_more_link": "",
-            "right_bg_color": "",
+            "right_bg_color": "#f3f4f6",
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
             "content_gap": 16,
@@ -1796,6 +1797,21 @@
             "right_padding_right": 40
           },
           "blocks": {
+            "icon_qbzPGB": {
+              "type": "icon",
+              "name": "t:names.icon",
+              "settings": {
+                "icon": "price_tag",
+                "image_upload": "shopify://shop_images/classic-logo.svg",
+                "width": 112,
+                "height": 0,
+                "width_mobile": 0,
+                "height_mobile": 0,
+                "link": "",
+                "open_in_new_tab": false
+              },
+              "blocks": {}
+            },
             "product_title_Jf3iWT": {
               "type": "product-title",
               "name": "t:names.title",
@@ -1835,14 +1851,14 @@
             "image_PJ44Lf": {
               "type": "image",
               "settings": {
-                "image": "shopify://shop_images/2669_2x_096774fb-3dd6-473d-9188-c630a2f1c263.webp",
+                "image": "shopify://shop_images/19WBPBDBDFUOO_D_45_DETAIL_2_1x_2x_aff447ce-e8a5-420e-ba5c-7d9162d6721f.webp",
                 "link": "",
                 "image_ratio": "adapt",
                 "image_ratio_mobile": "",
-                "width": "custom",
-                "custom_width": 60,
+                "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
-                "custom_width_mobile": 100,
+                "custom_width_mobile": 31,
                 "height": "fit",
                 "border": "none",
                 "border_width": 1,
@@ -1860,16 +1876,53 @@
             "text_KTdaKr": {
               "type": "text",
               "settings": {
-                "text": "<p>产品标题</p>",
+                "text": "<p>Verdant Avant-Garde Sunglasses192001</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
+                "type_preset": "custom",
+                "font": "'Mont', var(--font-heading--family)",
                 "font_size": "1rem",
-                "font_size_mobile": "",
-                "weight": "",
-                "weight_mobile": "",
+                "font_size_mobile": "0.875rem",
+                "weight": "900",
+                "weight_mobile": "900",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "letter_spacing_custom": "",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
+              },
+              "blocks": {}
+            },
+            "text_VnjkNi": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>$240</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "'Mont', var(--font-heading--family)",
+                "font_size": "1.25rem",
+                "font_size_mobile": "1rem",
+                "weight": "300",
+                "weight_mobile": "300",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "letter_spacing_custom": "",
@@ -1895,9 +1948,11 @@
             }
           },
           "block_order": [
+            "icon_qbzPGB",
             "product_title_Jf3iWT",
             "image_PJ44Lf",
-            "text_KTdaKr"
+            "text_KTdaKr",
+            "text_VnjkNi"
           ]
         },
         "pss_slide_9TEjd7": {
@@ -1905,7 +1960,8 @@
           "name": "PSS 幻灯片",
           "settings": {
             "left_image": "shopify://shop_images/2669_2x_096774fb-3dd6-473d-9188-c630a2f1c263.webp",
-            "use_mobile_image": false,
+            "use_mobile_image": true,
+            "left_image_mobile": "shopify://shop_images/171_2x_1.webp",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",

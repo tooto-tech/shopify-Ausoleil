@@ -773,20 +773,6 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "icon_Td8FCb": {
-              "type": "icon",
-              "name": "t:names.icon",
-              "settings": {
-                "icon": "price_tag",
-                "width": 24,
-                "height": 0,
-                "width_mobile": 0,
-                "height_mobile": 0,
-                "link": "",
-                "open_in_new_tab": false
-              },
-              "blocks": {}
-            },
             "text_HXBxUh": {
               "type": "text",
               "name": "t:names.text",
@@ -826,7 +812,6 @@
             }
           },
           "block_order": [
-            "icon_Td8FCb",
             "text_HXBxUh"
           ]
         },

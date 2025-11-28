@@ -1931,22 +1931,23 @@
             "text_VnjkNi"
           ]
         },
-        "pss_slide_BKENKH": {
+        "pss_slide_KpfBfi": {
           "type": "_pss-slide",
           "name": "PSS 幻灯片",
           "settings": {
-            "left_image": "shopify://shop_images/180_2x_f468d1a0-18af-4570-833b-454ff6f08c2d.webp",
+            "left_image": "shopify://shop_images/1-02_1x_5fb8457a-fee1-4ba2-858d-a1bbf0bdaeb7.png",
             "use_mobile_image": true,
-            "left_image_mobile": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
+            "left_image_mobile": "shopify://shop_images/1-02_1x_5fb8457a-fee1-4ba2-858d-a1bbf0bdaeb7.png",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "icon_width": 120,
+            "center_icon": "shopify://shop_images/logo.svg",
+            "icon_width": 150,
             "icon_width_mobile": 80,
-            "center_text": "",
-            "text_font": "var(--font-body--family)",
-            "text_size": "1rem",
+            "center_text": "Aussie Soul Time By Rock And Wave",
+            "text_font": "'DolceVitaLight', var(--font-heading--family)",
+            "text_size": "2.5rem",
             "text_size_mobile": "0.875rem",
             "text_weight": "400",
             "text_weight_mobile": "",
@@ -1962,11 +1963,11 @@
             "content_gap": 16,
             "right_padding_top": 60,
             "right_padding_bottom": 60,
-            "right_padding_left": 120,
-            "right_padding_right": 40
+            "right_padding_left": 60,
+            "right_padding_right": 60
           },
           "blocks": {
-            "icon_P9j9ek": {
+            "icon_mkMF6n": {
               "type": "icon",
               "name": "t:names.icon",
               "settings": {
@@ -1981,43 +1982,7 @@
               },
               "blocks": {}
             },
-            "product_title_gxE6eG": {
-              "type": "product-title",
-              "name": "t:names.title",
-              "settings": {
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "font_size_mobile": "",
-                "weight": "",
-                "weight_mobile": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "letter_spacing_custom": "",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "custom_color": "",
-                "custom_color_mobile": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 0,
-                "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
-              },
-              "blocks": {}
-            },
-            "image_6QyNKC": {
+            "image_rrawUb": {
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/19WBPBDBDFUOO_D_45_DETAIL_2_1x_2x_aff447ce-e8a5-420e-ba5c-7d9162d6721f.webp",
@@ -2042,13 +2007,13 @@
               },
               "blocks": {}
             },
-            "text_WdFr4T": {
+            "text_gzhtwf": {
               "type": "text",
               "settings": {
                 "text": "<p>Verdant Avant-Garde Sunglasses192001</p>",
-                "width": "fit-content",
+                "width": "100%",
                 "max_width": "normal",
-                "alignment": "left",
+                "alignment": "center",
                 "type_preset": "custom",
                 "font": "'Mont', var(--font-heading--family)",
                 "font_size": "1rem",
@@ -2078,7 +2043,7 @@
               },
               "blocks": {}
             },
-            "text_ij9m7T": {
+            "text_jcgxRr": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -2117,21 +2082,20 @@
             }
           },
           "block_order": [
-            "icon_P9j9ek",
-            "product_title_gxE6eG",
-            "image_6QyNKC",
-            "text_WdFr4T",
-            "text_ij9m7T"
+            "icon_mkMF6n",
+            "image_rrawUb",
+            "text_gzhtwf",
+            "text_jcgxRr"
           ]
         }
       },
       "block_order": [
         "pss_slide_QfhY46",
-        "pss_slide_BKENKH"
+        "pss_slide_KpfBfi"
       ],
       "custom_css": [
         ".pss-swiper {width: 95%;}",
-        ".pss-slide__left-text{width: 120%;}"
+        ".pss-slide__left-text {width: 120%;}"
       ],
       "name": "Product Showcase Swiper",
       "settings": {
@@ -2139,7 +2103,7 @@
         "left_width": 45,
         "min_height": 600,
         "mobile_left_height": 300,
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_delay": 3000,
         "speed": 500,
         "loop": false

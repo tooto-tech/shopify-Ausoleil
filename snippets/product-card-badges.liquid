@@ -3,42 +3,58 @@
 
   @param {object} product - The product object.
   @param {object} settings - The theme settings object.
+  @param {object} block_settings - Block settings for badge control (optional).
 
   @example
-  {% render 'product-card-badges', product: product, settings: settings %}
+  {% render 'product-card-badges', product: product, settings: settings, block_settings: block_settings %}
 {%- enddoc -%}
 
-<div
-  class="product-badges product-badges--{{ settings.badge_position }}"
-  style="
-    --badge-border-radius: {{ settings.badge_corner_radius }}px;
-    --badge-font-family: var(--font-{{ settings.badge_font_family }}--family); --badge-font-weight: var(--font-{{ settings.badge_font_family }}--weight); --badge-text-transform: {{ settings.badge_text_transform }};
-  "
->
-  {%- liquid
-    assign is_new = false
-    if product.tags contains 'new' or product.tags contains 'New' or product.tags contains 'NEW'
-      assign is_new = true
-    endif
-  -%}
+{%- liquid
+  # 默认值设置
+  assign show_badges = block_settings.show_badges | default: true
+  assign show_sold_out_badge = block_settings.show_sold_out_badge | default: true
+  assign show_sale_badge = block_settings.show_sale_badge | default: true
+  assign custom_badge_text = block_settings.custom_badge_text | default: ''
+  assign custom_badge_color_scheme = block_settings.custom_badge_color_scheme | default: 'scheme-1'
+-%}
 
-  {%- if product.available == false or product.compare_at_price > product.price and product.available or is_new -%}
-    <div
-      class="
-        product-badges__badge product-badges__badge--rectangle
-        {% if product.available == false %} color-{{ settings.badge_sold_out_color_scheme }}{% elsif is_new %} color-{{ settings.badge_new_color_scheme | default: settings.badge_sale_color_scheme }}{% elsif product.compare_at_price > product.price %} color-{{ settings.badge_sale_color_scheme }}{% endif %}
-      "
-    >
-      {%- if product.available == false -%}
+{%- if show_badges -%}
+  <div
+    class="product-badges product-badges--{{ settings.badge_position }}"
+    style="
+      --badge-border-radius: {{ settings.badge_corner_radius }}px;
+      --badge-font-family: var(--font-{{ settings.badge_font_family }}--family); --badge-font-weight: var(--font-{{ settings.badge_font_family }}--weight); --badge-text-transform: {{ settings.badge_text_transform }};
+    "
+  >
+    {%- liquid
+      assign is_on_sale = false
+      if product.compare_at_price > product.price and product.available
+        assign is_on_sale = true
+      endif
+    -%}
+
+    {%- comment -%} Sold Out 标签 {%- endcomment -%}
+    {%- if product.available == false and show_sold_out_badge -%}
+      <div class="product-badges__badge product-badges__badge--rectangle color-{{ settings.badge_sold_out_color_scheme }}">
         {{ 'content.product_badge_sold_out' | t }}
-      {%- elsif is_new -%}
-        {{ 'content.product_badge_new' | t | default: 'NEW' }}
-      {%- elsif product.compare_at_price > product.price -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} 自定义标签 {%- endcomment -%}
+    {%- if custom_badge_text != blank and product.available -%}
+      <div class="product-badges__badge product-badges__badge--rectangle color-{{ custom_badge_color_scheme }}">
+        {{ custom_badge_text }}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Sale 标签 {%- endcomment -%}
+    {%- if is_on_sale and show_sale_badge -%}
+      <div class="product-badges__badge product-badges__badge--rectangle color-{{ settings.badge_sale_color_scheme }}">
         {{ 'content.product_badge_sale' | t }}
-      {%- endif -%}
-    </div>
-  {%- endif -%}
-</div>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}
 
 {% stylesheet %}
   .product-badges {
@@ -46,6 +62,9 @@
 
     position: absolute;
     z-index: var(--layer-flat);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .product-badges--bottom-left {

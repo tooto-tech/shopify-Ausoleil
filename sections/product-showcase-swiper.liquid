@@ -361,42 +361,34 @@
     margin: 0 auto;
     padding: 0 0 70px;
     position: relative;
-    overflow: hidden;
   }
 
   .product-showcase-slide {
     position: relative;
     width: 100%;
     height: auto;
-    flex-shrink: 0;
   }
 
   .product-showcase-slide__container {
     display: grid;
-    grid-template-columns: 45% 1fr;
+    grid-template-columns: 45% 55%;
     gap: 0;
-    align-items: stretch;
-    min-height: 600px;
+    align-items: start;
   }
 
   .product-showcase-slide__left {
     position: relative;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    max-height: 90vh;
   }
 
   .product-showcase-slide__lifestyle-image {
     width: 100%;
-    height: 100%;
     position: relative;
   }
 
   .product-showcase-slide__lifestyle-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
   }
 
@@ -429,15 +421,12 @@
   .product-showcase-slide__right {
     position: relative;
     width: 100%;
-    height: 100%;
     background-color: transparent;
-    padding: 150px 92px 0;
+    padding: 80px 60px 60px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    max-height: 90vh;
-    min-height: 600px; /* 确保有足够高度 */
   }
 
   .product-showcase-slide__see-more {
@@ -546,14 +535,11 @@
     }
 
     .product-showcase-slide__left {
-      max-height: 50vh;
       order: 1;
     }
 
     .product-showcase-slide__right {
       padding: 40px 20px 45px;
-      min-height: auto;
-      max-height: none;
       order: 2;
     }
 

@@ -8,6 +8,72 @@
   font-display: swap;
 }
 
+/* 自定义字体: DolceVitaLight */
+@font-face {
+  font-family: 'DolceVitaLight';
+  src: url('Font/DolceVitaLight.woff2') format('woff2'),
+       url('Font/DolceVitaLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 自定义字体: DreamOrphans */
+@font-face {
+  font-family: 'DreamOrphans';
+  src: url('Font/DreamOrphans-Regular.woff2') format('woff2'),
+       url('Font/DreamOrphans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DreamOrphans';
+  src: url('Font/DreamOrphans-Italic.woff2') format('woff2'),
+       url('Font/DreamOrphans-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DreamOrphans';
+  src: url('Font/DreamOrphans-Bold.woff2') format('woff2'),
+       url('Font/DreamOrphans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DreamOrphans';
+  src: url('Font/DreamOrphans-BoldItalic.woff2') format('woff2'),
+       url('Font/DreamOrphans-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 自定义字体: Mont */
+@font-face {
+  font-family: 'Mont';
+  src: url('Font/Mont-ExtraLightDEMO.woff2') format('woff2'),
+       url('Font/Mont-ExtraLightDEMO.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mont';
+  src: url('Font/Mont-HeavyDEMO.woff2') format('woff2'),
+       url('Font/Mont-HeavyDEMO.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @media screen and (min-width: 750px) {
   .section--full-width.section--full-width-margin > * {
     box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.24);

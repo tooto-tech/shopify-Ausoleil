@@ -1682,6 +1682,7 @@
       "block_order": [
         "text_BdQkcQ"
       ],
+      "disabled": true,
       "custom_css": [
         ".product-badges__badge {background: #121821; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}"
       ],
@@ -1742,6 +1743,7 @@
       "block_order": [
         "button_cGmjmp"
       ],
+      "disabled": true,
       "name": "Shop More",
       "settings": {
         "content_direction": "column",
@@ -2297,7 +2299,6 @@
       "block_order": [
         "group_jzKAbL"
       ],
-      "disabled": true,
       "name": "MODERN",
       "settings": {
         "product": "verdant-avant-garde-olive-sunglasses-garde-192001",

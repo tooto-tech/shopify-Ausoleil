@@ -82,16 +82,19 @@
 
 /* 价格自定义样式 */
 product-price .price {
+  font-family: var(--price-font, inherit);
   font-size: var(--price-font-size, inherit);
   color: var(--price-color, inherit);
 }
 
 product-price .compare-at-price {
+  font-family: var(--compare-price-font, inherit);
   font-size: var(--compare-price-font-size, inherit);
   color: var(--compare-price-color, inherit);
 }
 
 product-price .price-save {
+  font-family: var(--save-font, inherit);
   font-size: var(--save-font-size, inherit);
   color: var(--save-color, inherit);
 }

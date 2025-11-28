@@ -2109,14 +2109,14 @@
       ],
       "name": "Product Showcase Swiper",
       "settings": {
-        "bg_color": "#f5f5ef",
+        "bg_color": "#ffffff",
         "left_width": 45,
         "min_height": 600,
         "mobile_left_height": 300,
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_delay": 3000,
         "speed": 500,
-        "loop": true
+        "loop": false
       }
     },
     "hero_aq6Dhk": {

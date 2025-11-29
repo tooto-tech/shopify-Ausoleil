@@ -542,4 +542,7 @@ CSS
     line-height: 20px;
     color: #ffffff; 
 }
-
+/* 去除gap */
+.email-signup__input-group:not(:has(.email-signup__button--integrated)){
+  gap:0px;
+}

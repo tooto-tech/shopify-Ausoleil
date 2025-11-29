@@ -494,7 +494,7 @@ CSS
 
 /* 1. 容器宽度限制 (应用于外层 Block) */
 /* 假设 .email-signup-block 是 .email-signup__input-group 的父容器 */
-.email-signup-block {
+.email-signup-block{
     max-width: 534px; 
     /* 确保容器本身是块级元素 */
     margin-left: auto;

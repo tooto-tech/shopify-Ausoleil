@@ -367,5 +367,36 @@ product-price .compare-at-price{
   }
 
 }
+/* 走马灯样式 */
+/* 标题（Verdant...） */
+.itm-item__title {
+  font-family: Mont;
+  font-size: 16px;
+  color: #121821;
+}
 
+/* 文本（@ausoleil / @thisismc / @frank-thebunny） */
+.itm-item__desc {
+  font-family: Mont;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #121821;
+}
 
+/* 移动端样式 */
+@media (max-width: 768px) {
+  /* 标题 */
+  .itm-item__title {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  /* 文本 */
+  .itm-item__desc {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 12px;
+  }
+}

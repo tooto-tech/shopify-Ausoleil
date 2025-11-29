@@ -492,39 +492,40 @@ CSS
 
 /* 邮箱订阅区块样式定制 */
 
-/* 1. 容器宽度和边框颜色/透明度 */
+/* 1. 容器宽度限制 (应用于外层 Block) */
+/* 假设 .email-signup-block 是 .email-signup__input-group 的父容器 */
+.email-signup-block {
+    max-width: 534px; 
+    /* 确保容器本身是块级元素 */
+    margin-left: auto;
+    margin-right: auto; /* 可选：如果你希望整个区块居中 */
+}
+
+/* 2. 边框颜色/透明度 (应用于内层 input-group) */
 .email-signup__input-group {
-    /* 容器宽度 */
-    max-width: 414px; 
-    width: 100%; /* 确保在小屏幕上仍能响应 */
-    
-    /* 边框颜色和透明度 (这里通常指 input-group 外层的边框) */
-    /* 注意：你的 HTML 中边框是通过 CSS 变量设置的，这里强制覆盖 */
+    /* 确保内层容器占满父级宽度 */
+    width: 100%;
+    /* 边框颜色和透明度 */
     border: 1px solid rgba(209, 209, 209, 0.6); /* #D1D1D1 with opacity 0.6 */
 }
 
-/* 2. 输入框 Placeholder 样式 */
+/* 3. 输入框 Placeholder 样式 (保持不变) */
 .email-signup__input-group input.email-signup__input::placeholder {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: normal;
     line-height: 20px;
     color: #121821;
-    opacity: 1; /* 确保浏览器不应用默认的透明度 */
+    opacity: 1; 
 }
-/* 去除gap */
-.email-signup__input-group:not(:has(.email-signup__button--integrated)){
-  gap:0px;
-}
-/* 针对不同浏览器内核添加前缀，以确保兼容性 */
-.email-signup__input-group input.email-signup__input::-webkit-input-placeholder { /* Chrome, Safari */
+.email-signup__input-group input.email-signup__input::-webkit-input-placeholder {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: normal;
     line-height: 20px;
     color: #121821;
 }
-.email-signup__input-group input.email-signup__input::-moz-placeholder { /* Firefox */
+.email-signup__input-group input.email-signup__input::-moz-placeholder {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: normal;
@@ -532,15 +533,13 @@ CSS
     color: #121821;
 }
 
-/* 3. 按钮背景颜色和文本样式 */
+/* 4. 按钮背景颜色和文本样式 (保持不变) */
 .email-signup__input-group button.email-signup__button {
-    /* 按钮背景颜色 */
     background-color: #1226AA;
-    
-    /* 按钮文本样式 */
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
-    color: #ffffff; /* 按钮文本颜色 */
+    color: #ffffff; 
 }
+

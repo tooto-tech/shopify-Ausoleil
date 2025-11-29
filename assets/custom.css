@@ -496,11 +496,11 @@ CSS
 /* 假设 .email-signup-block 是 .email-signup__input-group 的父容器 */
 
 
-.email-signup-block{
-    max-width: 534px; 
-    /* 确保容器本身是块级元素 */
+.email-signup-wrapper {
+    max-width: 534px;
+    /* 确保它作为块级元素居中 */
     margin-left: auto;
-    margin-right: auto; /* 可选：如果你希望整个区块居中 */
+    margin-right: auto;
 }
 
 /* 2. 边框颜色/透明度 (应用于内层 input-group) */

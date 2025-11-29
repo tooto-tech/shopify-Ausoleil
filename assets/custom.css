@@ -596,7 +596,36 @@ summary {
   background-color: #1226AA;
 }
 /* 图标列表内容居右 */
-.group-block-content.layout-panel-flex--row .menu__item a {
+/* 针对该区域的所有元素进行居右对齐设置 */
+.group-block-content.layout-panel-flex--row {
+    /* 1. 确保菜单块在容器内靠右排列 */
+    /* 覆盖主题中可能存在的 horizontal-alignment: center */
+    --horizontal-alignment: flex-end !important;
+    justify-content: flex-end !important; /* Flexbox 主轴对齐：靠右 */
+    
+    /* 2. 强制该容器内所有文本居右对齐 */
+    text-align: right !important;
+}
+
+/* 3. 确保每个菜单块的内容也居右对齐 */
+.group-block-content.layout-panel-flex--row .menu {
+    /* 确保菜单块内容继承右对齐 */
     text-align: right;
-    display: block; /* 确保链接是块级元素，可以应用 text-align */
+}
+
+/* 4. 确保列表项和链接文本居右对齐 */
+.group-block-content.layout-panel-flex--row .list-unstyled {
+    /* 如果列表项没有居右，再次强制设置 */
+    text-align: right;
+}
+
+/* 5. 调整菜单标题的 Flex 对齐方式（如果它内部元素没有靠右） */
+/* 你的 summary 标题是 Flex 容器。我们需要让标题内容靠右 */
+.group-block-content.layout-panel-flex--row .menu__heading {
+    /* 覆盖 align-items: center; 并将内容推到右侧 */
+    justify-content: flex-end; 
+    text-align: right;
+    /* 确保标题不会占据整个宽度，以便内容能居右 */
+    width: fit-content; 
+    margin-left: auto; /* 将整个 summary 推到右侧 */
 }

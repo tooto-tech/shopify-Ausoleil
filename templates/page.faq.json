@@ -367,7 +367,7 @@
         "accordion_rrrUjz"
       ],
       "custom_css": [
-        ".text-block>*{text-wrap: wrap;}"
+        "/* 改为换行 */.text-block > * {text-wrap: wrap;}"
       ],
       "settings": {
         "content_direction": "column",

@@ -495,7 +495,7 @@ CSS
 /* 1. 容器宽度和边框颜色/透明度 */
 .email-signup__input-group {
     /* 容器宽度 */
-    max-width: 534px; 
+    max-width: 414px; 
     width: 100%; /* 确保在小屏幕上仍能响应 */
     
     /* 边框颜色和透明度 (这里通常指 input-group 外层的边框) */

@@ -109,153 +109,75 @@
     </div>
   {% endif %}
 
-  {% comment %}
   <div
-    class="
-      {% if should_show_pane == false %}
-        hidden
-      {% endif %}
-      facets-block-wrapper
-      facets-block-wrapper--{{ block_settings.filter_style }}
-      {%- if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
-      {%- if block_settings.filter_width == 'full-width' %} facets-block-wrapper--full-width{% endif %}
-    "
+    class="facets-block-wrapper facets-block-wrapper--desktop-toggle"
     style="
       --grid-column--desktop:
         {%- if block_settings.filter_style == 'horizontal' -%}
           var(--{{ block_settings.filter_width }})
         {%- else -%}
-          2 / var(--facets-vertical-col-width)
+          column-1 / column-12
         {%- endif -%};
       {{ facets_margin_style }}
-      --facets-inner-padding-block: {{ block_settings.padding-block-start }}px {{ block_settings.padding-block-end }}px;
-      --facets-inner-padding-inline: var(--padding-lg);
     "
     {{ block.shopify_attributes }}
   >
-    <div
-      class="facets facets--{{ block_settings.filter_style }} spacing-style"
-      style="{% render 'spacing-style', settings: block_settings %}{% if block_settings.text_label_case == 'uppercase' %} --facet-label-transform: uppercase;{% endif %}"
-      aria-label="{{ 'accessibility.filters' | t }}"
-    >
-      <facets-form-component
-        class="facets__form-wrapper"
-        section-id="{{ section.id }}"
-        form-style="{{ block_settings.filter_style }}"
-      >
-        <form
-          action="{{ results_url }}"
-          id="FacetFiltersForm--{{ section.id }}-desktop"
-          class="facets__form"
-          ref="facetsForm"
-        >
-          {% if should_show_pane %}
-            {% render 'filter-remove-buttons',
-              filters: filters,
-              results_url: results_url,
-              show_filter_label: block_settings.show_filter_label,
-              should_show_clear_all: true
-            %}
+    <div class="desktop-filter-bar">
+      <div class="products-count-wrapper products-count-wrapper--desktop">
+        <span title="{{ 'content.product_count' | t }}">
+          {%- if collection != blank -%}
+            All {{ collection.title }} ({{ products_count }})
+          {%- else -%}
+            {{- 'content.item_count' | t: count: products_count -}}
+          {%- endif -%}
+        </span>
+      </div>
 
-            {% if block_settings.enable_filtering %}
-              {% assign total_active_values = 0 %}
+      {%- if block_settings.enable_filtering -%}
+        <div class="facets-toggle__wrapper desktop-only-toggle">
+          <button
+            class="button facets-toggle__button button-unstyled button-unstyled--with-icon"
+            on:click="#filters-drawer/showDialog"
+            type="button"
+          >
+            <span class="svg-wrapper">
+              {%- if block_settings.custom_filter_icon != blank -%}
+                <img
+                  src="{{ block_settings.custom_filter_icon | image_url: width: 24 }}"
+                  alt="Filter"
+                  width="24"
+                  height="24"
+                  loading="lazy"
+                >
+              {%- else -%}
+                {{ 'icon-filter.svg' | inline_asset_content }}
+              {%- endif -%}
+            </span>
 
-              {% capture rendered_filters %}
-                {%- for filter in filters -%}
-                  {% case filter.type %}
-                    {% when 'price_range' %}
-                      {%- liquid
-                        if filter.min_value.value != null or filter.max_value.value != null
-                          assign total_active_values = total_active_values | plus: 1
-                          assign is_active = true
-                        endif
+            {{ block_settings.filter_button_text | default: 'Filter' }}
 
-                        if block_settings.filter_style != 'vertical'
-                          assign should_render_clear = true
-                        else
-                          assign should_render_clear = false
-                        endif
+            {% if total_active_values > 0 %}
+              <div
+                id="filter-count-bubble-toggle-desktop"
+                class="filter-count-bubble"
+                aria-label="{{ 'accessibility.filter_count' | t: count: total_active_values }}"
+              >
+                <span class="filter-count-bubble__background"></span>
 
-                        render 'price-filter', filter: filter, filter_style: block_settings.filter_style, should_render_clear: should_render_clear
-                      -%}
-                    {% else %}
-                      {% liquid
-                        if filter.active_values.size > 0
-                          assign is_active = true
-                        endif
-
-                        assign active_value_count = filter.active_values | size
-                        assign total_active_values = total_active_values | plus: active_value_count
-                        if block_settings.filter_style != 'vertical'
-                          assign should_render_clear = true
-                        else
-                          assign should_render_clear = false
-                        endif
-                        render 'list-filter', filter: filter, filter_style: block_settings.filter_style, active_value_count: active_value_count, should_render_clear: should_render_clear, show_swatch_label: block_settings.show_swatch_label, sectionId: section.id
-                      %}
-                  {% endcase %}
-                {%- endfor -%}
-              {% endcapture %}
-
-              <div class="facets__filters-wrapper">
-                {% if block_settings.filter_style == 'horizontal' %}
-                  {% liquid
-                    assign more_attributes = 'on:click="#filters-drawer/showDialog"'
-                    if block_settings.text_label_case == 'uppercase'
-                      assign more_attributes = more_attributes | append: ' style="--text-transform: uppercase;"'
-                    endif
-                  %}
-                  {% render 'overflow-list',
-                    class: 'facets__overflow-list',
-                    children: rendered_filters,
-                    more-attributes: more_attributes,
-                    minimum-items: 2
-                  %}
-                {% else %}
-                  {{ rendered_filters }}
-                {% endif %}
-              </div>
-
-              {% render 'facets-actions',
-                results_url: results_url,
-                is_active: is_active,
-                products_count: products_count,
-                should_show_clear_all: should_show_vertical_clear_all
-              %}
-            {% endif %}
-            {% if block_settings.filter_style == 'horizontal' %}
-              <div class="products-count-wrapper">
-                <span title="{{ 'content.product_count' | t }}">
-                  {%- if collection != blank -%}
-                    All {{ collection.title }} ({{ products_count }})
-                  {%- else -%}
-                    {{- 'content.item_count' | t: count: products_count -}}
-                  {%- endif -%}
+                <span
+                  ref="cartBubbleText"
+                  class="filter-count-bubble__text"
+                  aria-hidden="true"
+                >
+                  {{ total_active_values }}
                 </span>
               </div>
-
-              {% if block_settings.enable_sorting and block_settings.show_sorting_desktop %}
-                {% render 'sorting',
-                  results: results,
-                  sort_by: sort_by,
-                  filter_style: block_settings.filter_style,
-                  suffix: 'desktop',
-                  sort_position: 'desktop',
-                  should_use_select_on_mobile: false,
-                  section_id: section.id
-                %}
-              {% endif %}
-
-              {% if block_settings.enable_grid_density and block_settings.show_grid_density_desktop %}
-                {% render 'grid-density-controls', viewport: 'desktop' %}
-              {% endif %}
             {% endif %}
-          {% endif %}
-        </form>
-      </facets-form-component>
+          </button>
+        </div>
+      {%- endif -%}
     </div>
   </div>
-  {% endcomment %}
 
   <div
     class="facets-toggle{% if block_settings.enable_filtering == false %} facets-toggle--no-filters{% endif %}{% if block_settings.filter_style == 'horizontal' and block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}"
@@ -1079,16 +1001,50 @@
     }
   }
 
-  /* Force visibility of filter toggle on desktop */
-  .facets-toggle {
-    display: flex !important;
-  }
-  
   /* Accordion Icons */
   .facets__item details[open] .icon-expand { display: none; }
   .facets__item details:not([open]) .icon-collapse { display: none; }
   .facets__item details[open] .icon-collapse { display: block; }
   .facets__item details:not([open]) .icon-expand { display: block; }
+  
+  /* Desktop Filter Toggle */
+  .facets-block-wrapper--desktop-toggle {
+    @media screen and (min-width: 750px) {
+      display: block;
+      padding-block: var(--padding-block-start) var(--padding-block-end);
+      padding-inline: var(--padding-inline-start) var(--padding-inline-end);
+    }
+    
+    @media screen and (max-width: 749px) {
+      display: none !important;
+    }
+  }
+  
+  .desktop-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: var(--gap-md);
+  }
+  
+  .products-count-wrapper--desktop {
+    display: flex !important;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .desktop-only-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .desktop-only-toggle .facets-toggle__button {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+    cursor: pointer;
+  }
 {% endstylesheet %}
 
 {% schema %}

@@ -14,19 +14,6 @@
     "section_anyXfM": {
       "type": "section",
       "blocks": {
-        "divider_V3imMn": {
-          "type": "_divider",
-          "name": "t:names.divider",
-          "settings": {
-            "thickness": 0.5,
-            "corner_radius": "rounded",
-            "width_percent": 100,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "custom_class": "fd"
-          },
-          "blocks": {}
-        },
         "group_JR7a6A": {
           "type": "group",
           "settings": {
@@ -508,7 +495,6 @@
         }
       },
       "block_order": [
-        "divider_V3imMn",
         "group_JR7a6A",
         "divider_caUn3D",
         "group_WUtdjR",

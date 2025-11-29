@@ -3287,12 +3287,48 @@
             "button_text": "",
             "link": ""
           }
+        },
+        "slide_QFbkY9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
+            "subtitle": "",
+            "title": "",
+            "description": "",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_qTwA8W": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
+            "subtitle": "",
+            "title": "",
+            "description": "",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_FgpqPw": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
+            "subtitle": "",
+            "title": "",
+            "description": "",
+            "button_text": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "slide_GTX8nz",
         "slide_QnphC3",
-        "slide_K4iyRn"
+        "slide_K4iyRn",
+        "slide_QFbkY9",
+        "slide_qTwA8W",
+        "slide_FgpqPw"
       ],
       "name": "图文走马灯",
       "settings": {

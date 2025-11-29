@@ -458,8 +458,8 @@ product-price .compare-at-price{
 .text-block h3 {
     /* 标题样式 */
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     line-height: 24px;
     color: #000000;
     /* 额外的间隔优化：确保标题和正文之间有足够空间 */
@@ -472,8 +472,8 @@ product-price .compare-at-price{
 .text-block p {
     /* 正文样式 */
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: 600;
     line-height: 20px;
     color: #231C0A;
     /* 额外的间隔优化：移除或调整段落底部默认间隔 */

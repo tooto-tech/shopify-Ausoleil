@@ -48,10 +48,13 @@
   endcapture
 %}
 
+{%- liquid
+  assign custom_class_value = block_settings.custom_class | default: ''
+  assign all_classes = class | append: ' spacing-style text-block text-block--' | append: block.id | append: ' ' | append: block_settings.type_preset | append: ' ' | append: text_block_classes | append: ' ' | append: custom_class_value | strip | split: ' ' | uniq | join: ' '
+-%}
 {% capture attributes %}
-  class="{{ class }} spacing-style text-block text-block--{{ block.id }} {{ block_settings.type_preset }}
-    {{ text_block_classes }}
-  "
+  class="{{ all_classes }}"
+  
 
   style="
     {% render 'spacing-padding', settings: block_settings %}

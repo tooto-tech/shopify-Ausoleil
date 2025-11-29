@@ -3432,7 +3432,7 @@
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
-            "custom_class_name": "",
+            "custom_class_name": "fg",
             "enable_aos_animation": false,
             "aos_animation_type": "fade-up",
             "aos_animation_delay": 0,
@@ -3458,7 +3458,7 @@
                 "height_mobile": 0,
                 "link": "",
                 "open_in_new_tab": false,
-                "custom_class": ""
+                "custom_class": "fi"
               },
               "blocks": {}
             },
@@ -3495,7 +3495,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "ft"
               },
               "blocks": {}
             }
@@ -3514,7 +3514,7 @@
             "width_percent": 100,
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "custom_class": ""
+            "custom_class": "fd"
           },
           "blocks": {}
         },

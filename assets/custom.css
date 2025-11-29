@@ -546,3 +546,6 @@ CSS
 .email-signup__input-group:not(:has(.email-signup__button--integrated)){
   gap:0px;
 }
+.email-signup__input, .email-signup__button--text{
+  padding: 16px;
+}

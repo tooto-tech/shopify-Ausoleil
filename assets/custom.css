@@ -587,7 +587,7 @@ summary {
   background-color: #1226AA;
 }
 /* 产品系列标题样式 */
-.spacing-style.text-block.text-block--ARUJ6aFI2Z2ViYlphO__text_tqQTNE h2.collection-title {
+collection-title {
     font-family: 'Mont', sans-serif !important;
     font-size: 56px !important;
     font-weight: 900 !important;

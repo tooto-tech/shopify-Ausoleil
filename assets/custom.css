@@ -592,6 +592,6 @@ summary {
     padding-bottom: 0; 
 }
 /* 底部版权背景色 */
-footer__copyright{
+.footer__copyright{
   background-color: #1226AA;
 }

@@ -771,8 +771,8 @@
             "case": "none",
             "wrap": "pretty",
             "color": "var(--color-foreground)",
-            "custom_color": "",
-            "custom_color_mobile": "",
+            "custom_color": "#3d3d3d",
+            "custom_color_mobile": "#3d3d3d",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -861,35 +861,47 @@
     "section_4BwnpE": {
       "type": "section",
       "blocks": {
-        "product_description_F36T7M": {
-          "type": "product-description",
-          "name": "t:names.product_description",
+        "text_fwKwK6": {
+          "type": "text",
+          "name": "t:names.text",
           "settings": {
-            "text": "<p>One dusk, a wind carrying the scent of sea salt blew slowly from the pier. He took off the sunglasses he had worn all day long, and his fingertips gently tapped the hard temples. Amid the faint sound of metal clanging, a thought suddenly became clear: the inability to find the sunglasses he liked was not because the number of choices was insufficient, but because there had never been a design that could truly understand this \"yearning for the light and shadow by the seaside\".</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "text": "<p>At that moment, the \"rustling\" sound of the distant waves crashing against the shore was like a signal - there was no need to search anymore. It was better to create it with your own hands. He made up his mind to create a sunglasses brand exclusively for the seaside and for those who chase light: the lenses must accurately reproduce the clear and deep blue of the sea, while also retaining the transparency of sunlight penetrating the clouds, and must not allow any color cast to steal the slightest bit of light and shadow. The frame should fit the curve of the cheek, as light and stress-free as a gentle sea breeze. Even if worn throughout the afternoon, it won't cause the slightest pain. Even in every minute detail, the affection for the seaside should be integrated: fine wave patterns are carved on the inner side of the temple, so that when the fingertips glide across it, memories of the waves can be evoked. The light transmittance of the lenses should be just right for the soft light of dusk, allowing every grain of fine sand (to fully display the beauty of being dyed orange)...<br/><br/></p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "'Mont', var(--font-heading--family)",
+            "font_size": "1.25rem",
+            "font_size_mobile": "",
+            "weight": "300",
+            "weight_mobile": "300",
             "line_height": "normal",
             "letter_spacing": "normal",
+            "letter_spacing_custom": "",
             "case": "none",
             "wrap": "pretty",
             "color": "var(--color-foreground)",
+            "custom_color": "#3d3d3d",
+            "custom_color_mobile": "#3d3d3d",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0,
+            "custom_class": ""
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "product_description_F36T7M"
+        "text_fwKwK6"
       ],
       "name": "banner描述",
       "settings": {

@@ -597,8 +597,8 @@ summary {
 
 /* 产品系列描述样式 */
 .collection-desc {
-    font-family: 'Mont', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 24px;
+    font-family: 'Mont', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    line-height: 24px !important;
 }

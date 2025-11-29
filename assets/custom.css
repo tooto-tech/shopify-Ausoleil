@@ -595,3 +595,8 @@ summary {
 .footer__copyright{
   background-color: #1226AA;
 }
+/* 图标列表内容居右 */
+.group-block-content.layout-panel-flex--row .menu__item a {
+    text-align: right;
+    display: block; /* 确保链接是块级元素，可以应用 text-align */
+}

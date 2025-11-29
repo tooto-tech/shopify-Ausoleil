@@ -58,28 +58,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: #000000;
-    border: 1px solid rgba(255, 255, 255, 0.19);
-    border-radius: 50%;
-  }
-
-  .social-icons__icon-wrapper a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
+    height: var(--icon-size-lg);
   }
 
   .social-icons__icon {
     display: flex;
     fill: currentColor;
     flex-shrink: 0;
-    width: 20px;
-    height: 20px;
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
   }
 
   .social-icons__icon {
@@ -87,6 +74,8 @@
   }
 
   .social-icons__icon-wrapper:has(.social-icons__icon path) {
+    width: var(--icon-size-lg);
+
     .social-icons__icon {
       display: block;
     }

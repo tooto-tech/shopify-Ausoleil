@@ -47,17 +47,17 @@
     content_for 'block', type: '_header-logo', id: 'header-logo'
   endcapture
 
-  capture menu
-    content_for 'block', type: '_header-menu', id: 'header-menu'
-  endcapture
+capture menu
+  content_for 'block', type: '_header-menu', id: 'header-menu'
+endcapture
 
-  capture mobile_menu
-    content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'mobile'
-  endcapture
+capture mobile_menu
+  content_for 'block', type: '_header-menu', id: 'header-menu-mobile', variant: 'mobile'
+endcapture
 
-  capture navigation_bar
-    content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'navigation_bar', transparent: transparent
-  endcapture
+capture navigation_bar
+  content_for 'block', type: '_header-menu', id: 'header-menu-nav', variant: 'navigation_bar'
+endcapture
 
   capture actions
     render 'header-actions'

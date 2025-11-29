@@ -477,5 +477,5 @@ product-price .compare-at-price{
     line-height: 20px;
     color: #231C0A;
     /* 额外的间隔优化：移除或调整段落底部默认间隔 */
-    margin-bottom: 0px; 
+    margin-bottom: 32px; 
 }

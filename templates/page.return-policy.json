@@ -9,6 +9,73 @@
  */
 {
   "sections": {
+    "page_banner_TaympD": {
+      "type": "page-banner",
+      "blocks": {
+        "text_pne6iX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>RETURN POLICY</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "'Mont', var(--font-heading--family)",
+            "font_size": "3.5rem",
+            "font_size_mobile": "1.75rem",
+            "weight": "900",
+            "weight_mobile": "900",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "letter_spacing_custom": "",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "custom_color": "",
+            "custom_color_mobile": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0,
+            "custom_class": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_pne6iX"
+      ],
+      "name": "Page Banner",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/151_2x_2.webp",
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "main": {
       "type": "main-page",
       "blocks": {
@@ -99,7 +166,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -108,8 +175,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>You may return or exchange items within 30 days of delivery, provided they are unused, unworn, unwashed, and in original condition with all tags and packaging intact.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -137,7 +204,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -234,7 +301,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -243,8 +310,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Custom-made products (such as tailored suits), underwear, socks, fragrances, and redeemed or opened gift cards are final sale and cannot be returned or exchanged.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -272,7 +339,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -369,7 +436,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -378,8 +445,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Please contact our customer service team to obtain a Return Merchandise Authorization (RMA) number and detailed return instructions. Unauthorized returns will not be accepted.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -407,7 +474,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -504,7 +571,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -513,8 +580,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>If the return is due to our error (e.g., incorrect item or quality issue), we cover the return shipping cost. For change-of-mind returns, you are responsible for the postage fees.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -542,7 +609,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -639,7 +706,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -648,8 +715,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Once your return is approved and processed, refunds will be issued to your original payment method within 7–10 business days.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -677,7 +744,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -774,7 +841,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -783,8 +850,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Exchanges depend on stock availability. If the item you request is out of stock, we will issue a refund or recommend a suitable alternative.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -812,7 +879,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -909,7 +976,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -918,8 +985,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Please ensure that yAll returned items undergo inspection. Products showing signs of wear, stains, damage, alteration, or missing components will be rejected and sent back to you.our delivery address and contact phone number are complete and accurate. Any redelivery fees resulting from incorrect information or unreachable contact details will be your responsibility.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -947,7 +1014,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -1044,7 +1111,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -1053,8 +1120,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Cross-border returns are not supported. Delivery and returns are available only within mainland China.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1082,7 +1149,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -1179,7 +1246,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -1188,8 +1255,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Products marked as “Final Sale,” “Clearance,” or “Non-Returnable” during promotional campaigns are excluded from this policy.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1217,7 +1284,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -1314,7 +1381,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
@@ -1323,8 +1390,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>We reserve the right to interpret and apply this Returns Policy at our discretion, ensuring fairness and the protection of product integrity.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1352,7 +1419,7 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
@@ -1375,84 +1442,18 @@
         "group_paHgWp",
         "group_zyVVaA"
       ],
+      "custom_css": [],
       "settings": {
         "content_direction": "column",
         "gap": 32,
-        "color_scheme": "",
+        "color_scheme": "scheme-6",
         "padding-block-start": 40,
         "padding-block-end": 80
-      }
-    },
-    "page_banner_TaympD": {
-      "type": "page-banner",
-      "blocks": {
-        "text_pne6iX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>RETURN POLICY</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "'Mont', var(--font-heading--family)",
-            "font_size": "3.5rem",
-            "font_size_mobile": "1.75rem",
-            "weight": "900",
-            "weight_mobile": "900",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "letter_spacing_custom": "",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "custom_color": "",
-            "custom_color_mobile": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0,
-            "custom_class": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_pne6iX"
-      ],
-      "name": "Page Banner",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/151_2x_2.webp",
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "large",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "toggle_overlay": true,
-        "overlay_color": "#00000026",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
       }
     }
   },
   "order": [
-    "main",
-    "page_banner_TaympD"
+    "page_banner_TaympD",
+    "main"
   ]
 }

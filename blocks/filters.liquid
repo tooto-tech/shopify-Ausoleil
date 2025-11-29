@@ -109,6 +109,7 @@
     </div>
   {% endif %}
 
+  {% comment %}
   <div
     class="
       {% if should_show_pane == false %}
@@ -254,6 +255,7 @@
       </facets-form-component>
     </div>
   </div>
+  {% endcomment %}
 
   <div
     class="facets-toggle{% if block_settings.enable_filtering == false %} facets-toggle--no-filters{% endif %}{% if block_settings.filter_style == 'horizontal' and block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}"
@@ -428,7 +430,7 @@
                         assign is_active = true
                       endif
 
-                      render 'price-filter', filter: filter, filter_style: 'vertical', should_render_clear: false, autofocus: should_autofocus
+                      render 'price-filter', filter: filter, filter_style: 'vertical', should_render_clear: false, autofocus: should_autofocus, expand_icon: block_settings.accordion_expand_icon, collapse_icon: block_settings.accordion_collapse_icon
                     -%}
                   {% else %}
                     {% liquid
@@ -438,7 +440,7 @@
 
                       assign active_value_count = filter.active_values | size
                       assign total_active_values = total_active_values | plus: active_value_count
-                      render 'list-filter', filter: filter, filter_style: 'vertical', active_value_count: active_value_count, should_render_clear: false, autofocus: should_autofocus, in_drawer: true, sectionId: section.id
+                      render 'list-filter', filter: filter, filter_style: 'vertical', active_value_count: active_value_count, should_render_clear: false, autofocus: should_autofocus, in_drawer: true, sectionId: section.id, expand_icon: block_settings.accordion_expand_icon, collapse_icon: block_settings.accordion_collapse_icon
                     %}
                 {% endcase %}
               {%- endfor -%}
@@ -1076,6 +1078,17 @@
       z-index: var(--facets-open-z-index);
     }
   }
+
+  /* Force visibility of filter toggle on desktop */
+  .facets-toggle {
+    display: flex !important;
+  }
+  
+  /* Accordion Icons */
+  .facets__item details[open] .icon-expand { display: none; }
+  .facets__item details:not([open]) .icon-collapse { display: none; }
+  .facets__item details[open] .icon-collapse { display: block; }
+  .facets__item details:not([open]) .icon-expand { display: block; }
 {% endstylesheet %}
 
 {% schema %}

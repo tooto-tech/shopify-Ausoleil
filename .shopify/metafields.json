@@ -119,6 +119,26 @@
         "name": "single_line_text_field",
         "category": "TEXT"
       }
+    },
+    {
+      "key": "tinuuid",
+      "namespace": "custom",
+      "name": "TINUUID",
+      "description": "Tinuuid of vizbl object",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "hid",
+      "namespace": "custom",
+      "name": "HID",
+      "description": "HID of vizbl object",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "variant": [],

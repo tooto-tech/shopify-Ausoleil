@@ -56,9 +56,20 @@
           {%- endif -%}
         </span>
       </facet-status-component>
-      <span class="svg-wrapper icon-caret icon-animated">
-        {{- 'icon-caret.svg' | inline_asset_content -}}
-      </span>
+      {%- if expand_icon != blank and collapse_icon != blank -%}
+        <div class="accordion-icons">
+          <span class="icon-expand">
+            {{ expand_icon | image_url: width: 24 | image_tag }}
+          </span>
+          <span class="icon-collapse">
+            {{ collapse_icon | image_url: width: 24 | image_tag }}
+          </span>
+        </div>
+      {%- else -%}
+        <span class="svg-wrapper icon-caret icon-animated">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </span>
+      {%- endif -%}
     </summary>
     <floating-panel-component
       {% unless filter_style == 'vertical' %}

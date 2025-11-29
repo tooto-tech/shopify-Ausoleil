@@ -2722,9 +2722,8 @@
           "type": "_pss-slide",
           "name": "PSS 幻灯片",
           "settings": {
-            "left_image": "shopify://shop_images/181_2x_1.webp",
+            "left_image": "shopify://shop_images/177_3x_be7b2b7b-9feb-49d2-a954-bc5f2b50cc04.webp",
             "use_mobile_image": true,
-            "left_image_mobile": "shopify://shop_images/181_2x_1.webp",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",

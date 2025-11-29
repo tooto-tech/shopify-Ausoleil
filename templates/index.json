@@ -3260,8 +3260,8 @@
           "settings": {
             "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_FIRST_2x_af880cef-a6c8-4b66-9b51-6fe7ee080897.webp",
             "subtitle": "",
-            "title": "",
-            "description": "",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@ausoleil",
             "button_text": "",
             "link": ""
           }
@@ -3271,8 +3271,8 @@
           "settings": {
             "image": "shopify://shop_images/11003130_LOOK_BOOK_FIRST_2x_a3f63622-258d-45f8-bcd7-962f19340118.webp",
             "subtitle": "",
-            "title": "",
-            "description": "",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@thisismc",
             "button_text": "",
             "link": ""
           }
@@ -3282,41 +3282,41 @@
           "settings": {
             "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
             "subtitle": "",
-            "title": "",
-            "description": "",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@thisismc",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_QFbkY9": {
+        "slide_gijFQX": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
             "subtitle": "",
-            "title": "",
-            "description": "",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@thisismc",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_qTwA8W": {
+        "slide_bLnFgg": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
             "subtitle": "",
-            "title": "",
-            "description": "",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@thisismc",
             "button_text": "",
             "link": ""
           }
         },
-        "slide_FgpqPw": {
+        "slide_DYqMME": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
             "subtitle": "",
-            "title": "",
-            "description": "",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@thisismc",
             "button_text": "",
             "link": ""
           }
@@ -3326,9 +3326,9 @@
         "slide_GTX8nz",
         "slide_QnphC3",
         "slide_K4iyRn",
-        "slide_QFbkY9",
-        "slide_qTwA8W",
-        "slide_FgpqPw"
+        "slide_gijFQX",
+        "slide_bLnFgg",
+        "slide_DYqMME"
       ],
       "name": "图文走马灯",
       "settings": {

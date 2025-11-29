@@ -512,6 +512,10 @@ CSS
     color: #121821;
     opacity: 1; /* 确保浏览器不应用默认的透明度 */
 }
+/* 去除gap */
+.email-signup__input-group:not(:has(.email-signup__button--integrated)){
+  gap:0px;
+}
 /* 针对不同浏览器内核添加前缀，以确保兼容性 */
 .email-signup__input-group input.email-signup__input::-webkit-input-placeholder { /* Chrome, Safari */
     font-family: 'Poppins', sans-serif;

@@ -3281,12 +3281,52 @@
             "description": "@frank-thebunny",
             "link": ""
           }
+        },
+        "item_ezRdML": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@frank-thebunny",
+            "link": ""
+          }
+        },
+        "item_yjFC6N": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@frank-thebunny",
+            "link": ""
+          }
+        },
+        "item_gjng9w": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@frank-thebunny",
+            "link": ""
+          }
+        },
+        "item_LKEphz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
+            "title": "Verdant Avant-Garde Olive Sunglasses Garde 192001",
+            "description": "@frank-thebunny",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "item_hfyfdx",
         "item_VLMUtF",
-        "item_bzbjqa"
+        "item_bzbjqa",
+        "item_ezRdML",
+        "item_yjFC6N",
+        "item_gjng9w",
+        "item_LKEphz"
       ],
       "custom_css": [
         ".itm-item {width: 200px; display: flex; flex-direction: column; text-align: center;}",
@@ -3302,8 +3342,7 @@
         "gap": 30,
         "speed": 30,
         "direction": "normal",
-        "image_width": 200,
-        "image_height": 250,
+        "aspect_ratio": "4/5",
         "image_radius": 8,
         "text_align": "center",
         "item_title_color": "#000000",

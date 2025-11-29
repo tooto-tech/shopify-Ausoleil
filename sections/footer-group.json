@@ -71,9 +71,9 @@
               "settings": {
                 "icon": "eye",
                 "image_upload": "shopify://shop_images/92691c477f0e677531a746a72a9535d1.svg",
-                "width": 32,
+                "width": 16,
                 "height": 0,
-                "width_mobile": 0,
+                "width_mobile": 36,
                 "height_mobile": 0,
                 "link": "",
                 "open_in_new_tab": false,

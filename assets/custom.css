@@ -402,36 +402,40 @@ product-price .compare-at-price{
 }
 /* 手风琴样式修改 */
 /* 修改文本的样式 */
-.sunglasses-info {
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 20px;
-  color: #231c0a;
-}
-@media (max-width: 768px) {
-  .sunglasses-info {
-    font-family: "Poppins", sans-serif;
-    font-size: 13px;
-    font-weight: normal;
-    line-height: normal;
-    color: #231c0a;
-  }
-} /* 修改标题的样式 */
-.custom-accordion-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  color: #000000;
-}
-
-@media (max-width: 768px) {
-  .custom-accordion-title {
+.custom-text-content {
+    /* 电脑端 / 默认样式 */
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 140%;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
     color: #231C0A;
   }
-}
+
+  /* 移动端样式 (屏幕宽度小于 768px 时生效) */
+  @media screen and (max-width: 768px) {
+    .custom-text-content {
+      font-size: 13px;
+      line-height: normal;
+      /* 颜色和字重相同，继承默认即可，无需重复写 */
+    }
+  }
+/* 修改标题的样式 */
+/* 桌面端 / 默认样式 */
+  .details__header {
+    font-family: 'Poppins', sans-serif !important; /* 使用 !important 确保覆盖内联或现有样式 */
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    line-height: 24px !important;
+    color: #000000 !important;
+  }
+
+  /* 移动端样式 (屏幕宽度小于 768px 时生效) */
+  @media screen and (max-width: 768px) {
+    .details__header {
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      line-height: 140% !important; /* 注意：移动端要求颜色为 #231C0A */
+      color: #231C0A !important;
+    }
+  }

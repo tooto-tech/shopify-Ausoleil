@@ -454,8 +454,9 @@ product-price .compare-at-price{
 }
 /* TERM ＆ CONDITION */
 /* 针对富文本内容容器内的 <h3> 标签（标题） */
-.rte-formatter h3,
-.text-block h3 {
+/* 针对富文本内容容器内的 <h3> 标签（标题） */
+.policy .rte-formatter h3,
+.policy .text-block h3 {
     /* 标题样式 */
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -468,8 +469,8 @@ product-price .compare-at-price{
 }
 
 /* 针对富文本内容容器内的 <p> 标签（正文） */
-.rte-formatter p,
-.text-block p {
+.policy .rte-formatter p,
+.policy .text-block p {
     /* 正文样式 */
     font-family: 'Poppins', sans-serif;
     font-size: 16px;

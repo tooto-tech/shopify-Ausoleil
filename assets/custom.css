@@ -500,7 +500,12 @@ email-signup-block.email-signup-block {
     /* 覆盖可能的行内或主题宽度设置 */
     max-width: 534px !important; /* 使用 !important 临时确保生效，待确认后移除 */
 }
-
+.email-signup-block{
+    max-width: 534px; 
+    /* 确保容器本身是块级元素 */
+    margin-left: auto;
+    margin-right: auto; /* 可选：如果你希望整个区块居中 */
+}
 
 /* 2. 边框颜色/透明度 (应用于内层 input-group) */
 .email-signup__input-group {

@@ -599,10 +599,10 @@
         "padding-block-end": 40
       }
     },
-    "section_xXGbVD": {
+    "section_aPUnyV": {
       "type": "section",
       "blocks": {
-        "text_fNKTaJ": {
+        "text_pVC6yQ": {
           "type": "text",
           "name": "t:names.text",
           "settings": {
@@ -610,9 +610,9 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "type_preset": "custom",
+            "font": "'DolceVitaLight', var(--font-heading--family)",
+            "font_size": "3rem",
             "font_size_mobile": "",
             "weight": "",
             "weight_mobile": "",
@@ -622,8 +622,8 @@
             "case": "none",
             "wrap": "pretty",
             "color": "var(--color-foreground)",
-            "custom_color": "",
-            "custom_color_mobile": "",
+            "custom_color": "#121821",
+            "custom_color_mobile": "#121821",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -640,20 +640,20 @@
           },
           "blocks": {}
         },
-        "text_RRK3MV": {
+        "text_XkKCUN": {
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>However, it is precisely this extremely delicate perception of light and shadow that gives him an extraordinary \"obsession\" when choosing sunglasses. While taking a walk, I wanted to gaze at the returning sailboat from afar. However, the color deviation of the lens merged the sea and the sky into a blurry color block, and even the outline of the sail became hazy. After surfing, taking a rest on the reef, the hard frame of the glasses pressed tightly against the back of the ears, causing waves of pain and even reducing the comfort of enjoying the sea breeze. The most regrettable thing is that at dusk, when one wants to closely observe the faint glimmers of the waves crashing against the rocks, the lenses are like a thin mist, instantly \"smoothing\" the edges of that fleeting light and shadow, making it lose its clear outline. Every romantic moment by the seaside that he cherished in his heart has lost its original charm because of a pair of sunglasses that did not meet his expectations.<br/><br/></p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "text": "<p>However, it is precisely this extremely delicate perception of light and shadow that gives him an extraordinary \"obsession\" when choosing sunglasses. While taking a walk, I wanted to gaze at the returning sailboat from afar. However, the color deviation of the lens merged the sea and the sky into a blurry color block, and even the outline of the sail became hazy. After surfing, taking a rest on the reef, the hard frame of the glasses pressed tightly against the back of the ears, causing waves of pain and even reducing the comfort of enjoying the sea breeze. The most regrettable thing is that at dusk, when one wants to closely observe the faint glimmers of the waves crashing against the rocks, the lenses are like a thin mist, instantly \"smoothing\" the edges of that fleeting light and shadow, making it lose its clear outline. Every romantic moment by the seaside that he cherished in his heart has lost its original charm because of a pair of sunglasses that did not meet his expectations.</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-subheading--family)",
+            "font_size": "1.25rem",
             "font_size_mobile": "",
-            "weight": "",
-            "weight_mobile": "",
+            "weight": "275",
+            "weight_mobile": "275",
             "line_height": "normal",
             "letter_spacing": "normal",
             "letter_spacing_custom": "",
@@ -680,8 +680,8 @@
         }
       },
       "block_order": [
-        "text_fNKTaJ",
-        "text_RRK3MV"
+        "text_pVC6yQ",
+        "text_XkKCUN"
       ],
       "name": "内容区域",
       "settings": {
@@ -690,7 +690,7 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "full-width",
@@ -916,7 +916,7 @@
     "section_ARfwLx",
     "section_kGPgHH",
     "hero_fphmeY",
-    "section_xXGbVD",
+    "section_aPUnyV",
     "hero_k8HpFy",
     "section_aXixnM",
     "hero_7EjRw9",

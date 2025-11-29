@@ -4,7 +4,6 @@
   @param {object} results - The search results object
   @param {number} results_size - The number of products in the search results
   @param {object} [filters] - The filters object
-  @param {object} [collection] - The collection object for title display
 {%- enddoc -%}
 
 <script
@@ -1174,6 +1173,22 @@
     },
     {
       "type": "header",
+      "content": "Accordion Icons (Drawer)"
+    },
+    {
+      "type": "image_picker",
+      "id": "accordion_expand_icon",
+      "label": "Expand icon (collapsed state)",
+      "info": "Icon shown when accordion is collapsed. Leave empty to use default plus icon."
+    },
+    {
+      "type": "image_picker",
+      "id": "accordion_collapse_icon",
+      "label": "Collapse icon (expanded state)",
+      "info": "Icon shown when accordion is expanded. Leave empty to use default minus icon."
+    },
+    {
+      "type": "header",
       "content": "Sorting Options"
     },
     {
@@ -1186,15 +1201,13 @@
       "type": "checkbox",
       "id": "show_sorting_desktop",
       "label": "Show sorting on desktop",
-      "default": true,
-      "visible_if": "{{ block.settings.enable_sorting == true }}"
+      "default": true
     },
     {
       "type": "checkbox",
       "id": "show_sorting_mobile",
       "label": "Show sorting on mobile",
-      "default": true,
-      "visible_if": "{{ block.settings.enable_sorting == true }}"
+      "default": true
     },
     {
       "type": "header",
@@ -1210,15 +1223,13 @@
       "type": "checkbox",
       "id": "show_grid_density_desktop",
       "label": "Show grid density on desktop",
-      "default": true,
-      "visible_if": "{{ block.settings.enable_grid_density == true }}"
+      "default": true
     },
     {
       "type": "checkbox",
       "id": "show_grid_density_mobile",
       "label": "Show grid density on mobile",
-      "default": true,
-      "visible_if": "{{ block.settings.enable_grid_density == true }}"
+      "default": true
     },
     {
       "type": "checkbox",

@@ -37,14 +37,15 @@
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 100,
+            "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0,
             "custom_mobile_padding": false,
             "padding-block-start-mobile": 0,
             "padding-block-end-mobile": 0,
             "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0
+            "padding-inline-end-mobile": 0,
+            "custom_class": ""
           },
           "blocks": {}
         }
@@ -55,6 +56,7 @@
       "name": "Page Banner",
       "settings": {
         "media_type_1": "image",
+        "image_1": "shopify://shop_images/151_2x_1.webp",
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -71,7 +73,7 @@
         "overlay_style": "gradient",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 100
+        "padding-block-end": 0
       }
     },
     "main": {
@@ -174,7 +176,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -211,7 +214,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -307,7 +311,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -344,7 +349,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -440,7 +446,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -477,7 +484,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -573,7 +581,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -610,7 +619,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -706,7 +716,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -743,7 +754,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -839,7 +851,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -876,7 +889,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -972,7 +986,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -1009,7 +1024,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -1105,7 +1121,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -1142,7 +1159,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -1238,7 +1256,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -1275,7 +1294,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -1371,7 +1391,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -1408,7 +1429,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -1504,7 +1526,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             },
@@ -1541,7 +1564,8 @@
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0
+                "padding-inline-end-mobile": 0,
+                "custom_class": ""
               },
               "blocks": {}
             }
@@ -1591,7 +1615,8 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "custom_class": ""
       }
     }
   },

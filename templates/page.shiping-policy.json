@@ -78,19 +78,8 @@
     },
     "main": {
       "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "content_direction": "column",
-        "gap": 32,
-        "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 80
-      }
-    },
-    "section_9ifCgG": {
-      "type": "section",
       "blocks": {
-        "group_yP6dKQ": {
+        "group_gNJYWp": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -143,20 +132,20 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_KhhNGn": {
+            "text_8DxLHi": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p><strong>1. Delivery Coverage</strong></p>",
                 "width": "fit-content",
                 "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
+                "alignment": "center",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
                 "font_size": "1rem",
                 "font_size_mobile": "",
-                "weight": "",
-                "weight_mobile": "",
+                "weight": "600",
+                "weight_mobile": "600",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "letter_spacing_custom": "",
@@ -181,20 +170,20 @@
               },
               "blocks": {}
             },
-            "text_9zKJwT": {
+            "text_4Ga3ff": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>We currently deliver to maianland China only. Orders from Hong Kong,Macau, Taiwan, and international regions are not supported at this time.</p>",
-                "width": "fit-content",
+                "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
                 "font_size": "1rem",
                 "font_size_mobile": "",
-                "weight": "",
-                "weight_mobile": "",
+                "weight": "400",
+                "weight_mobile": "400",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "letter_spacing_custom": "",
@@ -221,11 +210,11 @@
             }
           },
           "block_order": [
-            "text_KhhNGn",
-            "text_9zKJwT"
+            "text_8DxLHi",
+            "text_4Ga3ff"
           ]
         },
-        "group_Tf4aJ4": {
+        "group_qWfV7f": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -278,7 +267,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_847tpN": {
+            "text_HBG9KX": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -316,7 +305,7 @@
               },
               "blocks": {}
             },
-            "text_6eciee": {
+            "text_tgBQ88": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -356,11 +345,11 @@
             }
           },
           "block_order": [
-            "text_847tpN",
-            "text_6eciee"
+            "text_HBG9KX",
+            "text_tgBQ88"
           ]
         },
-        "group_ca83mf": {
+        "group_h4pFBR": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -413,7 +402,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_jxqEGN": {
+            "text_XyxDfQ": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -451,7 +440,7 @@
               },
               "blocks": {}
             },
-            "text_YKJgAT": {
+            "text_BrmNzy": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -491,11 +480,11 @@
             }
           },
           "block_order": [
-            "text_jxqEGN",
-            "text_YKJgAT"
+            "text_XyxDfQ",
+            "text_BrmNzy"
           ]
         },
-        "group_ycrDCg": {
+        "group_HqrETL": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -548,7 +537,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_yCXrDe": {
+            "text_wCtCAg": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -586,7 +575,7 @@
               },
               "blocks": {}
             },
-            "text_TDV3FD": {
+            "text_fpTigC": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -626,11 +615,11 @@
             }
           },
           "block_order": [
-            "text_yCXrDe",
-            "text_TDV3FD"
+            "text_wCtCAg",
+            "text_fpTigC"
           ]
         },
-        "group_8wCyQ7": {
+        "group_y4KTci": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -683,142 +672,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_ArnW4B": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p><strong>4. Shipment Notification</strong></p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "font_size_mobile": "",
-                "weight": "",
-                "weight_mobile": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "letter_spacing_custom": "",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "custom_color": "",
-                "custom_color_mobile": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 0,
-                "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0,
-                "custom_class": ""
-              },
-              "blocks": {}
-            },
-            "text_BYxGWV": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>Once your order has shipped, you will receive an email containing a <strong>tracking number</strong>, allowing you to monitor your shipment in real time via the SF Express website or mobile app.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "font_size_mobile": "",
-                "weight": "",
-                "weight_mobile": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "letter_spacing_custom": "",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "custom_color": "",
-                "custom_color_mobile": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 0,
-                "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0,
-                "custom_class": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_ArnW4B",
-            "text_BYxGWV"
-          ]
-        },
-        "group_cpyGc3": {
-          "type": "group",
-          "name": "文本块",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 0,
-            "enable_mobile_gap": false,
-            "gap_mobile": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "custom_mobile_border_radius": false,
-            "border_radius_mobile": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "custom_class_name": "",
-            "enable_aos_animation": false,
-            "aos_animation_type": "fade-up",
-            "aos_animation_delay": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0
-          },
-          "blocks": {
-            "text_7cYEHr": {
+            "text_WXGQMx": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -856,7 +710,7 @@
               },
               "blocks": {}
             },
-            "text_DLfTHQ": {
+            "text_ERNbAm": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -896,11 +750,11 @@
             }
           },
           "block_order": [
-            "text_7cYEHr",
-            "text_DLfTHQ"
+            "text_WXGQMx",
+            "text_ERNbAm"
           ]
         },
-        "group_KFCPgr": {
+        "group_aBqnKh": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -953,7 +807,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_zQWBrG": {
+            "text_nQWf8Y": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -991,7 +845,7 @@
               },
               "blocks": {}
             },
-            "text_RfcyiL": {
+            "text_HGpaq6": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1031,11 +885,11 @@
             }
           },
           "block_order": [
-            "text_zQWBrG",
-            "text_RfcyiL"
+            "text_nQWf8Y",
+            "text_HGpaq6"
           ]
         },
-        "group_HUHggG": {
+        "group_aUPUVA": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -1088,7 +942,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_3CrxtB": {
+            "text_i9kTTY": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1126,7 +980,7 @@
               },
               "blocks": {}
             },
-            "text_Mr8chh": {
+            "text_dmVJD4": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1166,11 +1020,11 @@
             }
           },
           "block_order": [
-            "text_3CrxtB",
-            "text_Mr8chh"
+            "text_i9kTTY",
+            "text_dmVJD4"
           ]
         },
-        "group_QhfTGN": {
+        "group_xDFc7i": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -1223,7 +1077,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_z7Aer3": {
+            "text_VghY8g": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1261,7 +1115,7 @@
               },
               "blocks": {}
             },
-            "text_hWG4eN": {
+            "text_Et8egb": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1301,11 +1155,11 @@
             }
           },
           "block_order": [
-            "text_z7Aer3",
-            "text_hWG4eN"
+            "text_VghY8g",
+            "text_Et8egb"
           ]
         },
-        "group_JXtxk3": {
+        "group_7CnUHy": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -1358,7 +1212,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_VxmRxx": {
+            "text_DaGAbQ": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1396,7 +1250,7 @@
               },
               "blocks": {}
             },
-            "text_kqRAk6": {
+            "text_Mqt4Lt": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1436,11 +1290,11 @@
             }
           },
           "block_order": [
-            "text_VxmRxx",
-            "text_kqRAk6"
+            "text_DaGAbQ",
+            "text_Mqt4Lt"
           ]
         },
-        "group_NfcfGL": {
+        "group_hdkBjq": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -1493,7 +1347,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_UxjTbX": {
+            "text_FpzrzW": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1531,7 +1385,7 @@
               },
               "blocks": {}
             },
-            "text_VAPpEK": {
+            "text_dPYcYD": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1571,58 +1425,34 @@
             }
           },
           "block_order": [
-            "text_UxjTbX",
-            "text_VAPpEK"
+            "text_FpzrzW",
+            "text_dPYcYD"
           ]
         }
       },
       "block_order": [
-        "group_yP6dKQ",
-        "group_Tf4aJ4",
-        "group_ca83mf",
-        "group_ycrDCg",
-        "group_8wCyQ7",
-        "group_cpyGc3",
-        "group_KFCPgr",
-        "group_HUHggG",
-        "group_QhfTGN",
-        "group_JXtxk3",
-        "group_NfcfGL"
+        "group_gNJYWp",
+        "group_qWfV7f",
+        "group_h4pFBR",
+        "group_HqrETL",
+        "group_y4KTci",
+        "group_aBqnKh",
+        "group_aUPUVA",
+        "group_xDFc7i",
+        "group_7CnUHy",
+        "group_hdkBjq"
       ],
-      "name": "内容区",
       "settings": {
         "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-end",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "small",
-        "section_height_custom": 50,
+        "gap": 32,
         "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0,
-        "custom_class": ""
+        "padding-block-start": 40,
+        "padding-block-end": 80
       }
     }
   },
   "order": [
     "page_banner_H8d4gx",
-    "main",
-    "section_9ifCgG"
+    "main"
   ]
 }

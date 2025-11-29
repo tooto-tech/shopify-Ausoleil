@@ -1272,6 +1272,7 @@
           ]
         }
       },
+      "disabled": true,
       "custom_css": [
         ".product-badges__badge {background: #1226aa; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}"
       ],
@@ -1333,6 +1334,7 @@
       "block_order": [
         "button_hVciNh"
       ],
+      "disabled": true,
       "name": "Shop More",
       "settings": {
         "content_direction": "column",
@@ -2119,6 +2121,7 @@
         "pss_slide_QfhY46",
         "pss_slide_KpfBfi"
       ],
+      "disabled": true,
       "custom_css": [
         ".pss-swiper {width: 95%;}",
         ".pss-slide__left-text {width: 120%;}"
@@ -3249,147 +3252,80 @@
         "custom_class": ""
       }
     },
-    "featured_blog_posts_W7ifGF": {
-      "type": "featured-blog-posts",
+    "image_text_carousel_rherK3": {
+      "type": "image-text-carousel",
       "blocks": {
-        "static-blog-title": {
-          "type": "_featured-blog-posts-title",
-          "name": "t:names.title",
-          "disabled": true,
-          "static": true,
+        "slide_GTX8nz": {
+          "type": "slide",
           "settings": {
-            "text": "<p>  </p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_FIRST_2x_af880cef-a6c8-4b66-9b51-6fe7ee080897.webp",
+            "subtitle": "",
+            "title": "",
+            "description": "",
+            "button_text": "",
+            "link": ""
+          }
         },
-        "static-blog-post-card": {
-          "type": "_featured-blog-posts-card",
-          "name": "t:names.blog_card",
-          "static": true,
+        "slide_QnphC3": {
+          "type": "slide",
           "settings": {
-            "alignment": "left",
-            "gap": 8,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "image": {
-              "type": "_featured-blog-posts-image",
-              "static": true,
-              "settings": {
-                "image_ratio": "square",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0
-              },
-              "blocks": {}
-            },
-            "title": {
-              "type": "_heading",
-              "name": "t:names.title",
-              "static": true,
-              "settings": {
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "text": "<h4>{{ closest.article.title }}</h4>",
-                "read_only": false,
-                "alignment": "left",
-                "show_alignment": false,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "blog-post-info-text": {
-              "type": "_blog-post-info-text",
-              "name": "t:names.details",
-              "static": true,
-              "settings": {
-                "show_date": true,
-                "show_author": true,
-                "type_preset": "",
-                "alignment": "left",
-                "show_alignment": false,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
-            "blog-post-description": {
-              "type": "_blog-post-description",
-              "name": "t:names.excerpt",
-              "static": true,
-              "settings": {
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "padding-block-start": 8,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
+            "image": "shopify://shop_images/11003130_LOOK_BOOK_FIRST_2x_a3f63622-258d-45f8-bcd7-962f19340118.webp",
+            "subtitle": "",
+            "title": "",
+            "description": "",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "slide_K4iyRn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/19WBPBDBDFUOO_LOOK_BOOK_SECOND_2x_b93bb571-dfe3-4d24-8cc4-509e568eee49.webp",
+            "subtitle": "",
+            "title": "",
+            "description": "",
+            "button_text": "",
+            "link": ""
+          }
         }
       },
-      "name": "t:names.blog_posts_carousel",
+      "block_order": [
+        "slide_GTX8nz",
+        "slide_QnphC3",
+        "slide_K4iyRn"
+      ],
+      "name": "图文走马灯",
       "settings": {
-        "blog": "news",
-        "layout_type": "carousel",
-        "carousel_on_mobile": true,
-        "post_limit": 5,
-        "columns": 3,
-        "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 8,
-        "rows_gap": 16,
-        "icons_style": "arrow",
-        "icons_shape": "circle",
-        "section_width": "page-width",
-        "gap": 12,
-        "color_scheme": "",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "title": "",
+        "title_size": 28,
+        "title_color": "#000000",
+        "title_margin": 30,
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "slides_desktop": 3,
+        "slides_mobile": 1.5,
+        "gap_desktop": 30,
+        "gap": 15,
+        "image_height": 300,
+        "image_height_mobile": 250,
+        "image_radius": 8,
+        "text_align": "left",
+        "content_padding": 15,
+        "subtitle_color": "#666666",
+        "slide_title_color": "#000000",
+        "desc_color": "#666666",
+        "btn_bg": "#000000",
+        "btn_color": "#ffffff",
+        "autoplay": true,
+        "autoplay_delay": 4000,
+        "speed": 500,
+        "loop": true,
+        "show_pagination": true,
+        "pagination_color": "#cccccc",
+        "pagination_active_color": "#000000",
+        "show_arrows": false,
+        "arrow_color": "#000000"
       }
     }
   },
@@ -3409,6 +3345,6 @@
     "section_dzB9UN",
     "product_showcase_swiper_z79WVN",
     "section_PMUhmi",
-    "featured_blog_posts_W7ifGF"
+    "image_text_carousel_rherK3"
   ]
 }

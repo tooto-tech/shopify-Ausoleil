@@ -587,13 +587,14 @@ summary {
   background-color: #1226AA;
 }
 /* 产品系列标题样式 */
-.custom-collection-text h2.collection-title {
-    font-family: 'Mont', sans-serif;
-    font-size: 56px;
-    font-weight: 900;
-    line-height: 56px;
-    color: #1226AA;
+.spacing-style.text-block.text-block--ARUJ6aFI2Z2ViYlphO__text_tqQTNE h2.collection-title {
+    font-family: 'Mont', sans-serif !important;
+    font-size: 56px !important;
+    font-weight: 900 !important;
+    line-height: 56px !important;
+    color: #1226AA !important;
 }
+
 /* 产品系列描述样式 */
 .collection-desc {
     font-family: 'Mont', sans-serif;

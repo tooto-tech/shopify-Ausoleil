@@ -1,10 +1,10 @@
-
 {%- doc -%}
   Renders the facet filtering component
 
   @param {object} results - The search results object
   @param {number} results_size - The number of products in the search results
   @param {object} [filters] - The filters object
+  @param {object} [collection] - The collection object for title display
 {%- enddoc -%}
 
 <script
@@ -84,11 +84,15 @@
 
       <div class="products-count-wrapper">
         <span title="{{ 'content.product_count' | t }}">
-          {{- 'content.item_count' | t: count: products_count -}}
+          {%- if collection != blank -%}
+            All {{ collection.title }} ({{ products_count }})
+          {%- else -%}
+            {{- 'content.item_count' | t: count: products_count -}}
+          {%- endif -%}
         </span>
       </div>
 
-      {% if block_settings.enable_sorting %}
+      {% if block_settings.enable_sorting and block_settings.show_sorting_desktop %}
         {% render 'sorting',
           results: results,
           sort_by: sort_by,
@@ -100,7 +104,7 @@
         %}
       {% endif %}
 
-      {% if block_settings.enable_grid_density %}
+      {% if block_settings.enable_grid_density and block_settings.show_grid_density_desktop %}
         {% render 'grid-density-controls', viewport: 'desktop' %}
       {% endif %}
     </div>
@@ -222,11 +226,15 @@
             {% if block_settings.filter_style == 'horizontal' %}
               <div class="products-count-wrapper">
                 <span title="{{ 'content.product_count' | t }}">
-                  {{- 'content.item_count' | t: count: products_count -}}
+                  {%- if collection != blank -%}
+                    All {{ collection.title }} ({{ products_count }})
+                  {%- else -%}
+                    {{- 'content.item_count' | t: count: products_count -}}
+                  {%- endif -%}
                 </span>
               </div>
 
-              {% if block_settings.enable_sorting %}
+              {% if block_settings.enable_sorting and block_settings.show_sorting_desktop %}
                 {% render 'sorting',
                   results: results,
                   sort_by: sort_by,
@@ -238,7 +246,7 @@
                 %}
               {% endif %}
 
-              {% if block_settings.enable_grid_density %}
+              {% if block_settings.enable_grid_density and block_settings.show_grid_density_desktop %}
                 {% render 'grid-density-controls', viewport: 'desktop' %}
               {% endif %}
             {% endif %}
@@ -263,10 +271,20 @@
           type="button"
         >
           <span class="svg-wrapper">
-            {{ 'icon-filter.svg' | inline_asset_content }}
+            {%- if block_settings.custom_filter_icon != blank -%}
+              <img
+                src="{{ block_settings.custom_filter_icon | image_url: width: 24 }}"
+                alt="Filter"
+                width="24"
+                height="24"
+                loading="lazy"
+              >
+            {%- else -%}
+              {{ 'icon-filter.svg' | inline_asset_content }}
+            {%- endif -%}
           </span>
 
-          {{ 'actions.show_filters' | t }}
+          {{ block_settings.filter_button_text | default: 'Filter' }}
 
           {% if total_active_values > 0 %}
             <div
@@ -290,7 +308,10 @@
     {% endif %}
 
     <div class="facets-mobile-wrapper facets-controls-wrapper">
-      {% if block_settings.enable_filtering == false and block_settings.enable_sorting %}
+      {% if block_settings.enable_filtering == false
+        and block_settings.enable_sorting
+        and block_settings.show_sorting_mobile
+      %}
         <facets-form-component
           section-id="{{ section.id }}"
           id="FacetFiltersForm--{{ section.id }}-mobile-sorting-only"
@@ -311,7 +332,7 @@
           </form>
         </facets-form-component>
       {% endif %}
-      {% if block_settings.enable_grid_density %}
+      {% if block_settings.enable_grid_density and block_settings.show_grid_density_mobile %}
         {% render 'grid-density-controls', viewport: 'mobile' %}
       {% endif %}
     </div>
@@ -1136,6 +1157,26 @@
       "visible_if": "{{ block.settings.enable_filtering == true }}"
     },
     {
+      "type": "header",
+      "content": "Filter Button"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_filter_icon",
+      "label": "Custom filter icon",
+      "info": "Upload a custom icon for the filter button. Leave empty to use default icon."
+    },
+    {
+      "type": "text",
+      "id": "filter_button_text",
+      "label": "Filter button text",
+      "default": "Filter"
+    },
+    {
+      "type": "header",
+      "content": "Sorting Options"
+    },
+    {
       "type": "checkbox",
       "id": "enable_sorting",
       "label": "t:settings.enable_sorting",
@@ -1143,9 +1184,41 @@
     },
     {
       "type": "checkbox",
+      "id": "show_sorting_desktop",
+      "label": "Show sorting on desktop",
+      "default": true,
+      "visible_if": "{{ block.settings.enable_sorting == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sorting_mobile",
+      "label": "Show sorting on mobile",
+      "default": true,
+      "visible_if": "{{ block.settings.enable_sorting == true }}"
+    },
+    {
+      "type": "header",
+      "content": "Grid Density Options"
+    },
+    {
+      "type": "checkbox",
       "id": "enable_grid_density",
       "label": "t:settings.enable_grid_density",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_grid_density_desktop",
+      "label": "Show grid density on desktop",
+      "default": true,
+      "visible_if": "{{ block.settings.enable_grid_density == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_grid_density_mobile",
+      "label": "Show grid density on mobile",
+      "default": true,
+      "visible_if": "{{ block.settings.enable_grid_density == true }}"
     },
     {
       "type": "checkbox",

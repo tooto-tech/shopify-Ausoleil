@@ -552,3 +552,37 @@ CSS
 .email-signup__input, .email-signup__button--text{
   padding: 16px;
 }
+/* footer菜单文本样式 */
+/* -------- Collection 主标题（PC 端） -------- */
+.menu__heading__default,
+.menu__heading__accordion {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #121821;
+}
+
+/* -------- 子菜单 li（PC 端） -------- */
+.menu__item a {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #121821;
+}
+
+/* -------- 移动端（≤768px） -------- */
+@media (max-width: 768px) {
+
+  /* Collection 主标题 */
+  .menu__heading__default,
+  .menu__heading__accordion {
+    font-size: 18px; /* ← 你要的移动端字体大小 */
+  }
+
+  /* 子菜单 li */
+  .menu__item a {
+    font-size: 13px;
+  }
+}

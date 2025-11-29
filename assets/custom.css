@@ -587,5 +587,5 @@ CSS
 }
 /* 去除Collection等标题的间距 */
 .summary{
-  padding: 0px;
+  padding-block: 0px;
 }

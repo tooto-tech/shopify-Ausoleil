@@ -1034,7 +1034,7 @@
                       "type": "social-links",
                       "name": "t:names.social_media_links",
                       "settings": {
-                        "facebook_url": "https://facebook.com",
+                        "facebook_url": "https://facebook.com/123456",
                         "instagram_url": "https://instagram.com",
                         "youtube_url": "",
                         "tiktok_url": "",

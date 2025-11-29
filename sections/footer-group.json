@@ -18,8 +18,8 @@
           "type": "_divider",
           "name": "t:names.divider",
           "settings": {
-            "thickness": 1,
-            "corner_radius": "square",
+            "thickness": 0.5,
+            "corner_radius": "rounded",
             "width_percent": 100,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -523,7 +523,7 @@
       "name": "t:names.icons_with_text",
       "settings": {
         "content_direction": "row",
-        "vertical_on_mobile": true,
+        "vertical_on_mobile": false,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,

@@ -480,3 +480,63 @@ product-price .compare-at-price{
     /* 额外的间隔优化：移除或调整段落底部默认间隔 */
     margin-bottom: 32px; 
 }
+/* 电子邮件注册信息 */
+这是一个针对 Shopify 邮件订阅区块的非常具体的 CSS 样式定制需求。我将为你提供完整的 CSS 代码，针对你提供的 HTML 结构实现所有样式要求。
+
+由于输入框和按钮的样式需要使用不同的 CSS 伪类来定位，我将分步编写。
+
+💻 邮件订阅区块 CSS 代码
+请将以下代码添加到你主题的全局样式文件（如 theme.css 或 theme.scss.liquid）中：
+
+CSS
+
+/* 邮箱订阅区块样式定制 */
+
+/* 1. 容器宽度和边框颜色/透明度 */
+.email-signup__input-group {
+    /* 容器宽度 */
+    max-width: 534px; 
+    width: 100%; /* 确保在小屏幕上仍能响应 */
+    
+    /* 边框颜色和透明度 (这里通常指 input-group 外层的边框) */
+    /* 注意：你的 HTML 中边框是通过 CSS 变量设置的，这里强制覆盖 */
+    border: 1px solid rgba(209, 209, 209, 0.6); /* #D1D1D1 with opacity 0.6 */
+}
+
+/* 2. 输入框 Placeholder 样式 */
+.email-signup__input-group input.email-signup__input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #121821;
+    opacity: 1; /* 确保浏览器不应用默认的透明度 */
+}
+/* 针对不同浏览器内核添加前缀，以确保兼容性 */
+.email-signup__input-group input.email-signup__input::-webkit-input-placeholder { /* Chrome, Safari */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #121821;
+}
+.email-signup__input-group input.email-signup__input::-moz-placeholder { /* Firefox */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #121821;
+}
+
+/* 3. 按钮背景颜色和文本样式 */
+.email-signup__input-group button.email-signup__button {
+    /* 按钮背景颜色 */
+    background-color: #1226AA;
+    
+    /* 按钮文本样式 */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #ffffff; /* 按钮文本颜色 */
+}

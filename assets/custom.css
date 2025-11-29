@@ -463,8 +463,8 @@ product-price .compare-at-price{
     line-height: 24px;
     color: #000000;
     /* 额外的间隔优化：确保标题和正文之间有足够空间 */
-    margin-top: 30px; 
-    margin-bottom: 10px;
+    margin-top: 0px; 
+    margin-bottom: 0px;
 }
 
 /* 针对富文本内容容器内的 <p> 标签（正文） */
@@ -477,5 +477,5 @@ product-price .compare-at-price{
     line-height: 20px;
     color: #231C0A;
     /* 额外的间隔优化：移除或调整段落底部默认间隔 */
-    margin-bottom: 14px; 
+    margin-bottom: 0px; 
 }

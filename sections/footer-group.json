@@ -27,7 +27,7 @@
             "gap": 16,
             "enable_mobile_gap": false,
             "gap_mobile": 12,
-            "width": "fill",
+            "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
@@ -133,7 +133,7 @@
             "width_percent": 100,
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "custom_class": ""
+            "custom_class": "fd"
           },
           "blocks": {}
         }

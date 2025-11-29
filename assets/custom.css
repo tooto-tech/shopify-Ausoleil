@@ -455,8 +455,8 @@ product-price .compare-at-price{
 /* TERM ＆ CONDITION */
 /* 针对富文本内容容器内的 <h3> 标签（标题） */
 /* 针对富文本内容容器内的 <h3> 标签（标题） */
-.policy.rte-formatter h3,
-.policy.text-block h3 {
+.policy .rte-formatter h3,
+.policy .text-block h3 {
     /* 标题样式 */
     font-family: 'Poppins', sans-serif;
     font-size: 16px;

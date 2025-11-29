@@ -751,35 +751,47 @@
     "section_aXixnM": {
       "type": "section",
       "blocks": {
-        "product_description_tDUaNd": {
-          "type": "product-description",
-          "name": "t:names.product_description",
+        "text_QCLPnt": {
+          "type": "text",
+          "name": "t:names.text",
           "settings": {
             "text": "<p>One dusk, a wind carrying the scent of sea salt blew slowly from the pier. He took off the sunglasses he had worn all day long, and his fingertips gently tapped the hard temples. Amid the faint sound of metal clanging, a thought suddenly became clear: the inability to find the sunglasses he liked was not because the number of choices was insufficient, but because there had never been a design that could truly understand this \"yearning for the light and shadow by the seaside\".</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "center",
+            "type_preset": "custom",
+            "font": "var(--font-subheading--family)",
+            "font_size": "1.25rem",
+            "font_size_mobile": "",
+            "weight": "275",
+            "weight_mobile": "275",
             "line_height": "normal",
             "letter_spacing": "normal",
+            "letter_spacing_custom": "",
             "case": "none",
             "wrap": "pretty",
             "color": "var(--color-foreground)",
+            "custom_color": "",
+            "custom_color_mobile": "",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0,
+            "custom_class": ""
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "product_description_tDUaNd"
+        "text_QCLPnt"
       ],
       "name": "banner描述",
       "settings": {
@@ -788,7 +800,7 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",

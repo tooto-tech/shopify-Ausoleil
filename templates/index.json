@@ -3288,6 +3288,10 @@
         "item_VLMUtF",
         "item_bzbjqa"
       ],
+      "custom_css": [
+        ".itm-item {width: 200px; display: flex; flex-direction: column; text-align: center;}",
+        ".itm-item__title,.itm-item__desc {overflow-wrap: break-word; word-break: break-word; max-width: 100%;}"
+      ],
       "name": "图文走马灯",
       "settings": {
         "title": "",

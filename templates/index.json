@@ -3331,7 +3331,7 @@
       "custom_css": [
         ".itm-item {width: 200px; display: flex; flex-direction: column; text-align: center;}",
         ".itm-item__title,.itm-item__desc {overflow-wrap: break-word; word-break: break-word; max-width: 100%;}",
-        "/* 修改每个item的宽度 */.itm-item{width: 380px;}"
+        " /* 修改每个item的宽度 */.itm-item {width: 380px;}"
       ],
       "name": "图文走马灯",
       "settings": {
@@ -3340,10 +3340,10 @@
         "bg_color": "#ffffff",
         "padding_top": 40,
         "padding_bottom": 40,
-        "gap": 30,
+        "gap": 10,
         "speed": 30,
         "direction": "normal",
-        "aspect_ratio": "4/5",
+        "aspect_ratio": "1/1",
         "image_radius": 8,
         "text_align": "center",
         "item_title_color": "#000000",

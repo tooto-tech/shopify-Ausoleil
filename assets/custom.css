@@ -501,8 +501,7 @@ CSS
 .email-signup-block{
     max-width: 534px; 
     /* 确保容器本身是块级元素 */
-    margin-left: auto;
-    margin-right: auto; /* 可选：如果你希望整个区块居中 */
+    margin-right: auto;
 }
 
 /* 2. 边框颜色/透明度 (应用于内层 input-group) */

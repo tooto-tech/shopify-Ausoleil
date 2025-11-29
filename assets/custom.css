@@ -586,6 +586,8 @@ CSS
   }
 }
 /* 去除Collection等标题的间距 */
-.summary{
-
+summary {
+    padding-block: 0;
+    padding-top: 0; 
+    padding-bottom: 0; 
 }

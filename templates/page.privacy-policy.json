@@ -78,19 +78,8 @@
     },
     "main": {
       "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "content_direction": "column",
-        "gap": 32,
-        "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 80
-      }
-    },
-    "section_FkF7WA": {
-      "type": "section",
       "blocks": {
-        "group_mUAg9P": {
+        "group_BJndDH": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -143,7 +132,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_7kkdrW": {
+            "text_kMWAxP": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -177,17 +166,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_KYTgpq": {
+            "text_ajE7yf": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>We collect personal information you provide during registration, checkout, or customer service interactions, including your name, phone number, email address, shipping address, and payment details. This information is used to fulfill orders and support your overall experience.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -215,17 +204,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_7kkdrW",
-            "text_KYTgpq"
+            "text_kMWAxP",
+            "text_ajE7yf"
           ]
         },
-        "group_egAVmA": {
+        "group_6RUwY6": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -278,7 +267,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_UThF87": {
+            "text_3cGgCL": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -312,17 +301,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_jwkbN9": {
+            "text_6UtExY": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>When you browse our website, we automatically gather certain technical data—such as device type, IP address, pages viewed, and session duration—through cookies and similar technologies to improve site functionality and user experience.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -350,17 +339,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_UThF87",
-            "text_jwkbN9"
+            "text_3cGgCL",
+            "text_6UtExY"
           ]
         },
-        "group_7MKQTX": {
+        "group_rCi7cL": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -413,7 +402,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_FTDGhG": {
+            "text_tTkAU9": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -447,17 +436,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_nT4FXC": {
+            "text_jXDHFE": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>We use your personal information solely to process orders, arrange delivery, send shipping notifications, provide after-sales support, and deliver promotional content when you have given consent.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -485,17 +474,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_FTDGhG",
-            "text_nT4FXC"
+            "text_tTkAU9",
+            "text_jXDHFE"
           ]
         },
-        "group_TrBTYD": {
+        "group_TnaceE": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -548,7 +537,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_qNUUEe": {
+            "text_fCiRj9": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -582,17 +571,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_ViKCmc": {
+            "text_TBW6LP": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>We do not sell or rent your personal information. Data may be shared only with trusted third-party partners, such as logistics providers and payment processors, and only under strict confidentiality and security obligations.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -620,17 +609,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_qNUUEe",
-            "text_ViKCmc"
+            "text_fCiRj9",
+            "text_TBW6LP"
           ]
         },
-        "group_H73mYr": {
+        "group_wg9f3G": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -683,7 +672,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_n9NKyR": {
+            "text_dFUE3N": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -717,17 +706,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_XKJP8X": {
+            "text_n3mwxQ": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>We employ industry-standard security measures—including SSL encryption, firewalls, and restricted access protocols—to protect your data from unauthorized access, disclosure, alteration, or loss.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -755,17 +744,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_n9NKyR",
-            "text_XKJP8X"
+            "text_dFUE3N",
+            "text_n3mwxQ"
           ]
         },
-        "group_YYwd3p": {
+        "group_EDfhqg": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -818,7 +807,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_HGj7mQ": {
+            "text_9tBQtY": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -852,17 +841,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_QDx3BP": {
+            "text_HCi9QH": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Our site uses cookies to enhance functionality and personalize your experience. You may disable cookies in your browser settings; however, some site features may become limited or unavailable.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -890,17 +879,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_HGj7mQ",
-            "text_QDx3BP"
+            "text_9tBQtY",
+            "text_HCi9QH"
           ]
         },
-        "group_8BG3jp": {
+        "group_iQFtWa": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -953,7 +942,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_wWCagn": {
+            "text_6dDXMh": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -987,17 +976,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_r8JrB8": {
+            "text_C9TntV": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>You have the right to request access to, correction of, or deletion of your personal data, as well as the right to withdraw consent for marketing communications at any time by contacting our customer service team.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1025,17 +1014,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_wWCagn",
-            "text_r8JrB8"
+            "text_6dDXMh",
+            "text_C9TntV"
           ]
         },
-        "group_n44rxU": {
+        "group_iYKrJU": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -1088,7 +1077,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_Gr8Vad": {
+            "text_PLyjNK": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1122,17 +1111,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_X4Cyhn": {
+            "text_Ph8pNL": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Our services are not intended for individuals under the age of 14. If we become aware that such information has been collected, we will delete it promptly.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1160,17 +1149,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_Gr8Vad",
-            "text_X4Cyhn"
+            "text_PLyjNK",
+            "text_Ph8pNL"
           ]
         },
-        "group_i3jBf7": {
+        "group_BXnyhF": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -1223,7 +1212,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_hm3WNg": {
+            "text_ppHgNc": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1257,17 +1246,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_QmYPTE": {
+            "text_q7hQyt": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>Our website may contain links to external sites. We are not responsible for the privacy practices of those third-party websites, and we encourage you to review their policies independently.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1295,17 +1284,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_hm3WNg",
-            "text_QmYPTE"
+            "text_ppHgNc",
+            "text_q7hQyt"
           ]
         },
-        "group_9Bi8n6": {
+        "group_nnccNU": {
           "type": "group",
           "name": "文本块",
           "settings": {
@@ -1358,7 +1347,7 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "text_LBFTGy": {
+            "text_WDLfrt": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -1392,17 +1381,17 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-title"
               },
               "blocks": {}
             },
-            "text_9ek4z3": {
+            "text_k3EX6R": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
                 "text": "<p>We may update this Privacy Policy periodically. Any changes will be posted on our website, and your continued use of our services constitutes acceptance of the revised policy.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -1430,29 +1419,39 @@
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "custom_class": "policy-text"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "text_LBFTGy",
-            "text_9ek4z3"
+            "text_WDLfrt",
+            "text_k3EX6R"
           ]
         }
       },
       "block_order": [
-        "group_mUAg9P",
-        "group_egAVmA",
-        "group_7MKQTX",
-        "group_TrBTYD",
-        "group_H73mYr",
-        "group_YYwd3p",
-        "group_8BG3jp",
-        "group_n44rxU",
-        "group_i3jBf7",
-        "group_9Bi8n6"
+        "group_BJndDH",
+        "group_6RUwY6",
+        "group_rCi7cL",
+        "group_TnaceE",
+        "group_wg9f3G",
+        "group_EDfhqg",
+        "group_iQFtWa",
+        "group_iYKrJU",
+        "group_BXnyhF",
+        "group_nnccNU"
       ],
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "section_FkF7WA": {
+      "type": "section",
       "name": "内容区",
       "settings": {
         "content_direction": "column",

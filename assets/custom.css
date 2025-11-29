@@ -585,3 +585,7 @@ CSS
     font-size: 13px;
   }
 }
+/* 去除Collection等标题的间距 */
+.summary{
+  padding: 0px;
+}

@@ -1,9 +1,8 @@
 {%- comment -%}
   Image Text Marquee - 图文无缝滚动走马灯
-  - 均匀水平平移
+  - 均匀水平平移，无缝循环
   - 鼠标悬停暂停
 {%- endcomment -%}
-
 
 <div
   class="itm-section"
@@ -19,27 +18,16 @@
   {%- endif -%}
 
   <div
-    class="itm-track"
-    style="
-      --marquee-speed: {{ section.settings.speed }}s;
-      --marquee-direction: {{ section.settings.direction }};
-      --marquee-gap: {{ section.settings.gap }}px;
-    "
+    class="itm-track {% if section.settings.direction == 'reverse' %}itm-track--reverse{% endif %}"
+    style="--marquee-speed: {{ section.settings.speed }}s; --marquee-gap: {{ section.settings.gap }}px;"
   >
     <div class="itm-content">
       {%- for block in section.blocks -%}
-        <div class="itm-item" {{ block.shopify_attributes }}>
-          <div
-            class="itm-item__image"
-            style="
-              width: {{ section.settings.image_width }}px;
-              height: {{ section.settings.image_height }}px;
-              border-radius: {{ section.settings.image_radius }}px;
-            "
-          >
+        <div class="itm-item" {{ block.shopify_attributes}}>
+          <div class="itm-item__image" style="border-radius: {{ section.settings.image_radius }}px;">
             {%- if block.settings.image != blank -%}
               <img
-                src="{{ block.settings.image | image_url: width: 600 }}"
+                src="{{ block.settings.image | image_url: width: 800 }}"
                 alt="{{ block.settings.image.alt | default: block.settings.title | escape }}"
                 loading="lazy"
                 width="{{ block.settings.image.width }}"
@@ -73,18 +61,11 @@
     <div class="itm-content" aria-hidden="true">
       {%- for block in section.blocks -%}
         <div class="itm-item">
-          <div
-            class="itm-item__image"
-            style="
-              width: {{ section.settings.image_width }}px;
-              height: {{ section.settings.image_height }}px;
-              border-radius: {{ section.settings.image_radius }}px;
-            "
-          >
+          <div class="itm-item__image" style="border-radius: {{ section.settings.image_radius }}px;">
             {%- if block.settings.image != blank -%}
               <img
-                src="{{ block.settings.image | image_url: width: 600 }}"
-                alt="{{ block.settings.image.alt | default: block.settings.title | escape }}"
+                src="{{ block.settings.image | image_url: width: 800 }}"
+                alt=""
                 loading="lazy"
                 width="{{ block.settings.image.width }}"
                 height="{{ block.settings.image.height }}"
@@ -92,21 +73,18 @@
             {%- else -%}
               <div class="itm-item__placeholder">{{ 'image' | placeholder_svg_tag }}</div>
             {%- endif -%}
-            {%- if block.settings.link != blank -%}
-              <a href="{{ block.settings.link }}" class="itm-item__link"></a>
-            {%- endif -%}
           </div>
           {%- if block.settings.title != blank or block.settings.description != blank -%}
             <div class="itm-item__content" style="text-align: {{ section.settings.text_align }};">
               {%- if block.settings.title != blank -%}
-                <h3 class="itm-item__title" style="color: {{ section.settings.item_title_color }};">
+                <span class="itm-item__title" style="color: {{ section.settings.item_title_color }};">
                   {{ block.settings.title }}
-                </h3>
+                </span>
               {%- endif -%}
               {%- if block.settings.description != blank -%}
-                <p class="itm-item__desc" style="color: {{ section.settings.desc_color }};">
+                <span class="itm-item__desc" style="color: {{ section.settings.desc_color }};">
                   {{ block.settings.description }}
-                </p>
+                </span>
               {%- endif -%}
             </div>
           {%- endif -%}
@@ -121,60 +99,47 @@
     width: 100%;
     overflow: hidden;
   }
-
   .itm-title {
     text-align: center;
     font-family: var(--font-heading--family);
     font-size: 28px;
     margin: 0 0 30px;
+    padding: 0 20px;
   }
-
   .itm-track {
     display: flex;
-    width: 100%;
-    overflow: hidden;
+    width: max-content;
+    overflow: visible;
   }
-
   .itm-content {
     display: flex;
     gap: var(--marquee-gap);
     padding-right: var(--marquee-gap);
-    animation: marquee-scroll var(--marquee-speed) linear infinite;
-    animation-direction: var(--marquee-direction);
+    animation: itm-scroll var(--marquee-speed) linear infinite;
   }
-
-  /* 鼠标悬停暂停 */
+  .itm-track--reverse .itm-content {
+    animation-direction: reverse;
+  }
   .itm-track:hover .itm-content {
     animation-play-state: paused;
   }
-
-  @keyframes marquee-scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  @keyframes itm-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
   }
-
-  /* 反向滚动 */
-  .itm-content[style*='direction: reverse'] {
-    animation-direction: reverse;
-  }
-
   .itm-item {
     flex-shrink: 0;
+    width: calc((100vw - var(--marquee-gap) * 2) / 3 - var(--marquee-gap) * 2 / 3);
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
-
   .itm-item__image {
     position: relative;
+    width: 100%;
+    aspect-ratio: {{ section.settings.aspect_ratio }};
     overflow: hidden;
-    flex-shrink: 0;
   }
-
   .itm-item__image img {
     width: 100%;
     height: 100%;
@@ -182,11 +147,9 @@
     display: block;
     transition: transform 0.3s;
   }
-
   .itm-item:hover .itm-item__image img {
     transform: scale(1.05);
   }
-
   .itm-item__placeholder {
     width: 100%;
     height: 100%;
@@ -195,47 +158,37 @@
     align-items: center;
     justify-content: center;
   }
-
-  .itm-item__placeholder svg {
-    width: 50px;
-    opacity: 0.3;
-  }
-
+  .itm-item__placeholder svg { width: 60px; opacity: 0.3; }
   .itm-item__link {
     position: absolute;
     inset: 0;
     z-index: 2;
   }
-
   .itm-item__content {
     padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
   }
-
   .itm-item__title {
     font-family: var(--font-heading--family);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     margin: 0;
     line-height: 1.3;
   }
-
   .itm-item__desc {
     font-size: 14px;
     line-height: 1.5;
-    margin: 6px 0 0;
+    margin: 0;
   }
-
   @media (max-width: 749px) {
-    .itm-title {
-      font-size: 22px;
-      margin-bottom: 20px;
+    .itm-item {
+      width: calc(100vw - 60px);
     }
-    .itm-item__title {
-      font-size: 14px;
-    }
-    .itm-item__desc {
-      font-size: 12px;
-    }
+    .itm-title { font-size: 22px; margin-bottom: 20px; }
+    .itm-item__title { font-size: 16px; }
+    .itm-item__desc { font-size: 13px; }
   }
 </style>
 
@@ -309,10 +262,10 @@
       "id": "speed",
       "label": "滚动速度",
       "min": 10,
-      "max": 60,
+      "max": 80,
       "step": 5,
       "unit": "s",
-      "default": 30,
+      "default": 40,
       "info": "数值越小滚动越快"
     },
     {
@@ -330,24 +283,18 @@
       "content": "图片设置"
     },
     {
-      "type": "range",
-      "id": "image_width",
-      "label": "图片宽度",
-      "min": 100,
-      "max": 400,
-      "step": 10,
-      "unit": "px",
-      "default": 200
-    },
-    {
-      "type": "range",
-      "id": "image_height",
-      "label": "图片高度",
-      "min": 100,
-      "max": 400,
-      "step": 10,
-      "unit": "px",
-      "default": 250
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "图片比例",
+      "options": [
+        { "value": "1/1", "label": "1:1 正方形" },
+        { "value": "4/5", "label": "4:5 竖版" },
+        { "value": "3/4", "label": "3:4 竖版" },
+        { "value": "2/3", "label": "2:3 竖版" },
+        { "value": "16/9", "label": "16:9 横版" },
+        { "value": "4/3", "label": "4:3 横版" }
+      ],
+      "default": "4/5"
     },
     {
       "type": "range",

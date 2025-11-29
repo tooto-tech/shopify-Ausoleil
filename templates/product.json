@@ -216,7 +216,7 @@
                     "save_font": "",
                     "price_font_size": "",
                     "price_color": "",
-                    "compare_price_font_size": "",
+                    "compare_price_font_size": "1.875rem",
                     "compare_price_color": "",
                     "save_font_size": "",
                     "save_color": "",

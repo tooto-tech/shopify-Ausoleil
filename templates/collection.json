@@ -120,7 +120,7 @@
         "gradient_direction": "to top",
         "padding-block-start": 48,
         "padding-block-end": 48,
-        "custom_class": ""
+        "custom_class": "custom-collection-text"
       }
     },
     "main": {

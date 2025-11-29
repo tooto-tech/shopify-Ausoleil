@@ -460,7 +460,7 @@ product-price .compare-at-price{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    line-height: 1.6;
+    line-height: 1;
     color: #000000;
     /* 额外的间隔优化：确保标题和正文之间有足够空间 */
     margin-top: 0px; 

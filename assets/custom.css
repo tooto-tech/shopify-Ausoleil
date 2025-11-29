@@ -494,9 +494,19 @@ CSS
 
 /* 1. 容器宽度限制 (应用于外层 Block) */
 /* 假设 .email-signup-block 是 .email-signup__input-group 的父容器 */
+
+/* 针对 .email-signup-block 设置最大宽度和居中 */
+email-signup-block.email-signup-block {
+    /* 覆盖可能的行内或主题宽度设置 */
+    width: 100% !important; 
+    max-width: 534px !important; /* 使用 !important 临时确保生效，待确认后移除 */
+    
+    /* 居中（如果需要） */
+    margin-left: auto;
+    margin-right: auto;
+}
 .email-signup-block{
-    max-width: 414px; 
-    min-width: 0px;
+    max-width: 534px; 
     /* 确保容器本身是块级元素 */
     margin-left: auto;
     margin-right: auto; /* 可选：如果你希望整个区块居中 */

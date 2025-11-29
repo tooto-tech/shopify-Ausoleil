@@ -598,11 +598,12 @@ summary {
 /* 图标列表内容居右 */
 .menu__heading {
   display: flex;
-  justify-content: flex-end; /* summary 整体靠右 */
+  justify-content: flex-end; /* 整体向右 */
+  width: 100%;
 }
 
-.menu__heading > span {
-  display: flex;
-  justify-content: flex-end; /* 每个 span 内部内容靠右 */
-
+.menu__heading__default,
+.menu__heading__accordion {
+  margin-left: auto; /* 强制文本靠右 */
+  text-align: right;
 }

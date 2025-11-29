@@ -599,12 +599,10 @@ summary {
 .menu__heading {
   display: flex;
   justify-content: flex-end; /* summary 整体靠右 */
-  width: 100%;
 }
 
 .menu__heading > span {
   display: flex;
   justify-content: flex-end; /* 每个 span 内部内容靠右 */
-  flex: 1; /* 让文本占满行，才能右对齐 */
-  text-align: right;
+
 }

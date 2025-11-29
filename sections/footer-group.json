@@ -503,6 +503,7 @@
         "divider_cGjdhT",
         "group_frCTm7"
       ],
+      "disabled": true,
       "custom_css": [
         ".divider {transform: rotate(15deg); display: flex; justify-content: center;}"
       ],
@@ -1196,7 +1197,6 @@
       "block_order": [
         "group_JKhtmD"
       ],
-      "disabled": true,
       "name": "t:names.footer",
       "settings": {
         "section_width": "full-width",
@@ -1251,7 +1251,6 @@
       "block_order": [
         "text_RVH6tH"
       ],
-      "disabled": true,
       "name": "底部版权",
       "settings": {
         "content_direction": "column",

@@ -596,3 +596,8 @@ summary {
   background-color: #1226AA;
 }
 /* 图标列表内容居右 */
+.details-content,
+.details-content ul,
+.menu__heading {
+  text-align: right;
+}

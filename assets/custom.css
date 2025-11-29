@@ -133,6 +133,12 @@ product-price .compare-at-price{
   border-color: #ffffff80;
 }
 
+/* 文字样式（桌面端） - 给 text 添加 ft 类名 */
+.ft > p {
+  font-weight: 500;
+  line-height: 22px;
+}
+
 /* 移动端样式 - 横向滚动 */
 @media (max-width: 749px) {
   .my-custom-texticon .section {
@@ -196,7 +202,44 @@ product-price .compare-at-price{
     flex-shrink: 0;
   }
 
-  /* 图标大小 */
+  /* 隐藏分隔线（移动端） - 给 divider 添加 fd 类名 */
+  .fd {
+    display: none !important;
+  }
+
+  /* 图标大小 - 给 icon 添加 fi 类名 */
+  .fi .icon-block__media {
+    width: 29px !important;
+    height: 29px !important;
+  }
+
+  /* 文字样式 - 给 text 添加 ft 类名 */
+  .ft > p {
+    font-size: 12px !important;
+    line-height: 32px !important;
+  }
+
+  /* group 样式 - 给 group 添加 fg 类名 */
+  .fg {
+    flex-shrink: 0;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    min-width: max-content;
+    --size-style-width-mobile: fit-content !important;
+    max-width: none !important;
+  }
+
+  .fg .group-block-content {
+    flex-direction: row !important;
+    gap: 10px !important;
+  }
+
+  .fg .icon-block .fi {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* 图标大小（旧样式保留兼容） */
   .my-custom-texticon .icon-block__media {
     width: 29px !important;
     height: 29px !important;

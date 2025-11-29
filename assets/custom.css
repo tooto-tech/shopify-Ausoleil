@@ -586,4 +586,18 @@ summary {
 .footer__copyright{
   background-color: #1226AA;
 }
-/* 图标列表内容居右 */
+/* 产品系列标题样式 */
+.collection-title {
+    font-family: 'Mont', sans-serif;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 56px;
+    color: #1226AA;
+}
+/* 产品系列描述样式 */
+.collection-desc {
+    font-family: 'Mont', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}

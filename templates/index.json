@@ -405,7 +405,6 @@
         "slide_xrE3gC",
         "slide_w7wyXP"
       ],
-      "disabled": true,
       "name": "t:names.slideshow",
       "settings": {
         "icons_style": "arrows_large",
@@ -700,7 +699,6 @@
         "group_YT7ptY",
         "group_XCNFLh"
       ],
-      "disabled": true,
       "name": "t:names.multicolumn",
       "settings": {
         "content_direction": "row",
@@ -987,7 +985,6 @@
       "block_order": [
         "group_Dy77NB"
       ],
-      "disabled": true,
       "custom_css": [
         ".collection-card__link {background-color: white;}"
       ],
@@ -1272,7 +1269,6 @@
           ]
         }
       },
-      "disabled": true,
       "custom_css": [
         ".product-badges__badge {background: #1226aa; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}"
       ],
@@ -1334,7 +1330,6 @@
       "block_order": [
         "button_hVciNh"
       ],
-      "disabled": true,
       "name": "Shop More",
       "settings": {
         "content_direction": "column",
@@ -1447,7 +1442,6 @@
         "text_fMG6wt",
         "text_cJPCHP"
       ],
-      "disabled": true,
       "name": "Banner",
       "settings": {
         "media_type_1": "image",
@@ -1504,7 +1498,6 @@
       "block_order": [
         "icon_k6mAWU"
       ],
-      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -1701,7 +1694,6 @@
       "block_order": [
         "text_BdQkcQ"
       ],
-      "disabled": true,
       "custom_css": [
         ".product-badges__badge {background: #121821; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}"
       ],
@@ -1762,7 +1754,6 @@
       "block_order": [
         "button_cGmjmp"
       ],
-      "disabled": true,
       "name": "Shop More",
       "settings": {
         "content_direction": "column",
@@ -2121,7 +2112,6 @@
         "pss_slide_QfhY46",
         "pss_slide_KpfBfi"
       ],
-      "disabled": true,
       "custom_css": [
         ".pss-swiper {width: 95%;}",
         ".pss-slide__left-text {width: 120%;}"

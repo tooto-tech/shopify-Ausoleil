@@ -1,10 +1,23 @@
+<style>
+  [data-social-block-id="{{ block.id }}"].social-icons__wrapper {
+    gap: {{ block.settings.icon_gap }}px !important;
+    color: {{ block.settings.icon_color }} !important;
+  }
+  [data-social-block-id="{{ block.id }}"] .social-icons__icon-wrapper {
+    height: {{ block.settings.icon_size }}px !important;
+  }
+  [data-social-block-id="{{ block.id }}"] .social-icons__icon {
+    width: {{ block.settings.icon_size }}px !important;
+    height: {{ block.settings.icon_size }}px !important;
+    fill: {{ block.settings.icon_color }} !important;
+  }
+  [data-social-block-id="{{ block.id }}"] .social-icons__icon-wrapper:has(.social-icons__icon path) {
+    width: {{ block.settings.icon_size }}px !important;
+  }
+</style>
 <div
   class="social-icons__wrapper footer-utilities__icons"
-  style="
-    --social-icon-gap: {{ block.settings.icon_gap }}px;
-    --social-icon-size: {{ block.settings.icon_size }}px;
-    --social-icon-color: {{ block.settings.icon_color }};
-  "
+  data-social-block-id="{{ block.id }}"
   {{ block.shopify_attributes }}
 >
   {% liquid
@@ -187,7 +200,7 @@
     },
     {
       "type": "range",
-      "id":"e",
+      "id": "e",
       "label": "图标大小",
       "min": 16,
       "max": 48,

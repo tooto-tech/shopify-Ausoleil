@@ -358,8 +358,8 @@
       "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0": {
         "settings": {
           "background": "#ffffff",
-          "foreground_heading": "#000000",
-          "foreground": "#000000cf",
+          "foreground_heading": "#ffffff",
+          "foreground": "#ffffff",
           "primary": "#000000cf",
           "primary_hover": "#000000",
           "border": "#0000000f",

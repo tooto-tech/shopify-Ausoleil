@@ -1092,9 +1092,9 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>where precision meets innovation.   Curated styles that redefine modern menswear, blending timeless cuts with season-defining details.</p>",
+                "text": "<p>where precision meets innovation.   Curated styles that redefine modern menswear, blending timeless cuts <br/>with season-defining details.</p>",
                 "width": "100%",
-                "max_width": "normal",
+                "max_width": "none",
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "'Mont', var(--font-heading--family)",
@@ -1288,7 +1288,7 @@
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
         "gap": 28,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "padding-block-start": 48,
         "padding-block-end": 48
       }

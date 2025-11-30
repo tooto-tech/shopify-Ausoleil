@@ -211,7 +211,7 @@
                     "show_installments": false,
                     "show_tax_info": false,
                     "show_save": false,
-                    "price_font": "",
+                    "price_font": "var(--font-accent--family)",
                     "compare_price_font": "var(--font-accent--family)",
                     "save_font": "",
                     "price_font_size": "",

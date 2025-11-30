@@ -79,18 +79,18 @@
             endif
           -%}
 
-          {%- if has_quantity_rules -%}
-            {%- assign cart_quantity = cart | item_count_for_variant: variant.id -%}
-            <div class="quantity-label">
-              {{ 'products.product.quantity' | t }}
+          {%- assign cart_quantity = cart | item_count_for_variant: variant.id -%}
+          <div class="quantity-label quantity-label-custom">
+            Quantity:
+            {%- if has_quantity_rules -%}
               <span
                 class="quantity-label__cart-count{% if cart_quantity == 0 %} hidden{% endif %}"
                 ref="quantityLabelCartCount"
                 >({{ cart_quantity }}
                 {{ 'products.product.in_cart' | t }})</span
               >
-            </div>
-          {%- endif -%}
+            {%- endif -%}
+          </div>
 
           {% content_for 'block', type: 'quantity', id: 'quantity' %}
 

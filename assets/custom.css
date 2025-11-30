@@ -602,3 +602,21 @@ summary {
     font-weight: 300 !important;
     line-height: 24px !important;
 }
+
+
+/* 产品详情页数量选择器 Label 样式 */
+.quantity-label-custom {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+/* 让数量选择器独占一行，在按钮上方 */
+.product-form-buttons .quantity-selector {
+    flex: 1 0 100% !important;
+    width: 100% !important;
+    max-width: 120px;
+    margin-bottom: 12px;
+}

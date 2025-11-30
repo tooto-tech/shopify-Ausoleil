@@ -121,7 +121,7 @@
             "enable_aos_animation": false,
             "aos_animation_type": "fade-up",
             "aos_animation_delay": 0,
-            "padding-block-start": 0,
+            "padding-block-start": 15,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0,
@@ -1446,7 +1446,7 @@
         "content_direction": "column",
         "gap": 32,
         "color_scheme": "",
-        "padding-block-start": 40,
+        "padding-block-start": 100,
         "padding-block-end": 80
       }
     }

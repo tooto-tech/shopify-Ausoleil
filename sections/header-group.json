@@ -123,7 +123,9 @@
         "enable_transparent_header_product": false,
         "product_color_scheme": "inverse",
         "enable_transparent_header_collection": false,
-        "collection_color_scheme": "inverse"
+        "collection_color_scheme": "inverse",
+        "enable_transparent_header_other": true,
+        "other_color_scheme": "inverse"
       }
     }
   },

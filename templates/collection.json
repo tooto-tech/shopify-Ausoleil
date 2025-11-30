@@ -138,6 +138,8 @@
             "show_filter_label": true,
             "custom_filter_icon": "shopify://shop_images/92691c477f0e677531a746a72a9535d1_64bb874a-2d72-4087-bd94-346e1aaf226a.svg",
             "filter_button_text": "Filter",
+            "accordion_expand_icon": "shopify://shop_images/18dddcc9cf53b547eaf0f76c308502f6.svg",
+            "accordion_collapse_icon": "shopify://shop_images/minus.svg",
             "enable_sorting": false,
             "show_sorting_desktop": true,
             "show_sorting_mobile": true,

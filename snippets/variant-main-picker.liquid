@@ -116,6 +116,21 @@
                     mode: 'unscaled'
                   %}
                 {% else %}
+                  {% liquid
+                    assign featured_media = product_option_value.variant.featured_media
+
+                    # If the variant has no featured media, and we have a combined listing product, then fall back to
+                    # using the featured media of the child product that is linked to this option value.
+                    if featured_media == blank and product_option_value.product_url
+                      assign featured_media = product_option_value.variant.product.featured_media
+                    endif
+                  %}
+                  
+                  {% if featured_media %}
+                    <span class="variant-option__thumbnail" style="background-color: #F1F1F1;">
+                      {{ featured_media | image_url: width: 76 | image_tag: loading: 'lazy', sizes: '38px', widths: '38, 76' }}
+                    </span>
+                  {% endif %}
                   {% if product_option_value.available == true %}
                     <span class="variant-option__button-label__pill"></span>
                   {% endif %}
@@ -307,7 +322,7 @@
     border: var(--options-border-width) solid var(--color-variant-border);
     border-radius: var(--options-border-radius);
     overflow: clip;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: calc(3ch + 1.3em);
     min-width: fit-content;
     white-space: nowrap;
@@ -428,6 +443,29 @@
     text-align: start;
     text-wrap: auto;
     z-index: 2;
+  }
+
+  .variant-option__thumbnail {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    margin-inline-end: var(--padding-xs);
+    border-radius: var(--options-border-radius);
+    overflow: hidden;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .variant-option__thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .variant-option__button-label:has(.variant-option__thumbnail) {
+    min-height: calc(38px + (var(--padding-sm) * 2));
   }
 
   .variant-option--equal-width-buttons {

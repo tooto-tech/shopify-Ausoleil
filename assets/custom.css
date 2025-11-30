@@ -464,7 +464,7 @@ product-price .compare-at-price{
     line-height: 1;
     color: #000000;
     /* 额外的间隔优化：确保标题和正文之间有足够空间 */
-    margin-top: 0px; 
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -478,7 +478,7 @@ product-price .compare-at-price{
     line-height: 20px;
     color: #231C0A;
     /* 额外的间隔优化：移除或调整段落底部默认间隔 */
-    margin-bottom: 32px; 
+    margin-bottom: 32px;
 }
 
 /* 邮箱订阅区块样式定制 */
@@ -490,7 +490,7 @@ product-price .compare-at-price{
   max-width: 543px;
 }
 .email-signup-block{
-    max-width: 534px; 
+    max-width: 534px;
     /* 确保容器本身是块级元素 */
     margin-right: auto;
 }
@@ -510,7 +510,7 @@ product-price .compare-at-price{
     font-weight: normal;
     line-height: 20px;
     color: #121821;
-    opacity: 1; 
+    opacity: 1;
 }
 .email-signup__input-group input.email-signup__input::-webkit-input-placeholder {
     font-family: 'Poppins', sans-serif;
@@ -534,7 +534,7 @@ product-price .compare-at-price{
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
-    color: #ffffff; 
+    color: #ffffff;
 }
 /* 去除gap */
 .email-signup__input-group:not(:has(.email-signup__button--integrated)){
@@ -579,8 +579,8 @@ product-price .compare-at-price{
 /* 去除Collection等标题的间距 */
 summary {
     padding-block: 0;
-    padding-top: 0; 
-    padding-bottom: 0; 
+    padding-top: 0;
+    padding-bottom: 0;
 }
 /* 底部版权背景色 */
 .footer__copyright{

@@ -1819,6 +1819,7 @@ zoom-dialog dialog {
 .product-media {
   display: flex;
   flex: 1;
+  background: #F9FAFC;
 }
 
 /* If the product media is already providing an image cover, hide images provided by sibling deferred-media */
@@ -2516,8 +2517,8 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   --checkbox-top: 50%;
   --checkbox-left: 1.5px;
   --checkbox-offset: 3px;
-  --checkbox-border-radius: 7px;
-  --checkbox-label-padding: 8px;
+  --checkbox-border-radius: 2px;
+  --checkbox-label-padding: 12px;
   --checkbox-path-opacity: 0;
   --checkbox-cursor: pointer;
   --checkbox-border: 1px solid rgb(var(--color-foreground-rgb) / var(--opacity-35-55));
@@ -2528,8 +2529,8 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 
   @media screen and (min-width: 750px) {
     --checkbox-size: 16px;
-    --checkbox-border-radius: 5px;
-    --checkbox-label-padding: 6px;
+    --checkbox-border-radius: 2px;
+    --checkbox-label-padding: 12px;
   }
 
   &:has(.checkbox__input:checked) {
@@ -2581,7 +2582,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   height: var(--checkbox-size);
   width: var(--checkbox-size);
   flex-shrink: 0;
-  border: var(--checkbox-border);
+  border: 1px solid #C2C2C2;
   border-radius: var(--checkbox-border-radius);
   background-color: var(--color-background);
 }
@@ -2591,6 +2592,10 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: Poppins;
+font-size: 14px;
+font-weight: normal;
+color: #000000;
 }
 
 .checkbox .icon-checkmark path {

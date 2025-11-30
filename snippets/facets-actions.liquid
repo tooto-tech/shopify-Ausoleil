@@ -40,7 +40,9 @@
       type="button"
       on:click="dialog-component/closeDialog"
     >
-      {{- 'actions.see_items' | t: count: products_count -}}
+    {% comment %} 注释原生动态展示选中商品数量的内容 {% endcomment %}
+      {% comment %} {{- 'actions.see_items' | t: count: products_count -}} {% endcomment %}
+       CONFIRM
     </button>
   {% endif %}
 </div>
@@ -140,6 +142,7 @@
     transform: translateY(100%);
     flex-grow: 1;
     padding-block: var(--padding-lg);
+    background:white;
   }
 
   .facets:not(.facets--drawer) .facets__clear-all {
@@ -210,6 +213,10 @@
     min-width: var(--facets-see-results-min-width);
     flex-grow: 1;
     padding-block: var(--padding-lg);
+    font-family: Mont;
+font-size: 20px;
+font-weight: 900;
+border-radius: 0px;
   }
 
   .facets:not(.facets--drawer) .facets__see-results {

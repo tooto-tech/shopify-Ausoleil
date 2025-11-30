@@ -1473,13 +1473,13 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
 
 shopify-accelerated-checkout,
 shopify-accelerated-checkout-cart {
-  --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-primary);
+  /* --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-primary); */
   --shopify-accelerated-checkout-button-block-size: var(--height-buy-buttons);
 }
 
 .product-form-buttons:has(.add-to-cart-button.button-secondary)
   :is(shopify-accelerated-checkout, shopify-accelerated-checkout-cart) {
-  --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-secondary);
+  /* --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-secondary); */
   --shopify-accelerated-checkout-button-block-size: var(--height-buy-buttons);
 }
 

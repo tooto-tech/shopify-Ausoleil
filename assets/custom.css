@@ -618,3 +618,7 @@ summary {
     width: 25%;
     margin-bottom: 12px;
 }
+/* 产品详情按钮样式 */
+.add-to-cart-button{
+  border-radius: 0px;
+}

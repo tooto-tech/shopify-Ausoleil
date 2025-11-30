@@ -613,10 +613,8 @@ summary {
     margin-bottom: 8px;
 }
 
-/* 让数量选择器独占一行，在按钮上方 */
-.product-form-buttons .quantity-selector {
-    flex: 1 0 100% !important;
-    width: 100% !important;
-    max-width: 120px;
+/* 数量选择器容器 */
+.quantity-wrapper {
+    width: 25%;
     margin-bottom: 12px;
 }

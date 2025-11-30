@@ -67,19 +67,16 @@
         {%- if block_settings.gift_card_form and product.gift_card? -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section, block: block -%}
         {%- endif -%}
-        <div
-          class="product-form-buttons spacing-style{% if block_settings.stacking %} product-form-buttons--stacked{% endif %}"
-          style="{% render 'spacing-style', settings: block_settings %}"
-          ref="productFormButtons"
-        >
-          {%- liquid
-            assign has_quantity_rules = false
-            if variant.quantity_rule.min > 1 or variant.quantity_rule.increment > 1 or variant.quantity_rule.max != null
-              assign has_quantity_rules = true
-            endif
-          -%}
 
-          {%- assign cart_quantity = cart | item_count_for_variant: variant.id -%}
+        {%- liquid
+          assign has_quantity_rules = false
+          if variant.quantity_rule.min > 1 or variant.quantity_rule.increment > 1 or variant.quantity_rule.max != null
+            assign has_quantity_rules = true
+          endif
+        -%}
+
+        {%- assign cart_quantity = cart | item_count_for_variant: variant.id -%}
+        <div class="quantity-wrapper">
           <div class="quantity-label quantity-label-custom">
             Quantity:
             {%- if has_quantity_rules -%}
@@ -116,7 +113,13 @@
               {%- endif -%}
             </div>
           {%- endif -%}
+        </div>
 
+        <div
+          class="product-form-buttons spacing-style{% if block_settings.stacking %} product-form-buttons--stacked{% endif %}"
+          style="{% render 'spacing-style', settings: block_settings %}"
+          ref="productFormButtons"
+        >
           {%- unless block_settings.gift_card_form and product.gift_card? -%}
             <span
               class="product-form-text__error hidden"

@@ -1084,6 +1084,21 @@ font-weight: 900;
     gap: var(--gap-xs);
     cursor: pointer;
   }
+
+  /* Fix custom filter icon size override */
+  .facets-toggle__button img {
+    width: 14px !important;
+    height: 14px !important;
+    flex-shrink: 0;
+  }
+
+  /* Fix custom accordion icons size override */
+  .facets__item .icon-expand img,
+  .facets__item .icon-collapse img {
+    width: 14px !important;
+    height: 14px !important;
+    flex-shrink: 0;
+  }
 {% endstylesheet %}
 
 {% schema %}

@@ -1,5 +1,3 @@
-
-
 {% liquid
   assign order = 'logo,search,menu,localization,mobile_search,actions'
 
@@ -23,6 +21,9 @@
   elsif section.settings.enable_transparent_header_collection and template.name == 'collection'
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.collection_color_scheme
+  elsif section.settings.enable_transparent_header_other and template.name != 'index' and template.name != 'product' and template.name != 'collection'
+    assign transparent = 'always'
+    assign transparent_color_scheme = section.settings.other_color_scheme
   endif
 
   if section.settings.enable_sticky_header == 'always'
@@ -47,17 +48,17 @@
     content_for 'block', type: '_header-logo', id: 'header-logo'
   endcapture
 
-capture menu
-  content_for 'block', type: '_header-menu', id: 'header-menu'
-endcapture
+  capture menu
+    content_for 'block', type: '_header-menu', id: 'header-menu'
+  endcapture
 
-capture mobile_menu
-  content_for 'block', type: '_header-menu', id: 'header-menu-mobile', variant: 'mobile'
-endcapture
+  capture mobile_menu
+    content_for 'block', type: '_header-menu', id: 'header-menu-mobile', variant: 'mobile'
+  endcapture
 
-capture navigation_bar
-  content_for 'block', type: '_header-menu', id: 'header-menu-nav', variant: 'navigation_bar'
-endcapture
+  capture navigation_bar
+    content_for 'block', type: '_header-menu', id: 'header-menu-nav', variant: 'navigation_bar'
+  endcapture
 
   capture actions
     render 'header-actions'
@@ -999,7 +1000,7 @@ endcapture
       "id": "color_scheme_transparent",
       "label": "t:settings.inverse",
       "default": "primary",
-      "visible_if": "{{ section.settings.enable_transparent_header_home or section.settings.enable_transparent_header_product or section.settings.enable_transparent_header_collection }}"
+      "visible_if": "{{ section.settings.enable_transparent_header_home or section.settings.enable_transparent_header_product or section.settings.enable_transparent_header_collection or section.settings.enable_transparent_header_other }}"
     },
     {
       "type": "header",
@@ -1081,6 +1082,33 @@ endcapture
       ],
       "default": "default",
       "visible_if": "{{ section.settings.enable_transparent_header_collection }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.other_pages"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_transparent_header_other",
+      "label": "t:settings.transparent_background",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "other_color_scheme",
+      "label": "t:settings.color_scheme",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:options.default"
+        },
+        {
+          "value": "inverse",
+          "label": "t:options.inverse"
+        }
+      ],
+      "default": "default",
+      "visible_if": "{{ section.settings.enable_transparent_header_other }}"
     }
   ],
   "presets": []

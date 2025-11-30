@@ -893,7 +893,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>At that moment, the \"rustling\" sound of the distant waves crashing against the shore was like a signal - there was no need to search anymore. It was better to create it with your own hands. He made up his mind to create a sunglasses brand exclusively for the seaside and for those who chase light: the lenses must accurately reproduce the clear and deep blue of the sea, while also retaining the transparency of sunlight penetrating the clouds, and must not allow any color cast to steal the slightest bit of light and shadow. The frame should fit the curve of the cheek, as light and stress-free as a gentle sea breeze. Even if worn throughout the afternoon, it won't cause the slightest pain. Even in every minute detail, the affection for the seaside should be integrated: fine wave patterns are carved on the inner side of the temple, so that when the fingertips glide across it, memories of the waves can be evoked. The light transmittance of the lenses should be just right for the soft light of dusk, allowing every grain of fine sand (to fully display the beauty of being dyed orange)...<br/><br/></p>",
+            "text": "<p>At that moment, the \"rustling\" sound of the distant waves crashing against the shore was like a signal - there was no need to search anymore. It was better to create it with your own hands. He made up his mind to create a sunglasses brand exclusively for the seaside and for those who chase light: the lenses must accurately reproduce the clear and deep blue of the sea, while also retaining the transparency of sunlight penetrating the clouds, and must not allow any color cast to steal the slightest bit of light and shadow. The frame should fit the curve of the cheek, as light and stress-free as a gentle sea breeze. Even if worn throughout the afternoon, it won't cause the slightest pain. Even in every minute detail, the affection for the seaside should be integrated: fine wave patterns are carved on the inner side of the temple, so that when the fingertips glide across it, memories of the waves can be evoked. The light transmittance of the lenses should be just right for the soft light of dusk, allowing every grain of fine sand (to fully display the beauty of being dyed orange)...</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "center",
@@ -915,7 +915,7 @@
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 100,
             "padding-inline-start": 0,
             "padding-inline-end": 0,
             "custom_mobile_padding": false,
@@ -942,7 +942,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",
-        "section_height": "small",
+        "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "",
         "background_media": "none",
@@ -956,7 +956,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 0,
+        "padding-block-start": 56,
         "padding-block-end": 0,
         "custom_class": ""
       }

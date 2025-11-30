@@ -1511,7 +1511,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "",
+        "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -1523,8 +1523,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0,
+        "padding-block-start": 63,
+        "padding-block-end": 51,
         "custom_class": ""
       }
     },
@@ -1712,7 +1712,7 @@
         "icons_shape": "none",
         "section_width": "page-width",
         "gap": 28,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "padding-block-start": 48,
         "padding-block-end": 48
       }

@@ -395,7 +395,15 @@
 {% endif %}
 
 {% stylesheet %}
-
+/* 最强覆盖：非常具体的选择器 + !important + max-width 重置 */
+.facets-toggle__button .svg-wrapper img,
+.facets-toggle__wrapper .svg-wrapper img {
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px !important;  /* 防止被 max-width:100% 限制 */
+  display: inline-block !important; /* 防止被 block-level 拉伸 */
+  object-fit: contain !important;
+}
   .collection-wrapper {
     @media screen and (min-width: 750px) {
       --facets-vertical-col-width: 6;

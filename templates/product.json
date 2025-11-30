@@ -214,7 +214,7 @@
                     "price_font": "var(--font-accent--family)",
                     "compare_price_font": "var(--font-accent--family)",
                     "save_font": "",
-                    "price_font_size": "",
+                    "price_font_size": "2rem",
                     "price_color": "",
                     "compare_price_font_size": "1.875rem",
                     "compare_price_color": "",

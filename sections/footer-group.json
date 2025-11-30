@@ -503,7 +503,6 @@
         "divider_cGjdhT",
         "group_frCTm7"
       ],
-      "disabled": true,
       "custom_css": [
         ".divider {transform: rotate(15deg); display: flex; justify-content: center;}"
       ],

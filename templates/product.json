@@ -391,46 +391,17 @@
                     "width": 20
                   },
                   "blocks": {
-                    "text_UmKmXm": {
-                      "type": "text",
+                    "custom_liquid_cf6BEr": {
+                      "type": "custom-liquid",
+                      "name": "t:names.custom_liquid",
                       "settings": {
-                        "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "font_size_mobile": "",
-                        "weight": "",
-                        "weight_mobile": "",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "letter_spacing_custom": "",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "custom_color": "",
-                        "custom_color_mobile": "",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "custom_mobile_padding": false,
-                        "padding-block-start-mobile": 0,
-                        "padding-block-end-mobile": 0,
-                        "padding-inline-start-mobile": 0,
-                        "padding-inline-end-mobile": 0,
-                        "custom_class": ""
+                        "custom_liquid": "<ul>\n  <li>\n    <svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"currentColor\">\n      <circle cx=\"6\" cy=\"6\" r=\"6\" />\n    </svg>\n    Design: Very oversized, angular statement frame\n  </li>\n  <li>\n    <svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"currentColor\">\n      <circle cx=\"6\" cy=\"6\" r=\"6\" />\n    </svg>\n    Trim: Large detailed, metal icon badge on temple\n  </li>\n</ul>"
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "text_UmKmXm"
+                    "custom_liquid_cf6BEr"
                   ]
                 },
                 "accordion_row_4FfMmN": {

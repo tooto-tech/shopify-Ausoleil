@@ -125,7 +125,7 @@
                       assign featured_media = product_option_value.variant.product.featured_media
                     endif
                   %}
-                  
+
                   {% if featured_media %}
                     <span class="variant-option__thumbnail" style="background-color: #F1F1F1;">
                       {{ featured_media | image_url: width: 76 | image_tag: loading: 'lazy', sizes: '38px', widths: '38, 76' }}
@@ -234,7 +234,6 @@
   }
 
   .variant-option {
-    --options-border-radius: var(--variant-picker-button-radius);
     --options-border-width: var(--variant-picker-button-border-width);
     --variant-option-padding-inline: var(--padding-md);
   }
@@ -450,7 +449,6 @@
     width: 38px;
     height: 38px;
     margin-inline-end: var(--padding-xs);
-    border-radius: var(--options-border-radius);
     overflow: hidden;
     flex-shrink: 0;
     align-items: center;

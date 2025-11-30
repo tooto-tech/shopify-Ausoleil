@@ -120,9 +120,9 @@
         "color_scheme_transparent": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "enable_transparent_header_home": true,
         "home_color_scheme": "inverse",
-        "enable_transparent_header_product": true,
+        "enable_transparent_header_product": false,
         "product_color_scheme": "inverse",
-        "enable_transparent_header_collection": true,
+        "enable_transparent_header_collection": false,
         "collection_color_scheme": "inverse"
       }
     }

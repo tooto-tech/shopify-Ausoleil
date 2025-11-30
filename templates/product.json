@@ -312,43 +312,236 @@
               },
               "block_order": []
             },
-            "text_aEtTtq": {
-              "type": "text",
-              "name": "Product description",
+            "accordion_UEXMtF": {
+              "type": "accordion",
+              "name": "t:names.accordion",
               "settings": {
-                "text": "{{ closest.product.description }}",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "font_size_mobile": "",
-                "weight": "",
-                "weight_mobile": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "letter_spacing_custom": "",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "custom_color": "",
-                "custom_color_mobile": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
+                "icon": "caret",
+                "dividers": true,
+                "type_preset": "h6",
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 0,
-                "padding-inline-start-mobile": 0,
-                "padding-inline-end-mobile": 0,
-                "custom_class": ""
+                "padding-inline-end": 0
               },
-              "blocks": {}
+              "blocks": {
+                "accordion_row_Y79HMb": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Specifications",
+                    "open_by_default": true,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_tieieg": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>󰀠Design: Very oversized, angular statement frame<br/>󰀠Trim: Large detailed, metal icon badge on temple<br/>󰀠Hardware: OBE fixed hinges<br/>󰀠Material: Acetate<br/>󰀠Shape: Square<br/>󰀠Face Curve: 0 base (flat)<br/>󰀠Lens Category: CAT3<br/>󰀠Product SKU: S0932</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "font_size_mobile": "",
+                        "weight": "",
+                        "weight_mobile": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "letter_spacing_custom": "",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "custom_color": "",
+                        "custom_color_mobile": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "custom_mobile_padding": false,
+                        "padding-block-start-mobile": 0,
+                        "padding-block-end-mobile": 0,
+                        "padding-inline-start-mobile": 0,
+                        "padding-inline-end-mobile": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_tieieg"
+                  ]
+                },
+                "accordion_row_MHAcaJ": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "frame Size",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_UmKmXm": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "font_size_mobile": "",
+                        "weight": "",
+                        "weight_mobile": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "letter_spacing_custom": "",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "custom_color": "",
+                        "custom_color_mobile": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "custom_mobile_padding": false,
+                        "padding-block-start-mobile": 0,
+                        "padding-block-end-mobile": 0,
+                        "padding-inline-start-mobile": 0,
+                        "padding-inline-end-mobile": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_UmKmXm"
+                  ]
+                },
+                "accordion_row_4FfMmN": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Warranty",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_Mfc3jp": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "font_size_mobile": "",
+                        "weight": "",
+                        "weight_mobile": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "letter_spacing_custom": "",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "custom_color": "",
+                        "custom_color_mobile": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "custom_mobile_padding": false,
+                        "padding-block-start-mobile": 0,
+                        "padding-block-end-mobile": 0,
+                        "padding-inline-start-mobile": 0,
+                        "padding-inline-end-mobile": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_Mfc3jp"
+                  ]
+                },
+                "accordion_row_W88AVN": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Shipping & Returns",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_3U6WQq": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>󰀠This item can be returned for credit card refund.<br/><br/>󰀠Return Authorization requests must be made within 14 days of shipment and the item must be returned within 21 days of original shipment.<br/>󰀠See the Return Policy for more details.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "font_size_mobile": "",
+                        "weight": "",
+                        "weight_mobile": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "letter_spacing_custom": "",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "custom_color": "",
+                        "custom_color_mobile": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "custom_mobile_padding": false,
+                        "padding-block-start-mobile": 0,
+                        "padding-block-end-mobile": 0,
+                        "padding-inline-start-mobile": 0,
+                        "padding-inline-end-mobile": 0,
+                        "custom_class": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_3U6WQq"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_row_Y79HMb",
+                "accordion_row_MHAcaJ",
+                "accordion_row_4FfMmN",
+                "accordion_row_W88AVN"
+              ]
             }
           },
           "block_order": [
@@ -356,7 +549,7 @@
             "divider_VJhene",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
-            "text_aEtTtq"
+            "accordion_UEXMtF"
           ]
         }
       },

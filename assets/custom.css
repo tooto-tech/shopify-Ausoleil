@@ -758,3 +758,29 @@ summary {
 }
 
 /* 幻灯片高度 */
+/* 让 slideshow 自动根据图片高度伸缩 */
+slideshow-component,
+slideshow-container,
+slideshow-slides,
+slideshow-slide {
+  height: auto !important;
+}
+
+/* 解除 slide 内部的强制 cover 规则 */
+slideshow-slide {
+  --product-media-fit: contain !important;
+}
+
+/* 图片完全按照原图高度渲染 */
+.slide__image-container,
+.slide__image-container img {
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  width: 100% !important;
+}
+
+/* 移除任何 aspect-ratio 限制（关键） */
+.slide__image-container {
+  aspect-ratio: auto !important;
+}

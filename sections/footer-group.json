@@ -193,7 +193,7 @@
               "type": "icon",
               "settings": {
                 "icon": "eye",
-                "image_upload": "shopify://shop_images/92691c477f0e677531a746a72a9535d1.svg",
+                "image_upload": "shopify://shop_images/1.svg",
                 "width": 16,
                 "height": 0,
                 "width_mobile": 36,
@@ -207,7 +207,7 @@
             "text_GAYARQ": {
               "type": "text",
               "settings": {
-                "text": "<p>FREE RETURNS<br/></p>",
+                "text": "<p>SATISFACTION GUARANTEED</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",
@@ -316,7 +316,7 @@
               "type": "icon",
               "settings": {
                 "icon": "eye",
-                "image_upload": "shopify://shop_images/92691c477f0e677531a746a72a9535d1.svg",
+                "image_upload": "shopify://shop_images/51.svg",
                 "width": 16,
                 "height": 0,
                 "width_mobile": 36,
@@ -439,7 +439,7 @@
               "type": "icon",
               "settings": {
                 "icon": "eye",
-                "image_upload": "shopify://shop_images/92691c477f0e677531a746a72a9535d1.svg",
+                "image_upload": "shopify://shop_images/50.svg",
                 "width": 16,
                 "height": 0,
                 "width_mobile": 36,
@@ -453,7 +453,7 @@
             "text_jqPJ4X": {
               "type": "text",
               "settings": {
-                "text": "<p>FREE RETURNS<br/></p>",
+                "text": "<p>SECURE PAYMENT</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",

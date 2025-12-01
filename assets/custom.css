@@ -549,6 +549,33 @@ product-price .compare-at-price{
 .email-signup__input, .email-signup__button--text{
   padding: 16px;
 }
+/* 页脚部分 */
+/* 移动端切换表单和logo的顺序 */
+@media (max-width: 768px) { /* 调整断点为你的移动端标准 */
+  .email-signup-wrapper {
+    order: 2; /* 电子邮件块排到后面 */
+  }
+  /* 电子邮件块宽度 */
+  .email-signup__input-group {
+    width: 134px;
+  }
+
+  .group-block:last-child {
+    order: 1; /* 图标块排到前面 */
+  }
+  /* 图标居中 */
+  .group-block-content{
+    align-items: center;
+  }
+
+  
+  /* 移动端图标宽度 */
+  .group-block:last-child img.icon-block__media {
+    width: 134px !important;
+    height: auto;
+  }
+}
+
 /* footer菜单文本样式 */
 /* -------- Collection 主标题（PC 端） -------- */
 .menu__heading__default,
@@ -663,29 +690,3 @@ summary {
   }
 }
 
-/* 页脚部分 */
-/* 移动端切换表单和logo的顺序 */
-@media (max-width: 768px) { /* 调整断点为你的移动端标准 */
-  .email-signup-wrapper {
-    order: 2; /* 电子邮件块排到后面 */
-  }
-  /* 电子邮件块宽度 */
-  .email-signup__input-group {
-    width: 134px;
-  }
-
-  .group-block:last-child {
-    order: 1; /* 图标块排到前面 */
-  }
-  /* 图标居中 */
-  .group-block-content{
-    align-items: center;
-  }
-
-  
-  /* 移动端图标宽度 */
-  .group-block:last-child img.icon-block__media {
-    width: 134px !important;
-    height: auto;
-  }
-}

@@ -665,3 +665,12 @@ summary {
 
 /* 页脚部分 */
 /* 移动端切换表单和logo的顺序 */
+@media (max-width: 768px) { /* 调整断点为你的移动端标准 */
+  .email-signup-wrapper {
+    order: 2; /* 电子邮件块排到后面 */
+  }
+
+  .group-block:last-child {
+    order: 1; /* 图标块排到前面 */
+  }
+}

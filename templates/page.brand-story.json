@@ -63,7 +63,7 @@
         "text_wrqBg3": {
           "type": "text",
           "settings": {
-            "text": "<h1>The Mirror Of Mountains And Seas:</h1>",
+            "text": "<h1>The Mirror Of <br/>Mountains And Seas:</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -73,7 +73,7 @@
             "font_size_mobile": "",
             "weight": "900",
             "weight_mobile": "900",
-            "line_height": "normal",
+            "line_height": "tight",
             "letter_spacing": "normal",
             "letter_spacing_custom": "",
             "case": "none",
@@ -101,7 +101,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Light Born From The Coast</p>",
+            "text": "<p>Light Born From The <br/>Coast</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -111,7 +111,7 @@
             "font_size_mobile": "",
             "weight": "300",
             "weight_mobile": "300",
-            "line_height": "normal",
+            "line_height": "tight",
             "letter_spacing": "normal",
             "letter_spacing_custom": "",
             "case": "none",

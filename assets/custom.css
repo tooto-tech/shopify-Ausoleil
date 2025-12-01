@@ -618,7 +618,7 @@ product-price .compare-at-price{
 }
 /* 交换联系方式和社交图标 */
 .social-icons__wrapper{
-  order: 2;
+  order: -1;
 }
 }
 

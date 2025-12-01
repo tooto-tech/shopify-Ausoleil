@@ -129,7 +129,7 @@ product-price .compare-at-price{
 
 /* 分隔线样式 */
 .my-custom-texticon .divider__line {
-  transform: rotate(15deg);
+  transform: rotate(10deg);
   border-color: #ffffff80;
 }
 

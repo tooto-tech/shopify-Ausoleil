@@ -619,6 +619,7 @@ product-price .compare-at-price{
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* 左对齐所有子元素 */
+  padding-left: 6%;
 }
 /* 交换联系方式和社交图标 */
 .social-icons__wrapper{

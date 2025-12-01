@@ -327,7 +327,8 @@ p:empty {
   .page-width-normal,
   .page-width-narrow,
   .page-width-content {
-    --page-margin: 40px;
+    /* 修改页面宽度的边距为80 */
+    --page-margin: 80px;
   }
 }
 

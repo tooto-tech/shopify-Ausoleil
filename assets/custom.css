@@ -553,8 +553,9 @@ product-price .compare-at-price{
 }
 /* 页脚部分 */
 @media (max-width: 768px) {
+  /* 底部菜单添加padding */
   .menu__details {
-    --padding-block-end: 40px !important;
+    --padding-block-end: 40px;
 }
 .email-signup__input-group{
   width: 100%;

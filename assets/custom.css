@@ -183,6 +183,9 @@ product-price .compare-at-price{
     min-width: 0;
     scroll-behavior: smooth;
   }
+  .divider__line {
+  --divider-flex-basis: 50%; /* 50%宽度 */
+}
 
   .my-custom-texticon .section-content-wrapper > *:first-child {
     margin-left: 0;

@@ -650,6 +650,10 @@ summary {
   }
 }
 /* 移动端you may also like样式 */
-.section-resource-list__content{
-  justify-content: center;
+@media screen and (max-width: 749px) {
+  .section-resource-list__content {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中（如果需要） */
+  }
 }

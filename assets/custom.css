@@ -626,7 +626,7 @@ product-price .compare-at-price{
 .footer-menu-wrapper .group-block-content{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-   align-items: start;
+   align-items: cenr;
   --padding-inline-start: 0px;
 }
 .menu__details{

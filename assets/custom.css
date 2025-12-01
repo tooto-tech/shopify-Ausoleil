@@ -589,6 +589,7 @@ product-price .compare-at-price{
     flex-direction: row;
     margin-top: 53px;
     width: 40%;
+    margin-left: auto;
 
 }
 

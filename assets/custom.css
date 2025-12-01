@@ -763,3 +763,8 @@ summary {
 .slideshow__media {
   height: auto !important;
 }
+.slideshow__media img {
+  width: 100%;
+  height: auto !important;
+  object-fit: none !important;
+}

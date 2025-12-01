@@ -758,13 +758,6 @@ summary {
 }
 
 /* 幻灯片高度 */
-.slideshow,
-.slideshow__slide,
-.slideshow__media {
-  height: auto !important;
-}
-.slideshow__media img {
-  width: 100%;
-  height: auto !important;
-  object-fit: none !important;
+.slide__image-container img {
+  object-fit: contain !important;
 }

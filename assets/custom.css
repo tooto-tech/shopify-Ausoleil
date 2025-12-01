@@ -757,14 +757,4 @@ summary {
   }
 }
 
-/* 幻灯片高度 */
-/* 彻底解除 Shopify slideshow 的固定高度/纵横比 */
-slideshow-component,
-slideshow-container,
-slideshow-slides,
-slideshow-slide,
-.slide__image-container {
-  height: auto ;
-  aspect-ratio: auto ;
-}
 

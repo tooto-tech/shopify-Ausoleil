@@ -665,12 +665,3 @@ summary {
 
 /* 页脚部分 */
 /* 移动端切换表单和logo的顺序 */
-/* 移动端顺序调整 */
-@media (max-width: 768px) { /* 可根据你项目调整断点 */
-  .group-block-content .group-block:first-child {
-    order: 2; /* 原第一个块排到后面 */
-  }
-  .group-block-content .group-block:last-child {
-    order: 1; /* 原第二个块排到前面 */
-  }
-}

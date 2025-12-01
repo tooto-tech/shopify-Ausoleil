@@ -507,8 +507,7 @@ product-price .compare-at-price{
     width: 100%;
     /* 边框颜色和透明度 */
     border: 1px solid rgba(209, 209, 209, 0.6); /* #D1D1D1 with opacity 0.6 */
-      display: flex;
-  flex-direction: row !important; /* 横向排列 */
+
     
 }
 
@@ -554,7 +553,11 @@ product-price .compare-at-price{
 }
 /* 页脚部分 */
 /* 移动端切换表单和logo的顺序 */
-@media (max-width: 768px) { /* 调整断点为你的移动端标准 */
+@media (max-width: 768px) {
+.email-signup__input-group{
+        display: flex;
+  flex-direction: row !important; /* 横向排列 */
+}
   .email-signup-wrapper {
     order: 2; /* 电子邮件块排到后面 */
   }

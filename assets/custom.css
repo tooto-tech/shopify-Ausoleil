@@ -566,7 +566,9 @@ product-price .compare-at-price{
   .group-block-content{
     align-items: center;
   }
-
+  .email-signup__input-group {
+    flex-direction: row !important;
+  }
   
   /* 移动端图标宽度 */
   .group-block:last-child img.icon-block__media {

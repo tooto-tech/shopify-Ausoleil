@@ -14,9 +14,8 @@
   {% endif %}
 >
   {% capture children %}
-    {% comment %} 面包屑导航 {% endcomment %}
-    {% render 'product-breadcrumb', product: product %}
-    
+
+
     <div class="view-product-title">
       <a
         href="{{ product.selected_or_first_available_variant.url }}"

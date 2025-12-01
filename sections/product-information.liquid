@@ -43,10 +43,13 @@
 </script>
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+
 <div
   class="product-information section section--{{ content_width }} spacing-style color-{{ section.settings.color_scheme }} relative"
-  style="{% render 'spacing-style', settings: section.settings %} --gap: {{ section.settings.gap }}px;"
+  style="{% render 'spacing-style', settings: section.settings %}"
 >
+    {% comment %} 面包屑导航 {% endcomment %}
+    {% render 'product-breadcrumb', product: product %}
 
 
   {% if section.settings.desktop_media_position == 'left' and product_has_media %}

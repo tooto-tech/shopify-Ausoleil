@@ -42,17 +42,15 @@ elsif section.settings.enable_sticky_header == 'scroll-up'
   assign sticky = 'scroll-up'
 endif
 
+if transparent and sticky
+  assign transparent = 'not-sticky'
+endif
+
 if transparent
-  # 只处理首页/产品页/收藏页,因为"其他页面"已经在上面处理过了
-  if template.name == 'index' or template.name == 'product' or template.name == 'collection'
-    if transparent_color_scheme == 'inverse'
-      assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_transparent
-    else
-      assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_top
-    endif
+  if transparent_color_scheme == 'inverse'
+    assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_transparent
   else
-    # 其他页面:已经设置好了,只需要加前缀
-    assign transparent_color_scheme = 'color-' | append: transparent_color_scheme
+    assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_top
   endif
 endif
 

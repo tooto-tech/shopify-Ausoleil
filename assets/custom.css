@@ -671,9 +671,11 @@ summary {
   }
 
   .group-block:last-child {
-    display: flex;
-    align-items: center;
     order: 1; /* 图标块排到前面 */
+  }
+  /* 图标居中 */
+  .group-block-content{
+    align-items: center;
   }
 
   

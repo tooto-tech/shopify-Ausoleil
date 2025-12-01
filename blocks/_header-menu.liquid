@@ -150,6 +150,23 @@
     margin-inline-end: var(--margin-xl);
   }
 
+  /* Custom Banner Styles for Menu Drawer */
+  .menu-drawer__banner-wrapper {
+    width: 100%;
+  }
+
+  .menu-drawer__banner-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .menu-drawer__banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
   .menu-list {
     --menu-horizontal-gap: var(--gap-xl);
     --menu-vertical-gap: var(--gap-xl);
@@ -723,6 +740,10 @@
         {
           "value": "featured_collections",
           "label": "t:options.featured_collections"
+        },
+        {
+          "value": "custom_banner",
+          "label": "自定义Banner图"
         }
       ],
       "default": "collection_images"
@@ -779,6 +800,49 @@
       "unit": "px",
       "default": 0,
       "visible_if": "{{ block.settings.menu_style != 'text' }}"
+    },
+    {
+      "type": "header",
+      "content": "自定义Banner设置"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_banner_image",
+      "label": "Banner图片",
+      "info": "推荐尺寸：1200x400px",
+      "visible_if": "{{ block.settings.menu_style == 'custom_banner' }}"
+    },
+    {
+      "type": "url",
+      "id": "custom_banner_link",
+      "label": "Banner链接",
+      "info": "点击Banner后跳转的链接",
+      "visible_if": "{{ block.settings.menu_style == 'custom_banner' }}"
+    },
+    {
+      "type": "select",
+      "id": "custom_banner_aspect_ratio",
+      "label": "Banner图片比例",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:options.auto"
+        },
+        {
+          "value": "16 / 9",
+          "label": "16:9"
+        },
+        {
+          "value": "21 / 9",
+          "label": "21:9"
+        },
+        {
+          "value": "3 / 1",
+          "label": "3:1"
+        }
+      ],
+      "default": "16 / 9",
+      "visible_if": "{{ block.settings.menu_style == 'custom_banner' }}"
     },
     {
       "type": "header",

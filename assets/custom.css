@@ -671,6 +671,15 @@ summary {
   }
 
   .group-block:last-child {
+    display: flex;
+    align-items: center;
     order: 1; /* 图标块排到前面 */
+  }
+
+  
+  /* 移动端图标宽度 */
+  .group-block:last-child img.icon-block__media {
+    width: 134px !important;
+    height: auto;
   }
 }

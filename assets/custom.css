@@ -570,7 +570,9 @@ product-price .compare-at-price{
   .group-block-content{
     align-items: center;
   }
-
+.email-signup__input, .email-signup__button--text{
+  padding: 14px;
+}
   
   /* 移动端图标宽度 */
   .group-block:last-child img.icon-block__media {

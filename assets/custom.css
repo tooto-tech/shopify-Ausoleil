@@ -623,6 +623,22 @@ summary {
 .add-to-cart-button{
   border-radius: 0px;
 }
+/* 产品详情多属性选择器的Label样式 */
+.quantity-label-custom {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+@media (max-width: 768px) {
+    .quantity-label-custom {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 10px;
+    }
+}
 /* 筛选drawer样式 */
 .menu-drawer{
 }

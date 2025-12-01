@@ -951,7 +951,7 @@
                         "link": "",
                         "open_in_new_tab": false,
                         "placeholder": "",
-                        "custom_class_name": "",
+                        "custom_class_name": "footer-contact-information",
                         "enable_aos_animation": false,
                         "aos_animation_type": "fade-up",
                         "aos_animation_delay": 0,

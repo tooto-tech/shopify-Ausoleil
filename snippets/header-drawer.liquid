@@ -510,7 +510,7 @@
                               assign collection_linklist = link.links | where: 'type', 'collection_link' | first
                               assign featured_products_collection = collection_linklist.object
                             endif
-                            
+
                             if block_settings.menu_style == 'custom_banner'
                               assign custom_banner_image = block_settings.custom_banner_image
                             endif
@@ -528,6 +528,9 @@
                           >
                             {% if custom_banner_image != blank %}
                               <div class="menu-drawer__banner-wrapper">
+                                {% liquid
+                                  assign banner_style = 'aspect-ratio: ' | append: ratio
+                                %}
                                 {% if block_settings.custom_banner_link != blank %}
                                   <a href="{{ block_settings.custom_banner_link }}" class="menu-drawer__banner-link">
                                 {% endif %}
@@ -537,7 +540,7 @@
                                     | image_tag:
                                       loading: 'lazy',
                                       class: 'menu-drawer__banner-image',
-                                      style: 'aspect-ratio: ' | append: ratio,
+                                      style: banner_style,
                                       sizes: 'auto, 1200px'
                                   }}
                                 {% if block_settings.custom_banner_link != blank %}
@@ -660,6 +663,9 @@
         >
           {% if top_level_custom_banner_image != blank %}
             <div class="menu-drawer__banner-wrapper menu-drawer__animated-element">
+              {% liquid
+                assign banner_style = 'aspect-ratio: ' | append: ratio
+              %}
               {% if block_settings.custom_banner_link != blank %}
                 <a href="{{ block_settings.custom_banner_link }}" class="menu-drawer__banner-link">
               {% endif %}
@@ -669,7 +675,7 @@
                   | image_tag:
                     loading: 'lazy',
                     class: 'menu-drawer__banner-image',
-                    style: 'aspect-ratio: ' | append: ratio,
+                    style: banner_style,
                     sizes: 'auto, 1200px'
                 }}
               {% if block_settings.custom_banner_link != blank %}
@@ -797,7 +803,6 @@
     /* 控制drawer的宽高 */
     height: var(--drawer-height);
     width: var(--drawer-width);
-    max-width: var(--drawer-max-width);
     z-index: var(--layer-menu-drawer);
     left: 0;
     top: 0;

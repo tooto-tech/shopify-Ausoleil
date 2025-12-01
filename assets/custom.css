@@ -768,15 +768,3 @@ slideshow-slide,
   aspect-ratio: auto !important;
 }
 
-/* 图片全宽 + 高度自适应（关键组合） */
-.slide__image-container img {
-  width: 100% !important;
-  height: auto !important;
-  object-fit: cover !important; /* 仍然使用 cover 才能全屏 */
-  object-position: center !important;
-}
-
-/* 禁用 Shopify 强制的 --product-media-fit */
-slideshow-slide {
-  --product-media-fit: initial !important;
-}

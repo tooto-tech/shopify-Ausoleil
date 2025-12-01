@@ -559,7 +559,13 @@ product-price .compare-at-price{
         display: flex;
   flex-direction: row !important; /* 横向排列 */
 }
- 
+  .email-signup-wrapper {
+    order: 2; /* 电子邮件块排到后面 */
+  }
+
+  .group-block:last-child {
+    order: 0; /* 图标块排到前面 */
+  }
   /* 图标居中 */
   .group-block-content{
     align-items: center;
@@ -602,7 +608,7 @@ product-price .compare-at-price{
     order: 1;
   }
   .footer-menu-wrapper{
-    order: 07;
+    order: 0;
   }
 
 }

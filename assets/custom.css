@@ -587,6 +587,7 @@ product-price .compare-at-price{
 .email-signup__input-group {
     display: flex;
     flex-direction: row;
+    margin-top: 53px;
 }
 
 /* 输入框占70% */

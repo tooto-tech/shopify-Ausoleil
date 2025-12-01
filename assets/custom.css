@@ -149,6 +149,8 @@ product-price .compare-at-price{
 /* 移动端样式 - 横向滚动 */
 @media (max-width: 749px) {
   .divider{
+    display: flex;
+    align-items: center;
     height: 20px;
   }
   .my-custom-texticon .section {

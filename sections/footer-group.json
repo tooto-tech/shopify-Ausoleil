@@ -503,9 +503,7 @@
         "divider_cGjdhT",
         "group_frCTm7"
       ],
-      "custom_css": [
-        ".divider {transform: rotate(15deg); display: flex; justify-content: center;}"
-      ],
+      "custom_css": [],
       "name": "t:names.icons_with_text",
       "settings": {
         "content_direction": "row",

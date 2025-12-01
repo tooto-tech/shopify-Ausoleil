@@ -27,8 +27,8 @@ elsif section.settings.enable_transparent_header_collection and template.name ==
   assign section.settings.color_scheme_transparent = section.settings.collection_color_scheme
 else
   assign transparent = 'always'
-  assign transparent_color_scheme = section.settings.other_color_scheme 
-  assign section.settings.color_scheme_transparent = section.settings.other_color_scheme
+  assign transparent_color_scheme = section.settings.home_color_scheme
+  assign section.settings.color_scheme_transparent = section.settings.home_color_scheme
 endif
 
 if section.settings.enable_sticky_header == 'always'

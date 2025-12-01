@@ -574,6 +574,9 @@ product-price .compare-at-price{
   .email-signup__input, .email-signup__button--text{
     width: 170px;
   }
+  .email-signup__input-group {
+    flex-direction: row;
+  }
 }
 
 /* footer菜单文本样式 */

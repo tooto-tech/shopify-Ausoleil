@@ -559,13 +559,7 @@ product-price .compare-at-price{
         display: flex;
   flex-direction: row !important; /* 横向排列 */
 }
-  .email-signup-wrapper {
-    order: 2; /* 电子邮件块排到后面 */
-  }
-
-  .group-block:last-child {
-    order: 0; /* 图标块排到前面 */
-  }
+ 
   /* 图标居中 */
   .group-block-content{
     align-items: center;
@@ -602,13 +596,7 @@ product-price .compare-at-price{
     background-color: #1226AA;
     color: #fff;
 }
-/* 交换社交图标和联系方式的顺序 */
-  .group-block-content .group-block {
-    order: 2;
-  }
-  .group-block-content .social-icons__wrapper {
-    order: 1;
-  }
+
   /* 交换联系区域和菜单区域 */
   .footer-contact{
     order: 1;

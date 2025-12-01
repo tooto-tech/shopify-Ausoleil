@@ -588,6 +588,8 @@ product-price .compare-at-price{
     display: flex;
     flex-direction: row;
     margin-top: 53px;
+    width: 40%;
+
 }
 
 /* 输入框占70% */

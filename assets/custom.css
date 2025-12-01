@@ -587,22 +587,17 @@ product-price .compare-at-price{
 .email-signup__input-group {
     display: flex;
     flex-direction: row;
-    gap: 8px;
-    width: 100%;
 }
 
 /* 输入框占70% */
 .email-signup__input-group input.email-signup__input {
     flex: 7 0 0;
     min-width: 0; /* 防止溢出 */
-    padding: 16px;
 }
 
 /* 按钮占30% */
 .email-signup__input-group button.email-signup__button--text {
     flex: 3 0 0;
-    width: auto;
-    padding: 16px;
     background-color: #1226AA;
     color: #fff;
 }

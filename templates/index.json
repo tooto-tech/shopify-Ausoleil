@@ -1363,7 +1363,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 83,
+        "padding-block-start": 84,
         "padding-block-end": 100,
         "custom_class": ""
       }
@@ -1531,8 +1531,8 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 63,
-        "padding-block-end": 51,
+        "padding-block-start": 64,
+        "padding-block-end": 52,
         "custom_class": ""
       }
     },

@@ -564,7 +564,7 @@ product-price .compare-at-price{
   }
 
   .group-block:last-child {
-    order: 1; /* 图标块排到前面 */
+    order: 0; /* 图标块排到前面 */
   }
   /* 图标居中 */
   .group-block-content{

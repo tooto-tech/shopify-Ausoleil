@@ -610,7 +610,10 @@ product-price .compare-at-price{
   .footer-menu-wrapper{
     order: 0;
   }
-
+/* 联系方式内容居左 */
+.footer-contact-information{
+  text-align: left;
+}
 }
 
 /* footer菜单文本样式 */

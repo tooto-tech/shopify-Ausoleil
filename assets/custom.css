@@ -623,7 +623,7 @@ product-price .compare-at-price{
   margin-bottom: 43px;
 }
 /* 底部菜单调整为一行两个 */
-.footer-menu-wrapper{
+.footer-menu-wrapper .group-block-content{
   display: grid;
   grid-template-columns: repeat(2,1fr);
 }

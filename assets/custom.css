@@ -148,6 +148,9 @@ product-price .compare-at-price{
 
 /* 移动端样式 - 横向滚动 */
 @media (max-width: 749px) {
+  .divider{
+    height: 10px;
+  }
   .my-custom-texticon .section {
     overflow: visible !important;
   }
@@ -183,9 +186,6 @@ product-price .compare-at-price{
     min-width: 0;
     scroll-behavior: smooth;
   }
-  .divider__line {
-  --divider-flex-basis: 50%; /* 50%宽度 */
-}
 
   .my-custom-texticon .section-content-wrapper > *:first-child {
     margin-left: 0;

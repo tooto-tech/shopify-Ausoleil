@@ -231,6 +231,8 @@
     {% endif %}
 
     <div class="facets-mobile-wrapper facets-controls-wrapper">
+
+
       {% if block_settings.enable_filtering == false
         and block_settings.enable_sorting
         and block_settings.show_sorting_mobile
@@ -258,6 +260,15 @@
       {% if block_settings.enable_grid_density and block_settings.show_grid_density_mobile %}
         {% render 'grid-density-controls', viewport: 'mobile' %}
       {% endif %}
+          <div class="products-count-wrapper products-count-wrapper--mobile">
+        <span title="{{ 'content.product_count' | t }}">
+          {%- if collection != blank -%}
+            All {{ collection.title }} ({{ products_count }})
+          {%- else -%}
+            {{- 'content.item_count' | t: count: products_count -}}
+          {%- endif -%}
+        </span>
+      </div>
     </div>
   </div>
 {% else %}
@@ -429,11 +440,14 @@
     display: flex;
     align-items: center;
     gap: var(--gap-sm);
-    justify-content: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* 交换filter和数量统计的顺序 */
+    order: -1;
   }
 
-  .facets-mobile-wrapper:has(> :nth-child(2)) {
-    justify-content: space-between;
+  .facets-mobile-wrapper:has(> :only-child) {
+    justify-content: flex-start;
   }
 
   dialog-component.facets-block-wrapper:not(:has(.facets--drawer[open])) {
@@ -913,7 +927,7 @@ font-weight: 900;
 
   /* Products count */
   .products-count-wrapper {
-    display: none;
+    display: flex;
   }
 
   .facets--horizontal .products-count-wrapper {
@@ -1050,7 +1064,7 @@ font-weight: 900;
       padding-block: var(--padding-block-start) var(--padding-block-end);
       padding-inline: var(--padding-inline-start) var(--padding-inline-end);
     }
-
+  /* 移动端隐藏PC端的过滤器容器 */
     @media screen and (max-width: 749px) {
       display: none !important;
     }
@@ -1071,6 +1085,21 @@ font-weight: 900;
     display: flex !important;
     align-items: center;
     margin: 0;
+  }
+
+  .products-count-wrapper--mobile {
+    color: #231C0A;
+    font-family: Manrope;
+    font-size: 13px;
+    font-weight: normal;
+line-height: 17px;
+    display: flex !important;
+    align-items: center;
+    margin: 0;
+
+    @media screen and (min-width: 750px) {
+      display: none !important;
+    }
   }
 
   .desktop-only-toggle {

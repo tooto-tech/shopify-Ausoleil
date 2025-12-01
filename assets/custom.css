@@ -128,13 +128,13 @@ product-price .compare-at-price{
    ======================================== */
 
 /* 分隔线样式 */
-.my-custom-texticon .divider__line {
+.my-custom-texticon .divider {
   transform: rotate(10deg);
   border-color: #ffffff80;
 }
 
 /* 斜线分隔符样式 - 给 divider 添加 fd 类名 */
-.fd .divider__line {
+.fd .divider {
   transform: rotate(10deg);
   border-color: rgba(18, 24, 33, 0.5); /* #121821 透明度 0.5 */
 }

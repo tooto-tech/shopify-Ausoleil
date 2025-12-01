@@ -845,6 +845,24 @@
       "visible_if": "{{ block.settings.menu_style == 'custom_banner' }}"
     },
     {
+      "type": "select",
+      "id": "custom_banner_layout",
+      "label": "Banner布局方式（桌面端）",
+      "info": "移动端始终为上下排列",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "上下排列"
+        },
+        {
+          "value": "horizontal",
+          "label": "左右排列"
+        }
+      ],
+      "default": "vertical",
+      "visible_if": "{{ block.settings.menu_style == 'custom_banner' }}"
+    },
+    {
       "type": "header",
       "content": "t:content.mobile_layout"
     },

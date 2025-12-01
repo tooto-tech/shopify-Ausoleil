@@ -292,7 +292,14 @@
                       tabindex="-1"
                       style="--menu-drawer-animation-index: {{ animation_index }};"
                     >
-                      <div class="menu-drawer__inner-submenu">
+                      {% liquid
+                        assign banner_layout = block_settings.custom_banner_layout | default: 'vertical'
+                        assign inner_submenu_class = ''
+                        if block_settings.menu_style == 'custom_banner' and banner_layout == 'horizontal'
+                          assign inner_submenu_class = 'menu-drawer__inner-submenu--horizontal'
+                        endif
+                      %}
+                      <div class="menu-drawer__inner-submenu {{ inner_submenu_class }}">
                         <div class="menu-drawer__nav-buttons">
                           <button
                             class="button menu-drawer__back-button focus-inset"
@@ -327,11 +334,12 @@
                             endif
                           endif
                         %}
-                        <ul
-                          class="menu-drawer__menu menu-drawer__menu--childlist{% if render_link_image and link.levels == 1 %} menu-drawer__menu--grid{% endif %}"
-                          role="list"
-                          tabindex="-1"
-                        >
+                        <div class="menu-drawer__menu-wrapper">
+                          <ul
+                            class="menu-drawer__menu menu-drawer__menu--childlist{% if render_link_image and link.levels == 1 %} menu-drawer__menu--grid{% endif %}"
+                            role="list"
+                            tabindex="-1"
+                          >
                           {% assign first_accordion_open = false -%}
                           {%- for childlink in link.links -%}
                             <li
@@ -499,7 +507,8 @@
                               {%- endif -%}
                             </li>
                           {%- endfor -%}
-                        </ul>
+                          </ul>
+                        </div>
                         {% liquid
                           if eager_loading
                             if block_settings.menu_style == 'featured_collections'
@@ -522,8 +531,15 @@
                         -%}
 
                         {% if featured_collections.size > 0 or featured_products_collection.products_count > 0 or custom_banner_image != blank %}
+                          {% liquid
+                            assign banner_layout = block_settings.custom_banner_layout | default: 'vertical'
+                            assign layout_class = ''
+                            if custom_banner_image != blank and banner_layout == 'horizontal'
+                              assign layout_class = 'menu-drawer__featured-content--horizontal'
+                            endif
+                          %}
                           <div
-                            class="menu-drawer__featured-content menu-drawer__featured-content--childlist"
+                            class="menu-drawer__featured-content menu-drawer__featured-content--childlist {{ layout_class }}"
                             style="--menu-drawer-animation-index: {{ linklist.links.size | plus: 1 }};"
                           >
                             {% if custom_banner_image != blank %}
@@ -657,8 +673,15 @@
       -%}
 
       {% if top_level_featured_collections.size > 0 or top_level_featured_products_collection.products_count > 0 or top_level_custom_banner_image != blank %}
+        {% liquid
+          assign top_banner_layout = block_settings.custom_banner_layout | default: 'vertical'
+          assign top_layout_class = ''
+          if top_level_custom_banner_image != blank and top_banner_layout == 'horizontal'
+            assign top_layout_class = 'menu-drawer__featured-content--horizontal-bottom'
+          endif
+        %}
         <div
-          class="menu-drawer__featured-content"
+          class="menu-drawer__featured-content {{ top_layout_class }}"
           style="--menu-drawer-animation-index: {{ linklist.links.size | plus: 1 }};"
         >
           {% if top_level_custom_banner_image != blank %}
@@ -883,6 +906,45 @@
     }
   }
 
+  /* Horizontal layout for banner and menu (desktop only) */
+  .menu-drawer__inner-submenu--horizontal {
+    @media screen and (min-width: 750px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .menu-drawer__inner-submenu--horizontal .menu-drawer__nav-buttons {
+    @media screen and (min-width: 750px) {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  }
+
+  .menu-drawer__inner-submenu--horizontal .menu-drawer__menu-wrapper {
+    @media screen and (min-width: 750px) {
+      flex: 1;
+      min-width: 300px;
+      overflow-y: auto;
+    }
+  }
+
+  .menu-drawer__inner-submenu--horizontal .menu-drawer__featured-content--childlist {
+    @media screen and (min-width: 750px) {
+      flex: 1;
+      min-width: 400px;
+      max-width: 50%;
+      align-self: flex-start;
+    }
+  }
+
+  /* Adjust featured content layout in horizontal mode */
+  .menu-drawer__featured-content--horizontal {
+    @media screen and (min-width: 750px) {
+      margin-block-start: 0;
+    }
+  }
+
   .menu-drawer__nav-buttons {
     display: flex;
     justify-content: space-between;
@@ -908,6 +970,11 @@
 
   .menu-drawer__menu--childlist:not(.menu-drawer__menu--grid) {
     flex-grow: 1;
+  }
+
+  .menu-drawer__menu-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   .menu-drawer__menu.has-submenu,
@@ -1230,6 +1297,23 @@
     width: 100%;
     padding-inline: var(--drawer-padding);
     padding-block-end: var(--padding-lg);
+  }
+
+  /* Banner in horizontal layout */
+  .menu-drawer__inner-submenu--horizontal .menu-drawer__banner-wrapper {
+    @media screen and (min-width: 750px) {
+      padding-inline: var(--padding-md);
+      padding-block: 0;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  .menu-drawer__inner-submenu--horizontal .menu-drawer__banner-link {
+    @media screen and (min-width: 750px) {
+      height: auto;
+    }
   }
 
   .menu-drawer__banner-link {

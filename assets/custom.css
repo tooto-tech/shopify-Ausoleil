@@ -278,7 +278,7 @@ product-price .compare-at-price{
     height: 24px !important;
   }
  .fd {
-    display: none !important;
+    /* display: none !important; */
   }
 
   .my-custom-texticon .section {

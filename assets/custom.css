@@ -629,6 +629,9 @@ product-price .compare-at-price{
    align-items: start;
   --padding-inline-start: 0px;
 }
+.menu__details{
+  padding: 0px;
+}
 }
 
 /* footer菜单文本样式 */

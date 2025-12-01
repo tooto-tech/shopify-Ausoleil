@@ -555,6 +555,7 @@ product-price .compare-at-price{
 /* 移动端切换表单和logo的顺序 */
 @media (max-width: 768px) {
 .email-signup__input-group{
+  width: 100%;
         display: flex;
   flex-direction: row !important; /* 横向排列 */
 }

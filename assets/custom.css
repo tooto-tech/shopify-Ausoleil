@@ -148,6 +148,11 @@ product-price .compare-at-price{
 
 /* 移动端样式 - 横向滚动 */
 @media (max-width: 749px) {
+  .divider{
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
   .my-custom-texticon .section {
     overflow: visible !important;
   }
@@ -211,7 +216,7 @@ product-price .compare-at-price{
 
   /* 隐藏分隔线（移动端） - 给 divider 添加 fd 类名 */
   .fd {
-    display: none !important;
+    /* display: none !important; */
   }
 
   /* 图标大小 - 给 icon 添加 fi 类名 */
@@ -278,7 +283,7 @@ product-price .compare-at-price{
     height: 24px !important;
   }
  .fd {
-    display: none !important;
+    /* display: none !important; */
   }
 
   .my-custom-texticon .section {
@@ -647,5 +652,13 @@ summary {
   .product-grid {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+/* 移动端you may also like样式 */
+@media screen and (max-width: 749px) {
+  .section-resource-list__content {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中（如果需要） */
   }
 }

@@ -2649,7 +2649,7 @@ color: #000000;
 
 /* Quantity selector */
 .quantity-selector {
-  --quantity-selector-width: 124px;
+  --quantity-selector-width: 145px;
 
   display: flex;
   justify-content: space-between;
@@ -2664,6 +2664,13 @@ color: #000000;
   &:hover {
     background-color: var(--color-input-hover-background);
   }
+}
+
+.quantity-selector {
+  /* 移除任何固定宽度 */
+  width: auto; /* 或者不设置 width */
+  min-width: var(--quantity-selector-width);
+  max-width: none; /* ✅ 允许扩展 */
 }
 
 .product-form-buttons:has(.add-to-cart-button.button-secondary) .quantity-selector {

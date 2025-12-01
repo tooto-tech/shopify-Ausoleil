@@ -35,6 +35,7 @@
   #
   # At the moment, we check if the Section Rendering API is being used by
   # checking if section.index is blank.
+  # 只有在API被调用时才加载资源,首次加载更快
   assign eager_loading = false
   if section.index == blank
     assign eager_loading = true
@@ -51,6 +52,7 @@
   class="header-drawer {{ class }}"
   style="--menu-image-border-radius: {{ image_border_radius }}px; --resource-card-corner-radius: {{ image_border_radius }}px;"
 >
+  {% comment %} 用于实现可展开/折叠的语义容器 {% endcomment %}
   <details
     id="Details-menu-drawer-container"
     data-skip-node-update="true"
@@ -58,6 +60,7 @@
     ref="details"
     scroll-lock
   >
+    {% comment %} 作为折叠容器的触发控件(汉堡按钮) {% endcomment %}
     <summary
       class="header__icon header__icon--menu header__icon--summary"
       aria-label="{{ 'accessibility.menu' | t }}"
@@ -70,6 +73,7 @@
         {{- 'icon-close.svg' | inline_asset_content -}}
       </span>
     </summary>
+    {% comment %} 抽屉主体 {% endcomment %}
     <div
       data-header-drawer
       class="
@@ -78,6 +82,7 @@
         color-{{ block_settings.color_scheme }}
       "
     >
+      {% comment %} 顶部关闭按钮 {% endcomment %}
       <button
         class="button button-unstyled close-button menu-drawer__close-button"
         type="button"
@@ -88,6 +93,7 @@
           {{- 'icon-close.svg' | inline_asset_content -}}
         </span>
       </button>
+      {% comment %} 主菜单 {% endcomment %}
       <nav
         class="menu-drawer__navigation"
         style="
@@ -101,7 +107,9 @@
         >
           {%- comment -%}
             Handle menus with fewer than 3 levels of links
+            每个菜单项用li包裹,drawer_accordion设置不同渲染分支,linklist.levels会记录该菜单的最大层级
           {%- endcomment -%}
+          {% comment %} 最多只有二级菜单的情况 {% endcomment %}
           {% if linklist.levels < 3 %}
             {% assign first_accordion_open = false %}
             {% assign animation_index = 0 %}
@@ -246,6 +254,7 @@
                 {% endif %}
               </li>
             {%- endfor -%}
+            {% comment %} 三级及以上的情况,一级菜单点击进入二级子页面,二级子页面再展开三级子菜单 {% endcomment %}
           {% else %}
             {%- comment -%}
               Handle menus with 3 levels of links
@@ -563,6 +572,7 @@
           {% endif %}
         </ul>
       </nav>
+      {% comment %} 语言切换区域(只显示在移动端) {% endcomment %}
       <div
         class="menu-drawer__utility-links menu-drawer__animated-element"
         style="--menu-drawer-animation-index: {{ linklist.links.size }};"
@@ -583,6 +593,7 @@
             assign show_country = false
           endif
         %}
+        {% comment %} 判断是否是移动端 {% endcomment %}
         {% if data_header_drawer_type == 'mobile-drawer' and show_country or show_language %}
           {% render 'drawer-localization',
             show_country: show_country,
@@ -725,9 +736,11 @@
   }
 
   .menu-drawer {
+
     position: fixed;
     transform: translateX(-100%);
     visibility: hidden;
+    /* 控制drawer的宽高 */
     height: var(--drawer-height);
     width: var(--drawer-width);
     max-width: var(--drawer-max-width);

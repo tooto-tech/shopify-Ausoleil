@@ -602,7 +602,13 @@ product-price .compare-at-price{
     background-color: #1226AA;
     color: #fff;
 }
-
+/* 交换社交图标和联系方式的顺序 */
+  .group-block-content .group-block {
+    order: 2;
+  }
+  .group-block-content .social-icons__wrapper {
+    order: 1;
+  }
 }
 
 /* footer菜单文本样式 */

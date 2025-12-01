@@ -572,7 +572,6 @@
           {% endif %}
         </ul>
       </nav>
-      {% comment %} 语言切换区域(只显示在移动端) {% endcomment %}
       <div
         class="menu-drawer__utility-links menu-drawer__animated-element"
         style="--menu-drawer-animation-index: {{ linklist.links.size }};"
@@ -593,7 +592,7 @@
             assign show_country = false
           endif
         %}
-        {% comment %} 判断是否是移动端 {% endcomment %}
+        {% comment %}  语言切换区域(只显示在移动端(通过data_header_drawer_type来判断)) {% endcomment %}
         {% if data_header_drawer_type == 'mobile-drawer' and show_country or show_language %}
           {% render 'drawer-localization',
             show_country: show_country,
@@ -602,12 +601,12 @@
           %}
         {%- endif -%}
       </div>
-
+      {% comment %} 底部推荐产品区域 {% endcomment %}
+        {% comment %} 移动端的eager_loading为false,所以不展示 {% endcomment %}
       {% liquid
         if block_settings.menu_style == 'featured_collections'
           assign top_level_featured_collections = linklist.links | where: 'type', 'collection_link'
         endif
-
         if eager_loading and block_settings.menu_style == 'featured_products'
           for link in linklist.links
             if link.type == 'collection_link'
@@ -621,6 +620,7 @@
           endfor
         endif
       -%}
+
       {% if top_level_featured_collections.size > 0 or top_level_featured_products_collection.products_count > 0 %}
         <div
           class="menu-drawer__featured-content"

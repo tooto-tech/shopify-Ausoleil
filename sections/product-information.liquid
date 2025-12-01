@@ -262,7 +262,11 @@
   }
 
   /* Wider sidebar for large screens */
-  /* 加间距 */
+@media screen and (min-width: 768px) {
+  .product-information__grid:not(.product-information__grid--half):not(:has(.product-information__media:empty)) {
+    gap: 20px; /* 平板和PC端都有间距 */
+  }
+}
 
   @media screen and (min-width: 1200px) {
     .product-information__grid:not(

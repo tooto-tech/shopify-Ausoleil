@@ -609,6 +609,13 @@ product-price .compare-at-price{
   .group-block-content .social-icons__wrapper {
     order: 1;
   }
+  /* 交换联系区域和菜单区域 */
+  .footer-contact{
+    order: 1;
+  }
+  .footer-menu-wrapper{
+    order: 07;
+  }
 
 }
 

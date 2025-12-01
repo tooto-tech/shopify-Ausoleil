@@ -27,8 +27,13 @@ elsif section.settings.enable_transparent_header_collection and template.name ==
   assign section.settings.color_scheme_transparent = section.settings.collection_color_scheme
 elsif section.settings.enable_transparent_header_other and template.name != 'index' and template.name != 'product' and template.name != 'collection'
   assign transparent = 'always'
-  assign transparent_color_scheme = section.settings.other_color_scheme 
-  assign section.settings.color_scheme_transparent = section.settings.other_color_scheme
+  # 直接在这里判断并设置最终值
+  if section.settings.other_color_scheme == 'inverse'
+    assign transparent_color_scheme = section.settings.color_scheme_transparent
+  else
+    assign transparent_color_scheme = section.settings.color_scheme_top
+  endif
+  assign section.settings.color_scheme_transparent = transparent_color_scheme
 endif
 
 if section.settings.enable_sticky_header == 'always'
@@ -37,15 +42,17 @@ elsif section.settings.enable_sticky_header == 'scroll-up'
   assign sticky = 'scroll-up'
 endif
 
-if transparent and sticky
-  assign transparent = 'not-sticky'
-endif
-
 if transparent
-  if transparent_color_scheme == 'inverse'
-    assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_transparent
+  # 只处理首页/产品页/收藏页,因为"其他页面"已经在上面处理过了
+  if template.name == 'index' or template.name == 'product' or template.name == 'collection'
+    if transparent_color_scheme == 'inverse'
+      assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_transparent
+    else
+      assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_top
+    endif
   else
-    assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_top
+    # 其他页面:已经设置好了,只需要加前缀
+    assign transparent_color_scheme = 'color-' | append: transparent_color_scheme
   endif
 endif
 

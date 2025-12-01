@@ -41,6 +41,18 @@
       }
     {% endstyle %}
   {% endif %}
+  {% if block_settings['padding-block-start-mobile'] != blank or block_settings['padding-block-end-mobile'] != blank or block_settings['padding-inline-start-mobile'] != blank or block_settings['padding-inline-end-mobile'] != blank %}
+    {% style %}
+      @media screen and (max-width: 749px) {
+        .slide__content--{{ section.id }}-{{ block.id }} {
+          {% if block_settings['padding-block-start-mobile'] != blank %}padding-block-start: {{ block_settings['padding-block-start-mobile'] }}px !important;{% endif %}
+          {% if block_settings['padding-block-end-mobile'] != blank %}padding-block-end: {{ block_settings['padding-block-end-mobile'] }}px !important;{% endif %}
+          {% if block_settings['padding-inline-start-mobile'] != blank %}padding-inline-start: {{ block_settings['padding-inline-start-mobile'] }}px !important;{% endif %}
+          {% if block_settings['padding-inline-end-mobile'] != blank %}padding-inline-end: {{ block_settings['padding-inline-end-mobile'] }}px !important;{% endif %}
+        }
+      }
+    {% endstyle %}
+  {% endif %}
 
   <div class="slide__image-container">
     {%- if block_settings.toggle_overlay -%}
@@ -114,7 +126,7 @@
     {%- endif -%}
   </div>
   <div
-    class="spacing-style slide__content{% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}{% if preview_image or block_settings.toggle_overlay %} background-transparent{% endif %}"
+    class="spacing-style slide__content slide__content--{{ section.id }}-{{ block.id }}{% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}{% if preview_image or block_settings.toggle_overlay %} background-transparent{% endif %}"
     style="{% render 'spacing-style', settings: block_settings %}"
     {{ block.shopify_attributes }}
   >
@@ -493,6 +505,50 @@
       "type": "range",
       "id": "padding-inline-end",
       "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "移动端填充"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "顶部（移动端）",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "底部（移动端）",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "左侧（移动端）",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "右侧（移动端）",
       "min": 0,
       "max": 100,
       "step": 1,

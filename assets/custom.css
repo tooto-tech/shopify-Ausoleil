@@ -764,7 +764,7 @@ slideshow-container,
 slideshow-slides,
 slideshow-slide,
 .slide__image-container {
-  height: auto !important;
-  aspect-ratio: auto !important;
+  height: auto ;
+  aspect-ratio: auto ;
 }
 

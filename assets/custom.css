@@ -757,3 +757,9 @@ summary {
   }
 }
 
+/* 幻灯片高度 */
+.slideshow,
+.slideshow__slide,
+.slideshow__media {
+  height: auto !important;
+}

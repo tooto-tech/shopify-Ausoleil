@@ -504,7 +504,7 @@ product-price .compare-at-price{
 /* 2. 边框颜色/透明度 (应用于内层 input-group) */
 .email-signup__input-group {
     /* 确保内层容器占满父级宽度 */
-    width: 70%;
+    width: 80%;
     /* 边框颜色和透明度 */
     border: 1px solid rgba(209, 209, 209, 0.6); /* #D1D1D1 with opacity 0.6 */
 

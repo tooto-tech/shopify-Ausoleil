@@ -45,7 +45,7 @@
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div
   class="product-information section section--{{ content_width }} spacing-style color-{{ section.settings.color_scheme }} relative"
-  style="{% render 'spacing-style', settings: section.settings %} --gap: {{ section.settings.gap }}px;"
+  style="{% render 'spacing-style', settings: section.settings %}"
 >
 {% comment %} 顶部面包屑 {% endcomment %}
         {% render 'product-breadcrumb', product: closest.product %}

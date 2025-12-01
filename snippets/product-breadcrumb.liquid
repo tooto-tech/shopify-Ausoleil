@@ -7,7 +7,7 @@
   assign collection_name = ''
   assign back_url = ''
   assign current_collection = null
-  
+
   # Check if there's a collection context from the request
   if collection and collection.handle
     assign current_collection = collection
@@ -15,7 +15,7 @@
     # Use the first collection if no collection context
     assign current_collection = product.collections.first
   endif
-  
+
   # Set collection name and back URL
   if current_collection
     assign collection_name = current_collection.title
@@ -34,7 +34,7 @@
       </svg>
       Back
     </a>
-    
+
     {% if collection_name != blank %}
       <span class="product-breadcrumb__separator">|</span>
       <nav class="product-breadcrumb__nav">
@@ -49,7 +49,8 @@
 <style>
 .product-breadcrumb {
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 33px;
+  margin-top: 30px;
 }
 
 .product-breadcrumb__wrapper {
@@ -59,15 +60,17 @@
   flex-wrap: wrap;
   font-size: 0.875rem;
   line-height: 1.5;
-  color: #231c0a;
+  color: #000000;
 }
 
 .product-breadcrumb__back {
+  font-size: 12px;
+  font-family: Manrope;
   display: flex;
   align-items: center;
   gap: 6px;
   text-decoration: none;
-  color: #231c0a;
+  color: #000000;
   font-weight: 500;
   transition: opacity 0.2s ease;
 }
@@ -77,17 +80,22 @@
 }
 
 .product-breadcrumb__back-icon {
+  margin-left: 26px;
   width: 16px;
   height: 16px;
   flex-shrink: 0;
 }
 
 .product-breadcrumb__separator {
-  color: #231c0a;
-  font-weight: 400;
+  color: #979797;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
 }
 
 .product-breadcrumb__nav {
+  font-size: 12px;
+  font-family: Manrope;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -96,7 +104,7 @@
 
 .product-breadcrumb__collection {
   text-decoration: none;
-  color: #231c0a;
+  color: #000000;
   font-weight: 500;
   transition: opacity 0.2s ease;
   text-transform: capitalize;
@@ -107,13 +115,12 @@
 }
 
 .product-breadcrumb__divider {
-  color: #231c0a;
-  font-weight: 400;
+    font-size: 16px;
+  display: inline-block;
 }
 
 .product-breadcrumb__product {
-  color: #231c0a;
-  font-weight: 400;
+  color: #000000;
 }
 
 /* Mobile responsive */
@@ -121,17 +128,17 @@
   .product-breadcrumb {
     margin-bottom: 16px;
   }
-  
+
   .product-breadcrumb__wrapper {
     font-size: 0.8125rem;
     gap: 10px;
   }
-  
+
   .product-breadcrumb__back-icon {
     width: 14px;
     height: 14px;
   }
-  
+
   .product-breadcrumb__nav {
     gap: 6px;
   }

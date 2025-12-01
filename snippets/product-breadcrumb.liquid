@@ -1,0 +1,147 @@
+{% comment %}
+  Product Breadcrumb Component
+  Displays: < Back | Collection / Product Name
+{% endcomment %}
+
+{%- liquid
+  assign collection_name = ''
+  assign back_url = ''
+  assign current_collection = null
+  
+  # Check if there's a collection context from the request
+  if collection and collection.handle
+    assign current_collection = collection
+  elsif product.collections.size > 0
+    # Use the first collection if no collection context
+    assign current_collection = product.collections.first
+  endif
+  
+  # Set collection name and back URL
+  if current_collection
+    assign collection_name = current_collection.title
+    assign back_url = current_collection.url
+  else
+    # Fallback to all collections page
+    assign back_url = '/collections/all'
+  endif
+-%}
+
+<div class="product-breadcrumb">
+  <div class="product-breadcrumb__wrapper">
+    <a href="{{ back_url }}" class="product-breadcrumb__back">
+      <svg class="product-breadcrumb__back-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+    
+    {% if collection_name != blank %}
+      <span class="product-breadcrumb__separator">|</span>
+      <nav class="product-breadcrumb__nav">
+        <a href="{{ back_url }}" class="product-breadcrumb__collection">{{ collection_name }}</a>
+        <span class="product-breadcrumb__divider">/</span>
+        <span class="product-breadcrumb__product">{{ product.title }}</span>
+      </nav>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+.product-breadcrumb {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.product-breadcrumb__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #231c0a;
+}
+
+.product-breadcrumb__back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #231c0a;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.product-breadcrumb__back:hover {
+  opacity: 0.7;
+}
+
+.product-breadcrumb__back-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.product-breadcrumb__separator {
+  color: #231c0a;
+  font-weight: 400;
+}
+
+.product-breadcrumb__nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.product-breadcrumb__collection {
+  text-decoration: none;
+  color: #231c0a;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+  text-transform: capitalize;
+}
+
+.product-breadcrumb__collection:hover {
+  opacity: 0.7;
+}
+
+.product-breadcrumb__divider {
+  color: #231c0a;
+  font-weight: 400;
+}
+
+.product-breadcrumb__product {
+  color: #231c0a;
+  font-weight: 400;
+}
+
+/* Mobile responsive */
+@media (max-width: 749px) {
+  .product-breadcrumb {
+    margin-bottom: 16px;
+  }
+  
+  .product-breadcrumb__wrapper {
+    font-size: 0.8125rem;
+    gap: 10px;
+  }
+  
+  .product-breadcrumb__back-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .product-breadcrumb__nav {
+    gap: 6px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 750px) and (max-width: 1199px) {
+  .product-breadcrumb {
+    margin-bottom: 20px;
+  }
+}
+</style>
+

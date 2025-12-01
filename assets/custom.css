@@ -580,8 +580,10 @@ product-price .compare-at-price{
     height: auto;
   }
   .email-signup__input, .email-signup__button--text{
-    width: 170px;
+    width: 50%;
   }
+  /* 修改输入框和按钮的比例 */
+
 }
 
 /* footer菜单文本样式 */

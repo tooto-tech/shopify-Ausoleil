@@ -669,6 +669,10 @@ summary {
   .email-signup-wrapper {
     order: 2; /* 电子邮件块排到后面 */
   }
+  /* 电子邮件块宽度 */
+  .email-signup__input-group {
+    width: 134px;
+  }
 
   .group-block:last-child {
     order: 1; /* 图标块排到前面 */

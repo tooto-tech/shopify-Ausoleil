@@ -552,8 +552,10 @@ product-price .compare-at-price{
   padding: 16px;
 }
 /* 页脚部分 */
-/* 移动端切换表单和logo的顺序 */
 @media (max-width: 768px) {
+  .menu__details {
+    --padding-block-end: 40px !important;
+}
 .email-signup__input-group{
   width: 100%;
         display: flex;

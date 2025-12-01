@@ -760,4 +760,5 @@ summary {
 /* 幻灯片高度 */
 .slide__image-container img {
   object-fit: contain !important;
+  width: 100%;
 }

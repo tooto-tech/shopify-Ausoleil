@@ -649,3 +649,7 @@ summary {
     padding-right: 20px;
   }
 }
+/* 移动端you may also like样式 */
+.section-resource-list__content{
+  justify-content: center;
+}

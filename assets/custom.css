@@ -128,8 +128,13 @@ product-price .compare-at-price{
    ======================================== */
 
 /* 分隔线样式 */
+<<<<<<< HEAD
 .my-custom-texticon .divider {
   transform: rotate(10deg);
+=======
+.my-custom-texticon .divider__line {
+  transform: rotate(15deg);
+>>>>>>> parent of dc0f940 (Update from Shopify for theme shopify-Ausoleil/main)
   border-color: #ffffff80;
 }
 

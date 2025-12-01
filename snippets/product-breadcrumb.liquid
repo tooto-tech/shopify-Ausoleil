@@ -61,6 +61,7 @@
   font-size: 0.875rem;
   line-height: 1.5;
   color: #000000;
+  max-width: 100%;
 }
 
 .product-breadcrumb__back {
@@ -73,6 +74,7 @@
   color: #000000;
   font-weight: 500;
   transition: opacity 0.2s ease;
+  white-space: nowrap;
 }
 
 .product-breadcrumb__back:hover {
@@ -88,9 +90,10 @@
 
 .product-breadcrumb__separator {
   color: #979797;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .product-breadcrumb__nav {
@@ -100,6 +103,8 @@
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+  min-width: 0;
+  flex: 1;
 }
 
 .product-breadcrumb__collection {
@@ -108,6 +113,7 @@
   font-weight: 500;
   transition: opacity 0.2s ease;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .product-breadcrumb__collection:hover {
@@ -115,32 +121,59 @@
 }
 
 .product-breadcrumb__divider {
-    font-size: 16px;
+  font-size: 16px;
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .product-breadcrumb__product {
   color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 
 /* Mobile responsive */
 @media (max-width: 749px) {
   .product-breadcrumb {
     margin-bottom: 16px;
+    margin-top: 16px;
   }
 
   .product-breadcrumb__wrapper {
-    font-size: 0.8125rem;
-    gap: 10px;
+    font-size: 0.75rem;
+    gap: 8px;
+    padding: 0 16px;
+  }
+
+  .product-breadcrumb__back {
+    font-size: 11px;
   }
 
   .product-breadcrumb__back-icon {
-    width: 14px;
-    height: 14px;
+    margin-left: 0;
+    width: 12px;
+    height: 12px;
+  }
+
+  .product-breadcrumb__separator {
+    font-size: 12px;
   }
 
   .product-breadcrumb__nav {
+    font-size: 11px;
     gap: 6px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .product-breadcrumb__divider {
+    font-size: 14px;
+  }
+
+  .product-breadcrumb__product {
+    max-width: 100%;
   }
 }
 
@@ -148,6 +181,11 @@
 @media (min-width: 750px) and (max-width: 1199px) {
   .product-breadcrumb {
     margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .product-breadcrumb__back-icon {
+    margin-left: 12px;
   }
 }
 </style>

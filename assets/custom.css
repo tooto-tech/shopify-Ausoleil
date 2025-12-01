@@ -135,7 +135,7 @@ product-price .compare-at-price{
 
 /* 斜线分隔符样式 - 给 divider 添加 fd 类名 */
 .fd .divider__line {
-  transform: rotate(15deg);
+  transform: rotate(10deg);
   border-color: rgba(18, 24, 33, 0.5); /* #121821 透明度 0.5 */
 }
 

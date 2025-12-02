@@ -1011,7 +1011,7 @@
       "custom_css": [
         ".collection-card__link {background-color: white;}",
         "@media screen and (max-width: 749px) {.resource-list--grid {gap: 20px; }}",
-        "@media screen and (max-width: 749px) {.section-resource-list {--padding-block-end: 94px !important; --padding-block-start: 50px !important; }}"
+        "@media screen and (max-width: 749px) {.section-resource-list {--padding-block-end: 46px !important; --padding-block-start: 50px !important; }}"
       ],
       "name": "产品系列列表",
       "settings": {
@@ -1282,7 +1282,11 @@
                 "padding-block-start": 6,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             }
@@ -1315,7 +1319,9 @@
         "gap": 0,
         "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "padding-block-start": 74,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0
       }
     },
     "section_Ncd7GN": {
@@ -1773,7 +1779,11 @@
                 "padding-block-start": 10,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             }
@@ -2627,7 +2637,11 @@
                 "padding-block-start": 10,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             }

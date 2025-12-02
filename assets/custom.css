@@ -152,6 +152,7 @@ product-price .compare-at-price{
     display: flex;
     align-items: center;
     height: 20px;
+    margin-top: 2px;
   }
   .my-custom-texticon .section {
     overflow: visible !important;

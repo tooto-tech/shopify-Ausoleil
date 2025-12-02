@@ -1977,7 +1977,12 @@
                 "padding-block-start": 82,
                 "padding-block-end": 76,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "custom_mobile_padding": true,
+                "padding-block-start-mobile": 40,
+                "padding-block-end-mobile": 26,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             },
@@ -2009,7 +2014,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "custom_mobile_padding": false,
+                "custom_mobile_padding": true,
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
@@ -2047,8 +2052,8 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "padding-block-start-mobile": 0,
+                "custom_mobile_padding": true,
+                "padding-block-start-mobile": 12,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
@@ -2141,7 +2146,12 @@
                 "padding-block-start": 82,
                 "padding-block-end": 76,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             },

@@ -139,8 +139,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "{{ closest.page.content }}",
-                "width": "fit-content",
-                "max_width": "normal",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",

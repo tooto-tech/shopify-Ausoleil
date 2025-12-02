@@ -296,8 +296,19 @@
     },
     {
       "type": "range",
-      "id": "padding_y",
-      "label": "上下内边距",
+      "id": "padding_top",
+      "label": "上内边距",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12,
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下内边距",
       "min": 0,
       "max": 40,
       "step": 2,
@@ -314,6 +325,44 @@
       "step": 2,
       "unit": "px",
       "default": 24,
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "header",
+      "content": "移动端内边距",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "上内边距（移动端）",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 10,
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "下内边距（移动端）",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 10,
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "padding_x_mobile",
+      "label": "左右内边距（移动端）",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 20,
       "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
     },
     {

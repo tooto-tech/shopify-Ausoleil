@@ -21,8 +21,12 @@
     --btn-border-color-hover: {{ block_settings.border_color_hover }};
     --btn-border-width: {{ block_settings.border_width }}px;
     --btn-border-radius: {{ block_settings.border_radius }}px;
-    --btn-padding-y: {{ block_settings.padding_y }}px;
+    --btn-padding-top: {{ block_settings.padding_top }}px;
+    --btn-padding-bottom: {{ block_settings.padding_bottom }}px;
     --btn-padding-x: {{ block_settings.padding_x }}px;
+    --btn-padding-top-mobile: {{ block_settings.padding_top_mobile }}px;
+    --btn-padding-bottom-mobile: {{ block_settings.padding_bottom_mobile }}px;
+    --btn-padding-x-mobile: {{ block_settings.padding_x_mobile }}px;
     {% if block_settings.font_family != blank %}--btn-font-family: {{ block_settings.font_family }};{% endif %}
     {% if block_settings.font_size != blank %}--btn-font-size: {{ block_settings.font_size }};{% endif %}
     {% if block_settings.font_size_mobile != blank %}--btn-font-size-mobile: {{ block_settings.font_size_mobile }};{% endif %}
@@ -72,7 +76,7 @@
     color: var(--btn-text);
     border: var(--btn-border-width) solid var(--btn-border-color);
     border-radius: var(--btn-border-radius);
-    padding: var(--btn-padding-y) var(--btn-padding-x);
+    padding: var(--btn-padding-top) var(--btn-padding-x) var(--btn-padding-bottom);
     font-family: var(--btn-font-family, inherit);
     font-size: var(--btn-font-size, inherit);
     font-weight: var(--btn-font-weight, inherit);
@@ -92,6 +96,8 @@
   @media screen and (max-width: 749px) {
     .button-custom {
       font-size: var(--btn-font-size-mobile, var(--btn-font-size, inherit));
+      padding: var(--btn-padding-top-mobile, var(--btn-padding-top)) var(--btn-padding-x-mobile, var(--btn-padding-x))
+        var(--btn-padding-bottom-mobile, var(--btn-padding-bottom));
     }
   }
 {% endstylesheet %}

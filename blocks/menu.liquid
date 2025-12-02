@@ -1,5 +1,3 @@
-
-
 {% liquid
   assign block_settings = block.settings
   assign menu = block_settings.menu
@@ -11,12 +9,68 @@
   endif
 %}
 
+{% capture heading_custom_styles %}
+  {% if block_settings.heading_type_preset == 'custom' %}
+    --menu-heading-font: {{ block_settings.heading_font }};
+    --menu-heading-size: {{ block_settings.heading_font_size }};
+    --menu-heading-size-mobile: {{ block_settings.heading_font_size_mobile | default: block_settings.heading_font_size }};
+    --menu-heading-weight: {{ block_settings.heading_weight | default: '400' }};
+    --menu-heading-weight-mobile: {{ block_settings.heading_weight_mobile | default: block_settings.heading_weight | default: '400' }};
+    --menu-heading-line-height: var(--line-height-{{ block_settings.heading_line_height }});
+    {% if block_settings.heading_letter_spacing_custom != blank %}
+      --menu-heading-letter-spacing: {{ block_settings.heading_letter_spacing_custom }};
+    {% else %}
+      --menu-heading-letter-spacing: var(--letter-spacing-{{ block_settings.heading_letter_spacing }});
+    {% endif %}
+    --menu-heading-case: {{ block_settings.heading_case }};
+    {% if block_settings.heading_custom_color != blank %}
+      --menu-heading-color: {{ block_settings.heading_custom_color }};
+    {% else %}
+      --menu-heading-color: {{ block_settings.heading_color }};
+    {% endif %}
+    {% if block_settings.heading_custom_color_mobile != blank %}
+      --menu-heading-color-mobile: {{ block_settings.heading_custom_color_mobile }};
+    {% else %}
+      --menu-heading-color-mobile: var(--menu-heading-color);
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
+{% capture link_custom_styles %}
+  {% if block_settings.link_type_preset == 'custom' %}
+    --menu-link-font: {{ block_settings.link_font }};
+    --menu-link-size: {{ block_settings.link_font_size }};
+    --menu-link-size-mobile: {{ block_settings.link_font_size_mobile | default: block_settings.link_font_size }};
+    --menu-link-weight: {{ block_settings.link_weight | default: '400' }};
+    --menu-link-weight-mobile: {{ block_settings.link_weight_mobile | default: block_settings.link_weight | default: '400' }};
+    --menu-link-line-height: var(--line-height-{{ block_settings.link_line_height }});
+    {% if block_settings.link_letter_spacing_custom != blank %}
+      --menu-link-letter-spacing: {{ block_settings.link_letter_spacing_custom }};
+    {% else %}
+      --menu-link-letter-spacing: var(--letter-spacing-{{ block_settings.link_letter_spacing }});
+    {% endif %}
+    --menu-link-case: {{ block_settings.link_case }};
+    {% if block_settings.link_custom_color != blank %}
+      --menu-link-color: {{ block_settings.link_custom_color }};
+    {% else %}
+      --menu-link-color: {{ block_settings.link_color }};
+    {% endif %}
+    {% if block_settings.link_custom_color_mobile != blank %}
+      --menu-link-color-mobile: {{ block_settings.link_custom_color_mobile }};
+    {% else %}
+      --menu-link-color-mobile: var(--menu-link-color);
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
 {% if menu != blank or heading != blank %}
   <accordion-custom
     class="
       menu
       {% if show_as_accordion == true %} menu--accordion menu--{{ block_settings.accordion_icon }}{% endif %}
       {% if dividers_enabled == true %} menu--dividers{% endif %}
+      {% if block_settings.heading_type_preset == 'custom' %} menu--custom-heading{% endif %}
+      {% if block_settings.link_type_preset == 'custom' %} menu--custom-link{% endif %}
     "
     data-disable-on-desktop="true"
     open-by-default-on-desktop
@@ -35,6 +89,8 @@
       style="
         --spacing--size: {{ block_settings.menu_spacing }}px;
         {% render 'spacing-style', settings: block_settings %}
+        {{ heading_custom_styles }}
+        {{ link_custom_styles }}
       "
       {{ block.shopify_attributes }}
     >
@@ -93,6 +149,29 @@
     display: none;
   }
 
+  /* Custom heading styles */
+  .menu--custom-heading .menu__heading__default,
+  .menu--custom-heading .menu__heading__accordion {
+    font-family: var(--menu-heading-font);
+    font-size: var(--menu-heading-size);
+    font-weight: var(--menu-heading-weight);
+    line-height: var(--menu-heading-line-height);
+    letter-spacing: var(--menu-heading-letter-spacing);
+    text-transform: var(--menu-heading-case);
+    color: var(--menu-heading-color);
+  }
+
+  /* Custom link styles */
+  .menu--custom-link .menu__item a {
+    font-family: var(--menu-link-font);
+    font-size: var(--menu-link-size);
+    font-weight: var(--menu-link-weight);
+    line-height: var(--menu-link-line-height);
+    letter-spacing: var(--menu-link-letter-spacing);
+    text-transform: var(--menu-link-case);
+    color: var(--menu-link-color);
+  }
+
   @media screen and (max-width: 749px) {
     /* Always show the fallback heading on mobile when accordion is enabled */
     .menu--accordion .menu__heading--empty {
@@ -121,6 +200,21 @@
 
     .menu--dividers .details-content {
       padding-block-end: var(--padding-sm);
+    }
+
+    /* Mobile custom heading styles */
+    .menu--custom-heading .menu__heading__default,
+    .menu--custom-heading .menu__heading__accordion {
+      font-size: var(--menu-heading-size-mobile);
+      font-weight: var(--menu-heading-weight-mobile);
+      color: var(--menu-heading-color-mobile);
+    }
+
+    /* Mobile custom link styles */
+    .menu--custom-link .menu__item a {
+      font-size: var(--menu-link-size-mobile);
+      font-weight: var(--menu-link-weight-mobile);
+      color: var(--menu-link-color-mobile);
     }
   }
 
@@ -205,7 +299,7 @@
     },
     {
       "type": "header",
-      "content": "t:content.typography"
+      "content": "标题版式"
     },
     {
       "type": "select",
@@ -249,6 +343,290 @@
     },
     {
       "type": "select",
+      "id": "heading_type_preset",
+      "label": "标题样式类型",
+      "options": [
+        {
+          "value": "default",
+          "label": "默认"
+        },
+        {
+          "value": "custom",
+          "label": "自定义"
+        }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "select",
+      "id": "heading_font",
+      "label": "标题字体",
+      "options": [
+        {
+          "value": "var(--font-body--family)",
+          "label": "正文"
+        },
+        {
+          "value": "var(--font-subheading--family)",
+          "label": "副标题"
+        },
+        {
+          "value": "var(--font-heading--family)",
+          "label": "标题"
+        },
+        {
+          "value": "var(--font-accent--family)",
+          "label": "强调"
+        },
+        {
+          "value": "'Poppins', sans-serif",
+          "label": "Poppins"
+        },
+        {
+          "value": "'Mont', var(--font-heading--family)",
+          "label": "Mont"
+        }
+      ],
+      "default": "var(--font-heading--family)",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "heading_font_size",
+      "label": "标题字号",
+      "options": [
+        {
+          "value": "0.75rem",
+          "label": "12px"
+        },
+        {
+          "value": "0.875rem",
+          "label": "14px"
+        },
+        {
+          "value": "1rem",
+          "label": "16px"
+        },
+        {
+          "value": "1.125rem",
+          "label": "18px"
+        },
+        {
+          "value": "1.25rem",
+          "label": "20px"
+        },
+        {
+          "value": "1.5rem",
+          "label": "24px"
+        },
+        {
+          "value": "2rem",
+          "label": "32px"
+        }
+      ],
+      "default": "1.25rem",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "heading_font_size_mobile",
+      "label": "标题移动端字号",
+      "options": [
+        {
+          "value": "",
+          "label": "同桌面端"
+        },
+        {
+          "value": "0.75rem",
+          "label": "12px"
+        },
+        {
+          "value": "0.875rem",
+          "label": "14px"
+        },
+        {
+          "value": "1rem",
+          "label": "16px"
+        },
+        {
+          "value": "1.125rem",
+          "label": "18px"
+        },
+        {
+          "value": "1.25rem",
+          "label": "20px"
+        }
+      ],
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "标题字重",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light (300)"
+        },
+        {
+          "value": "400",
+          "label": "Regular (400)"
+        },
+        {
+          "value": "500",
+          "label": "Medium (500)"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold (600)"
+        },
+        {
+          "value": "700",
+          "label": "Bold (700)"
+        }
+      ],
+      "default": "600",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "heading_weight_mobile",
+      "label": "标题移动端字重",
+      "options": [
+        {
+          "value": "",
+          "label": "同桌面端"
+        },
+        {
+          "value": "300",
+          "label": "Light (300)"
+        },
+        {
+          "value": "400",
+          "label": "Regular (400)"
+        },
+        {
+          "value": "500",
+          "label": "Medium (500)"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold (600)"
+        },
+        {
+          "value": "700",
+          "label": "Bold (700)"
+        }
+      ],
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "heading_line_height",
+      "label": "标题行高",
+      "options": [
+        {
+          "value": "tight",
+          "label": "紧凑"
+        },
+        {
+          "value": "normal",
+          "label": "正常"
+        },
+        {
+          "value": "loose",
+          "label": "宽松"
+        }
+      ],
+      "default": "normal",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "heading_letter_spacing",
+      "label": "标题字间距",
+      "options": [
+        {
+          "value": "tight",
+          "label": "紧凑"
+        },
+        {
+          "value": "normal",
+          "label": "正常"
+        },
+        {
+          "value": "loose",
+          "label": "宽松"
+        }
+      ],
+      "default": "normal",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "text",
+      "id": "heading_letter_spacing_custom",
+      "label": "标题自定义字间距",
+      "info": "如 0.1em、2px，留空使用上方设置",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "heading_case",
+      "label": "标题大小写",
+      "options": [
+        {
+          "value": "none",
+          "label": "默认"
+        },
+        {
+          "value": "uppercase",
+          "label": "全大写"
+        }
+      ],
+      "default": "none",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "heading_color",
+      "label": "标题颜色",
+      "options": [
+        {
+          "value": "var(--color-foreground)",
+          "label": "文本色"
+        },
+        {
+          "value": "var(--color-foreground-heading)",
+          "label": "标题色"
+        },
+        {
+          "value": "var(--color-primary)",
+          "label": "链接色"
+        }
+      ],
+      "default": "var(--color-foreground-heading)",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "heading_custom_color",
+      "label": "标题自定义颜色",
+      "info": "设置后覆盖上方颜色",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "heading_custom_color_mobile",
+      "label": "标题移动端自定义颜色",
+      "info": "留空使用桌面端颜色",
+      "visible_if": "{{ block.settings.heading_type_preset == 'custom' }}"
+    },
+    {
+      "type": "header",
+      "content": "链接版式"
+    },
+    {
+      "type": "select",
       "id": "link_preset",
       "label": "t:settings.link_preset",
       "options": [
@@ -286,6 +664,266 @@
         }
       ],
       "default": "paragraph"
+    },
+    {
+      "type": "select",
+      "id": "link_type_preset",
+      "label": "链接样式类型",
+      "options": [
+        {
+          "value": "default",
+          "label": "默认"
+        },
+        {
+          "value": "custom",
+          "label": "自定义"
+        }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "select",
+      "id": "link_font",
+      "label": "链接字体",
+      "options": [
+        {
+          "value": "var(--font-body--family)",
+          "label": "正文"
+        },
+        {
+          "value": "var(--font-subheading--family)",
+          "label": "副标题"
+        },
+        {
+          "value": "var(--font-heading--family)",
+          "label": "标题"
+        },
+        {
+          "value": "var(--font-accent--family)",
+          "label": "强调"
+        },
+        {
+          "value": "'Poppins', sans-serif",
+          "label": "Poppins"
+        },
+        {
+          "value": "'Mont', var(--font-heading--family)",
+          "label": "Mont"
+        }
+      ],
+      "default": "var(--font-body--family)",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "link_font_size",
+      "label": "链接字号",
+      "options": [
+        {
+          "value": "0.75rem",
+          "label": "12px"
+        },
+        {
+          "value": "0.875rem",
+          "label": "14px"
+        },
+        {
+          "value": "1rem",
+          "label": "16px"
+        },
+        {
+          "value": "1.125rem",
+          "label": "18px"
+        },
+        {
+          "value": "1.25rem",
+          "label": "20px"
+        }
+      ],
+      "default": "0.875rem",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "link_font_size_mobile",
+      "label": "链接移动端字号",
+      "options": [
+        {
+          "value": "",
+          "label": "同桌面端"
+        },
+        {
+          "value": "0.75rem",
+          "label": "12px"
+        },
+        {
+          "value": "0.8125rem",
+          "label": "13px"
+        },
+        {
+          "value": "0.875rem",
+          "label": "14px"
+        },
+        {
+          "value": "1rem",
+          "label": "16px"
+        }
+      ],
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "link_weight",
+      "label": "链接字重",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light (300)"
+        },
+        {
+          "value": "400",
+          "label": "Regular (400)"
+        },
+        {
+          "value": "500",
+          "label": "Medium (500)"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold (600)"
+        }
+      ],
+      "default": "400",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "link_weight_mobile",
+      "label": "链接移动端字重",
+      "options": [
+        {
+          "value": "",
+          "label": "同桌面端"
+        },
+        {
+          "value": "300",
+          "label": "Light (300)"
+        },
+        {
+          "value": "400",
+          "label": "Regular (400)"
+        },
+        {
+          "value": "500",
+          "label": "Medium (500)"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold (600)"
+        }
+      ],
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "link_line_height",
+      "label": "链接行高",
+      "options": [
+        {
+          "value": "tight",
+          "label": "紧凑"
+        },
+        {
+          "value": "normal",
+          "label": "正常"
+        },
+        {
+          "value": "loose",
+          "label": "宽松"
+        }
+      ],
+      "default": "normal",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "link_letter_spacing",
+      "label": "链接字间距",
+      "options": [
+        {
+          "value": "tight",
+          "label": "紧凑"
+        },
+        {
+          "value": "normal",
+          "label": "正常"
+        },
+        {
+          "value": "loose",
+          "label": "宽松"
+        }
+      ],
+      "default": "normal",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "text",
+      "id": "link_letter_spacing_custom",
+      "label": "链接自定义字间距",
+      "info": "如 0.1em、2px，留空使用上方设置",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "link_case",
+      "label": "链接大小写",
+      "options": [
+        {
+          "value": "none",
+          "label": "默认"
+        },
+        {
+          "value": "uppercase",
+          "label": "全大写"
+        }
+      ],
+      "default": "none",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "link_color",
+      "label": "链接颜色",
+      "options": [
+        {
+          "value": "var(--color-foreground)",
+          "label": "文本色"
+        },
+        {
+          "value": "var(--color-foreground-heading)",
+          "label": "标题色"
+        },
+        {
+          "value": "var(--color-primary)",
+          "label": "链接色"
+        }
+      ],
+      "default": "var(--color-foreground)",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "link_custom_color",
+      "label": "链接自定义颜色",
+      "info": "设置后覆盖上方颜色",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "link_custom_color_mobile",
+      "label": "链接移动端自定义颜色",
+      "info": "留空使用桌面端颜色",
+      "visible_if": "{{ block.settings.link_type_preset == 'custom' }}"
     },
     {
       "type": "header",

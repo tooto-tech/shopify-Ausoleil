@@ -482,7 +482,7 @@
               "type": "text",
               "settings": {
                 "text": "<p>In the fleeting glimmers and soft-whispering shadows along the coast, lies the deep affection so many hold for the sea. He’s the most dedicated of all the “coastal light chasers” — when the morning mist wraps the land like a sheer veil,</p>",
-                "width": "fit-content",
+                "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
                 "type_preset": "custom",

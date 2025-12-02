@@ -301,6 +301,8 @@
         "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "padding-block-start": 0,
         "padding-block-end": 82,
+        "mobile_padding_block_start": 0,
+        "mobile_padding_block_end": 64,
         "mobile_padding_inline_start": 0,
         "mobile_padding_inline_end": 0
       }

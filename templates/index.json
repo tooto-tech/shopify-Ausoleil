@@ -1987,7 +1987,7 @@
             "text_VnjkNi"
           ]
         },
-        "pss_slide_KpfBfi": {
+        "pss_slide_tHn8JK": {
           "type": "_pss-slide",
           "name": "PSS 幻灯片",
           "settings": {
@@ -2004,7 +2004,7 @@
             "center_text": "Aussie Soul Time By Rock And Wave",
             "text_font": "'DolceVitaLight', var(--font-heading--family)",
             "text_size": "2.5rem",
-            "text_size_mobile": "0.875rem",
+            "text_size_mobile": "2rem",
             "text_weight": "400",
             "text_weight_mobile": "",
             "text_color": "#ffffff",
@@ -2015,15 +2015,15 @@
             "see_more_link": "",
             "right_bg_color": "#f3f4f6",
             "horizontal_alignment": "center",
-            "vertical_alignment": "center",
+            "vertical_alignment": "flex-start",
             "content_gap": 0,
-            "right_padding_top": 0,
-            "right_padding_bottom": 0,
-            "right_padding_left": 0,
-            "right_padding_right": 0
+            "right_padding_top": 64,
+            "right_padding_bottom": 56,
+            "right_padding_left": 60,
+            "right_padding_right": 60
           },
           "blocks": {
-            "icon_mkMF6n": {
+            "icon_xejjLT": {
               "type": "icon",
               "name": "t:names.icon",
               "settings": {
@@ -2039,7 +2039,7 @@
               },
               "blocks": {}
             },
-            "image_rrawUb": {
+            "image_HrtyHK": {
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/19WBPBDBDFUOO_D_45_DETAIL_2_1x_2x_aff447ce-e8a5-420e-ba5c-7d9162d6721f.webp",
@@ -2057,14 +2057,14 @@
                 "border_radius": 0,
                 "custom_mobile_border_radius": false,
                 "border_radius_mobile": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
+                "padding-block-start": 82,
+                "padding-block-end": 76,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
               "blocks": {}
             },
-            "text_gzhtwf": {
+            "text_A6nKN4": {
               "type": "text",
               "settings": {
                 "text": "<p>Verdant Avant-Garde Sunglasses192001</p>",
@@ -2101,7 +2101,7 @@
               },
               "blocks": {}
             },
-            "text_jcgxRr": {
+            "text_RkVNzN": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -2126,7 +2126,7 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 0,
+                "padding-block-start": 10,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
@@ -2141,16 +2141,16 @@
             }
           },
           "block_order": [
-            "icon_mkMF6n",
-            "image_rrawUb",
-            "text_gzhtwf",
-            "text_jcgxRr"
+            "icon_xejjLT",
+            "image_HrtyHK",
+            "text_A6nKN4",
+            "text_RkVNzN"
           ]
         }
       },
       "block_order": [
         "pss_slide_QfhY46",
-        "pss_slide_KpfBfi"
+        "pss_slide_tHn8JK"
       ],
       "custom_css": [
         ".pss-slide__left-text {width: 120%;}",

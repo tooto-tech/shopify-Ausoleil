@@ -319,8 +319,7 @@ p:empty {
 .page-width-normal,
 .page-width-narrow,
 .page-width-content {
-  移动端的页面边距为40
-  --page-margin: 40px;
+  --page-margin: 16px;
 }
 
 @media screen and (min-width: 750px) {

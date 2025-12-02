@@ -100,13 +100,19 @@
 <style>
   .pss-section {
     width: 100%;
+    display: grid;
   }
   .pss-section--page {
-    max-width: var(--page-width);
-    margin: 0 auto;
+    grid-template-columns:
+      minmax(var(--page-margin), 1fr)
+      min(var(--page-width) - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2))
+      minmax(var(--page-margin), 1fr);
+  }
+  .pss-section--page > .pss-swiper {
+    grid-column: 2;
   }
   .pss-section--full {
-    max-width: 100%;
+    grid-template-columns: 1fr;
   }
   .pss-swiper {
     width: 100%;

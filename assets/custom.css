@@ -798,7 +798,7 @@ body:not(:has(main[data-template="index"])) .page-width-wide,
 body:not(:has(main[data-template="index"])) .page-width-normal,
 body:not(:has(main[data-template="index"])) .page-width-narrow,
 body:not(:has(main[data-template="index"])) .page-width-content {
-  --page-margin: 20px !important;
+  --page-margin: 20px;
 }
 
 @media screen and (min-width: 750px) {
@@ -806,6 +806,6 @@ body:not(:has(main[data-template="index"])) .page-width-content {
   body:not(:has(main[data-template="index"])) .page-width-normal,
   body:not(:has(main[data-template="index"])) .page-width-narrow,
   body:not(:has(main[data-template="index"])) .page-width-content {
-    --page-margin: 120px !important;
+    --page-margin: 120px;
   }
 }

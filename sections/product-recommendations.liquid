@@ -1,4 +1,3 @@
-
 <script
   src="{{ 'product-recommendations.js' | asset_url }}"
   type="module"
@@ -179,6 +178,11 @@
   @media screen and (max-width: 749px) {
     .product-recommendations__skeleton-item:nth-child(2n + 1) {
       display: none;
+    }
+
+    .product-recommendations .section.spacing-style {
+      padding-block-start: var(--padding-block-start-mobile, var(--padding-block-start));
+      padding-block-end: var(--padding-block-end-mobile, var(--padding-block-end));
     }
   }
 
@@ -449,6 +453,30 @@
       "step": 1,
       "unit": "px",
       "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding_mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
     }
   ],
   "presets": [
@@ -471,7 +499,9 @@
         "gap": 28,
         "color_scheme": "scheme-1",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "padding-block-start-mobile": 24,
+        "padding-block-end-mobile": 24
       },
       "blocks": {
         "header": {

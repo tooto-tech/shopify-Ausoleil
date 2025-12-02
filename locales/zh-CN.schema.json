@@ -878,6 +878,7 @@
     "mobile_layout": "移动设备布局",
     "padding": "填充",
     "padding_desktop": "台式电脑填充",
+    "padding_mobile": "移动端填充",
     "paragraph": "段落",
     "policies": "政策",
     "popup": "弹出窗口",

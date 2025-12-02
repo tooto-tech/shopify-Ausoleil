@@ -866,6 +866,7 @@
     "mobile_layout": "行動裝置版面配置",
     "padding": "邊框間距",
     "padding_desktop": "桌面裝置邊框間距",
+    "padding_mobile": "行動裝置邊框間距",
     "paragraph": "段落",
     "policies": "政策",
     "popup": "彈出式視窗",

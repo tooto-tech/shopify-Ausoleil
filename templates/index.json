@@ -2703,11 +2703,11 @@
             "right_bg_color": "#f3f4f6",
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "content_gap": 16,
-            "right_padding_top": 70,
-            "right_padding_bottom": 30,
-            "right_padding_left": 30,
-            "right_padding_right": 30
+            "content_gap": 0,
+            "right_padding_top": 0,
+            "right_padding_bottom": 0,
+            "right_padding_left": 0,
+            "right_padding_right": 0
           },
           "blocks": {
             "group_8pmgYC": {

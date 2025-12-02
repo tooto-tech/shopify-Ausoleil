@@ -1017,8 +1017,8 @@
         "section_width": "page-width",
         "gap": 0,
         "color_scheme": "scheme-2",
-        "padding-block-start": 100,
-        "padding-block-end": 48
+        "padding-block-start": 128,
+        "padding-block-end": 88
       }
     },
     "product_list_MCD4cw": {

@@ -929,7 +929,7 @@
                   "type": "custom-liquid",
                   "name": "t:names.custom_liquid",
                   "settings": {
-                    "custom_liquid": "<div class=\"responsive-line\"></div>\n\n<style>\n.responsive-line {\n  width: 97px;       /* 桌面端宽度 */\n  height: 1px;       /* 线条厚度 */\n  background-color: #000; /* 线条颜色 */\n}\n\n/* 移动端（最大宽度 768px 以下） */\n@media (max-width: 768px) {\n  .responsive-line {\n    width: 78px;     /* 移动端宽度 */\n  }\n}\n</style>"
+                    "custom_liquid": "<div class=\"responsive-line\"></div>\n\n<style>\n.responsive-line {\n  width: 97px;       /* 桌面端宽度 */\n  height: 1px;       /* 线条厚度 */\n  background-color: #000; /* 线条颜色 */\nmargin-top: 14px;\n}\n\n/* 移动端（最大宽度 768px 以下） */\n@media (max-width: 768px) {\n  .responsive-line {\n    width: 78px;     /* 移动端宽度 */\n  }\n}\n</style>"
                   },
                   "blocks": {}
                 },
@@ -954,8 +954,8 @@
                     "font_size_mobile": "0.8125rem",
                     "font_weight": "",
                     "text_transform": "none",
-                    "padding_y": 12,
-                    "padding_x": 24,
+                    "padding_y": 0,
+                    "padding_x": 0,
                     "width": "fit-content",
                     "custom_width": 100,
                     "width_mobile": "fit-content",

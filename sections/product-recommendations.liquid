@@ -185,6 +185,12 @@
   product-recommendations:has([data-has-recommendations='false']) {
     display: none;
   }
+  @media screen and (max-width: 749px) {
+  #product-recommendations-{{ section.id }} .section {
+    padding-block-start: {{ section.settings.padding_block_start_mobile | default: section.settings['padding-block-start'] }}px;
+    padding-block-end: {{ section.settings.padding_block_end_mobile | default: section.settings['padding-block-end'] }}px;
+  }
+}
 {% endstylesheet %}
 
 {% schema %}

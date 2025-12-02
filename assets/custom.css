@@ -765,7 +765,7 @@ summary {
   }
 
   .pss-slide__see-more {
-    bottom: 88px ; /* PC端 See More 底部 */
+    bottom: 88px !important; /* PC端 See More 底部 */
   }
 }
 

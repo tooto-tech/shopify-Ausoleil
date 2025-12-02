@@ -1,5 +1,3 @@
-
-
 {% liquid
   assign block_settings = block.settings
   assign ratio = 1
@@ -164,6 +162,13 @@
 
     .placeholder-image--custom-mobile-border-radius.border-style {
       border-radius: var(--border-radius-mobile, var(--border-radius)) !important;
+    }
+
+    .image-block.spacing-style {
+      padding-block-start: var(--padding-block-start-mobile, var(--padding-block-start));
+      padding-block-end: var(--padding-block-end-mobile, var(--padding-block-end));
+      padding-inline-start: var(--padding-inline-start-mobile, var(--padding-inline-start));
+      padding-inline-end: var(--padding-inline-end-mobile, var(--padding-inline-end));
     }
   }
 {% endstylesheet %}
@@ -430,6 +435,60 @@
       "step": 1,
       "unit": "px",
       "default": 0
+    },
+    {
+      "type": "header",
+      "content": "移动端填充"
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_mobile_padding",
+      "label": "自定义移动端填充",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding == true }}"
     }
   ],
   "presets": [

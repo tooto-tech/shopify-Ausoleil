@@ -46,6 +46,7 @@
     --vertical-alignment: {{ block_settings.vertical_alignment }};
     --background-overlay-color: {{ block_settings.overlay_color }};
     --collection-card-gap: {{ block_settings.collection_card_gap }}px;
+    --collection-card-gap-mobile: {{ block_settings.collection_card_gap_mobile | default: block_settings.collection_card_gap }}px;
   "
   {{- block.shopify_attributes -}}
 >
@@ -190,6 +191,13 @@
 
     &:not(.collection-card--image-bg) .collection-card__content {
       height: auto;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .collection-card__inner,
+    .collection-card__content {
+      gap: var(--collection-card-gap-mobile);
     }
   }
 {% endstylesheet %}

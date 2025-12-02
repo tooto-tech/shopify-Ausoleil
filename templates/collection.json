@@ -284,8 +284,7 @@
         }
       },
       "custom_css": [
-        "@media screen and (max-width: 749px) {.product-grid {row-gap: 26px; column-gap: 14px; gap: 26px 14px; } .results-list {--padding-block-end: 64px; }}",
-        "@media (max-width: 749px) {}"
+        "@media screen and (max-width: 749px) {.product-grid {row-gap: 26px; column-gap: 14px; gap: 26px 14px; }.product-grid-container {--padding-block-end: 64px; }}"
       ],
       "settings": {
         "layout_type": "grid",

@@ -549,6 +549,7 @@ product-price .compare-at-price{
     font-weight: 600;
     line-height: 20px;
     color: #ffffff;
+    padding: 14px 22px 14px 22px;
 }
 /* 去除gap */
 .email-signup__input-group:not(:has(.email-signup__button--integrated)){

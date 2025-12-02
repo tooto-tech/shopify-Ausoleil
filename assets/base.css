@@ -345,9 +345,10 @@ body:has(main[data-template="index"]) .page-width-content {
   body:has(main[data-template="index"]) .page-width-wide,
   body:has(main[data-template="index"]) .page-width-normal,
   body:has(main[data-template="index"]) .page-width-narrow,
-  body:has(main[data-template="index"]) .page-width-content {
+  body:has(main[data-template="index"]) .page-width-content,
+   {
     /* 首页桌面端边距为80px */
-    --page-margin: 80px;
+    --page-margin: 80px !important;
   }
 }
 

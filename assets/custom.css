@@ -698,7 +698,7 @@ summary {
     padding-bottom: 0;
 }
 /* 底部版权背景色 */
-.footer__copyright{
+.section-outer-wrapper.footer__copyright{
   background-color: #1226AA !important;
 }
 /* 产品系列标题样式 */

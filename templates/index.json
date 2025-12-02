@@ -1858,7 +1858,7 @@
             "vertical_alignment": "flex-start",
             "content_gap": 0,
             "right_padding_top": 64,
-            "right_padding_bottom": 0,
+            "right_padding_bottom": 56,
             "right_padding_left": 60,
             "right_padding_right": 60
           },
@@ -2157,7 +2157,7 @@
         ".pss-slide__left-text {margin-top: 30px;}",
         ".pss-slide__see-more {bottom: 88px;}",
         " /* 移动端样式（小于 750px） */@media screen and (max-width: 749px) {.pss-slide__left-text {margin-top: 80px; /* 移动端上边距 */ } .pss-slide__see-more {bottom: 112px; /* 移动端底部位置 */ }}",
-        "/* 去除进度条padding */.pss-slide__progress{padding: 0px;}"
+        " /* 去除进度条padding */.pss-slide__progress {padding: 0px;}"
       ],
       "name": "Product Showcase Swiper",
       "settings": {

@@ -378,7 +378,7 @@ product-price .compare-at-price{
 }
 /* 走马灯样式 */
 /* 标题（Verdant...） */
-.itm-item__content{
+.itm-item .itm-item__content{
   gap: 16px;
 }
 .itm-item__title {

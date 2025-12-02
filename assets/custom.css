@@ -131,6 +131,7 @@ product-price .compare-at-price{
 .my-custom-texticon .divider {
   transform: rotate(10deg);
   border-color: #ffffff80;
+  height:20px;
 }
 
 /* 斜线分隔符样式 - 给 divider 添加 fd 类名 */

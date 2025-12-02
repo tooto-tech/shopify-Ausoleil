@@ -2137,6 +2137,7 @@
       ],
       "name": "Product Showcase Swiper",
       "settings": {
+        "section_width": "page",
         "bg_color": "#ffffff",
         "left_width": 45,
         "min_height": 900,
@@ -2968,6 +2969,7 @@
       ],
       "name": "Product Showcase Swiper",
       "settings": {
+        "section_width": "full",
         "bg_color": "#ffffff",
         "left_width": 45,
         "min_height": 900,

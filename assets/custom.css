@@ -508,7 +508,7 @@ product-price .compare-at-price{
     /* 边框颜色和透明度 */
     border: 1px solid rgba(209, 209, 209, 0.6); /* #D1D1D1 with opacity 0.6 */
 
-    
+
 }
 
 /* 3. 输入框 Placeholder 样式 (保持不变) */
@@ -576,7 +576,7 @@ product-price .compare-at-price{
 .email-signup__input, .email-signup__button--text{
   padding: 14px;
 }
-  
+
   /* 移动端图标宽度 */
   .group-block:last-child img.icon-block__media {
     width: 134px !important;
@@ -635,8 +635,8 @@ product-price .compare-at-price{
   display: grid;
   grid-template-columns: repeat(2,1fr);
    align-items: start;
-   justify-items: center;   
-   padding-left: 6%; 
+   justify-items: center;
+   padding-left: 6%;
 }
 .menu__details{
   padding: 0px;
@@ -789,4 +789,23 @@ summary {
         max-height: 50vh;  /* 可根据需要限制图片块高度 */
         height: auto;
     }
+}
+
+/*
+ 非首页的页面边距设置 */
+/* 桌面端: 120px, 移动端: 20px */
+body:not(:has(main[data-template="index"])) .page-width-wide,
+body:not(:has(main[data-template="index"])) .page-width-normal,
+body:not(:has(main[data-template="index"])) .page-width-narrow,
+body:not(:has(main[data-template="index"])) .page-width-content {
+  --page-margin: 20px;
+}
+
+@media screen and (min-width: 750px) {
+  body:not(:has(main[data-template="index"])) .page-width-wide,
+  body:not(:has(main[data-template="index"])) .page-width-normal,
+  body:not(:has(main[data-template="index"])) .page-width-narrow,
+  body:not(:has(main[data-template="index"])) .page-width-content {
+    --page-margin: 120px;
+  }
 }

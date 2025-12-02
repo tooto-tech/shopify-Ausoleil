@@ -833,9 +833,9 @@
                 "padding-block-end": 64,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "custom_mobile_padding": false,
+                "custom_mobile_padding": true,
                 "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 0,
+                "padding-block-end-mobile": 32,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
                 "custom_class": ""
@@ -855,7 +855,7 @@
             "placement": "below_image",
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "collection_card_gap": 30,
+            "collection_card_gap": 26,
             "inherit_color_scheme": true,
             "color_scheme": "",
             "border": "none",
@@ -937,7 +937,7 @@
                   "type": "custom-liquid",
                   "name": "t:names.custom_liquid",
                   "settings": {
-                    "custom_liquid": "<div class=\"responsive-line\"></div>\n\n<style>\n.responsive-line {\n  width: 97px;       /* 桌面端宽度 */\n  height: 1px;       /* 线条厚度 */\n  background-color: #000; /* 线条颜色 */\nmargin-top: 14px;\n}\n\n/* 移动端（最大宽度 768px 以下） */\n@media (max-width: 768px) {\n  .responsive-line {\n    width: 78px;     /* 移动端宽度 */\nmargin-top: 22px;\n  }\n}\n</style>"
+                    "custom_liquid": "<div class=\"responsive-line\"></div>\n\n<style>\n.responsive-line {\n  width: 97px;       /* 桌面端宽度 */\n  height: 1px;       /* 线条厚度 */\n  background-color: #000; /* 线条颜色 */\nmargin-top: 14px;\n}\n\n/* 移动端（最大宽度 768px 以下） */\n@media (max-width: 768px) {\n  .responsive-line {\n    width: 78px;     /* 移动端宽度 */\nmargin-top: 10px;\n  }\n}\n</style>"
                   },
                   "blocks": {}
                 },
@@ -965,8 +965,8 @@
                     "padding_top": 20,
                     "padding_bottom": 40,
                     "padding_x": 0,
-                    "padding_top_mobile": 32,
-                    "padding_bottom_mobile": 40,
+                    "padding_top_mobile": 16,
+                    "padding_bottom_mobile": 28,
                     "padding_x_mobile": 20,
                     "width": "fit-content",
                     "custom_width": 100,
@@ -1011,7 +1011,7 @@
       "custom_css": [
         ".collection-card__link {background-color: white;}",
         "@media screen and (max-width: 749px) {.resource-list--grid {gap: 40px; }}",
-        "@media screen and (max-width: 749px) {.section-resource-list {--padding-block-end: 94px !important; }}"
+        "@media screen and (max-width: 749px) {.section-resource-list {--padding-block-end: 94px !important; --padding-block-start: 50px !important; }}"
       ],
       "name": "产品系列列表",
       "settings": {

@@ -24,7 +24,7 @@
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <results-list
   class="section product-grid-container color-{{ section.settings.color_scheme }}"
-  style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px; --mobile-padding-inline-start: {{ section.settings.mobile_padding_inline_start }}px; --mobile-padding-inline-end: {{ section.settings.mobile_padding_inline_end }}px;"
+  style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px; --mobile-padding-block-start: {{ section.settings.mobile_padding_block_start }}px; --mobile-padding-block-end: {{ section.settings.mobile_padding_block_end }}px; --mobile-padding-inline-start: {{ section.settings.mobile_padding_inline_start }}px; --mobile-padding-inline-end: {{ section.settings.mobile_padding_inline_end }}px;"
   section-id="{{ section.id }}"
   infinite-scroll="{{ section.settings.enable_infinite_scroll }}"
 >
@@ -324,6 +324,26 @@
       "type": "range",
       "id": "padding-block-end",
       "label": "t:settings.bottom_padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_block_start",
+      "label": "t:settings.mobile_top_padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_block_end",
+      "label": "t:settings.mobile_bottom_padding",
       "min": 0,
       "max": 100,
       "step": 1,

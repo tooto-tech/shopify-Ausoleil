@@ -390,6 +390,8 @@
     "mobile_columns": "移动设备列",
     "mobile_left_padding": "移动端左侧填充",
     "mobile_right_padding": "移动端右侧填充",
+    "mobile_top_padding": "移动端顶部填充",
+    "mobile_bottom_padding": "移动端底部填充",
     "mobile_height": "移动设备高度",
     "mobile_quick_add": "移动设备快速添加",
     "motion_direction": "动作方向",

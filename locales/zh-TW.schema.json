@@ -381,6 +381,8 @@
     "mobile_columns": "行動裝置欄",
     "mobile_left_padding": "行動裝置左側邊距",
     "mobile_right_padding": "行動裝置右側邊距",
+    "mobile_top_padding": "行動裝置頂部邊距",
+    "mobile_bottom_padding": "行動裝置底部邊距",
     "mobile_height": "行動裝置高度",
     "mobile_quick_add": "行動裝置快速新增",
     "motion_direction": "動作方向",

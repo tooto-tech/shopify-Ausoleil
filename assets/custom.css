@@ -797,6 +797,6 @@ summary {
 }
 @media screen and (max-width: 749px){
   .first-showcase .pss-slide__left-text{
-    margin-top:40px;
+    padding-top:10px;
   }
 }

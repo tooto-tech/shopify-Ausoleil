@@ -2152,7 +2152,9 @@
         "pss_slide_QfhY46",
         "pss_slide_KpfBfi"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".pss-slide__left-text {width: 120%;}"
+      ],
       "name": "Product Showcase Swiper",
       "settings": {
         "section_width": "page",

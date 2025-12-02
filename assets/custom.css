@@ -567,11 +567,12 @@ product-price .compare-at-price{
 }
 @media (max-width: 768px) {
   .fg .group-block-content{
-  width: 105%;
+    width: 105%;
+  }
   /* 底部菜单添加padding */
   .footer-content {
     padding-bottom: 40px;
-}
+  }
 .email-signup__input-group{
   width: 100%;
         display: flex;

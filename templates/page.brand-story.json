@@ -407,7 +407,7 @@
             "text_brtp4M": {
               "type": "text",
               "settings": {
-                "text": "<p>I’ll swing by tomorrow morning</p>",
+                "text": "<p>I’ll swing by<br/> tomorrow <br/>morning</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",

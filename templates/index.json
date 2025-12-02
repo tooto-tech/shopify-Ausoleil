@@ -966,7 +966,7 @@
                     "padding_bottom": 40,
                     "padding_x": 0,
                     "padding_top_mobile": 32,
-                    "padding_bottom_mobile": 10,
+                    "padding_bottom_mobile": 40,
                     "padding_x_mobile": 20,
                     "width": "fit-content",
                     "custom_width": 100,

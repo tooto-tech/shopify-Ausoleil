@@ -779,3 +779,15 @@ summary {
     bottom: 56px; /* 移动端 See More 底部 */
   }
 }
+@media screen and (max-width: 749px) {
+    .pss-slide__right-content {
+        height: auto;      /* 取消固定高度 */
+        max-height: none;  /* 取消可能的最大高度限制 */
+    }
+
+    .pss-slide__right-content .image-block {
+        max-height: 50vh;  /* 可根据需要限制图片块高度 */
+        height: auto;
+    }
+}
+这样

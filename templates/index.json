@@ -1831,9 +1831,9 @@
           "type": "_pss-slide",
           "name": "PSS 幻灯片",
           "settings": {
-            "left_image": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
+            "left_image": "shopify://shop_images/180_2x_6fe2dbcf-6fd3-42b9-b197-bc5d680a835f.webp",
             "use_mobile_image": true,
-            "left_image_mobile": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
+            "left_image_mobile": "shopify://shop_images/180_2x_6fe2dbcf-6fd3-42b9-b197-bc5d680a835f.webp",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
@@ -1991,9 +1991,9 @@
           "type": "_pss-slide",
           "name": "PSS 幻灯片",
           "settings": {
-            "left_image": "shopify://shop_images/1-02_1x_5fb8457a-fee1-4ba2-858d-a1bbf0bdaeb7.png",
+            "left_image": "shopify://shop_images/180_2x_6fe2dbcf-6fd3-42b9-b197-bc5d680a835f.webp",
             "use_mobile_image": true,
-            "left_image_mobile": "shopify://shop_images/1-02_1x_5fb8457a-fee1-4ba2-858d-a1bbf0bdaeb7.png",
+            "left_image_mobile": "shopify://shop_images/180_2x_6fe2dbcf-6fd3-42b9-b197-bc5d680a835f.webp",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",

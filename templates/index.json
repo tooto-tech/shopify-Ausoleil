@@ -184,7 +184,7 @@
                     "border_color_hover": "#ffffff",
                     "border_width": 1,
                     "border_radius": 64,
-                    "font_family": "",
+                    "font_family": "var(--font-accent--family)",
                     "font_size": "0.875rem",
                     "font_size_mobile": "0.8125rem",
                     "font_weight": "500",

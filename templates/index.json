@@ -1299,7 +1299,8 @@
         }
       },
       "custom_css": [
-        ".product-badges__badge {background: #1226aa; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}"
+        ".product-badges__badge {background: #1226aa; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}",
+        "@media screen and (max-width: 749px) {.resource-list--grid {gap: 14px; }}"
       ],
       "name": "New Arrivals",
       "settings": {

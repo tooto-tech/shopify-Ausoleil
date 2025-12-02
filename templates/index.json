@@ -1834,7 +1834,9 @@
         "gap": 0,
         "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "padding-block-start": 0,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0
       }
     },
     "section_WVViqU": {
@@ -2707,7 +2709,9 @@
         "gap": 0,
         "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "padding-block-start": 90,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0
       }
     },
     "section_dzB9UN": {
@@ -3115,7 +3119,8 @@
         ".pss-slide__progress-track {background: rgba(255, 255, 255, 0.2);}",
         ".pss-slide__progress-fill {background: #ffffff;}",
         " /* 控制文本位置 */.pss-slide__right-content {display: flex; flex-direction: column; height: 100%; gap: 16px; justify-content: space-between !important; /* 顶部组顶上，底部组顶下 */ align-items: center;}",
-        ".pss-slide__progress {padding: 0px;}"
+        ".pss-slide__progress {padding: 0px;}",
+        "@media (max-width: 749px) {.pss-slide__left-icon {margin-bottom: 40px; }}"
       ],
       "name": "Product Showcase Swiper",
       "settings": {

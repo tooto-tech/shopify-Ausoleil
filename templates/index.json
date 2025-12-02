@@ -2268,7 +2268,7 @@
       ],
       "name": "Product Showcase Swiper",
       "settings": {
-        "custom_class": "",
+        "custom_class": "first-showcase",
         "section_width": "page",
         "bg_color": "#ffffff",
         "left_width": 70,

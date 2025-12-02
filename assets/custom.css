@@ -795,10 +795,4 @@ summary {
 .second-showcase .pss-slide__right{
   padding: 70px 62px 56px 62px;
 }
-.pss-slide__right {
-  background-image: url('//ausoleil-t.myshopify.com/cdn/shop/files/174_2x_5e09b51a-24ba-4c57-90fd-45e35e2014ac.webp?v=1764335227&width=1200');
-  background-size: cover;   /* 覆盖整个容器 */
-  background-position: center; /* 居中显示 */
-  background-repeat: no-repeat;
-  height: 100%;            /* 或者 height: 100vh */
-}
+

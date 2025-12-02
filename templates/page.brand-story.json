@@ -324,7 +324,7 @@
             "background_image": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
             "background_image_position": "cover",
             "enable_aspect_ratio": true,
-            "aspect_ratio": "725/606",
+            "aspect_ratio": "3/4",
             "enable_mobile_aspect_ratio": true,
             "aspect_ratio_mobile": "335 / 434",
             "enable_mobile_image": true,

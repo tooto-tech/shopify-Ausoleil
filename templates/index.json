@@ -2133,7 +2133,6 @@
         "pss_slide_KpfBfi"
       ],
       "custom_css": [
-        ".pss-swiper {width: 95%;}",
         ".pss-slide__left-text {width: 120%;}"
       ],
       "name": "Product Showcase Swiper",

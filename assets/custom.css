@@ -699,7 +699,7 @@ summary {
 }
 /* 底部版权背景色 */
 .footer__copyright{
-  background-color: #1226AA;
+  background-color: #1226AA !important;
 }
 /* 产品系列标题样式 */
 .collection-title {

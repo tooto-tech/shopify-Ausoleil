@@ -1010,7 +1010,7 @@
       ],
       "custom_css": [
         ".collection-card__link {background-color: white;}",
-        "@media screen and (max-width: 749px) {.resource-list--grid {gap: 40px; }}",
+        "@media screen and (max-width: 749px) {.resource-list--grid {gap: 20px; }}",
         "@media screen and (max-width: 749px) {.section-resource-list {--padding-block-end: 94px !important; --padding-block-start: 50px !important; }}"
       ],
       "name": "产品系列列表",

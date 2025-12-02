@@ -1,5 +1,3 @@
-
-
 {%- capture children %}
   {% content_for 'blocks' %}
 {% endcapture %}
@@ -362,6 +360,36 @@
       ],
       "default": "cover",
       "visible_if": "{{ block.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_image",
+      "label": "启用移动端图片",
+      "default": false,
+      "visible_if": "{{ block.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "移动端图片",
+      "visible_if": "{{ block.settings.background_media == 'image' and block.settings.enable_mobile_image == true }}"
+    },
+    {
+      "type": "select",
+      "id": "background_image_position_mobile",
+      "label": "移动端图片位置",
+      "options": [
+        {
+          "value": "cover",
+          "label": "t:options.cover"
+        },
+        {
+          "value": "fit",
+          "label": "t:options.fit"
+        }
+      ],
+      "default": "cover",
+      "visible_if": "{{ block.settings.background_media == 'image' and block.settings.enable_mobile_image == true }}"
     },
     {
       "type": "select",

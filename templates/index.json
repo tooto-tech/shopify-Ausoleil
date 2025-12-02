@@ -937,7 +937,7 @@
                   "type": "custom-liquid",
                   "name": "t:names.custom_liquid",
                   "settings": {
-                    "custom_liquid": "<div class=\"responsive-line\"></div>\n\n<style>\n.responsive-line {\n  width: 97px;       /* 桌面端宽度 */\n  height: 1px;       /* 线条厚度 */\n  background-color: #000; /* 线条颜色 */\nmargin-top: 14px;\n}\n\n/* 移动端（最大宽度 768px 以下） */\n@media (max-width: 768px) {\n  .responsive-line {\n    width: 78px;     /* 移动端宽度 */\n  }\n}\n</style>"
+                    "custom_liquid": "<div class=\"responsive-line\"></div>\n\n<style>\n.responsive-line {\n  width: 97px;       /* 桌面端宽度 */\n  height: 1px;       /* 线条厚度 */\n  background-color: #000; /* 线条颜色 */\nmargin-top: 14px;\n}\n\n/* 移动端（最大宽度 768px 以下） */\n@media (max-width: 768px) {\n  .responsive-line {\n    width: 78px;     /* 移动端宽度 */\nmargin-top: 22px;\n  }\n}\n</style>"
                   },
                   "blocks": {}
                 },
@@ -957,7 +957,7 @@
                     "border_color_hover": "#333333",
                     "border_width": 0,
                     "border_radius": 0,
-                    "font_family": "",
+                    "font_family": "var(--font-heading--family)",
                     "font_size": "0.875rem",
                     "font_size_mobile": "0.8125rem",
                     "font_weight": "",
@@ -965,7 +965,7 @@
                     "padding_top": 20,
                     "padding_bottom": 40,
                     "padding_x": 0,
-                    "padding_top_mobile": 10,
+                    "padding_top_mobile": 32,
                     "padding_bottom_mobile": 10,
                     "padding_x_mobile": 20,
                     "width": "fit-content",

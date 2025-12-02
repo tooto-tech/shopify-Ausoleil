@@ -360,7 +360,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 32,
+            "gap": 0,
             "enable_mobile_gap": false,
             "gap_mobile": 12,
             "width": "fill",
@@ -404,19 +404,6 @@
             "padding-inline-end-mobile": 0
           },
           "blocks": {
-            "spacer_UqC4Qd": {
-              "type": "spacer",
-              "settings": {
-                "size": "pixel",
-                "percent_size": 100,
-                "pixel_size": 16,
-                "custom_mobile_size": false,
-                "size_mobile": "percent",
-                "percent_size_mobile": 100,
-                "pixel_size_mobile": 120
-              },
-              "blocks": {}
-            },
             "text_brtp4M": {
               "type": "text",
               "settings": {
@@ -530,7 +517,6 @@
             }
           },
           "block_order": [
-            "spacer_UqC4Qd",
             "text_brtp4M",
             "text_xjeJMN",
             "text_EFaR9N"

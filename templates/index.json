@@ -733,7 +733,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 128,
-        "padding-block-end": 20,
+        "padding-block-end": 140,
         "custom_class": ""
       }
     },

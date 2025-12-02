@@ -798,9 +798,7 @@ summary {
 .second-showcase .pss-slide__right{
   padding: 70px 62px 56px 62px;
 }
-.second-showcase .pss-slide__left-text{
-  margin-top: 0px;
-}
+
 @media screen and (max-width: 749px){
   .first-showcase .pss-slide__left-text{
     padding-top:10px;
@@ -808,4 +806,8 @@ summary {
   .first-showcase .pss-slide__right{
     min-height: 469px !important;
   }
+
+  .second-showcase .pss-slide__left-text{
+  margin-top: 0px !important;
+}
 }

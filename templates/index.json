@@ -1217,7 +1217,7 @@
                 "max_width": "normal",
                 "alignment": "center",
                 "type_preset": "custom",
-                "font": "'Mont', var(--font-heading--family)",
+                "font": "var(--font-subheading--family)",
                 "font_size": "1rem",
                 "font_size_mobile": "0.875rem",
                 "weight": "400",

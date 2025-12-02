@@ -340,12 +340,12 @@ body:has(main[data-template="index"]) .page-width-content {
   --page-margin: 20px;
 }
 
-  
+
 @media screen and (min-width: 750px) {
-  body:has(main[data-template="index"]) .page-width-wide,
-  body:has(main[data-template="index"]) .page-width-normal,
-  body:has(main[data-template="index"]) .page-width-narrow,
-  body:has(main[data-template="index"]) .page-width-content{
+  body:has(main[data-template=index]) .page-width-wide,
+  body:has(main[data-template=index]) .page-width-normal,
+  body:has(main[data-template=index]) .page-width-narrow,
+  body:has(main[data-template=index]) .page-width-content {
     --page-margin: 80px;
   }
 }

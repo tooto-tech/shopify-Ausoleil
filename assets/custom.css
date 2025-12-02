@@ -794,6 +794,8 @@ summary {
 /* 首页第二个进度幻灯片 */
 .second-showcase .pss-slide__right{
   padding: 70px 62px 56px 62px;
+}
+.first-showcase .pss-slide__right{
   min-height: 828px !important;
 }
 @media screen and (max-width: 749px){

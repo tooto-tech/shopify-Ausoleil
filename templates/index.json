@@ -1297,7 +1297,7 @@
         "horizontal_alignment": "flex-start",
         "gap": 28,
         "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
-        "padding-block-start": 48,
+        "padding-block-start": 74,
         "padding-block-end": 48
       }
     },
@@ -1364,7 +1364,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 84,
-        "padding-block-end": 100,
+        "padding-block-end": 128,
         "custom_class": ""
       }
     },

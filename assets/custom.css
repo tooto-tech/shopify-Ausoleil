@@ -555,7 +555,7 @@ product-price .compare-at-price{
   gap:0px;
 }
 .email-signup__input, .email-signup__button--text{
-  padding: 16px;
+  padding: 14px 106px 14px 12px;
 }
 /* 页脚部分 */
 .menu:not(:has(.menu__heading--empty)) .details-content{
@@ -577,6 +577,7 @@ product-price .compare-at-price{
   }
   /* 底部菜单添加padding */
   .footer-content {
+    padding-top: 74px;
     padding-bottom: 40px;
   }
 .email-signup__input-group{

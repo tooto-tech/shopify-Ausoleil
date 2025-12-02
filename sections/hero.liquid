@@ -1,5 +1,3 @@
-
-
 {% liquid
   assign media_count = 0
   assign media_count_mobile = 0
@@ -10,6 +8,9 @@
   assign media_2_mobile = 'none'
   assign has_only_video = false
   assign has_only_video_mobile = false
+
+  # 生成唯一的 CSS 类名
+  assign hero_custom_class = 'hero-' | append: section.id
 
   # Desktop media checks
   # For each media slot, check if the media is not blank and the media type matches the slot
@@ -116,6 +117,76 @@
     assign fetch_priority = 'high'
   endif
 %}
+
+{% comment %} 手动宽高比样式 {% endcomment %}
+{% if section.settings.section_height == 'manual' %}
+  {% liquid
+    assign desktop_input = section.settings.aspect_ratio_desktop | strip
+    assign mobile_input = section.settings.aspect_ratio_mobile | strip
+
+    # 解析桌面端宽高比
+    assign desktop_aspect_ratio = 2.25
+    if desktop_input != blank
+      assign parts = desktop_input | split: '/'
+      if parts.size == 2
+        assign width_str = parts[0] | strip
+        assign height_str = parts[1] | strip
+        assign width_num = width_str | plus: 0
+        assign height_num = height_str | plus: 0
+        if height_num > 0
+          assign desktop_aspect_ratio_temp = width_num | times: 10000 | divided_by: height_num
+          assign desktop_aspect_ratio = desktop_aspect_ratio_temp | divided_by: 10000.0
+        endif
+      else
+        assign desktop_aspect_ratio = desktop_input | plus: 0.0
+        if desktop_aspect_ratio == 0
+          assign desktop_aspect_ratio = 2.25
+        endif
+      endif
+    endif
+
+    # 解析移动端宽高比
+    assign mobile_aspect_ratio = 0.88
+    if mobile_input != blank
+      assign parts = mobile_input | split: '/'
+      if parts.size == 2
+        assign width_str = parts[0] | strip
+        assign height_str = parts[1] | strip
+        assign width_num = width_str | plus: 0
+        assign height_num = height_str | plus: 0
+        if height_num > 0
+          assign mobile_aspect_ratio_temp = width_num | times: 10000 | divided_by: height_num
+          assign mobile_aspect_ratio = mobile_aspect_ratio_temp | divided_by: 10000.0
+        endif
+      else
+        assign mobile_aspect_ratio = mobile_input | plus: 0.0
+        if mobile_aspect_ratio == 0
+          assign mobile_aspect_ratio = 0.88
+        endif
+      endif
+    endif
+  %}
+  {% style %}
+    .{{ hero_custom_class }}.hero--manual-aspect {
+      min-height: 0 !important;
+      aspect-ratio: {{ desktop_aspect_ratio }};
+    }
+    .{{ hero_custom_class }}.hero--manual-aspect .hero__container {
+      min-height: 0 !important;
+    }
+    .{{ hero_custom_class }}.hero--manual-aspect .hero__media-wrapper {
+      aspect-ratio: {{ desktop_aspect_ratio }};
+    }
+    @media screen and (max-width: 749px) {
+      .{{ hero_custom_class }}.hero--manual-aspect {
+        aspect-ratio: {{ mobile_aspect_ratio }};
+      }
+      .{{ hero_custom_class }}.hero--manual-aspect .hero__media-wrapper {
+        aspect-ratio: {{ mobile_aspect_ratio }};
+      }
+    }
+  {% endstyle %}
+{% endif %}
 
 {% capture media %}
   {%- if media_1 == 'image' -%}
@@ -375,13 +446,15 @@
 
 <div
   id="Hero-{{ section.id }}"
-  class="hero color-{{ section.settings.color_scheme }}{% if section.blocks.size == 0 and section.settings.section_height == 'auto' %} hero--no-blocks-auto-height{% endif %}{% if section.settings.stack_media_on_mobile %} hero--stack-mobile{% endif %}"
+  class="hero {{ hero_custom_class }} color-{{ section.settings.color_scheme }}{% if section.blocks.size == 0 and section.settings.section_height == 'auto' %} hero--no-blocks-auto-height{% endif %}{% if section.settings.stack_media_on_mobile %} hero--stack-mobile{% endif %}{% if section.settings.section_height == 'manual' %} hero--manual-aspect{% endif %}"
   style="
     --hero-border-style: {{ section.settings.border }};
     --hero-border-width: {{ section.settings.border_width }}px;
     --hero-border-opacity: {{ section.settings.border_opacity }}%;
     --blur-opacity: {{ section.settings.reflection_opacity | divided_by: 100.0 }};
-    {% if section.settings.section_height == 'custom' %}
+    {% if section.settings.section_height == 'manual' %}
+      --hero-min-height: 0;
+    {% elsif section.settings.section_height == 'custom' %}
       --hero-min-height: {{ section.settings.section_height_custom }}svh;
     {% elsif section.settings.section_height == "full-screen" %}
        --hero-min-height: 100svh;
@@ -1033,6 +1106,10 @@
           "label": "t:options.auto"
         },
         {
+          "value": "manual",
+          "label": "手动宽高比"
+        },
+        {
           "value": "small",
           "label": "t:options.small"
         },
@@ -1054,6 +1131,22 @@
         }
       ],
       "default": "medium"
+    },
+    {
+      "type": "text",
+      "id": "aspect_ratio_desktop",
+      "label": "桌面端宽高比",
+      "info": "例如: 1440 / 640 或 2.25 (支持分数格式或小数格式)",
+      "default": "1440 / 640",
+      "visible_if": "{{ section.settings.section_height == 'manual' }}"
+    },
+    {
+      "type": "text",
+      "id": "aspect_ratio_mobile",
+      "label": "移动端宽高比",
+      "info": "例如: 750 / 850 或 0.88 (支持分数格式或小数格式)",
+      "default": "750 / 850",
+      "visible_if": "{{ section.settings.section_height == 'manual' }}"
     },
     {
       "type": "range",

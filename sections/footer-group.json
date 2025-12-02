@@ -1151,7 +1151,7 @@
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 12,
                     "enable_mobile_gap": true,
-                    "gap_mobile": 18,
+                    "gap_mobile": 0,
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",

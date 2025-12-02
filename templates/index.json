@@ -2809,7 +2809,7 @@
             "center_text": "Aussie Soul Time By Rock And Wave",
             "text_font": "'DolceVitaLight', var(--font-heading--family)",
             "text_size": "2.5rem",
-            "text_size_mobile": "0.875rem",
+            "text_size_mobile": "1.5rem",
             "text_weight": "400",
             "text_weight_mobile": "",
             "text_color": "#ffffff",

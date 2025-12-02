@@ -1801,7 +1801,7 @@
       ],
       "custom_css": [
         ".product-badges__badge {background: #121821; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}",
-        "@media screen and (max-width: 749px) {.section-resource-list.spacing-style {padding-block-end: 0 ; }}"
+        "@media screen and (max-width: 749px) {.section-resource-list.spacing-style {padding-block-end: 0; }}"
       ],
       "name": "Classic STYLE EVERYDAY",
       "settings": {
@@ -1850,9 +1850,9 @@
             "padding_top": 8,
             "padding_bottom": 8,
             "padding_x": 34,
-            "padding_top_mobile": 10,
-            "padding_bottom_mobile": 10,
-            "padding_x_mobile": 20,
+            "padding_top_mobile": 12,
+            "padding_bottom_mobile": 12,
+            "padding_x_mobile": 28,
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
@@ -1891,9 +1891,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 90,
         "padding-block-end": 116,
-        "custom_mobile_padding": false,
-        "padding-block-start-mobile": 0,
-        "padding-block-end-mobile": 0,
+        "custom_mobile_padding": true,
+        "padding-block-start-mobile": 14,
+        "padding-block-end-mobile": 50,
         "custom_class": ""
       }
     },

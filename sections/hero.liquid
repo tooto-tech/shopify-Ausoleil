@@ -169,19 +169,18 @@
   {% style %}
     .{{ hero_custom_class }}.hero--manual-aspect {
       min-height: 0 !important;
-      aspect-ratio: {{ desktop_aspect_ratio }};
     }
     .{{ hero_custom_class }}.hero--manual-aspect .hero__container {
       min-height: 0 !important;
-    }
-    .{{ hero_custom_class }}.hero--manual-aspect .hero__media-wrapper {
       aspect-ratio: {{ desktop_aspect_ratio }};
     }
+    .{{ hero_custom_class }}.hero--manual-aspect .hero__image,
+    .{{ hero_custom_class }}.hero--manual-aspect .hero__video {
+      object-fit: cover;
+      object-position: center center;
+    }
     @media screen and (max-width: 749px) {
-      .{{ hero_custom_class }}.hero--manual-aspect {
-        aspect-ratio: {{ mobile_aspect_ratio }};
-      }
-      .{{ hero_custom_class }}.hero--manual-aspect .hero__media-wrapper {
+      .{{ hero_custom_class }}.hero--manual-aspect .hero__container {
         aspect-ratio: {{ mobile_aspect_ratio }};
       }
     }

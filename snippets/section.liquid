@@ -54,10 +54,15 @@
           layout-panel-flex--{{ section.settings.content_direction }}
           section-content-wrapper
           {% if section.settings.vertical_on_mobile %} mobile-column{% endif %}
+          {% if section.settings.custom_mobile_padding %} section--custom-mobile-padding{% endif %}
         "
         style="
           {% render 'layout-panel-style', settings: section.settings %}
           {% render 'spacing-style', settings: section.settings %}
+          {% if section.settings.custom_mobile_padding %}
+            --padding-block-start-mobile: {{ section.settings.padding-block-start-mobile }}px;
+            --padding-block-end-mobile: {{ section.settings.padding-block-end-mobile }}px;
+          {% endif %}
         "
         data-testid="section-content"
       >
@@ -95,5 +100,12 @@
 
   .custom-section-content {
     z-index: var(--layer-flat);
+  }
+
+  @media screen and (max-width: 749px) {
+    .section--custom-mobile-padding.spacing-style {
+      padding-block-start: var(--padding-block-start-mobile) !important;
+      padding-block-end: var(--padding-block-end-mobile) !important;
+    }
   }
 {% endstylesheet %}

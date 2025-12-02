@@ -522,7 +522,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "custom_mobile_padding": false,
+                "custom_mobile_padding": true,
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
@@ -742,7 +742,7 @@
         "gradient_direction": "to top",
         "padding-block-start": 128,
         "padding-block-end": 140,
-        "custom_mobile_padding": false,
+        "custom_mobile_padding": true,
         "padding-block-start-mobile": 0,
         "padding-block-end-mobile": 0,
         "custom_class": ""

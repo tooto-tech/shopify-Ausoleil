@@ -95,7 +95,12 @@
             "padding-block-start": 116,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "custom_mobile_padding": true,
+            "padding-block-start-mobile": 30,
+            "padding-block-end-mobile": 42,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0
           },
           "blocks": {
             "accordion_row_fQKjcU": {
@@ -368,7 +373,7 @@
       ],
       "custom_css": [
         "/* 改为换行 */.text-block > * {text-wrap: wrap;}",
-        ".accordion--dividers .details-content{padding: 0px}"
+        ".accordion--dividers .details-content {padding: 0px;}"
       ],
       "settings": {
         "content_direction": "column",

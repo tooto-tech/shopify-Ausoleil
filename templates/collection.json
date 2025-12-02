@@ -283,6 +283,9 @@
           ]
         }
       },
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.product-grid {row-gap: 26px; column-gap: 14px; gap: 26px 14px; }}"
+      ],
       "settings": {
         "layout_type": "grid",
         "product_card_size": "medium",

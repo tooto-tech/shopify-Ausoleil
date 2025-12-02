@@ -75,6 +75,15 @@
 </results-list>
 
 {% stylesheet %}
+  .product-grid-container {
+    @media screen and (max-width: 749px) {
+      padding-block-start: var(--mobile-padding-block-start, var(--padding-block-start));
+      padding-block-end: var(--mobile-padding-block-end, var(--padding-block-end));
+      padding-inline-start: var(--mobile-padding-inline-start, 0);
+      padding-inline-end: var(--mobile-padding-inline-end, 0);
+    }
+  }
+
   .main-collection-grid {
     grid-column: var(--grid-column--mobile);
 

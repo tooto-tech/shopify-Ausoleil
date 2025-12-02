@@ -734,6 +734,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 128,
         "padding-block-end": 140,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -1365,6 +1368,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 84,
         "padding-block-end": 128,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -1533,6 +1539,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 64,
         "padding-block-end": 52,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -1789,6 +1798,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 90,
         "padding-block-end": 116,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -2358,7 +2370,7 @@
         "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 16,
         "section_width": "page-width",
-        "section_height": "large",
+        "section_height": "full-screen",
         "section_height_custom": 50,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
@@ -2721,6 +2733,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 100,
         "padding-block-end": 100,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -3248,6 +3263,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 0,
         "padding-block-end": 0,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 <div
-  class="pss-section pss-section--{{ section.settings.section_width }}"
+  class="pss-section pss-section--{{ section.settings.section_width }}{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"
   style="background-color: {{ section.settings.bg_color }};"
 >
   <div class="swiper pss-swiper" id="pss-{{ section.id }}">
@@ -193,6 +193,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "自定义类名",
+      "info": "添加自定义 CSS 类名，多个类名用空格分隔"
+    },
     {
       "type": "header",
       "content": "布局设置"

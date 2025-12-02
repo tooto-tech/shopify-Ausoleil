@@ -2992,8 +2992,7 @@
       "custom_css": [
         ".pss-slide__progress-track {background: rgba(255, 255, 255, 0.2);}",
         ".pss-slide__progress-fill {background: #ffffff;}",
-        " /* 控制文本位置 */.pss-slide__right-content {display: flex; flex-direction: column; height: 100%; gap: 16px; justify-content: space-between !important; /* 顶部组顶上，底部组顶下 */ align-items: center;}",
-        ".pss-swiper {width: 95%;}"
+        " /* 控制文本位置 */.pss-slide__right-content {display: flex; flex-direction: column; height: 100%; gap: 16px; justify-content: space-between !important; /* 顶部组顶上，底部组顶下 */ align-items: center;}"
       ],
       "name": "Product Showcase Swiper",
       "settings": {

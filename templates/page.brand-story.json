@@ -583,7 +583,7 @@
             "image": "shopify://shop_images/1-04_1x_6f167e2d-bc3c-4e59-97be-52f7b8963715.png",
             "link": "",
             "image_ratio": "adapt",
-            "image_ratio_mobile": "",
+            "image_ratio_mobile": "portrait",
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",

@@ -363,6 +363,36 @@
     },
     {
       "type": "checkbox",
+      "id": "enable_aspect_ratio",
+      "label": "启用宽高比",
+      "default": false,
+      "visible_if": "{{ block.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "text",
+      "id": "aspect_ratio",
+      "label": "宽高比",
+      "info": "输入宽高比，例如：16/9、4/3、1/1、3/4",
+      "default": "16/9",
+      "visible_if": "{{ block.settings.background_media == 'image' and block.settings.enable_aspect_ratio == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_aspect_ratio",
+      "label": "启用移动端宽高比",
+      "default": false,
+      "visible_if": "{{ block.settings.background_media == 'image' and block.settings.enable_aspect_ratio == true }}"
+    },
+    {
+      "type": "text",
+      "id": "aspect_ratio_mobile",
+      "label": "移动端宽高比",
+      "info": "输入宽高比，例如：9/16、3/4、1/1",
+      "default": "3/4",
+      "visible_if": "{{ block.settings.background_media == 'image' and block.settings.enable_aspect_ratio == true and block.settings.enable_mobile_aspect_ratio == true }}"
+    },
+    {
+      "type": "checkbox",
       "id": "enable_mobile_image",
       "label": "启用移动端图片",
       "default": false,

@@ -562,7 +562,9 @@ product-price .compare-at-price{
   margin-block-start: 24px;
 }
 
-
+.footer-menu-wrapper summary{
+  padding-block: 0px;
+}
 @media (max-width: 768px) {
   .fg .group-block-content{
   width: 105%;

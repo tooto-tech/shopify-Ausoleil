@@ -810,4 +810,7 @@ summary {
   .second-showcase .pss-slide__left-text{
   margin-top: 0px !important;
 }
+.second-showcase .pss-slide__right{
+  min-height:434px;
+}
 }

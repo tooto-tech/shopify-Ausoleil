@@ -104,6 +104,8 @@
             "background_media": "none",
             "video_position": "cover",
             "background_image_position": "cover",
+            "enable_mobile_image": false,
+            "background_image_position_mobile": "cover",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -136,7 +138,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "{{ closest.page.content }}",
+                "text": "<p>{{ closest.page.content }}</p>",
                 "width": "100%",
                 "max_width": "none",
                 "alignment": "left",
@@ -185,7 +187,9 @@
         "gap": 32,
         "color_scheme": "",
         "padding-block-start": 100,
-        "padding-block-end": 80
+        "padding-block-end": 80,
+        "padding-block-start-mobile": 30,
+        "padding-block-end-mobile": 42
       }
     }
   },

@@ -2695,7 +2695,7 @@
             "text_weight_mobile": "",
             "text_color": "#ffffff",
             "text_letter_spacing": "normal",
-            "text_margin_top": 16,
+            "text_margin_top": 0,
             "text_margin_top_mobile": 12,
             "see_more_text": "See More",
             "see_more_link": "",

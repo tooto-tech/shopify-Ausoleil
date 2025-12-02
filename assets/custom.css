@@ -555,9 +555,7 @@ product-price .compare-at-price{
   padding: 16px;
 }
 /* 页脚部分 */
-.text-block--AVGwzMmk3V2N5RnlJc__text_Wa4VLh p {
-  white-space: nowrap;
-}
+
 @media (max-width: 768px) {
   /* 底部菜单添加padding */
   .footer-content {

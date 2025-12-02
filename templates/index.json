@@ -1856,11 +1856,11 @@
             "right_bg_color": "#f3f4f6",
             "horizontal_alignment": "center",
             "vertical_alignment": "flex-start",
-            "content_gap": 60,
-            "right_padding_top": 0,
-            "right_padding_bottom": 30,
-            "right_padding_left": 30,
-            "right_padding_right": 30
+            "content_gap": 0,
+            "right_padding_top": 60,
+            "right_padding_bottom": 0,
+            "right_padding_left": 60,
+            "right_padding_right": 60
           },
           "blocks": {
             "icon_qbzPGB": {
@@ -1897,8 +1897,8 @@
                 "border_radius": 0,
                 "custom_mobile_border_radius": false,
                 "border_radius_mobile": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
+                "padding-block-start": 82,
+                "padding-block-end": 76,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -1966,7 +1966,7 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 0,
+                "padding-block-start": 10,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,

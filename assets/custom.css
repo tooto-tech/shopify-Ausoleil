@@ -177,7 +177,6 @@ product-price .compare-at-price{
   .my-custom-texticon .section-content-wrapper {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;

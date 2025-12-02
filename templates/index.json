@@ -1432,7 +1432,7 @@
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
-            "padding-block-start": 0,
+            "padding-block-start": 36,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0,
@@ -1480,7 +1480,7 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-end": 86
       }
     },
     "section_ydCNaQ": {

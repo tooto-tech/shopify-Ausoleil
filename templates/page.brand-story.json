@@ -159,7 +159,7 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
+        "gap": 0,
         "section_width": "page-width",
         "section_height": "large",
         "section_height_custom": 50,
@@ -285,6 +285,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 100,
         "padding-block-end": 100,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -316,6 +319,8 @@
             "video_position": "cover",
             "background_image": "shopify://shop_images/150_2x_3f0111fe-e4c7-4b74-b11b-20b1fe1ac914.webp",
             "background_image_position": "cover",
+            "enable_mobile_image": false,
+            "background_image_position_mobile": "cover",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -369,6 +374,8 @@
             "background_media": "image",
             "video_position": "cover",
             "background_image_position": "cover",
+            "enable_mobile_image": false,
+            "background_image_position_mobile": "cover",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -561,6 +568,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 0,
         "padding-block-end": 0,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -589,7 +599,12 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0
           },
           "blocks": {}
         }
@@ -624,6 +639,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 100,
         "padding-block-end": 0,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -738,6 +756,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 0,
         "padding-block-end": 0,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -848,6 +869,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 58,
         "padding-block-end": 56,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     },
@@ -958,6 +982,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 56,
         "padding-block-end": 0,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": ""
       }
     }

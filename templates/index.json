@@ -2274,7 +2274,7 @@
         "left_width": 70,
         "min_height": 800,
         "mobile_left_height": 500,
-        "min_height_mobile": 600,
+        "min_height_mobile": 475,
         "autoplay": false,
         "autoplay_delay": 3000,
         "speed": 500,

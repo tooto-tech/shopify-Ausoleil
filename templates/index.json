@@ -1934,8 +1934,8 @@
             "right_padding_bottom": 56,
             "right_padding_left": 60,
             "right_padding_right": 60,
-            "right_padding_top_mobile": 40,
-            "right_padding_bottom_mobile": 30,
+            "right_padding_top_mobile": 0,
+            "right_padding_bottom_mobile": 0,
             "right_padding_left_mobile": 20,
             "right_padding_right_mobile": 20
           },

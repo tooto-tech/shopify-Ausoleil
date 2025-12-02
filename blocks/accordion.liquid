@@ -1,8 +1,7 @@
-
-
 {% assign block_settings = block.settings %}
+{% assign has_mobile_padding = block_settings.custom_mobile_padding %}
 <div
-  class="accordion accordion--{{ block.id }} accordion--{{ block_settings.icon }} border-style spacing-style{% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}{% if block_settings.dividers %} accordion--dividers{% endif %}"
+  class="accordion accordion--{{ block.id }} accordion--{{ block_settings.icon }} border-style spacing-style{% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}{% if block_settings.dividers %} accordion--dividers{% endif %}{% if has_mobile_padding %} accordion--custom-mobile-padding{% endif %}"
   style="
     --summary-font-family: var(--font-{{ block_settings.type_preset }}--family);
      --summary-font-style: var(--font-{{ block_settings.type_preset }}--style);
@@ -12,6 +11,12 @@
      --summary-font-case: var(--font-{{ block_settings.type_preset }}--case);
     {% render 'spacing-style', settings: block_settings %}
     {% render 'border-override', settings: block_settings %}
+    {% if has_mobile_padding %}
+      --padding-block-start-mobile: {{ block_settings.padding-block-start-mobile }}px;
+      --padding-block-end-mobile: {{ block_settings.padding-block-end-mobile }}px;
+      --padding-inline-start-mobile: {{ block_settings.padding-inline-start-mobile }}px;
+      --padding-inline-end-mobile: {{ block_settings.padding-inline-end-mobile }}px;
+    {% endif %}
   "
   {{ block.shopify_attributes }}
 >
@@ -65,6 +70,15 @@
     line-height: var(--summary-font-line-height);
     text-transform: var(--summary-font-case);
     min-height: var(--minimum-touch-target);
+  }
+
+  @media screen and (max-width: 749px) {
+    .accordion--custom-mobile-padding.spacing-style {
+      padding-block-start: var(--padding-block-start-mobile) !important;
+      padding-block-end: var(--padding-block-end-mobile) !important;
+      padding-inline-start: var(--padding-inline-start-mobile) !important;
+      padding-inline-end: var(--padding-inline-end-mobile) !important;
+    }
   }
 {% endstylesheet %}
 
@@ -249,6 +263,60 @@
       "step": 2,
       "unit": "px",
       "default": 0
+    },
+    {
+      "type": "header",
+      "content": "移动端填充"
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_mobile_padding",
+      "label": "自定义移动端填充",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding }}"
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0,
+      "visible_if": "{{ block.settings.custom_mobile_padding }}"
     }
   ],
   "presets": [

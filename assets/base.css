@@ -321,31 +321,30 @@ p:empty {
 .page-width-content {
   --page-margin: 20px;
 }
-
+/* 非首页默认值 */
 @media screen and (min-width: 750px) {
   .page-width-wide,
   .page-width-normal,
   .page-width-narrow,
   .page-width-content {
-    /* 非首页默认边距为120px */
     --page-margin: 120px;
   }
 }
 
-/* 首页特殊边距设置：桌面端80px，移动端20px */
-body:has(main[data-template="index"]) .page-width-wide,
-body:has(main[data-template="index"]) .page-width-normal,
-body:has(main[data-template="index"]) .page-width-narrow,
-body:has(main[data-template="index"]) .page-width-content {
+/* 首页移动端：20px */
+body.page-width-narrow:has(main[data-template="index"]),
+body.page-width-wide:has(main[data-template="index"]),
+body.page-width-normal:has(main[data-template="index"]),
+body.page-width-content:has(main[data-template="index"]) {
   --page-margin: 20px;
 }
 
-
+/* 首页桌面端：80px */
 @media screen and (min-width: 750px) {
-  body:has(main[data-template=index]) .page-width-wide,
-  body:has(main[data-template=index]) .page-width-normal,
-  body:has(main[data-template=index]) .page-width-narrow,
-  body:has(main[data-template=index]) .page-width-content {
+  body.page-width-narrow:has(main[data-template="index"]),
+  body.page-width-wide:has(main[data-template="index"]),
+  body.page-width-normal:has(main[data-template="index"]),
+  body.page-width-content:has(main[data-template="index"]) {
     --page-margin: 80px;
   }
 }

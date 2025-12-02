@@ -259,8 +259,8 @@ product-price .compare-at-price{
 
   /* 文字样式 */
   .my-custom-texticon .text-block p {
-    font-size: 12px !important;
-    line-height: 32px !important;
+    font-size: 14px !important;
+    line-height: 10px !important;
   }
 
   /* group 块样式 */

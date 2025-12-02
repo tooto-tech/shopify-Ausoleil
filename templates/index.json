@@ -2955,7 +2955,7 @@
                     "padding-inline-end": 0,
                     "custom_mobile_padding": true,
                     "padding-block-start-mobile": 0,
-                    "padding-block-end-mobile": 38,
+                    "padding-block-end-mobile": 100,
                     "padding-inline-start-mobile": 0,
                     "padding-inline-end-mobile": 0,
                     "custom_class": ""

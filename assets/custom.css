@@ -802,7 +802,7 @@ summary {
 @media screen and (max-width: 749px){
   .first-showcase .pss-slide__left-text{
     padding-top:10px;
-  margin-top: 0px;
+  margin-top: 0px !important;
 
   }
   .first-showcase .pss-slide__right{

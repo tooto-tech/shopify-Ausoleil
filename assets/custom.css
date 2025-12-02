@@ -762,7 +762,7 @@ summary {
 /* PC端样式（大于等于 750px） */
 @media screen and (min-width: 750px) {
   .pss-slide__left-icon {
-    margin-bottom: 72px; /* PC端图标下边距 */
+    margin-bottom: 0px; /* PC端图标下边距 */
   }
 
   .pss-slide__see-more {

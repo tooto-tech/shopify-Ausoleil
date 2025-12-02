@@ -81,6 +81,13 @@
     "variant_button_radius": 14,
     "variant_button_width": "equal-width-buttons",
     "content_for_index": [],
+    "blocks": {
+      "6137168456857270540": {
+        "type": "shopify://apps/banuba-virtual-try-on/blocks/tint-embeded/822d5f84-4246-4284-af9e-7da386ac1f67",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {

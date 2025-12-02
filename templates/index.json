@@ -1106,7 +1106,7 @@
                 "padding-inline-end": 0,
                 "custom_mobile_padding": true,
                 "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 28,
+                "padding-block-end-mobile": 14,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
                 "custom_class": ""
@@ -1144,7 +1144,7 @@
                 "padding-inline-end": 0,
                 "custom_mobile_padding": true,
                 "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 44,
+                "padding-block-end-mobile": 22,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
                 "custom_class": ""
@@ -1320,7 +1320,7 @@
         "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "padding-block-start": 74,
         "padding-block-end": 0,
-        "padding-block-start-mobile": 0,
+        "padding-block-start-mobile": 50,
         "padding-block-end-mobile": 0
       }
     },

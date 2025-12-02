@@ -2815,7 +2815,7 @@
             "text_color": "#ffffff",
             "text_letter_spacing": "normal",
             "text_margin_top": 0,
-            "text_margin_top_mobile": 12,
+            "text_margin_top_mobile": 0,
             "see_more_text": "See More",
             "see_more_link": "",
             "right_bg_image": "shopify://shop_images/174_2x_5e09b51a-24ba-4c57-90fd-45e35e2014ac.webp",

@@ -33,4 +33,18 @@
       echo ';'
     endif
   endfor
+
+  assign mobile_keys = 'padding-block-start-mobile,padding-block-end-mobile,padding-inline-start-mobile,padding-inline-end-mobile' | split: ','
+
+  for key in mobile_keys
+    assign value = settings[key]
+
+    if value != blank
+      echo '--'
+      echo key
+      echo ': '
+      echo value
+      echo 'px;'
+    endif
+  endfor
 -%}

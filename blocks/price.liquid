@@ -114,6 +114,15 @@
   .installments:not(:has(shopify-payment-terms)) {
     display: none;
   }
+
+  @media screen and (max-width: 749px) {
+    product-price.spacing-style {
+      padding-block-start: var(--padding-block-start-mobile, var(--padding-block-start, 0));
+      padding-block-end: var(--padding-block-end-mobile, var(--padding-block-end, 0));
+      padding-inline-start: var(--padding-inline-start-mobile, var(--padding-inline-start, 0));
+      padding-inline-end: var(--padding-inline-end-mobile, var(--padding-inline-end, 0));
+    }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -222,7 +231,7 @@
         { "value": "1.125rem", "label": "18px" },
         { "value": "1.25rem", "label": "20px" },
         { "value": "1.5rem", "label": "24px" },
-              { "value": "1.875rem", "label": "30px" },
+        { "value": "1.875rem", "label": "30px" },
         { "value": "2rem", "label": "32px" },
         { "value": "2.5rem", "label": "40px" },
         { "value": "3rem", "label": "48px" },
@@ -644,6 +653,50 @@
       "type": "range",
       "id": "padding-inline-end",
       "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "移动端填充"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start-mobile",
+      "label": "顶部（移动端）",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end-mobile",
+      "label": "底部（移动端）",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start-mobile",
+      "label": "左侧（移动端）",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end-mobile",
+      "label": "右侧（移动端）",
       "min": 0,
       "max": 100,
       "step": 1,

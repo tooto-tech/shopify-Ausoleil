@@ -1003,7 +1003,7 @@
             "background_image_position": "cover",
             "enable_aspect_ratio": true,
             "aspect_ratio": "16/9",
-            "enable_mobile_aspect_ratio": true,
+            "enable_mobile_aspect_ratio": false,
             "aspect_ratio_mobile": "3/4",
             "enable_mobile_image": true,
             "background_image_mobile": "shopify://shop_images/1-03_2x_e7e62ea1-5b6f-496f-9b0c-c180eb363d1f.webp",

@@ -1009,7 +1009,8 @@
         "group_Dy77NB"
       ],
       "custom_css": [
-        ".collection-card__link {background-color: white;}"
+        ".collection-card__link {background-color: white;}",
+        "@media screen and (max-width: 749px) {.resource-list--grid {gap: 40px; }}"
       ],
       "name": "产品系列列表",
       "settings": {

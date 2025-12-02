@@ -185,12 +185,6 @@
   product-recommendations:has([data-has-recommendations='false']) {
     display: none;
   }
-  @media screen and (max-width: 749px) {
-  #product-recommendations-{{ section.id }} .section {
-    padding-block-start: {{ section.settings.padding_block_start_mobile | default: section.settings['padding-block-start'] }}px;
-    padding-block-end: {{ section.settings.padding_block_end_mobile | default: section.settings['padding-block-end'] }}px;
-  }
-}
 {% endstylesheet %}
 
 {% schema %}
@@ -455,27 +449,7 @@
       "step": 1,
       "unit": "px",
       "default": 0
-    },
-    {
-  "type": "range",
-  "id": "padding_block_start_mobile",
-  "label": "t:settings.top_mobile",
-  "min": 0,
-  "max": 100,
-  "step": 1,
-  "unit": "px",
-  "default": 24
-},
-{
-  "type": "range",
-  "id": "padding_block_end_mobile",
-  "label": "t:settings.bottom_mobile",
-  "min": 0,
-  "max": 100,
-  "step": 1,
-  "unit": "px",
-  "default": 24
-}
+    }
   ],
   "presets": [
     {

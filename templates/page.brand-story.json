@@ -163,7 +163,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 0,
         "section_width": "page-width",
-        "section_height": "full-screen",
+        "section_height": "manual",
         "aspect_ratio_desktop": "1440 / 905",
         "aspect_ratio_mobile": "750 / 850",
         "section_height_custom": 100,

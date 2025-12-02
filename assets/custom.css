@@ -455,15 +455,15 @@ product-price .compare-at-price{
   }
 /* 通用policy样式 */
 .policy h3 {
-  font-family: Poppins;
-  font-weight: 600;
-  font-size: 16px;
+  font-family: Poppins !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
 }
 
 .policy p {
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 16px;
+  font-family: Poppins !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
 }
 .policy-title {
     font-family: 'Poppins', sans-serif;

@@ -1857,7 +1857,7 @@
             "horizontal_alignment": "center",
             "vertical_alignment": "flex-start",
             "content_gap": 0,
-            "right_padding_top": 60,
+            "right_padding_top": 64,
             "right_padding_bottom": 0,
             "right_padding_left": 60,
             "right_padding_right": 60

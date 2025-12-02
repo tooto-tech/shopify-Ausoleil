@@ -776,6 +776,6 @@ summary {
   }
 
   .pss-slide__see-more {
-    bottom: 112px; /* 移动端 See More 底部 */
+    bottom: 56px; /* 移动端 See More 底部 */
   }
 }

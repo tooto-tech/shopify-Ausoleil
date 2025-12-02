@@ -128,6 +128,9 @@ product-price .compare-at-price{
    ======================================== */
 
 /* 分隔线样式 */
+.my-custom-texticon{
+  background-color: #F6F6F6;
+}
 .my-custom-texticon .divider {
   transform: rotate(10deg);
   border-color: #ffffff80;

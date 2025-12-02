@@ -740,7 +740,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 118,
+        "padding-block-start": 128,
         "padding-block-end": 140,
         "custom_mobile_padding": false,
         "padding-block-start-mobile": 0,

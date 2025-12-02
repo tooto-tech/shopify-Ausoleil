@@ -86,7 +86,7 @@
               "settings": {
                 "text": "<p>FREE RETURNS<br/></p>",
                 "width": "fit-content",
-                "max_width": "normal",
+                "max_width": "none",
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "var(--font-subheading--family)",
@@ -531,6 +531,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 46,
         "padding-block-end": 46,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": "my-custom-texticon"
       }
     },
@@ -1333,6 +1336,9 @@
         "gradient_direction": "to top",
         "padding-block-start": 20,
         "padding-block-end": 20,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
         "custom_class": "footer__copyright"
       }
     }

@@ -2153,7 +2153,7 @@
         "pss_slide_KpfBfi"
       ],
       "custom_css": [
-        ".pss-slide__left-text {width: 140%;}",
+        ".pss-slide__left-text {width: 120%;}",
         ".pss-slide__left-text {margin-top: 30px;}",
         ".pss-slide__see-more {bottom: 88px;}",
         " /* 移动端样式（小于 750px） */@media screen and (max-width: 749px) {.pss-slide__left-text {margin-top: 80px; /* 移动端上边距 */ } .pss-slide__see-more {bottom: 112px; /* 移动端底部位置 */ }}"

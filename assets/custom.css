@@ -259,6 +259,7 @@ product-price .compare-at-price{
 
   /* 文字样式 */
   .my-custom-texticon .text-block p {
+    font-family: Poppins;
     font-size: 14px !important;
     line-height: 10px !important;
   }

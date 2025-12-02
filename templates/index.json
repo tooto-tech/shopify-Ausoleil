@@ -865,7 +865,7 @@
             "placement": "below_image",
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
-            "collection_card_gap": 26,
+            "collection_card_gap": 30,
             "inherit_color_scheme": true,
             "color_scheme": "",
             "border": "none",

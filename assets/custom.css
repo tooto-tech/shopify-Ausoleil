@@ -791,21 +791,3 @@ summary {
     }
 }
 
-/*
- 非首页的页面边距设置 */
-/* 桌面端: 120px, 移动端: 20px */
-body:not(:has(main[data-template="index"])) .page-width-wide,
-body:not(:has(main[data-template="index"])) .page-width-normal,
-body:not(:has(main[data-template="index"])) .page-width-narrow,
-body:not(:has(main[data-template="index"])) .page-width-content {
-  --page-margin: 20px;
-}
-
-@media screen and (min-width: 750px) {
-  body:not(:has(main[data-template="index"])) .page-width-wide,
-  body:not(:has(main[data-template="index"])) .page-width-normal,
-  body:not(:has(main[data-template="index"])) .page-width-narrow,
-  body:not(:has(main[data-template="index"])) .page-width-content {
-    --page-margin: 120px;
-  }
-}

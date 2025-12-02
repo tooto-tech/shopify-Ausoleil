@@ -632,6 +632,7 @@ product-price .compare-at-price{
     flex: 3 0 0;
     background-color: #1226AA;
     color: #fff;
+    padding: 14px 18px 14px 18px;
 }
 
   /* 交换联系区域和菜单区域 */

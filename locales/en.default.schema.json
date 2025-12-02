@@ -929,6 +929,8 @@
     "minimum_height": "Minimum height",
     "mobile_card_size": "Mobile card size",
     "mobile_columns": "Mobile columns",
+    "mobile_left_padding": "Mobile left padding",
+    "mobile_right_padding": "Mobile right padding",
     "mobile_height": "Mobile height",
     "mobile_logo_image": "Mobile logo",
     "mobile_pagination": "Mobile pagination",

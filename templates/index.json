@@ -3120,7 +3120,7 @@
         ".pss-slide__progress-fill {background: #ffffff;}",
         " /* 控制文本位置 */.pss-slide__right-content {display: flex; flex-direction: column; height: 100%; gap: 16px; justify-content: space-between !important; /* 顶部组顶上，底部组顶下 */ align-items: center;}",
         ".pss-slide__progress {padding: 0px;}",
-        "@media (max-width: 749px) {.pss-slide__left-icon {margin-bottom: 40px; } .pss-slide__see-more {bottom: 56px; }}"
+        "@media (max-width: 749px) {.pss-slide__left-icon {margin-bottom: 40px; } .pss-slide__see-more {bottom: 56px; } .pss-slide__right {padding: 0px; padding-bottom: 28px; }}"
       ],
       "name": "Product Showcase Swiper",
       "settings": {

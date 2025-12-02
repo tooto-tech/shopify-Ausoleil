@@ -82,6 +82,7 @@
         "group_gNJYWp": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -219,6 +220,7 @@
         "group_qWfV7f": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -356,6 +358,7 @@
         "group_h4pFBR": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -493,6 +496,7 @@
         "group_HqrETL": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -630,6 +634,7 @@
         "group_y4KTci": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -767,6 +772,7 @@
         "group_aBqnKh": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -904,6 +910,7 @@
         "group_aUPUVA": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -1041,6 +1048,7 @@
         "group_xDFc7i": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -1178,6 +1186,7 @@
         "group_7CnUHy": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -1315,6 +1324,7 @@
         "group_hdkBjq": {
           "type": "group",
           "name": "文本块",
+          "disabled": true,
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,

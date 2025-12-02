@@ -333,11 +333,11 @@ p:empty {
 }
 
 /* 首页特殊边距设置：桌面端80px，移动端20px */
-  body:has(main[data-template="index"]) .page-width-wide,
-  body:has(main[data-template="index"]) .page-width-normal,
-  body:has(main[data-template="index"]) .page-width-narrow,
-  body:has(main[data-template="index"]) .page-width-content {
-    --page-margin: 20px;
+body:has(main[data-template="index"]) .page-width-wide,
+body:has(main[data-template="index"]) .page-width-normal,
+body:has(main[data-template="index"]) .page-width-narrow,
+body:has(main[data-template="index"]) .page-width-content {
+  --page-margin: 20px;
 }
 
   

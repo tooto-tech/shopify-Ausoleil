@@ -772,7 +772,7 @@ summary {
 /* 移动端样式（小于 750px） */
 @media screen and (max-width: 749px) {
   .pss-slide__left-icon {
-    margin-bottom: 80px; /* 移动端图标下边距 */
+    margin-bottom: 0px; /* 移动端图标下边距 */
   }
 
   .pss-slide__see-more {

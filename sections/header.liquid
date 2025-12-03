@@ -400,6 +400,7 @@ endif
   .header[data-sticky-state] {
     transition: opacity var(--animation-speed) var(--animation-easing);
     opacity: 1;
+    box-shadow: 0px 0.5px 0px 0px rgba(243, 243, 243, 0.27);
   }
 
   .header[data-sticky-state='active'] {
@@ -488,7 +489,7 @@ endif
 
     display: grid;
     grid-template-areas: 'left center right';
-    grid-gap: var(--gap-xl);
+    /* grid-gap: var(--gap-xl); */
     grid-template-columns: var(--header-template-columns);
 
     /* If menu is in center column */

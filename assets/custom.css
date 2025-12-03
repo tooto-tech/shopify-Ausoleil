@@ -769,6 +769,11 @@ summary {
 .add-to-cart-button{
   border-radius: 0px;
 }
+/* 产品详情手风琴样式 */
+.product-details .details__header{
+  line-height: 0px;
+  margin-bottom: 16px;
+}
 /* 去除产品详情多余margin */
 .product-collections ul{
   margin: 0px;

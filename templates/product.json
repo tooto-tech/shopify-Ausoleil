@@ -1355,6 +1355,9 @@
       "block_order": [
         "text_cbcgyb"
       ],
+      "custom_css": [
+        "/* you may also like产品间距 */.resource-list--grid{gap: 20px !important;}"
+      ],
       "name": "t:names.product_recommendations",
       "settings": {
         "product": "{{ closest.product }}",

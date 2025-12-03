@@ -753,7 +753,7 @@ summary {
     font-size: 14px !important;
     font-weight: 400 !important;
     line-height: 1.4;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 /* 数量选择器容器 */
@@ -779,6 +779,7 @@ summary {
     font-size: 24px;
     font-weight: normal;
     line-height: 20px;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {

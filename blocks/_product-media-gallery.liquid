@@ -292,6 +292,10 @@
   data-presentation="{{ block_settings.media_presentation }}"
   {{ block.shopify_attributes }}
 >
+  {%- comment -%} Render child blocks early to ensure App blocks are initialized {%- endcomment -%}
+  {%- capture ar_blocks_content -%}
+    {% content_for 'blocks' %}
+  {%- endcapture -%}
   {% capture slides %}
     {% for media in sorted_media %}
       {% capture children %}
@@ -415,10 +419,24 @@
           {% else %}
             {%- render 'product-media', media: media, sizes: media_sizes, is_main_product_media: forloop.first -%}
           {% endif %}
+          
+          {%- comment -%} AR Virtual Try On Button - only on first image {%- endcomment -%}
+          {%- if forloop.first and ar_blocks_content != blank -%}
+            <div class="product-media-gallery__ar-button-container product-media-gallery__ar-button-container--inside">
+              {{ ar_blocks_content }}
+            </div>
+          {%- endif -%}
         </li>
       {% endfor %}
     </ul>
   {% endif %}
+
+  {%- comment -%} AR Virtual Try On Button Container - fallback for carousel layout {%- endcomment -%}
+  {%- if block_settings.media_presentation == 'carousel' and ar_blocks_content != blank -%}
+    <div class="product-media-gallery__ar-button-container">
+      {{ ar_blocks_content }}
+    </div>
+  {%- endif -%}
 
   {%- if block_settings.zoom -%}
     <zoom-dialog
@@ -690,12 +708,61 @@
     /* Make the height match the height of the model-viewer */
     height: 100vh;
   }
+
+  /* AR Button Container Styles */
+  .product-media-gallery__ar-button-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0;
+    z-index: 1;
+  }
+
+  /* AR Button Container inside first image */
+  .product-media-container .product-media-gallery__ar-button-container--inside {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    margin-top: 0;
+    z-index: 10;
+    pointer-events: auto;
+  }
+
+  .product-media-container {
+    position: relative;
+  }
+
+  @media screen and (max-width: 749px) {
+    .product-media-gallery__ar-button-container {
+      margin-top: 16px;
+    }
+    
+    .product-media-container .product-media-gallery__ar-button-container--inside {
+      bottom: 16px;
+    }
+  }
+
+  /* Ensure AR button styles are applied */
+  .product-media-gallery__ar-button-container :deep(.tint-button-custom) {
+    font-family: Mont;
+    font-weight: 900;
+  }
 {% endstylesheet %}
 
 {% schema %}
 {
   "name": "t:names.product_media",
   "tag": null,
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
   "settings": [
     {
       "type": "select",

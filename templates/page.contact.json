@@ -6,37 +6,79 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
-    "main": {
-      "type": "main-page",
+    "page_banner_4kncxf": {
+      "type": "page-banner",
       "blocks": {
-        "title": {
+        "text_wiF6CB": {
           "type": "text",
-          "name": "t:names.title",
           "settings": {
-            "text": "<h1>{{ closest.page.title }}</h1>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
+            "text": "<p>FAQ</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "font_size_mobile": "",
+            "weight": "",
+            "weight_mobile": "",
             "line_height": "normal",
             "letter_spacing": "normal",
+            "letter_spacing_custom": "",
             "case": "none",
             "wrap": "pretty",
-            "color": "",
+            "color": "var(--color-foreground)",
+            "custom_color": "",
+            "custom_color_mobile": "",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0,
+            "custom_class": ""
           },
           "blocks": {}
-        },
+        }
+      },
+      "block_order": [
+        "text_wiF6CB"
+      ],
+      "name": "Page Banner",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/179_2x_bfe82fa0-9187-4f66-9f37-29e0f3e20d60.webp",
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "blocks": {
         "content": {
           "type": "text",
           "name": "t:names.content",
@@ -48,24 +90,35 @@
             "type_preset": "rte",
             "font": "var(--font-primary--family)",
             "font_size": "",
+            "font_size_mobile": "",
+            "weight": "",
+            "weight_mobile": "",
             "line_height": "normal",
             "letter_spacing": "normal",
+            "letter_spacing_custom": "",
             "case": "none",
             "wrap": "pretty",
             "color": "",
+            "custom_color": "",
+            "custom_color_mobile": "",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "custom_mobile_padding": false,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0,
+            "custom_class": ""
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "title",
         "content"
       ],
       "settings": {
@@ -73,7 +126,9 @@
         "gap": 32,
         "color_scheme": "",
         "padding-block-start": 40,
-        "padding-block-end": 0
+        "padding-block-end": 0,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0
       }
     },
     "form": {
@@ -140,11 +195,16 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 32,
-        "padding-block-end": 84
+        "padding-block-end": 84,
+        "custom_mobile_padding": false,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0,
+        "custom_class": ""
       }
     }
   },
   "order": [
+    "page_banner_4kncxf",
     "main",
     "form"
   ]

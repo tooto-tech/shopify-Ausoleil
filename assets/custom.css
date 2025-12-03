@@ -765,6 +765,10 @@ summary {
 .add-to-cart-button{
   border-radius: 0px;
 }
+/* 去除产品详情多余margin */
+.product-collections ul{
+  margin: 0px;
+}
 /* 产品详情多属性选择器的Label样式 */
 .quantity-label-custom {
     font-family: 'Poppins', sans-serif;

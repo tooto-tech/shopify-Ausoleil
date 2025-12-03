@@ -458,6 +458,9 @@ body.page-width-content:has(main[data-template="index"]) {
     padding-left: 38px;
     padding-right:48px;
   }
+  padding-left: 22px;
+  padding-right: 12px;
+
 }
 
 /* Some section content break out to full width of the page */

@@ -26,7 +26,7 @@
             "button_padding_vertical": 10,
             "button_padding_horizontal": 24,
             "button_alignment": "center",
-            "custom_css": ".tint-button-custom {}"
+            "custom_css": ".tint-button-custom {\nfont-family: Mont;\nfont-weight: 900;\n}"
           }
         },
         "media-gallery": {

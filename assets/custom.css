@@ -810,6 +810,10 @@ summary {
     align-items: center;     /* 垂直居中（如果需要） */
   }
 }
+/* you may also like产品间距 */
+.resource-list--grid{
+  gap: 20px;
+}
 
 /* 滑动轮播图样式 */
 /* PC端样式（大于等于 750px） */

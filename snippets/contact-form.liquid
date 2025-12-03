@@ -61,7 +61,8 @@
         autocomplete="name"
         name="contact[name]"
         value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-        placeholder="{{ 'blocks.contact_form.name' | t }}"
+        {% comment %} placeholder="{{ 'blocks.contact_form.name' | t }}" {% endcomment %}
+         placeholder="Your name"
       >
 
       <label
@@ -85,7 +86,8 @@
           aria-invalid="true"
           aria-describedby="ContactForm-email-error"
         {% endif %}
-        placeholder="{{ 'blocks.contact_form.email' | t }}"
+        {% comment %} placeholder="{{ 'blocks.contact_form.email' | t }}" {% endcomment %}
+         placeholder="Your E-mail"
       >
     </div>
 
@@ -117,7 +119,8 @@
       id="ContactForm-body"
       class="contact-form__input contact-form__input--textarea"
       name="contact[body]"
-      placeholder="{{ 'blocks.contact_form.comment' | t }}"
+      {% comment %} placeholder="{{ 'blocks.contact_form.comment' | t }}" {% endcomment %}
+       placeholder="Your Message"
     >
       {{- form.body -}}
     </textarea>

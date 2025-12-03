@@ -15,9 +15,7 @@
       {% assign heading_text = 'content.search_results' | t %}
     {% endif %}
 
-    {% capture heading_text %}
-      <h3>{{ heading_text }}</h3>
-    {% endcapture %}
+
 
     {% content_for 'block', id: 'heading', type: '_heading', text: heading_text %}
     {% content_for 'block', id: 'search', type: '_search-input' %}

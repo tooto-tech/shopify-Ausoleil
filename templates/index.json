@@ -3503,7 +3503,7 @@
         "section_width": "page",
         "bg_color": "#ffffff",
         "left_width": 45,
-        "min_height": 900,
+        "min_height": 800,
         "mobile_left_height": 500,
         "min_height_mobile": 600,
         "autoplay": false,

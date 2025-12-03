@@ -1356,7 +1356,8 @@
         "text_cbcgyb"
       ],
       "custom_css": [
-        "/* you may also like产品间距 */.resource-list--grid{gap: 20px !important;}"
+        ".resource-list--grid {column-gap: 20px;}",
+        "@media (max-width: 768px) {.resource-list--grid {column-gap: 46px; row-gap: 14px; }}"
       ],
       "name": "t:names.product_recommendations",
       "settings": {

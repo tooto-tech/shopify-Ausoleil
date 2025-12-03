@@ -126,6 +126,8 @@
         "localization_row": "top",
         "section_width": "full-width",
         "section_height": "standard",
+        "icon_size": 24,
+        "icon_size_mobile": 20,
         "enable_sticky_header": "always",
         "divider_width": 0,
         "divider_size": "page-width",

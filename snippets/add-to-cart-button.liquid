@@ -30,6 +30,7 @@
     ref="addToCartButton"
     on:click="/handleClick"
     class="button {{ class }}"
+    style="border-radius: 0px"
     {% unless can_add_to_cart %}
       disabled
     {% endunless %}

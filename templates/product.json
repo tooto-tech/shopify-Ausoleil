@@ -147,7 +147,7 @@
                   "type": "custom-liquid",
                   "name": "t:names.custom_liquid",
                   "settings": {
-                    "custom_liquid": "{% if product.collections.size > 0 %}\n  <div class=\"product-collections\">\n    <ul>\n      {% for collection in product.collections %}\n        <li class=\"collection-title1\">{{ collection.title }}</li>\n      {% endfor %}\n    </ul>\n  </div>\n{% endif %}\n\n<style>\n/* PC端样式 */\n.collection-title1 {\n  font-family: 'Poppins', sans-serif;\n  font-size: 48px;\n  font-weight: normal;\n  line-height: 56px;\n  color: #121821 ;\n  list-style: none; /* 去掉默认的li点 */\n  margin: 0;\n  padding: 0;\n}\n\n/* 移动端样式 */\n@media (max-width: 768px) {\n  .collection-title1 {\n    font-size: 24px;\n    line-height: 28px;\n    color: #121821; /* 保持颜色一致 */\n  }\n}\n\n/*去掉ul默认的padding*/\nul{\n    padding-inline-start: 0px;\n}\n</style>"
+                    "custom_liquid": "{% if product.collections.size > 0 %}\n  <div class=\"product-collections\">\n    <ul>\n      {% for collection in product.collections %}\n        <li class=\"collection-title1\">{{ collection.title }}</li>\n      {% endfor %}\n    </ul>\n  </div>\n{% endif %}\n\n<style>\n/* PC端样式 */\n.collection-title1 {\n  font-family: 'Poppins', sans-serif;\n  font-size: 48px;\n  font-weight: normal;\n  line-height: 56px;\n  color: #121821 ;\n  list-style: none; /* 去掉默认的li点 */\n  margin: 0;\n  padding: 0;\n}\n\n/* 移动端样式 */\n@media (max-width: 768px) {\n  .collection-title1 {\n    font-size: 24px;\n    line-height: 28px;\n    color: #121821; /* 保持颜色一致 */\nmargin-top: 36px;\n  }\n}\n\n/*去掉ul默认的padding*/\nul{\n    padding-inline-start: 0px;\n}\n</style>"
                   },
                   "blocks": {}
                 },
@@ -897,8 +897,7 @@
       ],
       "custom_css": [
         "/* 产品详情手风琴样式 */.details__header {line-height: 0px; margin-bottom: 20px; margin-top: 20px; min-height: 0px;}",
-        "@media (max-width: 768px) {.details__header {margin-bottom: 16px; }}",
-        ":where(media-gallery,.product-grid__item) .media-gallery__grid{gap: 16px;}"
+        "@media (max-width: 768px) {.details__header {margin-bottom: 16px; }}"
       ],
       "settings": {
         "content_width": "content-center-aligned",

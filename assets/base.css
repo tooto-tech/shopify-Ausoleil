@@ -347,6 +347,12 @@ body.page-width-content:has(main[data-template="index"]) {
   body.page-width-content:has(main[data-template="index"]) {
     --page-margin: 80px;
   }
+    body.page-width-narrow:has(main[data-template="page.sizing-guide"]),
+  body.page-width-wide:has(main[data-template="page.sizing-guide"]),
+  body.page-width-normal:has(main[data-template="page.sizing-guide"]),
+  body.page-width-content:has(main[data-template="page.sizing-guide"]) {
+    --page-margin: 200px;
+  }
 }
 
 .page-width-wide {

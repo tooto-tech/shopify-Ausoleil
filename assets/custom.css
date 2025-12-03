@@ -772,11 +772,11 @@ summary {
 }
 /* 详情图片间距 */
 :where(media-gallery, .product-grid__item) .media-gallery__grid {
-  gap: 16px;
+  gap: 16px !important;
 }
 @media (max-width: 768px) {
 :where(media-gallery, .product-grid__item) .media-gallery__grid {
-  gap: 8px;
+  gap: 8px !important;
   
 }
 

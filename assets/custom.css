@@ -865,7 +865,7 @@ summary {
 .second-showcase .pss-slide__right{
   padding: 70px 62px 56px 62px;
 }
-  .first-showcase .pss-slide__right{
+  .first-showcase .pss-slide__left .pss-slide__right{
     min-height: 800 !important;
   }
 @media screen and (max-width: 749px){

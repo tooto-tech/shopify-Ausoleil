@@ -138,7 +138,7 @@
           "type": "contact-form",
           "settings": {
             "width": "custom",
-            "custom_width": 100,
+            "custom_width": 80,
             "width_mobile": "custom",
             "custom_width_mobile": 100,
             "inherit_color_scheme": true,

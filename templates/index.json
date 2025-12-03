@@ -3072,7 +3072,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Winter stand-up collar zipper bread jacket</p>",
+                    "text": "<p>Winter stand-up collar zipper <br/>bread jacket</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "center",

@@ -67,6 +67,6 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
-    <script src="https://plugin-code.salesmartly.com/js/project_557490_575163_1764724047.js"></script> 
+    {{ 'salesmartly.js' | asset_url | script_tag }}
   </body>
 </html>

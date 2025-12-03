@@ -12,42 +12,42 @@
     assign search_style = 'modal'
   endif
 
-# 透明头部逻辑(含其他页面 logo 颜色支持)
-if section.settings.enable_transparent_header_home and template.name == 'index'
-  assign transparent = 'always'
-  assign transparent_color_scheme = section.settings.home_color_scheme
-  assign section.settings.color_scheme_transparent = section.settings.home_color_scheme
-elsif section.settings.enable_transparent_header_product and template.name == 'product'
-  assign transparent = 'always'
-  assign transparent_color_scheme = section.settings.product_color_scheme
-  assign section.settings.color_scheme_transparent = section.settings.product_color_scheme
-elsif section.settings.enable_transparent_header_collection and template.name == 'collection'
-  assign transparent = 'always'
-  assign transparent_color_scheme = section.settings.collection_color_scheme
-  assign section.settings.color_scheme_transparent = section.settings.collection_color_scheme
-elsif section.settings.enable_transparent_header_other and template.name != 'index' and template.name != 'product' and template.name != 'collection'
-  assign transparent = 'always'
-  assign transparent_color_scheme = section.settings.other_color_scheme 
-  assign section.settings.color_scheme_transparent = section.settings.other_color_scheme
-endif
-
-if section.settings.enable_sticky_header == 'always'
-  assign sticky = 'always'
-elsif section.settings.enable_sticky_header == 'scroll-up'
-  assign sticky = 'scroll-up'
-endif
-
-if transparent and sticky
-  assign transparent = 'not-sticky'
-endif
-
-if transparent
-  if transparent_color_scheme == 'inverse'
-    assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_transparent
-  else
-    assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_top
+  # 透明头部逻辑(含其他页面 logo 颜色支持)
+  if section.settings.enable_transparent_header_home and template.name == 'index'
+    assign transparent = 'always'
+    assign transparent_color_scheme = section.settings.home_color_scheme
+    assign section.settings.color_scheme_transparent = section.settings.home_color_scheme
+  elsif section.settings.enable_transparent_header_product and template.name == 'product'
+    assign transparent = 'always'
+    assign transparent_color_scheme = section.settings.product_color_scheme
+    assign section.settings.color_scheme_transparent = section.settings.product_color_scheme
+  elsif section.settings.enable_transparent_header_collection and template.name == 'collection'
+    assign transparent = 'always'
+    assign transparent_color_scheme = section.settings.collection_color_scheme
+    assign section.settings.color_scheme_transparent = section.settings.collection_color_scheme
+  elsif section.settings.enable_transparent_header_other and template.name != 'index' and template.name != 'product' and template.name != 'collection'
+    assign transparent = 'always'
+    assign transparent_color_scheme = section.settings.other_color_scheme
+    assign section.settings.color_scheme_transparent = section.settings.other_color_scheme
   endif
-endif
+
+  if section.settings.enable_sticky_header == 'always'
+    assign sticky = 'always'
+  elsif section.settings.enable_sticky_header == 'scroll-up'
+    assign sticky = 'scroll-up'
+  endif
+
+  if transparent and sticky
+    assign transparent = 'not-sticky'
+  endif
+
+  if transparent
+    if transparent_color_scheme == 'inverse'
+      assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_transparent
+    else
+      assign transparent_color_scheme = 'color-' | append: section.settings.color_scheme_top
+    endif
+  endif
 
   capture logo
     content_for 'block', type: '_header-logo', id: 'header-logo'
@@ -194,6 +194,7 @@ endif
 <header-component
   id="header-component"
   class="{{ class }}"
+  style="--header-icon-size: {{ section.settings.icon_size }}px; --header-icon-size-mobile: {{ section.settings.icon_size_mobile }}px;"
   {% if transparent %}
     transparent="{{ transparent }}"
   {% endif %}
@@ -294,6 +295,22 @@ endif
 
   body:has(> #header-group:empty) {
     --header-group-height: 0px;
+  }
+
+  .header .header-actions__action svg,
+  .header .header__icon svg,
+  .header .account-button__icon svg {
+    width: var(--header-icon-size, 20px);
+    height: var(--header-icon-size, 20px);
+  }
+
+  @media screen and (max-width: 749px) {
+    .header .header-actions__action svg,
+    .header .header__icon svg,
+    .header .account-button__icon svg {
+      width: var(--header-icon-size-mobile, 18px);
+      height: var(--header-icon-size-mobile, 18px);
+    }
   }
 
   .header[transparent] {
@@ -611,11 +628,11 @@ endif
     padding-block-end: 18px;
   }
   @media screen and (max-width: 749px) {
-  .header__columns {
-    padding-block-start: 10px;
-    padding-block-end: 10px;
+    .header__columns {
+      padding-block-start: 10px;
+      padding-block-end: 10px;
+    }
   }
-}
 
   .header:not(.header--compact) .header__row--bottom {
     --header-padding: var(--padding-xs);
@@ -935,6 +952,26 @@ endif
         }
       ],
       "default": "standard"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size (Desktop)",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "label": "Icon size (Mobile)",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 18
     },
     {
       "type": "select",

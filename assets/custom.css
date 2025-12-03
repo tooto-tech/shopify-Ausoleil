@@ -883,21 +883,21 @@ summary {
 }
 /* AR按钮样式 */
 .tint-button {
-  background-color: #ffffff;      /* 背景颜色 */
-  font-family: 'Mont', sans-serif; /* 字体 */
-  font-size: 14px;                /* 字号 */
-  font-weight: 900;               /* 字重 */
-  color: #231C0A;                 /* 字体颜色 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: 1px solid #000000;     /* 边框颜色 */
-  border-radius: 20px !important;            /* 圆角 */
-  padding: 10px 24px;             /* 上下10px，左右24px */
-  width: auto;                    /* 自适应宽度 */
-  box-sizing: border-box;
+    background-color: #ffffff !important;
+    font-family: 'Mont', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 900 !important;
+    color: #231C0A !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border: 1px solid #000000 !important;
+    border-radius: 20px !important;
+    padding: 10px 24px !important;
+    width: auto !important; /* 如果想自适应宽度 */
+    box-sizing: border-box !important;
 }
+
 
 .tint-button:disabled {
   cursor: not-allowed;

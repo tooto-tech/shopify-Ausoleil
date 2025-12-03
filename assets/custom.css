@@ -770,7 +770,16 @@ summary {
 .add-to-cart-button{
   border-radius: 0px;
 }
+/* 详情图片间距 */
+:where(media-gallery, .product-grid__item) .media-gallery__grid {
+  gap: 16px;
+}
+@media (max-width: 768px) {
+:where(media-gallery, .product-grid__item) .media-gallery__grid {
+  gap: 8px;
+}
 
+}
 /* 去除产品详情多余margin */
 .product-collections ul{
   margin: 0px;
@@ -810,10 +819,7 @@ summary {
     align-items: center;     /* 垂直居中（如果需要） */
   }
 }
-/* you may also like产品间距 */
-.resource-list--grid{
-  gap: 20px !important;
-}
+
 
 /* 滑动轮播图样式 */
 /* PC端样式（大于等于 750px） */

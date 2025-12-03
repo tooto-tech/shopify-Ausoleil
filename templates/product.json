@@ -1357,7 +1357,7 @@
       ],
       "custom_css": [
         ".resource-list--grid {column-gap: 20px;}",
-        "@media (max-width: 768px) {.resource-list--grid {column-gap: 46px; row-gap: 14px; }}"
+        "@media (max-width: 768px) {.resource-list--grid {column-gap: 14px; row-gap: 46px; }}"
       ],
       "name": "t:names.product_recommendations",
       "settings": {

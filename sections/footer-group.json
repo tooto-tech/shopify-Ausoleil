@@ -221,7 +221,7 @@
               "settings": {
                 "text": "<p>SATISFACTION GUARANTEED</p>",
                 "width": "fit-content",
-                "max_width": "normal",
+                "max_width": "none",
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "var(--font-subheading--family)",
@@ -350,7 +350,7 @@
               "settings": {
                 "text": "<p>FREE RETURNS<br/></p>",
                 "width": "fit-content",
-                "max_width": "normal",
+                "max_width": "none",
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "var(--font-subheading--family)",
@@ -479,7 +479,7 @@
               "settings": {
                 "text": "<p>SECURE PAYMENT</p>",
                 "width": "fit-content",
-                "max_width": "normal",
+                "max_width": "none",
                 "alignment": "center",
                 "type_preset": "custom",
                 "font": "var(--font-subheading--family)",

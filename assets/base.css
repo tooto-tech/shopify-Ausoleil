@@ -3912,6 +3912,11 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 .section-resource-list {
   row-gap: var(--gap);
 }
+@media (max-width: 768px) {
+  .section-resource-list {
+    --gap: 0;
+  }
+}
 
 .section-resource-list__content {
   display: flex;

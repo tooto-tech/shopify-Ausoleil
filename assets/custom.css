@@ -439,7 +439,7 @@ product-price .compare-at-price{
     font-family: 'Poppins', sans-serif !important; /* 使用 !important 确保覆盖内联或现有样式 */
     font-size: 20px !important;
     font-weight: 500 !important;
-    line-height: 24px !important;
+    line-height: 24px;
     color: #000000 !important;
   }
 
@@ -449,7 +449,7 @@ product-price .compare-at-price{
       font-family: 'Poppins', sans-serif !important;
       font-size: 15px !important;
       font-weight: 500 !important;
-      line-height: 140% !important; /* 注意：移动端要求颜色为 #231C0A */
+      line-height: 140%; /* 注意：移动端要求颜色为 #231C0A */
       color: #231C0A !important;
     }
   }

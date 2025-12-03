@@ -236,8 +236,10 @@
     --cart-bubble-right: 2.5px;
     display: flex;
     align-items: center;
-
     position: relative;
+    @media screen and (max-width: 749px) {
+      padding-left: 12px;
+    }
   }
 
   .header-actions__cart-icon .cart-bubble {

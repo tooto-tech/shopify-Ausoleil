@@ -893,7 +893,7 @@ summary {
   align-items: center;
   cursor: pointer;
   border: 1px solid #000000;     /* 边框颜色 */
-  border-radius: 20px;            /* 圆角 */
+  border-radius: 20px !important;            /* 圆角 */
   padding: 10px 24px;             /* 上下10px，左右24px */
   width: auto;                    /* 自适应宽度 */
   box-sizing: border-box;

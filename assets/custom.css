@@ -800,6 +800,9 @@ summary {
         font-weight: normal;
         line-height: 10px;
     }
+    collection-title1{
+      margin-top: 36px;
+    }
 }
 /* 筛选drawer样式 */
 .menu-drawer{

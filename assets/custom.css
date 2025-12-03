@@ -777,6 +777,10 @@ summary {
 @media (max-width: 768px) {
 :where(media-gallery, .product-grid__item) .media-gallery__grid {
   gap: 8px;
+
+  .product-collection{
+    text-align: left
+  }
 }
 
 }

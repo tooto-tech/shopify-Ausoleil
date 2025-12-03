@@ -3914,7 +3914,7 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 }
 @media (max-width: 768px) {
   .section-resource-list {
-    --gap: 0;
+    row-gap: 0px;
   }
 }
 

@@ -107,6 +107,9 @@
           "blocks": {}
         }
       },
+      "custom_css": [
+        "button{padding-inline:0px;}"
+      ],
       "settings": {
         "logo_position": "center",
         "menu_position": "left",

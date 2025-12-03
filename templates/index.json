@@ -2291,7 +2291,7 @@
         ".pss-slide__left-text {width: 120%;}",
         ".pss-slide__left-text {margin-top: 30px;}",
         ".pss-slide__see-more {bottom: 56px;}",
-        " /* 移动端样式（小于 750px） */@media screen and (max-width: 749px) {.pss-slide__see-more {bottom: 56px; /* 移动端底部位置 */ }}",
+        " /* 移动端样式（小于 750px) */@media screen and (max-width: 749px) {.pss-slide__see-more {bottom: 56px; /* 移动端底部位置 */ }}",
         " /* 去除进度条padding */.pss-slide__progress {padding: 0px;}"
       ],
       "name": "Product Showcase Swiper",

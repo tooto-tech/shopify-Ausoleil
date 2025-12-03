@@ -759,8 +759,12 @@ summary {
 /* 数量选择器容器 */
 .quantity-wrapper {
     width: 25%;
-    margin-bottom: 12px;
+    margin-bottom: 32px;
 }
+@media (max-width: 768px) {
+    .quantity-wrapper {
+        margin-bottom: 28px;
+    }
 /* 产品详情按钮样式 */
 .add-to-cart-button{
   border-radius: 0px;

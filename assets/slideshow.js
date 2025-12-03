@@ -72,7 +72,9 @@ export class Slideshow extends Component {
     }
 
     const slideCount = this.slides?.length || 0;
-    slideCount <= 1 ? this.#setupSlideshowWithoutControls() : this.#setupSlideshow();
+    slideCount <= 1
+      ? this.#setupSlideshowWithoutControls()
+      : this.#setupSlideshow();
   }
 
   disconnectedCallback() {
@@ -89,7 +91,10 @@ export class Slideshow extends Component {
       this.removeEventListener('mouseenter', this.suspend);
       this.removeEventListener('mouseleave', this.resume);
       this.removeEventListener('pointerenter', this.#handlePointerEnter);
-      document.removeEventListener('visibilitychange', this.#handleVisibilityChange);
+      document.removeEventListener(
+        'visibilitychange',
+        this.#handleVisibilityChange
+      );
     }
 
     if (this.#resizeObserver) {
@@ -132,7 +137,9 @@ export class Slideshow extends Component {
       if (typeof input === 'number') return input;
       if (typeof input === 'string') return parseInt(input, 10);
       if ('id' in input) {
-        const requestedSlide = this.refs.slides.find((slide) => slide.getAttribute('slide-id') == input.id);
+        const requestedSlide = this.refs.slides.find(
+          (slide) => slide.getAttribute('slide-id') == input.id
+        );
 
         if (!requestedSlide || !this.slides) return;
 
@@ -150,12 +157,18 @@ export class Slideshow extends Component {
     const { slides } = this;
 
     // Guard checks: no slides, invalid index, or selecting the same slide
-    if (!slides?.length || requestedIndex === undefined || isNaN(requestedIndex)) return;
+    if (
+      !slides?.length ||
+      requestedIndex === undefined ||
+      isNaN(requestedIndex)
+    )
+      return;
 
     const requestedSlideElement = slides?.[requestedIndex];
     if (currentSlide === requestedSlideElement) return;
 
-    if (!this.infinite) requestedIndex = clamp(requestedIndex, 0, slides.length - 1);
+    if (!this.infinite)
+      requestedIndex = clamp(requestedIndex, 0, slides.length - 1);
 
     event?.preventDefault();
 
@@ -167,7 +180,10 @@ export class Slideshow extends Component {
     if (requestedIndex < 0) index = lastIndex;
     else if (requestedIndex > lastIndex) index = 0;
 
-    const isAdjacentSlide = Math.abs(index - current) <= 1 && requestedIndex >= 0 && requestedIndex <= lastIndex;
+    const isAdjacentSlide =
+      Math.abs(index - current) <= 1 &&
+      requestedIndex >= 0 &&
+      requestedIndex <= lastIndex;
     const { visibleSlides } = this;
     const instant = prefersReducedMotion() || !animate;
 
@@ -344,11 +360,16 @@ export class Slideshow extends Component {
     if (current) current.textContent = `${value + 1}`;
 
     for (const controls of [thumbnails, dots]) {
-      controls?.forEach((el, i) => el.setAttribute('aria-selected', `${i === value}`));
+      controls?.forEach((el, i) =>
+        el.setAttribute('aria-selected', `${i === value}`)
+      );
     }
 
     if (previous) previous.disabled = Boolean(!this.infinite && value === 0);
-    if (next) next.disabled = Boolean(!this.infinite && slides && this.nextIndex >= slides.length);
+    if (next)
+      next.disabled = Boolean(
+        !this.infinite && slides && this.nextIndex >= slides.length
+      );
   }
 
   get infinite() {
@@ -356,7 +377,12 @@ export class Slideshow extends Component {
   }
 
   get visibleSlides() {
-    return getVisibleElements(this.refs.scroller, this.slides, SLIDE_VISIBLITY_THRESHOLD, 'x');
+    return getVisibleElements(
+      this.refs.scroller,
+      this.slides,
+      SLIDE_VISIBLITY_THRESHOLD,
+      'x'
+    );
   }
 
   get previousIndex() {
@@ -398,7 +424,8 @@ export class Slideshow extends Component {
    */
   get disabled() {
     return (
-      this.getAttribute('disabled') === 'true' || (this.hasAttribute('mobile-disabled') && !mediaQueryLarge.matches)
+      this.getAttribute('disabled') === 'true' ||
+      (this.hasAttribute('mobile-disabled') && !mediaQueryLarge.matches)
     );
   }
 
@@ -557,7 +584,10 @@ export class Slideshow extends Component {
     const { axis } = this.#scroll;
     const { scroller } = this.refs;
     const centers = visibleSlides.map((slide) => center(slide, axis));
-    const referencePoint = visibleSlides.length > 1 ? scroller.getBoundingClientRect()[axis] : center(scroller, axis);
+    const referencePoint =
+      visibleSlides.length > 1
+        ? scroller.getBoundingClientRect()[axis]
+        : center(scroller, axis);
     const closestCenter = closest(centers, referencePoint);
     const closestVisibleSlide = visibleSlides[centers.indexOf(closestCenter)];
 
@@ -617,15 +647,22 @@ export class Slideshow extends Component {
         this.setPointerCapture(event.pointerId);
 
         // Prevent clicks once the user starts dragging
-        document.addEventListener('click', preventDefault, { once: true, signal });
+        document.addEventListener('click', preventDefault, {
+          once: true,
+          signal,
+        });
 
         const movingRight = initialDelta < 0;
         const movingLeft = initialDelta > 0;
 
         // Check if the current slideshow should handle this drag
-        const closestSlideshow = this.parentElement?.closest('slideshow-component');
-        const isNested = closestSlideshow instanceof Slideshow && closestSlideshow !== this;
-        const cannotMoveInDirection = (movingRight && this.atStart) || (movingLeft && this.atEnd);
+        const closestSlideshow = this.parentElement?.closest(
+          'slideshow-component'
+        );
+        const isNested =
+          closestSlideshow instanceof Slideshow && closestSlideshow !== this;
+        const cannotMoveInDirection =
+          (movingRight && this.atStart) || (movingLeft && this.atEnd);
 
         // Abort and let the parent slideshow handle the drag if we're moving in a direction where nested slideshow can't move
         if (isNested && cannotMoveInDirection) {
@@ -665,7 +702,10 @@ export class Slideshow extends Component {
       const direction = Math.sign(velocity);
       const next = this.#sync();
 
-      const modifier = current !== next || Math.abs(velocity) < 10 || distanceTravelled < 10 ? 0 : direction;
+      const modifier =
+        current !== next || Math.abs(velocity) < 10 || distanceTravelled < 10
+          ? 0
+          : direction;
       const newIndex = clamp(next + modifier, 0, slides.length - 1);
 
       const newSlide = slides[newIndex];
@@ -721,7 +761,9 @@ export class Slideshow extends Component {
   };
 
   get slides() {
-    return this.refs.slides?.filter((slide) => !slide.hasAttribute('hidden') || slide.hasAttribute('reveal'));
+    return this.refs.slides?.filter(
+      (slide) => !slide.hasAttribute('hidden') || slide.hasAttribute('reveal')
+    );
   }
 
   /**
@@ -738,7 +780,8 @@ export class Slideshow extends Component {
   /**
    * Pause the slideshow when the page is hidden.
    */
-  #handleVisibilityChange = () => (document.hidden ? this.pause() : this.resume());
+  #handleVisibilityChange = () =>
+    document.hidden ? this.pause() : this.resume();
 
   #updateControlsVisibility() {
     if (!this.hasAttribute('auto-hide-controls')) return;
@@ -760,10 +803,12 @@ export class Slideshow extends Component {
     if (!selectedThumbnail) return;
 
     const { thumbnailsContainer } = this.refs;
-    if (!thumbnailsContainer || !(thumbnailsContainer instanceof HTMLElement)) return;
+    if (!thumbnailsContainer || !(thumbnailsContainer instanceof HTMLElement))
+      return;
 
     const { slideshowControls } = this.refs;
-    if (!slideshowControls || !(slideshowControls instanceof HTMLElement)) return;
+    if (!slideshowControls || !(slideshowControls instanceof HTMLElement))
+      return;
 
     scrollIntoView(selectedThumbnail, {
       ancestor: thumbnailsContainer,

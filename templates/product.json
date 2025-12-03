@@ -896,7 +896,8 @@
         "banuba_virtual_try_on_tint_block_wXByUK"
       ],
       "custom_css": [
-        "/* 产品详情手风琴样式 */.details__header {line-height: 0px; margin-bottom: 20px;}"
+        "/* 产品详情手风琴样式 */.details__header {line-height: 0px; margin-bottom: 20px; margin-top: 20px; min-height: 0px;}",
+        "@media (max-width: 768px) {.details__header {margin-bottom: 16px; }}"
       ],
       "settings": {
         "content_width": "content-center-aligned",

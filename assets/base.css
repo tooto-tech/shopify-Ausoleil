@@ -453,8 +453,10 @@ body.page-width-content:has(main[data-template="index"]) {
   grid-column: 1 / -1;
 
   @media screen and (min-width: 750px) {
-    padding-left: var(--page-margin);
-    padding-right: var(--page-margin);
+    /* padding-left: var(--page-margin); */
+    /* padding-right: var(--page-margin); */
+    padding-left: 38px;
+    padding-right:48px;
   }
 }
 

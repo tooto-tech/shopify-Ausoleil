@@ -812,7 +812,7 @@ summary {
 }
 /* you may also like产品间距 */
 .resource-list--grid{
-  gap: 20px;
+  gap: 20px !important;
 }
 
 /* 滑动轮播图样式 */

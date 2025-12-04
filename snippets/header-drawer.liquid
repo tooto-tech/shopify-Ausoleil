@@ -773,13 +773,18 @@
   .header__icon--menu {
     position: initial;
   }
-  .close-text {
+
+.header-drawer-icon--close {
+  display: flex;
+  align-items: flex-start; /* 整体顶部对齐 */
+}
+
+.close-text {
   font-family: Poppins;
   font-size: 24px;
-  font-weight: normal;
-  color: #231C0A;
-  display: flex;
-  justify-content: top;
+  font-weight: 400;
+  color: #231c0a;
+  align-self: flex-start; /* 子元素顶部对齐 */
   margin-left: 16px;
 }
 

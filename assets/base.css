@@ -2792,7 +2792,7 @@ color: #000000;
   cursor: pointer;
   background-color: var(--pills-pill-background-color);
   transition: background-color var(--animation-speed) var(--animation-easing);
-  font-family: 'Popins'
+  font-family: 'Popins' !important;
 
   &:hover {
     --pills-pill-background-color: rgb(var(--color-foreground-rgb) / var(--opacity-10-25));

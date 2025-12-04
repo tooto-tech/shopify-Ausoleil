@@ -256,6 +256,13 @@
           on:change="/changeLanguage"
         >
           {%- for language in localization.available_languages -%}
+            {%- liquid
+              if language.iso_code == 'en'
+                assign display_name = 'En'
+              else
+                assign display_name = language.endonym_name | capitalize
+              endif
+            -%}
             <option
               value="{{ language.iso_code }}"
               lang="{{ language.iso_code }}"
@@ -263,7 +270,7 @@
                 selected
               {% endif %}
             >
-              {{ language.endonym_name | capitalize }}
+              {{ display_name }}
             </option>
           {%- endfor -%}
         </select>
@@ -536,8 +543,8 @@
     color: var(--color-foreground);
     appearance: none;
     background-color: var(--color-input-background);
-    padding-block: var(--padding-3xs);
-    padding-inline: var(--padding-xs) calc(var(--icon-size-xs) + var(--padding-xs));
+    /* padding-block: var(--padding-3xs); */
+    /* padding-inline: var(--padding-xs) calc(var(--icon-size-xs) + var(--padding-xs)); */
     text-align: right;
     cursor: pointer;
     max-width: 40vw;
@@ -577,11 +584,11 @@
   }
 
   .language-selector--collapse-space {
-    padding-inline-end: var(--padding-2xs);
+    /* padding-inline-end: var(--padding-2xs); */
   }
 
   .language-selector--collapse-space .localization-form__select {
-    padding-inline-end: var(--icon-size-xs);
+    /* padding-inline-end: var(--icon-size-xs); */
   }
 
   .language-selector--collapse-space .svg-wrapper.icon-caret {

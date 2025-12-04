@@ -914,3 +914,23 @@ summary {
 span[title="Product count"] {
     font-family: 'Manrope', sans-serif;
 }
+
+
+/* Language Selector 样式 */
+.language-selector {
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  width: auto;
+}
+
+/* 暂时隐藏下拉箭头（以后可能会加回来） */
+.language-selector .svg-wrapper.icon-caret {
+  display: none;
+}
+
+/* 调整隐藏箭头后的 select padding，并让宽度自适应选中项 */
+.language-selector .localization-form__select {
+  /* padding-inline-end: var(--padding-xs); */
+  width: auto;
+  min-width: 0;
+}

@@ -907,4 +907,7 @@ summary {
 .tint-button:disabled {
   cursor: not-allowed;
 }
-/* contact us */
+/* 过滤器样式修改 */
+.product.count{
+  font-family: Manrope;
+}

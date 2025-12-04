@@ -812,6 +812,7 @@ summary {
 }
 /* 筛选drawer样式 */
 .menu-drawer{
+  box-shadow:none;
 }
 /* 产品列表页面的padding设置 */
 @media (max-width: 749px) {

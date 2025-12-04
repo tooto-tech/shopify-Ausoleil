@@ -908,6 +908,6 @@ summary {
   cursor: not-allowed;
 }
 /* 过滤器样式修改 */
-.product.count{
-  font-family: Manrope;
+span[title="Product count"] {
+    font-family: 'Manrope', sans-serif;
 }

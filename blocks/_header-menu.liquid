@@ -1,4 +1,3 @@
-
 {%- doc -%}
   Renders a header menu block.
 
@@ -603,6 +602,19 @@
   .mega-menu__submenu {
     /* preserves the inherited grid layout when this submenu wrapper is used */
     display: contents;
+  }
+
+  /* Custom Banner horizontal layout styles (desktop only) */
+  @media screen and (min-width: 990px) {
+    .header-drawer--fullwidth .menu-drawer__featured-content {
+      width: 42%;
+      margin-left: auto;
+    }
+
+    .header-drawer--fullwidth .menu-open > .menu-drawer,
+    .header-drawer--fullwidth .menu-open > .menu-drawer__submenu:not(.menu-drawer__menu--childlist) {
+      flex-direction: row;
+    }
   }
 {% endstylesheet %}
 

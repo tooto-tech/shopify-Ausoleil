@@ -707,15 +707,18 @@
    * To restore original mobile slideshow behavior, comment out this entire block
    * and uncomment the "ORIGINAL MOBILE SLIDESHOW" block below
    */
+  media-gallery.media-gallery--grid slideshow-component {
+    display: none !important;
+  }
+
+  media-gallery.media-gallery--grid .media-gallery__grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
 
   /* Mobile: first image full width, rest four columns */
   @media screen and (max-width: 749px) {
-    media-gallery.media-gallery--grid slideshow-component {
-      display: none !important;
-    }
-
     media-gallery.media-gallery--grid .media-gallery__grid {
-      display: grid !important;
       grid-template-columns: repeat(4, 1fr) !important;
     }
 
@@ -747,7 +750,7 @@
 
   .product-media-gallery__ar-button-container--inside {
     position: absolute;
-    bottom: 30px;
+    bottom: 63px;
     left: 50%;
     transform: translateX(-50%);
     width: auto;

@@ -920,7 +920,7 @@ span[title="Product count"] {
 .language-selector {
   border: 1px solid currentColor;
   border-radius: 2px;
-  /* padding: 4px 8px; */
+  padding: 6px 4px 4px 6px;
   position: relative;
   display: inline-flex;
   align-items: center;

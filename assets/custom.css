@@ -984,3 +984,16 @@ span[title="Product count"] {
   display: flex;
   flex-direction: row !important;
 }
+/*
+ 手风琴 group 水平排列 */
+.group-accr .group-block-content {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 749px) {
+  .group-accr .group-block-content {
+    flex-direction: row !important;
+  }
+}

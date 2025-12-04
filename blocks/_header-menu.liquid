@@ -822,8 +822,15 @@
     {
       "type": "image_picker",
       "id": "custom_banner_image",
-      "label": "Banner图片",
+      "label": "Banner图片（桌面端）",
       "info": "推荐尺寸：1200x400px",
+      "visible_if": "{{ block.settings.menu_style == 'custom_banner' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_banner_image_mobile",
+      "label": "Banner图片（手机端）",
+      "info": "可选。如不设置则使用桌面端图片",
       "visible_if": "{{ block.settings.menu_style == 'custom_banner' }}"
     },
     {

@@ -564,11 +564,13 @@
 
                             if block_settings.menu_style == 'custom_banner'
                               assign custom_banner_image = block_settings.custom_banner_image
+                              assign custom_banner_image_mobile = block_settings.custom_banner_image_mobile
                             endif
                           else
                             assign featured_collections = null | sort
                             assign featured_products_collection = null | sort
                             assign custom_banner_image = null
+                            assign custom_banner_image_mobile = null
                           endif
                         -%}
 
@@ -595,12 +597,23 @@
                                 {% if block_settings.custom_banner_link != blank %}
                                   <a href="{{ block_settings.custom_banner_link }}" class="menu-drawer__banner-link">
                                 {% endif %}
+                                {%- if custom_banner_image_mobile != blank -%}
+                                  {{
+                                    custom_banner_image_mobile
+                                    | image_url: width: 800
+                                    | image_tag:
+                                      loading: 'lazy',
+                                      class: 'menu-drawer__banner-image menu-drawer__banner-image--mobile',
+                                      style: banner_style,
+                                      sizes: 'auto, 800px'
+                                  }}
+                                {%- endif -%}
                                 {{
                                   custom_banner_image
                                   | image_url: width: 1200
                                   | image_tag:
                                     loading: 'lazy',
-                                    class: 'menu-drawer__banner-image',
+                                    class: 'menu-drawer__banner-image menu-drawer__banner-image--desktop',
                                     style: banner_style,
                                     sizes: 'auto, 1200px'
                                 }}
@@ -717,8 +730,10 @@
         endif
         if eager_loading and block_settings.menu_style == 'custom_banner'
           assign top_level_custom_banner_image = block_settings.custom_banner_image
+          assign top_level_custom_banner_image_mobile = block_settings.custom_banner_image_mobile
         else
           assign top_level_custom_banner_image = null
+          assign top_level_custom_banner_image_mobile = null
         endif
       -%}
 
@@ -745,12 +760,23 @@
               {% if block_settings.custom_banner_link != blank %}
                 <a href="{{ block_settings.custom_banner_link }}" class="menu-drawer__banner-link">
               {% endif %}
+              {%- if top_level_custom_banner_image_mobile != blank -%}
+                {{
+                  top_level_custom_banner_image_mobile
+                  | image_url: width: 800
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'menu-drawer__banner-image menu-drawer__banner-image--mobile',
+                    style: banner_style,
+                    sizes: 'auto, 800px'
+                }}
+              {%- endif -%}
               {{
                 top_level_custom_banner_image
                 | image_url: width: 1200
                 | image_tag:
                   loading: 'lazy',
-                  class: 'menu-drawer__banner-image',
+                  class: 'menu-drawer__banner-image menu-drawer__banner-image--desktop',
                   style: banner_style,
                   sizes: 'auto, 1200px'
               }}
@@ -1532,6 +1558,30 @@
     display: block;
     object-fit: cover;
     border-radius: var(--menu-image-border-radius);
+  }
+
+  /* 手机端/桌面端 banner 图片切换 */
+  .menu-drawer__banner-image--mobile {
+    display: block;
+  }
+
+  .menu-drawer__banner-image--desktop {
+    display: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .menu-drawer__banner-image--mobile {
+      display: none;
+    }
+
+    .menu-drawer__banner-image--desktop {
+      display: block;
+    }
+  }
+
+  /* 如果没有手机端图片，桌面端图片在所有设备显示 */
+  .menu-drawer__banner-image--desktop:only-child {
+    display: block;
   }
 
   @keyframes menu-drawer-nav-open {

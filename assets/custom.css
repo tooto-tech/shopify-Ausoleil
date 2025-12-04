@@ -980,3 +980,7 @@ span[title="Product count"] {
   right: auto !important;
   left: 10px !important;
 }
+.group-accr{
+  display: flex;
+  flex-direction: row;
+}

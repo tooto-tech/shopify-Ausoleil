@@ -115,12 +115,12 @@
           {%- render 'submenu-font-styles', settings: block_settings %}
         "
       >
-        <span class="close-text">Close</span>
-        <span class="menu-text">Menu</span>
+            <span class="close-text">Close</span>
         <ul
           class="menu-drawer__menu has-submenu"
           role="list"
         >
+
           {%- comment -%}
             Handle menus with fewer than 3 levels of links
             每个菜单项用li包裹,drawer_accordion设置不同渲染分支,linklist.levels会记录该菜单的最大层级
@@ -636,6 +636,7 @@
             {%- endfor -%}
           {% endif %}
         </ul>
+
       </nav>
       <div
         class="menu-drawer__utility-links menu-drawer__animated-element"
@@ -773,39 +774,21 @@
     position: initial;
   }
 
-  .header-drawer-icon--close {
-    display: flex;
-    align-items: flex-start; /* 整体顶部对齐 */
-  }
+.header-drawer-icon--close {
+  display: flex;
+  align-items: flex-start; /* 整体顶部对齐 */
+}
 
-  .close-text {
-    position: absolute;
+.close-text {
+     position: absolute;
     top: 20px;
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 400;
-    color: #231c0a;
-    align-self: flex-start; /* 子元素顶部对齐 */
-    margin-left: 16px;
-
-    @media screen and (max-width: 749px) {
-      display: none;
-    }
-  }
-
-  .menu-text {
-    display: none;
-    position: absolute;
-    top: 20px;
-    font-family: Poppins;
-    font-size: 21px;
-    font-weight: 500;
-    color: #231c0a;
-
-    @media screen and (max-width: 749px) {
-      display: inline;
-    }
-  }
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 400;
+  color: #231c0a;
+  align-self: flex-start; /* 子元素顶部对齐 */
+  margin-left: 16px;
+}
 
   @media screen and (min-width: 750px) {
     .header__drawer--mobile {
@@ -1059,12 +1042,14 @@
 
   .menu-drawer__menu.has-submenu,
   .menu-drawer__menu--childlist:not(:has(.menu-drawer__animated-element)) {
-    padding-block-start: 74px;
+      padding-block-start: 0px;
+
     margin-block-end: var(--margin-xs);
 
     @media screen and (min-width: 750px) {
       margin-block-end: 2.5rem;
-      padding-block-start: 0px;
+    padding-block-start: 74px;
+
     }
   }
 

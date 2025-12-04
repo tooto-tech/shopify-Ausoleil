@@ -959,6 +959,9 @@ font-weight: 900;
     padding-inline-start: var(--drawer-padding);
     padding-inline-end: var(--padding-2xs);
     z-index: var(--facets-sticky-z-index);
+      @media (max-width: 768px) {
+    padding: 0;
+  }
   }
 
   :is(.facets--horizontal, .facets--vertical) .facets__title-wrapper {

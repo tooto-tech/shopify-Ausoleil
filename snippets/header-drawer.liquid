@@ -119,6 +119,8 @@
           class="menu-drawer__menu has-submenu"
           role="list"
         >
+            <span class="close-text">close</span>
+
           {%- comment -%}
             Handle menus with fewer than 3 levels of links
             每个菜单项用li包裹,drawer_accordion设置不同渲染分支,linklist.levels会记录该菜单的最大层级
@@ -634,7 +636,6 @@
             {%- endfor -%}
           {% endif %}
         </ul>
-            <span class="close-text">close</span>
 
       </nav>
       <div

@@ -2118,7 +2118,7 @@
             "text_VnjkNi"
           ]
         },
-        "pss_slide_tHn8JK": {
+        "pss_slide_zNKWnf": {
           "type": "_pss-slide",
           "name": "PSS 幻灯片",
           "settings": {
@@ -2140,8 +2140,8 @@
             "text_weight_mobile": "",
             "text_color": "#ffffff",
             "text_letter_spacing": "normal",
-            "text_margin_top": 16,
-            "text_margin_top_mobile": 12,
+            "text_margin_top": 0,
+            "text_margin_top_mobile": 0,
             "see_more_text": "See More",
             "see_more_link": "",
             "right_bg_color": "#f3f4f6",
@@ -2152,13 +2152,13 @@
             "right_padding_bottom": 56,
             "right_padding_left": 60,
             "right_padding_right": 60,
-            "right_padding_top_mobile": 30,
-            "right_padding_bottom_mobile": 30,
+            "right_padding_top_mobile": 0,
+            "right_padding_bottom_mobile": 0,
             "right_padding_left_mobile": 20,
             "right_padding_right_mobile": 20
           },
           "blocks": {
-            "icon_xejjLT": {
+            "icon_RK9qnW": {
               "type": "icon",
               "name": "t:names.icon",
               "settings": {
@@ -2174,7 +2174,7 @@
               },
               "blocks": {}
             },
-            "image_HrtyHK": {
+            "image_MWQbPd": {
               "type": "image",
               "settings": {
                 "image": "shopify://shop_images/19WBPBDBDFUOO_D_45_DETAIL_2_1x_2x_aff447ce-e8a5-420e-ba5c-7d9162d6721f.webp",
@@ -2196,15 +2196,15 @@
                 "padding-block-end": 76,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 0,
+                "custom_mobile_padding": true,
+                "padding-block-start-mobile": 40,
+                "padding-block-end-mobile": 26,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0
               },
               "blocks": {}
             },
-            "text_A6nKN4": {
+            "text_UwUWJ4": {
               "type": "text",
               "settings": {
                 "text": "<p>Verdant Avant-Garde Sunglasses192001</p>",
@@ -2232,7 +2232,7 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "custom_mobile_padding": false,
+                "custom_mobile_padding": true,
                 "padding-block-start-mobile": 0,
                 "padding-block-end-mobile": 0,
                 "padding-inline-start-mobile": 0,
@@ -2241,7 +2241,7 @@
               },
               "blocks": {}
             },
-            "text_RkVNzN": {
+            "text_qWqNAm": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -2267,12 +2267,12 @@
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 10,
-                "padding-block-end": 0,
+                "padding-block-end": 78,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0,
-                "custom_mobile_padding": false,
-                "padding-block-start-mobile": 0,
-                "padding-block-end-mobile": 0,
+                "custom_mobile_padding": true,
+                "padding-block-start-mobile": 12,
+                "padding-block-end-mobile": 32,
                 "padding-inline-start-mobile": 0,
                 "padding-inline-end-mobile": 0,
                 "custom_class": ""
@@ -2281,16 +2281,16 @@
             }
           },
           "block_order": [
-            "icon_xejjLT",
-            "image_HrtyHK",
-            "text_A6nKN4",
-            "text_RkVNzN"
+            "icon_RK9qnW",
+            "image_MWQbPd",
+            "text_UwUWJ4",
+            "text_qWqNAm"
           ]
         }
       },
       "block_order": [
         "pss_slide_QfhY46",
-        "pss_slide_tHn8JK"
+        "pss_slide_zNKWnf"
       ],
       "custom_css": [
         ".pss-slide__left-text {width: 120%;}",

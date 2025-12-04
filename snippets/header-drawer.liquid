@@ -107,6 +107,34 @@
           {{- 'icon-close.svg' | inline_asset_content -}}
         </span>
       </button>
+      {% comment %} 移动端顶部栏：Menu + 语言切换 {% endcomment %}
+      <div class="menu-drawer__mobile-header">
+        <span class="menu-text">Menu</span>
+        {% liquid
+          if section
+            assign show_language_mobile = section.settings.show_language
+            if localization.available_languages.size <= 1
+              assign show_language_mobile = false
+            endif
+
+            assign show_country_mobile = section.settings.show_country
+            if localization.available_countries.size <= 1
+              assign show_country_mobile = false
+            endif
+          else
+            assign show_language_mobile = false
+            assign show_country_mobile = false
+          endif
+        %}
+        {% if data_header_drawer_type == 'mobile-drawer' and show_country_mobile or show_language_mobile %}
+          {%
+            render 'drawer-localization',
+            show_country: show_country_mobile,
+            show_language: show_language_mobile,
+            country_style: section.settings.country_selector_style | default: false
+          %}
+        {%- endif -%}
+      </div>
       {% comment %} 主菜单 {% endcomment %}
       <nav
         class="menu-drawer__navigation"
@@ -115,13 +143,11 @@
           {%- render 'submenu-font-styles', settings: block_settings %}
         "
       >
-            <span class="close-text">Close</span>
-            <span class="menu-text">Menu</span>
+        <span class="close-text">Close</span>
         <ul
           class="menu-drawer__menu has-submenu"
           role="list"
         >
-
           {%- comment -%}
             Handle menus with fewer than 3 levels of links
             每个菜单项用li包裹,drawer_accordion设置不同渲染分支,linklist.levels会记录该菜单的最大层级
@@ -637,7 +663,6 @@
             {%- endfor -%}
           {% endif %}
         </ul>
-
       </nav>
       <div
         class="menu-drawer__utility-links menu-drawer__animated-element"
@@ -660,14 +685,14 @@
           endif
         %}
         {% comment %}  语言切换区域(只显示在移动端(通过data_header_drawer_type来判断)) {% endcomment %}
-        {% if data_header_drawer_type == 'mobile-drawer' and show_country or show_language %}
+        {% comment %} {% if data_header_drawer_type == 'mobile-drawer' and show_country or show_language %}
           {%
             render 'drawer-localization',
             show_country: show_country,
             show_language: show_language,
             country_style: section.settings.country_selector_style | default: false
           %}
-        {%- endif -%}
+        {%- endif -%} {% endcomment %}
       </div>
       {% comment %} 底部推荐产品区域 {% endcomment %}
       {% comment %} 移动端的eager_loading为false,所以不展示 {% endcomment %}
@@ -775,24 +800,49 @@
     position: initial;
   }
 
-.header-drawer-icon--close {
-  display: flex;
-  align-items: flex-start; /* 整体顶部对齐 */
-}
+  .header-drawer-icon--close {
+    display: flex;
+    align-items: flex-start; /* 整体顶部对齐 */
+  }
 
-.close-text {
-     position: absolute;
+  .close-text {
+    position: absolute;
     top: 20px;
-  font-family: Poppins;
-  font-size: 24px;
-  font-weight: 400;
-  color: #231c0a;
-  align-self: flex-start; /* 子元素顶部对齐 */
-  margin-left: 16px;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    color: #231c0a;
+    align-self: flex-start; /* 子元素顶部对齐 */
+    margin-left: 16px;
     @media screen and (max-width: 749px) {
       display: none;
     }
-}
+  }
+
+  .menu-drawer__mobile-header {
+    display: none;
+
+    @media screen and (max-width: 749px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 16px;
+      width: 100%;
+    }
+  }
+
+  .menu-drawer__mobile-header .menu-text {
+    display: inline;
+    position: static;
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 500;
+    color: #231c0a;
+  }
+
+  .menu-drawer__mobile-header .menu-drawer__localization {
+    margin: 0;
+  }
 
   @media screen and (min-width: 750px) {
     .header__drawer--mobile {
@@ -803,20 +853,6 @@
   @media screen and (max-width: 749px) {
     .header__drawer--desktop {
       display: none;
-    }
-  }
-  
-  .menu-text {
-    display: none;
-    position: absolute;
-    top: 20px;
-    font-family: Poppins;
-    font-size: 21px;
-    font-weight: 500;
-    color: #000000;
-
-    @media screen and (max-width: 749px) {
-      display: inline;
     }
   }
 
@@ -1060,14 +1096,13 @@
 
   .menu-drawer__menu.has-submenu,
   .menu-drawer__menu--childlist:not(:has(.menu-drawer__animated-element)) {
-      padding-block-start: 0px;
+    padding-block-start: 0px;
 
     margin-block-end: var(--margin-xs);
 
     @media screen and (min-width: 750px) {
       margin-block-end: 2.5rem;
-    padding-block-start: 74px;
-
+      padding-block-start: 74px;
     }
   }
 

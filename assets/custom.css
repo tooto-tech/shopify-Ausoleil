@@ -769,6 +769,8 @@ summary {
     .quantity-wrapper {
         margin-bottom: 28px;
     }
+
+  }
 /* 产品详情按钮样式 */
 .add-to-cart-button{
   border-radius: 0px;
@@ -780,7 +782,7 @@ summary {
 @media (max-width: 768px) {
 :where(media-gallery, .product-grid__item) .media-gallery__grid {
   gap: 8px !important;
-  
+
 }
 
 }
@@ -913,5 +915,5 @@ span[title="Product count"] {
 }
 .ShopCollection .button-custom:hover {
   font-weight: 900;
-  transition: font-weight 0.2s ease; 
+  transition: font-weight 0.2s ease;
 }

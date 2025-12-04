@@ -919,7 +919,7 @@ span[title="Product count"] {
 /* Language Selector 样式 */
 .language-selector {
   border: 1px solid currentColor;
-  border-radius: 50px;
+  border-radius: 4px;
   padding: 2px 4px 2px 4px;
   position: relative;
   display: inline-flex;

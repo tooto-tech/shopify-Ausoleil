@@ -913,7 +913,7 @@ summary {
 span[title="Product count"] {
     font-family: 'Manrope', sans-serif;
 }
-.ShopCollection .button-custom:hover {
+.ShopCollection a.button-custom:hover {
   font-weight: 900;
   transition: font-weight 0.2s ease;
 }

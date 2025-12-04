@@ -98,7 +98,7 @@
       "
     >
       {% comment %} 顶部关闭按钮 {% endcomment %}
-      <button
+      {% comment %} <button
         class="button button-unstyled close-button menu-drawer__close-button"
         type="button"
         aria-label="{{ 'actions.close' | t }}"
@@ -107,7 +107,7 @@
         <span class="svg-wrapper header-drawer-icon header-drawer-icon--close">
           {{- 'icon-close.svg' | inline_asset_content -}}
         </span>
-      </button>
+      </button> {% endcomment %}
       {% comment %} 移动端顶部栏：Menu + 语言切换 {% endcomment %}
       <div class="menu-drawer__mobile-header">
         <span class="menu-text">Menu</span>

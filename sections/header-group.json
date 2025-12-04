@@ -108,7 +108,7 @@
         }
       },
       "custom_css": [
-        "button {padding-inline: 0px;}"
+        "button {padding-inline: 0px; padding-block: 0px;}"
       ],
       "settings": {
         "logo_position": "center",

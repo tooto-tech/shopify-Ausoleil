@@ -266,6 +266,39 @@
     },
     {
       "type": "select",
+      "id": "font_weight_hover",
+      "label": "字重 (悬停)",
+      "options": [
+        {
+          "value": "",
+          "label": "默认"
+        },
+        {
+          "value": "400",
+          "label": "Regular (400)"
+        },
+        {
+          "value": "500",
+          "label": "Medium (500)"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold (600)"
+        },
+        {
+          "value": "700",
+          "label": "Bold (700)"
+        },
+        {
+          "value": "900",
+          "label": "Black (900)"
+        }
+      ],
+      "default": "",
+      "visible_if": "{{ block.settings.style_class == 'button-custom' }}"
+    },
+    {
+      "type": "select",
       "id": "text_transform",
       "label": "文本转换",
       "options": [

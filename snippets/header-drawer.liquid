@@ -60,10 +60,11 @@
 
 {% liquid
   assign close_icon_size = block_settings.drawer_close_icon_size | default: 24
+  assign mobile_drawer_layout = block_settings.mobile_drawer_layout | default: 'fullscreen'
 %}
 
 <header-drawer
-  class="header-drawer {{ class }}{% if is_horizontal_banner %} header-drawer--fullwidth{% endif %}"
+  class="header-drawer {{ class }}{% if is_horizontal_banner %} header-drawer--fullwidth{% endif %}{% if mobile_drawer_layout == 'below_header' %} header-drawer--below-header{% endif %}"
   style="--menu-image-border-radius: {{ image_border_radius }}px; --resource-card-corner-radius: {{ image_border_radius }}px; --drawer-close-icon-size: {{ close_icon_size }}px;"
 >
   {% comment %} 用于实现可展开/折叠的语义容器 {% endcomment %}
@@ -685,14 +686,16 @@
           endif
         %}
         {% comment %}  语言切换区域(只显示在移动端(通过data_header_drawer_type来判断)) {% endcomment %}
-        {% comment %} {% if data_header_drawer_type == 'mobile-drawer' and show_country or show_language %}
-          {%
-            render 'drawer-localization',
-            show_country: show_country,
-            show_language: show_language,
-            country_style: section.settings.country_selector_style | default: false
-          %}
-        {%- endif -%} {% endcomment %}
+        {% comment %}
+          {% if data_header_drawer_type == 'mobile-drawer' and show_country or show_language %}
+            {%
+              render 'drawer-localization',
+              show_country: show_country,
+              show_language: show_language,
+              country_style: section.settings.country_selector_style | default: false
+            %}
+          {%- endif -%}
+        {% endcomment %}
       </div>
       {% comment %} 底部推荐产品区域 {% endcomment %}
       {% comment %} 移动端的eager_loading为false,所以不展示 {% endcomment %}
@@ -951,6 +954,17 @@
         width: 100vw;
       }
     }
+
+    /* Below header layout for mobile */
+    .header-drawer--below-header & {
+      @media screen and (max-width: 749px) {
+        top: var(--header-height, 60px);
+        height: calc(100dvh - var(--header-height, 60px));
+        width: 100%;
+        border-right: none;
+        border-top: 1px solid var(--color-border);
+      }
+    }
   }
 
   .menu-drawer:has(details[open]) {
@@ -970,6 +984,14 @@
 
     .menu-open & {
       opacity: 1;
+    }
+
+    /* Below header layout for mobile */
+    .header-drawer--below-header & {
+      @media screen and (max-width: 749px) {
+        top: var(--header-height, 60px);
+        height: calc(100dvh - var(--header-height, 60px));
+      }
     }
   }
 

@@ -80,7 +80,7 @@
             "drawer_accordion_expand_first": false,
             "drawer_dividers": false,
             "drawer_close_icon_size": 24,
-            "mobile_drawer_layout": "fullscreen"
+            "mobile_drawer_layout": "below_header"
           },
           "blocks": {}
         },
@@ -108,7 +108,7 @@
             "drawer_accordion_expand_first": false,
             "drawer_dividers": false,
             "drawer_close_icon_size": 24,
-            "mobile_drawer_layout": "fullscreen"
+            "mobile_drawer_layout": "below_header"
           },
           "blocks": {}
         }

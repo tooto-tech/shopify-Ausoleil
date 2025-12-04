@@ -988,7 +988,7 @@
                     "bg_color": "rgba(0,0,0,0)",
                     "bg_color_hover": "rgba(0,0,0,0)",
                     "text_color": "#231c0a",
-                    "text_color_hover": "#231c0a",
+                    "text_color_hover": "#1226aa",
                     "border_color": "#1a1a1a",
                     "border_color_hover": "#333333",
                     "border_width": 0,

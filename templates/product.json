@@ -147,10 +147,6 @@
                 "padding-inline-end-mobile": 0
               },
               "blocks": {
-                "judge_me_reviews_preview_badge_diKkDz": {
-                  "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-                  "settings": {}
-                },
                 "custom_liquid_admbRd": {
                   "type": "custom-liquid",
                   "name": "t:names.custom_liquid",
@@ -279,7 +275,6 @@
                 }
               },
               "block_order": [
-                "judge_me_reviews_preview_badge_diKkDz",
                 "custom_liquid_admbRd",
                 "text_xrnftG",
                 "text_9dWeVA",

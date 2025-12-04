@@ -982,5 +982,5 @@ span[title="Product count"] {
 }
 .group-accr{
   display: flex;
-  flex-direction: row;
+  flex-direction: row !important;
 }

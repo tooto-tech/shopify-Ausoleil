@@ -980,20 +980,26 @@ span[title="Product count"] {
   right: auto !important;
   left: 10px !important;
 }
-.group-accr{
-  display: flex;
-  flex-direction: row !important;
-}
-/*
- 手风琴 group 水平排列 */
-.group-accr .group-block-content {
-  flex-direction: row !important;
-  align-items: center;
-  gap: 10px;
-}
-
+/* 手风琴 group 水平排列 - 移动端强制不换行 */
 @media (max-width: 749px) {
-  .group-accr .group-block-content {
-    flex-direction: row !important;
+  .layout-panel-flex--row {
+    flex-wrap: nowrap !important;
+  }
+
+  /* 图标块宽度自适应 */
+  .layout-panel-flex--row .icon-block {
+    width: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  .layout-panel-flex--row .icon-block-wrapper {
+    width: auto !important;
+  }
+
+  /* 文本块不要占满宽度 */
+  .layout-panel-flex--row .text-block {
+    width: auto !important;
+    --width: auto !important;
+    flex: 0 1 auto !important;
   }
 }

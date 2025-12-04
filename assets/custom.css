@@ -920,7 +920,7 @@ span[title="Product count"] {
 .language-selector {
   border: 3px solid currentColor;
   border-radius: 6px;
-  padding: 2px 4px 2px 4px;
+  padding: 2px 4px;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -948,5 +948,23 @@ span[title="Product count"] {
 .language-selector__display {
   pointer-events: none;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 移动端 menu-drawer 中的 language-selector 样式（与 PC 端一致） */
+.menu-drawer .language-selector,
+.menu-drawer .language-selector.language-selector--collapse-space {
+  border: 3px solid currentColor;
+  border-radius: 6px;
+  padding: 2px 4px;
+  width: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.menu-drawer .language-selector__display {
+  text-align: center;
 }
 

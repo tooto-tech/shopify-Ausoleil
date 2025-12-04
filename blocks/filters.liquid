@@ -824,6 +824,9 @@
   /* Facets - Panel */
   .facets__panel {
     padding: 0 var(--drawer-padding);
+      @media (max-width: 768px) {
+    padding: 0;
+  }
   }
 
   .facets:not(.facets--drawer) .facets__panel,
@@ -960,7 +963,9 @@ font-weight: 900;
     padding-inline-end: var(--padding-2xs);
     z-index: var(--facets-sticky-z-index);
       @media (max-width: 768px) {
-    padding: 0px;
+    padding-inline-start: 0px;
+    padding-block: 0px;
+    padding-inline-end:0px;
   }
   }
 

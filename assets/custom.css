@@ -968,3 +968,15 @@ span[title="Product count"] {
   text-align: center;
 }
 
+/* Klaviyo 弹窗关闭按钮移到左边 */
+/* Teaser 底部条的关闭按钮 */
+[class*="kl-teaser-"] .klaviyo-close-form {
+  right: auto !important;
+  left: -16px !important;
+}
+
+/* 主弹窗的关闭按钮 */
+.klaviyo-form .klaviyo-close-form {
+  right: auto !important;
+  left: 10px !important;
+}

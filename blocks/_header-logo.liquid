@@ -1,5 +1,3 @@
-
-
 {% liquid
   assign block_settings = block.settings
   assign use_inverse_logo = false
@@ -10,8 +8,8 @@
     assign use_inverse_logo = true
   elsif section.settings.enable_transparent_header_collection and template.name == 'collection' and section.settings.collection_color_scheme == 'inverse'
     assign use_inverse_logo = true
-    elsif section.settings.enable_transparent_header_other and template.name != 'index' and template.name != 'product' and template.name != 'collection' and section.settings.other_color_scheme == 'inverse'
-  assign use_inverse_logo = true
+  elsif section.settings.enable_transparent_header_other and template.name != 'index' and template.name != 'product' and template.name != 'collection' and template.name != 'search' and section.settings.other_color_scheme == 'inverse'
+    assign use_inverse_logo = true
   endif
 
   if use_inverse_logo
@@ -57,7 +55,12 @@
     data-testid="header-logo"
     style="--header-logo-image-height: {{ logo_height }}px; --header-logo-image-height-mobile: {{ logo_height_mobile }}px;"
   >
-    <span class="header-logo__svg-wrapper" {% if block_settings.logo_color != blank %}style="--header-logo-color: {{ block_settings.logo_color }};"{% endif %}>
+    <span
+      class="header-logo__svg-wrapper"
+      {% if block_settings.logo_color != blank %}
+        style="--header-logo-color: {{ block_settings.logo_color }};"
+      {% endif %}
+    >
       {{- 'logo.svg' | inline_asset_content -}}
     </span>
   </span>
@@ -68,7 +71,12 @@
       data-testid="header-logo-inverse"
       style="--header-logo-image-height: {{ logo_height }}px; --header-logo-image-height-mobile: {{ logo_height_mobile }}px;"
     >
-      <span class="header-logo__svg-wrapper" {% if block_settings.logo_color_inverse != blank %}style="--header-logo-color: {{ block_settings.logo_color_inverse }};"{% endif %}>
+      <span
+        class="header-logo__svg-wrapper"
+        {% if block_settings.logo_color_inverse != blank %}
+          style="--header-logo-color: {{ block_settings.logo_color_inverse }};"
+        {% endif %}
+      >
         {{- 'logo.svg' | inline_asset_content -}}
       </span>
     </span>

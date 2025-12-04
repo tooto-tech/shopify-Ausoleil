@@ -912,5 +912,6 @@ span[title="Product count"] {
     font-family: 'Manrope', sans-serif;
 }
 .ShopCollection .button-custom:hover {
-  font-weight: 900; /* 加粗，可根据需要设置 500~900 */
+  font-weight: 900;
+  transition: font-weight 0.2s ease; 
 }

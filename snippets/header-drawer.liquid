@@ -98,16 +98,16 @@
       "
     >
       {% comment %} 顶部关闭按钮 {% endcomment %}
-        <button
-          class="button button-unstyled close-button menu-drawer__close-button"
-          type="button"
-          aria-label="{{ 'actions.close' | t }}"
-          on:click="/close"
-        >
-          <span class="svg-wrapper header-drawer-icon header-drawer-icon--close">
-            {{- 'icon-close.svg' | inline_asset_content -}}
-          </span>
-        </button>
+      <button
+        class="button button-unstyled close-button menu-drawer__close-button"
+        type="button"
+        aria-label="{{ 'actions.close' | t }}"
+        on:click="/close"
+      >
+        <span class="svg-wrapper header-drawer-icon header-drawer-icon--close">
+          {{- 'icon-close.svg' | inline_asset_content -}}
+        </span>
+      </button>
       {% comment %} 移动端顶部栏：Menu + 语言切换 {% endcomment %}
       <div class="menu-drawer__mobile-header">
         <span class="menu-text">Menu</span>
@@ -799,7 +799,27 @@
 </header-drawer>
 
 {% stylesheet %}
+  /* When below-header drawer is open, switch to opaque header state on mobile */
+  @media screen and (max-width: 749px) {
+    header-component:has(.header-drawer--below-header .menu-open) {
+      /* Switch logo display - show original logo, hide inverse logo */
+      --header-logo-display: block;
+      --header-logo-inverse-display: none;
+      /* Make header background opaque */
+      --header-bg-color: unset;
+      /* Inherit color scheme from header row */
+      --color-foreground: inherit;
+      --color-foreground-rgb: inherit;
+      --color-background: inherit;
+      --color-background-rgb: inherit;
+      --color-border: inherit;
+      --color-border-rgb: inherit;
+    }
 
+    header-component:has(.header-drawer--below-header .menu-open) .header__row {
+      background-color: var(--color-background);
+    }
+  }
 
   .header__icon--menu {
     position: initial;

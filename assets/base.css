@@ -4407,6 +4407,6 @@ text-component {
     max-height: 100vh !important;
   }
 
-  dialog.tint-widget > div.tint-image-source{
+  html body .tint-widget > .tint-image-source{
     max-width: 90vw !important; 
   }

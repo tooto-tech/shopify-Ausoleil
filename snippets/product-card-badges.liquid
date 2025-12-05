@@ -106,8 +106,15 @@
     padding: 8px 12px;
   }
 
+/* PC 默认样式 */
+.product-badges__badge--rectangle {
+  padding: 8px 12px; /* 上下8 左右12 */
+}
+
+/* 移动样式（小于 768px） */
+@media screen and (max-width: 767px) {
   .product-badges__badge--rectangle {
-    padding-block: var(--badge-rectangle-padding-block);
-    padding-inline: var(--badge-rectangle-padding-inline);
+    padding: 4px 6px; /* 上下4 左右6 */
   }
+}
 {% endstylesheet %}

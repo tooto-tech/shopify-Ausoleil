@@ -1638,6 +1638,7 @@ media-gallery.media-gallery--grid .media-gallery__grid .product-media-container 
 
   .media-gallery--two-column .media-gallery__grid {
     grid-template-columns: repeat(2, 1fr);
+    min-width: 622px;
   }
 
   .media-gallery--large-first-image .product-media-container:first-child,

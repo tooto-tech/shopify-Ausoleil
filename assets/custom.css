@@ -616,7 +616,7 @@ gap: 16px;
   }
   /* 图标居中 */
   .group-block-content{
-    align-items: center;
+    align-items: left;
   }
 .email-signup__input, .email-signup__button--text{
   padding: 14px 0px 14px 12px;

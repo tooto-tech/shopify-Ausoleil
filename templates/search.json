@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "search": {
       "type": "search-header",
@@ -15,8 +16,8 @@
           "type": "_heading",
           "static": true,
           "settings": {
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
+            "type_preset": "custom",
+            "font": "var(--font-subheading--family)",
             "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -66,8 +67,13 @@
             "text_label_case": "default",
             "show_swatch_label": false,
             "show_filter_label": false,
+            "filter_button_text": "Filter",
             "enable_sorting": true,
+            "show_sorting_desktop": true,
+            "show_sorting_mobile": true,
             "enable_grid_density": true,
+            "show_grid_density_desktop": true,
+            "show_grid_density_mobile": true,
             "inherit_color_scheme": true,
             "color_scheme": "",
             "padding-block-start": 8,
@@ -100,6 +106,11 @@
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
+                "show_badges": true,
+                "show_sold_out_badge": true,
+                "show_sale_badge": true,
+                "custom_badge_text": "",
+                "custom_badge_color_scheme": "scheme-1",
                 "image_ratio": "adapt",
                 "border": "none",
                 "border_width": 1,
@@ -122,18 +133,29 @@
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
+                "font_size_mobile": "",
+                "weight": "",
+                "weight_mobile": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
+                "letter_spacing_custom": "",
                 "case": "none",
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 4,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             },
@@ -144,6 +166,22 @@
                 "show_sale_price_first": true,
                 "show_installments": false,
                 "show_tax_info": false,
+                "show_save": false,
+                "price_font": "",
+                "compare_price_font": "",
+                "save_font": "",
+                "price_font_size": "",
+                "price_color": "",
+                "compare_price_font_size": "",
+                "compare_price_color": "",
+                "save_font_size": "",
+                "save_color": "",
+                "price_font_size_mobile": "",
+                "price_color_mobile": "",
+                "compare_price_font_size_mobile": "",
+                "compare_price_color_mobile": "",
+                "save_font_size_mobile": "",
+                "save_color_mobile": "",
                 "type_preset": "h6",
                 "width": "100%",
                 "alignment": "left",
@@ -156,7 +194,11 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             }
@@ -172,6 +214,8 @@
         "layout_type": "grid",
         "product_card_size": "medium",
         "mobile_product_card_size": "small",
+        "enable_infinite_scroll": true,
+        "products_per_page": 24,
         "product_grid_width": "centered",
         "full_width_on_mobile": true,
         "columns_gap_horizontal": 16,

@@ -998,8 +998,8 @@ span[title="Product count"] {
 
   /* 图标大小 16px */
   .layout-panel-flex--row .icon-block__media {
-    width: 16px !important;
-    height: 16px !important;
+    width: 16px;
+    height: 16px;
   }
 
   /* 文本块不要占满宽度 */

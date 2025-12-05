@@ -1170,7 +1170,7 @@ dialog[class="svelte-"] > :first-child * {
 .header-actions__cart-icon {
   --cart-bubble-size: 14px;
   --cart-bubble-top: -5px;
-  --cart-bubble-right: -4px;
+  --cart-bubble-right: px;
   width: 38px;
 }
 @media (min-width: 768px) {
@@ -1208,5 +1208,4 @@ dialog[class="svelte-"] > :first-child * {
 }
 /* 底部不换行 */
 body, .paragraph:not(.button), .paragraph>*{
-  white-space: nowrap;
 }

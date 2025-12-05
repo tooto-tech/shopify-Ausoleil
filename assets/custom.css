@@ -1227,6 +1227,8 @@ details-content body, .paragraph:not(.button), .paragraph>*{
   }
 }
 
-  :global([class*="svelte-"] .dialog) {
-    height: 100% !important;
+@media (min-height: 600px) {
+  dialog > :first-child {
+    max-height: 100vh !important;
   }
+}

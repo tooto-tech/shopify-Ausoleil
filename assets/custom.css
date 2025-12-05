@@ -1203,4 +1203,6 @@ dialog[class="svelte-"] > :first-child * {
 .collection-card:hover {
   transform: scale(1.03);
 }
-
+.header-actions.button-unstyled{
+  overflow: none;
+}

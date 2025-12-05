@@ -965,12 +965,14 @@
     /* 控制drawer的宽高 */
     height: var(--drawer-height);
     width: var(--drawer-width);
+    max-width: var(--drawer-max-width);
     z-index: var(--layer-menu-drawer);
     left: 0;
     top: 0;
     padding: 0;
     background-color: var(--color-background);
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     border-right: var(--style-border-drawer);
     box-shadow: var(--shadow-drawer);
@@ -1383,7 +1385,8 @@
     background-color: transparent;
     text-align: left;
     text-decoration: none;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
     overflow-x: hidden;
     line-height: 1.2;
     box-shadow: none;

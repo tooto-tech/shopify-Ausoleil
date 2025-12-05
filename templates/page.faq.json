@@ -374,7 +374,7 @@
       "custom_css": [
         "/* 改为换行 */.text-block > * {text-wrap: wrap;}",
         ".accordion--dividers .details-content {padding: 0px;}",
-        ":root {--normal-content-width: 960px;}"
+        ":root {--normal-content-width: 960px !important;}"
       ],
       "settings": {
         "content_direction": "column",

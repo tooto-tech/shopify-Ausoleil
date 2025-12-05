@@ -2308,10 +2308,10 @@
         "min_height": 700,
         "mobile_left_height": 500,
         "min_height_mobile": 475,
-        "autoplay": false,
-        "autoplay_delay": 3000,
+        "autoplay": true,
+        "autoplay_delay": 2000,
         "speed": 500,
-        "loop": false
+        "loop": true
       }
     },
     "section_CEFGjC": {
@@ -3512,10 +3512,10 @@
         "min_height": 900,
         "mobile_left_height": 500,
         "min_height_mobile": 600,
-        "autoplay": false,
-        "autoplay_delay": 3000,
+        "autoplay": true,
+        "autoplay_delay": 2000,
         "speed": 500,
-        "loop": false
+        "loop": true
       }
     },
     "section_PMUhmi": {

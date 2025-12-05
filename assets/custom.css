@@ -1169,7 +1169,7 @@ dialog[class="svelte-"] > :first-child * {
  购物车数字气泡样式 - 缩小尺寸 */
 .header-actions__cart-icon {
   --cart-bubble-size: 14px;
-  --cart-bubble-top: 2px;
+  --cart-bubble-top: -2px;
   --cart-bubble-right: 0px;
   width: 38px;
 }

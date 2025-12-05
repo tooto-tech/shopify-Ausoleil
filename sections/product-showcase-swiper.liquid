@@ -76,12 +76,66 @@
         fills.forEach(function(f) { f.style.transform = 'translateX(' + (idx * w) + 'px)'; });
       }
 
+      // 进度条点击事件（保持原有功能）
       tracks.forEach(function(t) {
         t.addEventListener('click', function(e) {
           var rect = t.getBoundingClientRect();
           var target = Math.floor((e.clientX - rect.left) / getSeg());
           if (target >= 0 && target < realCount) {
             swiper.slideToLoop ? swiper.slideToLoop(target) : swiper.slideTo(target);
+          }
+        });
+      });
+
+      // 整个 slide 区域的鼠标样式和点击事件
+      realSlides.forEach(function(slide) {
+        var currentCursor = 'default';
+        var container = slide.querySelector('.pss-slide__container');
+        if (!container) return;
+        
+        container.addEventListener('mousemove', function(e) {
+          var rect = container.getBoundingClientRect();
+          var containerWidth = rect.width;
+          var mouseX = e.clientX - rect.left;
+          var centerX = containerWidth / 2;
+          
+          if (mouseX < centerX) {
+            // 左半部分 - 显示左箭头
+            if (currentCursor !== 'w-resize') {
+              container.style.cursor = 'w-resize';
+              currentCursor = 'w-resize';
+            }
+          } else {
+            // 右半部分 - 显示右箭头
+            if (currentCursor !== 'e-resize') {
+              container.style.cursor = 'e-resize';
+              currentCursor = 'e-resize';
+            }
+          }
+        });
+        
+        container.addEventListener('mouseleave', function() {
+          container.style.cursor = 'default';
+          currentCursor = 'default';
+        });
+        
+        container.addEventListener('click', function(e) {
+          // 如果点击的是链接或按钮，不触发滑动
+          if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a') || e.target.closest('button')) {
+            return;
+          }
+          
+          var rect = container.getBoundingClientRect();
+          var containerWidth = rect.width;
+          var mouseX = e.clientX - rect.left;
+          var centerX = containerWidth / 2;
+          
+          if (mouseX < centerX) {
+            // 点击左半部分 - 向左滑动
+            swiper.slidePrev();
+          } else {
+            // 点击右半部分 - 向右滑动
+            swiper.slideNext();
           }
         });
       });
@@ -172,6 +226,9 @@
     .pss-slide__see-more:hover { opacity: 0.7; }
     .pss-slide__right-content { flex: 1; display: flex; flex-direction: column; width: 100%; position: relative; z-index: 1; }
     .pss-slide__progress { width: 100%; display: flex; justify-content: center; padding: 24px 0;  }
+    .pss-slide__container {
+      user-select: none;
+    }
     .pss-slide__progress-track { 
       height: 2px; 
       background: rgba(0,0,0,0.2); 

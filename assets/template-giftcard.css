@@ -57,7 +57,9 @@
 .gift-card__code,
 .gift-card__text-wrapper h1,
 .gift-card__price h2 {
-  font-family: var(--font-paragraph--family);
+  /* font-family: var(--font-paragraph--family); */
+  font-family: 'Popins' !important;
+
   font-style: var(--font-paragraph--style);
   font-weight: var(--font-paragraph--weight);
   text-align: center;
@@ -67,6 +69,8 @@
 .gift-card__code,
 .gift-card__text-wrapper h1 {
   font-size: var(--font-size--2xl);
+  font-family: 'Popins' !important;
+
   margin-block-end: 0;
 }
 
@@ -77,6 +81,8 @@
 
 .gift-card__text-wrapper {
   text-align: center;
+  font-family: 'Popins' !important;
+
   max-width: var(--max-width--body-normal);
   margin: 0 auto;
 }

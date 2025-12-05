@@ -1069,3 +1069,9 @@ PC端多属性图片大小 */
 .blog-post-content{
   font-family: 'Popins' !important;
 }
+.search-page-input{
+  font-family: 'Popins' !important;
+}
+.shopify-section:not(.header-section) :is(.section,.cart__summary-container){
+  font-family: 'Popins' !important;
+}

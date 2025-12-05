@@ -1156,6 +1156,6 @@ dialog[class="svelte-"] > :first-child * {
 }
 /* 产品详情预览小图大小更改 */
 .scroll-hint .dialog-thumbnails-list__thumbnail img {
-  transform: scale(1.2);  /* 放大 20% */
-  transform-origin: center center;
+  width: 120px;  /* 原来可能是 102px 左右，根据需要调整 */
+  height: auto;  /* 保持比例 */
 }

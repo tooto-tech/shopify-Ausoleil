@@ -624,7 +624,7 @@ gap: 16px;
 
   /* 移动端图标宽度 */
   .group-block:last-child img.icon-block__media {
-    width: 134px !important;
+    width: 134px;
     height: auto;
   }
   .email-signup__input, .email-signup__button--text{

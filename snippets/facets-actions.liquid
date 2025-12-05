@@ -89,6 +89,13 @@
     }
   }
 
+  /* 移动端当 clear all 激活时，容器宽度设为 84% */
+  @media (max-width: 768px) {
+    .facets__actions--active {
+      width: 84%;
+    }
+  }
+
   .facets:not(.facets--drawer) .facets__actions {
     @media screen and (min-width: 750px) {
       position: static;

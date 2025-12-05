@@ -1010,6 +1010,6 @@ span[title="Product count"] {
   }
 }
 /* 表单弹窗按钮背景色 */
-button:contains("SIGN ME UP!") {
+button.needsclick {
   background-color: #1226AA !important;
 }

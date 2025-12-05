@@ -1051,3 +1051,7 @@ PC端多属性图片大小 */
     --swatch-height: 38px !important;
   }
 }
+/* checkout页面字体调整 */
+header.EAjaz {
+    font-family: 'Poppins', sans-serif !important;
+}

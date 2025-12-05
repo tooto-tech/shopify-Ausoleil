@@ -443,7 +443,7 @@
         "autoplay": false,
         "autoplay_speed": 4,
         "section_width": "full-width",
-        "slide_height": "auto",
+        "slide_height": "large",
         "slide_aspect_ratio_desktop": "1440 / 905",
         "slide_aspect_ratio_mobile": "750 / 979",
         "custom_class": "",

@@ -1154,3 +1154,9 @@ dialog[class="svelte-"] > :first-child * {
 .dialog-zoomed-gallery__close-button:hover {
   background-color: rgba(255, 255, 255, 1) !important;
 }
+/* Slideshow large 高度自定义 */
+@media screen and (min-width: 750px) {
+  slideshow-slides[size='large'] {
+    min-height: 800px !important;
+  }
+}

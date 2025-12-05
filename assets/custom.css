@@ -1155,7 +1155,6 @@ dialog[class="svelte-"] > :first-child * {
   background-color: rgba(255, 255, 255, 1) !important;
 }
 /* 产品详情预览小图大小更改 */
-.scroll-hint .dialog-thumbnails-list__thumbnail img {
-  width: 120px;  /* 原来可能是 102px 左右，根据需要调整 */
-  height: auto;  /* 保持比例 */
+body a, body button, body [type='button'], body input[type='reset'], body input[type='submit'], body [role="button"], ::-webkit-search-cancel-button, ::-webkit-search-decoration, ::-webkit-scrollbar-button, ::-webkit-file-upload-button, body .sweezy-custom-cursor-hover, body button.sweezy-custom-cursor-hover, body a.sweezy-custom-cursor-hover{
+  width: 120px;
 }

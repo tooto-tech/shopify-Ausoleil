@@ -1133,11 +1133,13 @@ dialog[class="svelte-"] > :first-child * {
   width: 40px;
   height: 40px;
   padding: 8px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9) !important;
   border-radius: 50%;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
+  mix-blend-mode: normal !important;
+  color: #000 !important;
 }
 
 .dialog-zoomed-gallery__close-button svg {
@@ -1145,6 +1147,10 @@ dialog[class="svelte-"] > :first-child * {
   height: 24px;
 }
 
+.dialog-zoomed-gallery__close-button svg line {
+  stroke: #000 !important;
+}
+
 .dialog-zoomed-gallery__close-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 1) !important;
 }

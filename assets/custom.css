@@ -1104,4 +1104,5 @@ dialog.tint-widget {
   width: calc(100% - 80px) !important; /* 左右各 40px */
   max-width: calc(100% - 80px) !important;
   margin: auto !important;
+  padding: 40px 0px;
 }

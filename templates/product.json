@@ -476,12 +476,12 @@
                           "type": "icon",
                           "name": "t:names.icon",
                           "settings": {
-                            "icon": "price_tag",
+                            "icon": "none",
                             "image_upload": "shopify://shop_images/1_debe6ed6-bb88-47e9-a40d-95434f6d4175.svg",
                             "width": 24,
                             "height": 0,
-                            "width_mobile": 12,
-                            "height_mobile": 12,
+                            "width_mobile": 16,
+                            "height_mobile": 16,
                             "link": "",
                             "open_in_new_tab": false,
                             "custom_class": ""

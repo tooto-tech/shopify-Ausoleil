@@ -4406,7 +4406,3 @@ text-component {
   dialog > :first-child {
     max-height: 100vh !important;
   }
-
-  html body .tint-widget > .tint-image-source{
-    max-width: 90vw !important; 
-  }

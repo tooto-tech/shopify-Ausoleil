@@ -1107,5 +1107,5 @@ PC端多属性图片大小 */
   margin: 20px 0 !important;
 }
 dialog *:first-child * {
-  margin: 20px;
+  margin: 20px !important;
 }

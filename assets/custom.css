@@ -1109,3 +1109,6 @@ PC端多属性图片大小 */
 div[class^="tint-image-source"] {
   margin: 20px !important;
 }
+div[class*="tint-image-source"] {
+  margin: 20px !important;
+}

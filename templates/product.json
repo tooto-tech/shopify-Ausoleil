@@ -492,7 +492,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Lens width: 58.5mm</p>",
+                            "text": "<p>Lens Width: 58.5mm</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -611,7 +611,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Bridge width: 15.7mm</p>",
+                            "text": "<p>Bridge Width: 15.7mm</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",

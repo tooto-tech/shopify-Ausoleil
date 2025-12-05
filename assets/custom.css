@@ -1154,15 +1154,3 @@ dialog[class="svelte-"] > :first-child * {
 .dialog-zoomed-gallery__close-button:hover {
   background-color: rgba(255, 255, 255, 1) !important;
 }
-/* 产品详情预览小图大小更改 */
-/* 产品详情预览小图大小更改，仅缩略图按钮 */
-body .dialog-thumbnails-list__thumbnail {
-  width: 120px;    /* 设置按钮宽度 */
-  height: 120px;   /* 保持正方形 */
-}
-
-body .dialog-thumbnails-list__thumbnail img {
-  width: 100%;     /* 图片填满按钮 */
-  height: 100%;    
-  object-fit: cover; /* 保持比例并裁剪多余部分 */
-}

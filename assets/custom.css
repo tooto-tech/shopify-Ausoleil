@@ -1226,3 +1226,7 @@ details-content body, .paragraph:not(.button), .paragraph>*{
     width: 100px;
   }
 }
+
+  :global([class*="svelte-"] .dialog) {
+    height: 100% !important;
+  }

@@ -280,6 +280,12 @@
     border: none;
   }
 
+  @media (max-width: 749px) {
+    .variant-option--buttons {
+      gap: 5px;
+    }
+  }
+
   .variant-option--buttons legend {
     padding: 0;
     /* margin-block-end: var(--margin-xs); */
@@ -301,10 +307,10 @@
     /* color: var(--color-foreground); */
     /* font-size: var(--font-size-sm); */
     white-space: nowrap;
-font-family: Poppins;
-font-size: 14px;
-color: #000000;
-margin-left: 11px;
+    font-family: Poppins;
+    font-size: 14px;
+    color: #000000;
+    margin-left: 11px;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -533,6 +539,21 @@ margin-left: 11px;
     min-height: auto;
   }
 
+  @media (max-width: 749px) {
+    .variant-option__button-label--has-swatch {
+      max-width: 108px !important;
+      width: 108px !important;
+      flex-shrink: 0;
+    }
+
+    .variant-option__button-label--has-swatch .variant-option__selected-value {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 1;
+      min-width: 0;
+    }
+  }
+
   .variant-option__button-label:has(:checked) {
     color: var(--color-selected-variant-text);
     border-color: var(--color-selected-variant-border);
@@ -588,10 +609,10 @@ margin-left: 11px;
   }
 
   .variant-option__button-label--has-swatch:has(:checked) {
-    --focus-outline: var(--focus-outline-width) solid var(--color-foreground);
+    --focus-outline: none;
 
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-outline-offset);
+    outline: none;
+    border: none;
   }
 
   /* This triggers iOS < 16.4. The outline bug is not recognized as a lack of @supports */

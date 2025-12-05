@@ -1678,6 +1678,7 @@ media-gallery.media-gallery--grid .media-gallery__grid .product-media-container 
   height: fit-content;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .product-media-container.media-fit-contain img {

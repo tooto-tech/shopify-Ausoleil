@@ -1013,3 +1013,30 @@ span[title="Product count"] {
 [data-testid="form-row"]:nth-of-type(4) button.needsclick {
   background-color: #1226AA !important;
 }
+
+/* 手机端多
+属性选择器宽度限制 */
+@media (max-width: 749px) {
+  .variant-option--swatches .variant-option__button-label--has-swatch {
+    max-width: 108px !important;
+    width: 108px !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/*
+手机端多属性选择器样式 */
+@media (max-width: 749px) {
+  .variant-option--swatches .variant-option__button-label--has-swatch {
+    max-width: 108px !important;
+    width: 108px !important;
+  }
+
+  .variant-option--swatches .variant-option__button-label--has-swatch .swatch {
+    width: 25px !important;
+    height: 25px !important;
+    --swatch-width: 25px !important;
+    --swatch-height: 25px !important;
+  }
+}

@@ -312,6 +312,12 @@
     color: #000000;
     margin-left: 11px;
   }
+  @media (max-width: 768px) {
+    .variant-option__selected-value {
+      margin-left: 6px;
+      font-size: 11px;
+    }
+  }
 
   @media (prefers-reduced-motion: no-preference) {
     .variant-option__button-label,
@@ -540,13 +546,18 @@
   }
 
   @media (max-width: 749px) {
-    .variant-option__button-label--has-swatch {
+    .variant-option--swatches .variant-option__button-label--has-swatch {
       max-width: 108px !important;
       width: 108px !important;
       flex-shrink: 0;
+      box-sizing: border-box;
     }
 
-    .variant-option__button-label--has-swatch .variant-option__selected-value {
+    .variant-option--swatches .variant-option__button-label--has-swatch .swatch {
+      flex-shrink: 0;
+    }
+
+    .variant-option--swatches .variant-option__button-label--has-swatch .variant-option__selected-value {
       overflow: hidden;
       text-overflow: ellipsis;
       flex: 1;

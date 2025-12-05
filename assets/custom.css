@@ -1100,9 +1100,6 @@ PC端多属性图片大小 */
   font-family: 'Poppins', sans-serif !important;
 }
 /* AR样式修改 */
-dialog.tint-widget {
-  width: calc(100% - 80px) !important; /* 左右各 40px */
-  max-width: calc(100% - 80px) !important;
-  margin: auto !important;
-  padding: 40px 0px;
+.tint-image-source{
+  margin: 20px auto;
 }

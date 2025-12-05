@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "cart-section": {
       "type": "main-cart",
@@ -108,8 +109,8 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
                 "font_size": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
@@ -168,6 +169,11 @@
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
+                "show_badges": true,
+                "show_sold_out_badge": true,
+                "show_sale_badge": true,
+                "custom_badge_text": "",
+                "custom_badge_color_scheme": "scheme-1",
                 "image_ratio": "adapt",
                 "border": "none",
                 "border_width": 1,
@@ -187,21 +193,32 @@
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
+                "type_preset": "custom",
+                "font": "var(--font-subheading--family)",
                 "font_size": "",
+                "font_size_mobile": "",
+                "weight": "",
+                "weight_mobile": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
+                "letter_spacing_custom": "",
                 "case": "none",
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
+                "custom_color": "",
+                "custom_color_mobile": "",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
                 "padding-block-start": 4,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "custom_mobile_padding": false,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             },
@@ -212,6 +229,22 @@
                 "show_sale_price_first": true,
                 "show_installments": false,
                 "show_tax_info": false,
+                "show_save": false,
+                "price_font": "",
+                "compare_price_font": "var(--font-subheading--family)",
+                "save_font": "",
+                "price_font_size": "",
+                "price_color": "",
+                "compare_price_font_size": "",
+                "compare_price_color": "",
+                "save_font_size": "",
+                "save_color": "",
+                "price_font_size_mobile": "",
+                "price_color_mobile": "",
+                "compare_price_font_size_mobile": "",
+                "compare_price_color_mobile": "",
+                "save_font_size_mobile": "",
+                "save_color_mobile": "",
                 "type_preset": "h6",
                 "width": "100%",
                 "alignment": "left",
@@ -224,7 +257,11 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "padding-block-start-mobile": 0,
+                "padding-block-end-mobile": 0,
+                "padding-inline-start-mobile": 0,
+                "padding-inline-end-mobile": 0
               },
               "blocks": {}
             }
@@ -254,7 +291,9 @@
         "gap": 28,
         "color_scheme": "scheme-1",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "padding-block-start-mobile": 0,
+        "padding-block-end-mobile": 0
       }
     }
   },

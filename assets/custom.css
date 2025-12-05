@@ -1040,3 +1040,14 @@ span[title="Product count"] {
     --swatch-height: 25px !important;
   }
 }
+
+/*
+PC端多属性图片大小 */
+@media (min-width: 750px) {
+  .variant-option--swatches .variant-option__button-label--has-swatch .swatch {
+    width: 38px !important;
+    height: 38px !important;
+    --swatch-width: 38px !important;
+    --swatch-height: 38px !important;
+  }
+}

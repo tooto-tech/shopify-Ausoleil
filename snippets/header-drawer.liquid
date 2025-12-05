@@ -108,33 +108,9 @@
           {{- 'icon-close.svg' | inline_asset_content -}}
         </span>
       </button>
-      {% comment %} 移动端顶部栏：Menu + 语言切换 {% endcomment %}
+      {% comment %} 移动端顶部栏：Menu {% endcomment %}
       <div class="menu-drawer__mobile-header">
         <span class="menu-text">Menu</span>
-        {% liquid
-          if section
-            assign show_language_mobile = section.settings.show_language
-            if localization.available_languages.size <= 1
-              assign show_language_mobile = false
-            endif
-
-            assign show_country_mobile = section.settings.show_country
-            if localization.available_countries.size <= 1
-              assign show_country_mobile = false
-            endif
-          else
-            assign show_language_mobile = false
-            assign show_country_mobile = false
-          endif
-        %}
-        {% if data_header_drawer_type == 'mobile-drawer' and show_country_mobile or show_language_mobile %}
-          {%
-            render 'drawer-localization',
-            show_country: show_country_mobile,
-            show_language: show_language_mobile,
-            country_style: section.settings.country_selector_style | default: false
-          %}
-        {%- endif -%}
       </div>
       {% comment %} 主菜单 {% endcomment %}
       <nav

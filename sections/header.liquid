@@ -538,10 +538,10 @@
     }
 
     @media screen and (max-width: 749px) {
-      --header-template-columns: var(--header-mobile-bookend) var(--header-mobile-bookend) 1fr
+      --header-template-columns: var(--header-mobile-bookend) var(--header-mobile-bookend) 1fr auto
         var(--header-mobile-bookend) var(--header-mobile-bookend);
 
-      grid-template-areas: 'leftA leftB center rightA rightB';
+      grid-template-areas: 'leftA leftB center localization rightA rightB';
       grid-column: span 3;
       column-gap: 50;
       align-items: center;
@@ -566,6 +566,10 @@
 
       header-actions {
         grid-area: rightB;
+      }
+
+      .dropdown-localization {
+        grid-area: localization;
       }
     }
   }

@@ -1208,4 +1208,5 @@ dialog[class="svelte-"] > :first-child * {
 }
 /* 底部不换行 */
 body, .paragraph:not(.button), .paragraph>*{
+  white-space: nowrap;
 }

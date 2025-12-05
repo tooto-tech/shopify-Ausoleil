@@ -1106,6 +1106,6 @@ PC端多属性图片大小 */
 .tint-widget .tint-image-source{
   margin: 20px 0 !important;
 }
-dialog[class^="svelte-"] > :first-of-type {
-  margin: 20px !important;
+div[class^="tint-image-source"] {
+  margin: 20px;
 }

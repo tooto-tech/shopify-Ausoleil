@@ -1,5 +1,6 @@
 {% assign block_settings = block.settings %}
 {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
+{% assign has_mobile_icon = block_settings.image_upload_mobile != blank %}
 
 {% capture icon_style %}
   --icon-width: {{ block_settings.width }}px;
@@ -8,7 +9,7 @@
   {% if block_settings.height_mobile > 0 %}--icon-height-mobile: {{ block_settings.height_mobile }}px;{% endif %}
 {% endcapture %}
 
-{% capture icon %}
+{% capture icon_desktop %}
   {% render 'icon-or-image',
     icon: block_settings.icon,
     image_upload: block_settings.image_upload,
@@ -18,23 +19,39 @@
   %}
 {% endcapture %}
 
+{% capture icon_mobile %}
+  {% render 'icon-or-image',
+    icon: block_settings.icon,
+    image_upload: block_settings.image_upload_mobile,
+    width: block_settings.width_mobile | default: block_settings.width,
+    class_name: icon_block_class,
+    attributes: block.shopify_attributes
+  %}
+{% endcapture %}
+
 {%- if block_settings.link != blank -%}
   <a
     href="{{ block_settings.link }}"
-    class="text-inherit icon-block-wrapper icon-block-wrapper-{{ block.id }} {{ block_settings.custom_class }}"
+    class="text-inherit icon-block-wrapper icon-block-wrapper-{{ block.id }} {{ block_settings.custom_class }}{% if has_mobile_icon %} has-mobile-icon{% endif %}"
     style="{{ icon_style }}"
     {% if block_settings.open_in_new_tab %}
       target="_blank" rel="noopener"
     {% endif %}
   >
-    {{ icon }}
+    <span class="icon-desktop">{{ icon_desktop }}</span>
+    {%- if has_mobile_icon -%}
+      <span class="icon-mobile">{{ icon_mobile }}</span>
+    {%- endif -%}
   </a>
 {%- else -%}
   <span
-    class="icon-block-wrapper icon-block-wrapper-{{ block.id }} {{ block_settings.custom_class }}"
+    class="icon-block-wrapper icon-block-wrapper-{{ block.id }} {{ block_settings.custom_class }}{% if has_mobile_icon %} has-mobile-icon{% endif %}"
     style="{{ icon_style }}"
   >
-    {{ icon }}
+    <span class="icon-desktop">{{ icon_desktop }}</span>
+    {%- if has_mobile_icon -%}
+      <span class="icon-mobile">{{ icon_mobile }}</span>
+    {%- endif -%}
   </span>
 {%- endif -%}
 
@@ -64,10 +81,23 @@
     object-fit: contain;
   }
 
+  /* 移动端图标切换 */
+  .icon-mobile {
+    display: none;
+  }
+
   @media screen and (max-width: 749px) {
     .icon-block__media {
       width: var(--icon-width-mobile, var(--icon-width, auto));
       height: var(--icon-height-mobile, var(--icon-height, auto));
+    }
+
+    .has-mobile-icon .icon-desktop {
+      display: none;
+    }
+
+    .has-mobile-icon .icon-mobile {
+      display: inline-flex;
     }
   }
 {% endstylesheet %}
@@ -325,6 +355,16 @@
       "type": "image_picker",
       "id": "image_upload",
       "label": "t:settings.image_icon"
+    },
+    {
+      "type": "header",
+      "content": "移动端图标"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_upload_mobile",
+      "label": "移动端图片",
+      "info": "留空则使用桌面端图标"
     },
     {
       "type": "header",

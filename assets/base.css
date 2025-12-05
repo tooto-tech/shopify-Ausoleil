@@ -1680,6 +1680,14 @@ media-gallery.media-gallery--grid .media-gallery__grid .product-media-container 
   justify-content: center;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .product-media-container img {
+    width: 150px;   
+    height: 150px; 
+    /* 如果想保持比例，可以只设置 width 或 height，另一个用 auto */
+    /* width: 100px; height: auto; */
+  }
+}
 
 .product-media-container.media-fit-contain img {
   object-position: center center;

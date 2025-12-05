@@ -920,6 +920,12 @@ summary {
 span[title="Product count"] {
     font-family: 'Manrope', sans-serif;
 }
+/* 移动端过滤按钮大小更改 */
+@media (max-width: 768px) {
+  .facets__actions .button {
+    font-size: 13px;
+  }
+}
 
 
 /* Language Selector 样式 */

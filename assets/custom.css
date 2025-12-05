@@ -1186,8 +1186,8 @@ dialog[class="svelte-"] > :first-child * {
 
 @media (min-width: 768px) {
   .header-actions__cart-icon {
-    --cart-bubble-top: 0px;
-    --cart-bubble-right: 11px;
+    --cart-bubble-top: -3px;
+    --cart-bubble-right: 4px;
   }
 }
 .header-actions__cart-icon .cart-bubble__text {

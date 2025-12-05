@@ -281,6 +281,7 @@ product-price .compare-at-price{
   .my-custom-texticon .group-block .group-block-content {
     flex-direction: row !important;
     gap: 10px !important;
+    align-items: center;
   }
 
   .my-custom-texticon .group-block .icon-block {

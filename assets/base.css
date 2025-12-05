@@ -2132,6 +2132,7 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
 
 .variant-picker .variant-option--buttons label:has(.swatch) {
   border-radius: var(--variant-picker-swatch-radius);
+  width: 29%;
 }
 
 .sticky-content {

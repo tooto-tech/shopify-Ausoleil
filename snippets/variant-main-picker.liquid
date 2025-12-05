@@ -62,10 +62,18 @@
             {{ option_id_attribute }}
           >
             <legend>
-              {{ product_option.name | escape }}:
-              {%- if variant_style == 'swatch' -%}
-                <span class="variant-option__swatch-value">{{ product_option.selected_value }}</span>
-              {%- endif %}
+              {%- liquid
+                assign option_name = product_option.name | escape
+                case option_name
+                  when '颜色'
+                    assign option_name = 'Color'
+                  when '尺寸'
+                    assign option_name = 'Size'
+                  when '材质'
+                    assign option_name = 'Material'
+                endcase
+              -%}
+              {{ option_name }}:
             </legend>
             {%- for product_option_value in product_option.values -%}
               {% if product_option_value.size > longest_value and option_id_attribute %}
@@ -115,6 +123,7 @@
                     variant_image: featured_media,
                     mode: 'unscaled'
                   %}
+                  <span class="variant-option__selected-value">{{ product_option_value | escape }}</span>
                 {% else %}
                   {% liquid
                     assign featured_media = product_option_value.variant.featured_media
@@ -128,7 +137,11 @@
 
                   {% if featured_media %}
                     <span class="variant-option__thumbnail" style="background-color: #F1F1F1;">
-                      {{ featured_media | image_url: width: 76 | image_tag: loading: 'lazy', sizes: '38px', widths: '38, 76' }}
+                      {{
+                        featured_media
+                        | image_url: width: 76
+                        | image_tag: loading: 'lazy', sizes: '38px', widths: '38, 76'
+                      }}
                     </span>
                   {% endif %}
                   {% if product_option_value.available == true %}
@@ -260,7 +273,8 @@
   .variant-option--buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gap-sm);
+    /* gap: var(--gap-sm); */
+    gap: 13px;
     margin: 0;
     padding: 0;
     border: none;
@@ -272,14 +286,25 @@
     margin-block-end: 6px;
   }
   @media (max-width: 768px) {
-  .variant-option--buttons legend {
-    margin-block-end: 8px;
+    .variant-option--buttons legend {
+      margin-block-end: 8px;
+    }
   }
-}
 
   .variant-option__swatch-value {
     padding-inline-start: var(--padding-xs);
     color: rgb(var(--color-foreground-rgb) / var(--opacity-70));
+  }
+
+  .variant-option__selected-value {
+    margin-inline-start: var(--padding-xs);
+    /* color: var(--color-foreground); */
+    /* font-size: var(--font-size-sm); */
+    white-space: nowrap;
+font-family: Poppins;
+font-size: 14px;
+color: #000000;
+margin-left: 11px;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -501,8 +526,9 @@
     --focus-outline-radius: var(--variant-picker-swatch-radius);
 
     padding: 0;
-    border: none;
-    display: block;
+    /* border: none; */
+    display: flex;
+    align-items: center;
     flex-basis: auto;
     min-height: auto;
   }

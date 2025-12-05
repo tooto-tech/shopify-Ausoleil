@@ -1010,6 +1010,6 @@ span[title="Product count"] {
   }
 }
 /* 表单弹窗按钮背景色 */
-[data-testid="form-row"] button.needsclick:nth-of-type(1) {
+div[data-testid="form-row"] > div[data-testid="form-component"] > button.needsclick {
   background-color: #1226AA !important;
 }

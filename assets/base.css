@@ -2694,7 +2694,8 @@ color: #000000;
 .cart-bubble__background {
   position: absolute;
   inset: 0;
-  background-color: var(--color-primary-button-background);
+  /* background-color: var(--color-primary-button-background); */
+  border: 0.5px solid;
   border-radius: var(--style-border-radius-lg);
 }
 

@@ -1207,5 +1207,6 @@ dialog[class="svelte-"] > :first-child * {
   overflow: visible;
 }
 /* 底部不换行 */
-body, .paragraph:not(.button), .paragraph>*{
+details-content body, .paragraph:not(.button), .paragraph>*{
+  white-space: nowrap;
 }

@@ -783,10 +783,10 @@ summary {
 }
 /* 产品详情图标大小 */
 @media (max-width: 768px) {
-.group-accr .group-block:last-child img.icon-block__media {
-        width: 15px !important;
-        height: auto;
-    }
+  .group-accr img.icon-block__media {
+    width: 15px !important;
+    height: auto !important;
+  }
 }
 /* 详情图片间距 */
 :where(media-gallery, .product-grid__item) .media-gallery__grid {

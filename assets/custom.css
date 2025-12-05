@@ -1173,6 +1173,7 @@ dialog[class="svelte-"] > :first-child * {
   --cart-bubble-right: 0px;
   width: 38px;
 }
+/* 产品系列卡片hover放大效果 */
 @media (min-width: 768px) {
   .header-actions__cart-icon {
     --cart-bubble-top: 0px;
@@ -1183,20 +1184,6 @@ dialog[class="svelte-"] > :first-child * {
   font-size: 8px;
 }
 
-/* 产品系列卡片 hover 图片放大效果 */
-.collection-card__link {
-  overflow: hidden;
-}
-
-.collection-card__link img,
-.collection-card__link .media img {
-  transition: transform 0.4s ease;
-}
-
-.collection-card__link:hover img,
-.collection-card__link:hover .media img {
-  transform: scale(1.05);
-}
 @media (min-width: 768px) {
   .header-actions__cart-icon {
     --cart-bubble-top: 0px;
@@ -1216,3 +1203,4 @@ dialog[class="svelte-"] > :first-child * {
 .collection-card:hover {
   transform: scale(1.03);
 }
+

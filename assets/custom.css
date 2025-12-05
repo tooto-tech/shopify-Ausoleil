@@ -1227,8 +1227,6 @@ details-content body, .paragraph:not(.button), .paragraph>*{
   }
 }
 /* AR 虚拟试戴弹窗高度覆盖 - 覆盖 Svelte 随机类名样式 */
-@media (min-height: 600px) {
   dialog > :first-child {
     max-height: 100vh !important;
   }
-}

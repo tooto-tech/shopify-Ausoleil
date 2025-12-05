@@ -1011,5 +1011,5 @@ span[title="Product count"] {
 }
 /* 表单弹窗按钮背景色 */
 .needsclick{
-  background-color: #1226AA;
+  background-color: #1226AA !important;
 }

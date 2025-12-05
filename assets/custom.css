@@ -1204,3 +1204,17 @@ dialog[class="svelte-"] > :first-child * {
   transform: scale(1.03);
 }
 
+
+
+/* AR 虚拟试戴弹窗高度覆盖 - 覆盖 Svelte 随机类名样式 */
+@media (min-height: 600px) {
+  dialog > :first-child {
+    max-height: 100vh !important;
+  }
+}
+
+
+/* AR 虚拟试戴弹窗高度覆盖 - 通过 JS 动态添加类名 */
+.tint-vto-dialog-override > :first-child {
+  max-height: 100vh !important;
+}

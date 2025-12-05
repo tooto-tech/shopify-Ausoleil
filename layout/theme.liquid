@@ -30,8 +30,8 @@
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
     {% endif %}
-	  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
     {{ content_for_header }}
     {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
   </head>
@@ -67,6 +67,7 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
-   <script src="{{ 'salesmartly.js' | asset_url }}" async></script>
+    <script src="{{ 'salesmartly.js' | asset_url }}" async></script>
+    <script src="{{ 'tint-vto-fix.js' | asset_url }}" defer></script>
   </body>
 </html>

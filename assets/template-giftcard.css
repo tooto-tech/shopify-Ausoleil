@@ -127,6 +127,8 @@
 }
 
 .gift-card__buttons .button {
+  font-family: 'Popins' !important;
+
   width: 100%;
   justify-content: center;
 }

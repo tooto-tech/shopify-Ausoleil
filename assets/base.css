@@ -3825,6 +3825,7 @@ slideshow-component[autoplay] slideshow-controls {
 /* Slideshow Play/Pause */
 .slideshow-control:is(.icon-pause, .icon-play) {
   color: var(--color-active);
+  display: none;
 
   &:hover {
     color: var(--color-hover);

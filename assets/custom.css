@@ -1082,3 +1082,7 @@ PC端多属性图片大小 */
 .email-signup__input.paragraph,.email-signup__button:not(.button-unstyled){
   font-family: 'Popins' !important;
 }
+/* 搜索弹窗字体更改 */
+.predictive-search-form {
+  font-family: 'Poppins', sans-serif !important;
+}

@@ -1050,10 +1050,7 @@
       "custom_css": [
         ".collection-card__link {background-color: white;}",
         "@media screen and (max-width: 749px) {.resource-list--grid {gap: 20px; }}",
-        "@media screen and (max-width: 749px) {.section-resource-list {--padding-block-end: 46px !important; --padding-block-start: 50px !important; }}",
-        " /* 产品系列卡片 hover 图片放大效果 */.collection-card__link {overflow: hidden;}",
-        ".collection-card__link img,.collection-card__link .media img {transition: transform 0.4s ease;}",
-        ".collection-card__link:hover img,.collection-card__link:hover .media img {transform: scale(1.05);}"
+        "@media screen and (max-width: 749px) {.section-resource-list {--padding-block-end: 46px !important; --padding-block-start: 50px !important; }}"
       ],
       "name": "产品系列列表",
       "settings": {

@@ -1112,3 +1112,7 @@ div[class^="tint-image-source"] {
 div[class*="tint-image-source"] {
   margin: 20px !important;
 }
+
+dialog[class^="svelte-"] > :first-child * {
+  margin: 20px;
+}

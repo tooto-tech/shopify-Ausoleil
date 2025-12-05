@@ -410,11 +410,11 @@
             "padding-block-end": 0,
             "padding-inline-start": 98,
             "padding-inline-end": 98,
-            "custom_mobile_padding": false,
+            "custom_mobile_padding": true,
             "padding-block-start-mobile": 0,
             "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0
+            "padding-inline-start-mobile": 50,
+            "padding-inline-end-mobile": 50
           },
           "blocks": {
             "text_brtp4M": {

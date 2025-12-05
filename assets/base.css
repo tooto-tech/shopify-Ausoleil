@@ -2687,7 +2687,8 @@ color: #000000;
   line-height: normal;
   align-items: center;
   justify-content: center;
-  color: var(--color-primary-button-text);
+  /* color: var(--color-primary-button-text); */
+  color: currentColor;
   padding-inline: var(--cart-padding);
 }
 

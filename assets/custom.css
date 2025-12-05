@@ -1099,3 +1099,9 @@ PC端多属性图片大小 */
 .predictive-search-form {
   font-family: 'Poppins', sans-serif !important;
 }
+/* AR样式修改 */
+dialog.tint-widget {
+  width: calc(100% - 80px) !important; /* 两边各 40px */
+  max-width: calc(100% - 80px) !important;
+  margin: 0 auto !important; /* 居中 */
+}

@@ -620,10 +620,12 @@
   }
 
   .variant-option__button-label--has-swatch:has(:checked) {
-    --focus-outline: none;
-
     outline: none;
-    border: none;
+  }
+
+  .variant-option__button-label--has-swatch:has(:checked) .swatch {
+    outline: 1px solid var(--color-foreground);
+    outline-offset: 2px;
   }
 
   /* This triggers iOS < 16.4. The outline bug is not recognized as a lack of @supports */

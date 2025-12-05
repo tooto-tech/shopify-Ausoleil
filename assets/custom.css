@@ -960,29 +960,12 @@ span[title="Product count"] {
   border-radius: 6px;
   padding: 2px 4px;
   width: auto;
-  max-width: 80px; /* 限制最大宽度，防止日语等长文字撑开 drawer */
   justify-content: center;
   text-align: center;
-  flex-shrink: 0;
 }
 
 .menu-drawer .language-selector__display {
   text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-/* 防止移动端 drawer 顶部栏溢出 */
-.menu-drawer__mobile-header {
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.menu-drawer__mobile-header .menu-drawer__localization {
-  flex-shrink: 1;
-  min-width: 0;
-  overflow: hidden;
 }
 
 /* Klaviyo 弹窗关闭按钮移到左边 */

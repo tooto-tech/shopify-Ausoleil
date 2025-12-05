@@ -1160,3 +1160,6 @@ dialog[class="svelte-"] > :first-child * {
     min-height: 800px !important;
   }
 }
+.email-signup__button:hover {
+  color: #fff !important;
+}

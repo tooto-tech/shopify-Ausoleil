@@ -1197,3 +1197,22 @@ dialog[class="svelte-"] > :first-child * {
 .collection-card__link:hover .media img {
   transform: scale(1.05);
 }
+@media (min-width: 768px) {
+  .header-actions__cart-icon {
+    --cart-bubble-top: 0px;
+    --cart-bubble-right: 11px;
+  }
+}
+.header-actions__cart-icon .cart-bubble__text {
+  font-size: 8px;
+}
+
+
+/* 产品系列卡片 hover 整体放大效果 */
+.collection-card {
+  transition: transform 0.3s ease;
+}
+
+.collection-card:hover {
+  transform: scale(1.03);
+}

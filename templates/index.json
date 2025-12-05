@@ -1360,7 +1360,7 @@
         "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
         "padding-block-start": 50,
         "padding-block-end": 0,
-        "padding-block-start-mobile": 50,
+        "padding-block-start-mobile": 60,
         "padding-block-end-mobile": 0
       }
     },
@@ -1434,8 +1434,8 @@
         "padding-block-start": 84,
         "padding-block-end": 128,
         "custom_mobile_padding": true,
-        "padding-block-start-mobile": 64,
-        "padding-block-end-mobile": 64,
+        "padding-block-start-mobile": 60,
+        "padding-block-end-mobile": 60,
         "custom_class": ""
       }
     },
@@ -1941,8 +1941,8 @@
         "padding-block-start": 90,
         "padding-block-end": 116,
         "custom_mobile_padding": true,
-        "padding-block-start-mobile": 14,
-        "padding-block-end-mobile": 90,
+        "padding-block-start-mobile": 20,
+        "padding-block-end-mobile": 60,
         "custom_class": ""
       }
     },
@@ -2826,7 +2826,7 @@
         "padding-block-start": 126,
         "padding-block-end": 124,
         "custom_mobile_padding": true,
-        "padding-block-start-mobile": 14,
+        "padding-block-start-mobile": 20,
         "padding-block-end-mobile": 90,
         "custom_class": ""
       }

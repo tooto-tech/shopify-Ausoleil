@@ -1615,7 +1615,9 @@
         "group_paHgWp",
         "group_zyVVaA"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".page-width-content {--page-content-width: 1040px;}"
+      ],
       "settings": {
         "content_direction": "column",
         "gap": 32,

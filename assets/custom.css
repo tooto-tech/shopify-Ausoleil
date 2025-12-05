@@ -619,6 +619,10 @@ gap: 16px;
   .group-block-content{
     align-items: center;
   }
+  /* 首页多列文本居中 */
+  .multi-content .group-block-content{
+    align-items: left;
+  }
 .email-signup__input, .email-signup__button--text{
   padding: 14px 0px 14px 12px;
 }

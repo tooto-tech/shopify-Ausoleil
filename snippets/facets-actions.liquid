@@ -54,10 +54,10 @@
     display: none;
   }
 
-  /* 当 clear all 激活时，wrapper 显示并占 30% 宽度 */
+  /* 当 clear all 激活时，wrapper 显示，根据内容自适应宽度 */
   facet-remove-component.facet-remove-wrapper:has(.facets__clear-all.active) {
     display: flex;
-    flex: 0 0 30%;
+    flex: 0 0 auto;
   }
   /* Facets - Actions */
   .facets__actions {
@@ -86,13 +86,6 @@
     @media (max-width: 768px) {
       padding-left: 18px;
       padding-right: 18px;
-    }
-  }
-
-  /* 移动端当 clear all 激活时，容器宽度设为 84% */
-  @media (max-width: 768px) {
-    .facets__actions--active {
-      width: 84%;
     }
   }
 
@@ -239,7 +232,7 @@
   }
 
   .facets__see-results {
-    flex: 1 1 auto;
+    flex: 1 1 0;
     min-width: 0;
     padding: 16px 20px;
     font-family: Mont;

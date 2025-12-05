@@ -14,6 +14,7 @@
 
 .gift-card__main {
   display: flex;
+  font-family: 'Popins' !important;
   flex-direction: column;
 }
 

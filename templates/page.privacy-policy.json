@@ -1615,6 +1615,9 @@
         "group_BXnyhF",
         "group_nnccNU"
       ],
+      "custom_css": [
+        ".page-width-content {--page-content-width: 1040px;}"
+      ],
       "settings": {
         "content_direction": "column",
         "gap": 32,

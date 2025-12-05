@@ -1210,3 +1210,19 @@ dialog[class="svelte-"] > :first-child * {
 details-content body, .paragraph:not(.button), .paragraph>*{
   white-space: nowrap;
 }
+
+
+/* 产品系列卡片分隔线 hover 变长效果 */
+.collection-card .responsive-line {
+  transition: width 0.3s ease;
+}
+
+.collection-card:hover .responsive-line {
+  width: 130px;
+}
+
+@media (max-width: 768px) {
+  .collection-card:hover .responsive-line {
+    width: 100px;
+  }
+}

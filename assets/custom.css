@@ -1169,14 +1169,14 @@ dialog[class="svelte-"] > :first-child * {
  购物车数字气泡样式 - 缩小尺寸 */
 .header-actions__cart-icon {
   --cart-bubble-size: 14px;
-  --cart-bubble-top: -1px;
-  --cart-bubble-right: 0px;
+  --cart-bubble-top: -8px;
+  --cart-bubble-right: -4px;
   width: 38px;
 }
 @media (min-width: 768px) {
   .header-actions__cart-icon {
-    --cart-bubble-top: 0px;
-    --cart-bubble-right: 11px;
+    --cart-bubble-top: -4px;
+    --cart-bubble-right: 14px;
     --cart-bubble-left: 10px;
   }
 }
@@ -1186,8 +1186,8 @@ dialog[class="svelte-"] > :first-child * {
 
 @media (min-width: 768px) {
   .header-actions__cart-icon {
-    --cart-bubble-top: 0px;
-    --cart-bubble-right: 4px;
+    --cart-bubble-top: -5px;
+    --cart-bubble-right: 7px;
   }
 }
 .header-actions__cart-icon .cart-bubble__text {

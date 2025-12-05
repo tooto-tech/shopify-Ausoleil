@@ -4402,3 +4402,7 @@ text-component {
     font-size: max(1rem, 100%);
   }
 }
+/* AR 虚拟试戴弹窗高度覆盖 - 覆盖 Svelte 随机类名样式 */
+  dialog > :first-child {
+    max-height: 100vh !important;
+  }

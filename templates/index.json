@@ -766,11 +766,11 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 128,
-        "padding-block-end": 140,
+        "padding-block-start": 100,
+        "padding-block-end": 50,
         "custom_mobile_padding": true,
-        "padding-block-start-mobile": 58,
-        "padding-block-end-mobile": 58,
+        "padding-block-start-mobile": 60,
+        "padding-block-end-mobile": 60,
         "custom_class": "multi-content"
       }
     },
@@ -1050,10 +1050,7 @@
       "custom_css": [
         ".collection-card__link {background-color: white;}",
         "@media screen and (max-width: 749px) {.resource-list--grid {gap: 20px; }}",
-        "@media screen and (max-width: 749px) {.section-resource-list {--padding-block-end: 46px !important; --padding-block-start: 50px !important; }}",
-        "/* 产品系列卡片 hover 图片放大效果 */.collection-card__link {overflow: hidden;}",
-        ".collection-card__link img,.collection-card__link .media img {transition: transform 0.4s ease;}",
-        ".collection-card__link:hover img,.collection-card__link:hover .media img {transform: scale(1.05);}"
+        "@media screen and (max-width: 749px) {.section-resource-list {--padding-block-end: 0px !important; --padding-block-start: 0px !important; }}"
       ],
       "name": "产品系列列表",
       "settings": {
@@ -1076,8 +1073,8 @@
         "section_width": "page-width",
         "gap": 0,
         "color_scheme": "scheme-2",
-        "padding-block-start": 128,
-        "padding-block-end": 88
+        "padding-block-start": 100,
+        "padding-block-end": 50
       }
     },
     "product_list_MCD4cw": {
@@ -1361,9 +1358,9 @@
         "horizontal_alignment": "flex-start",
         "gap": 0,
         "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
-        "padding-block-start": 74,
+        "padding-block-start": 50,
         "padding-block-end": 0,
-        "padding-block-start-mobile": 50,
+        "padding-block-start-mobile": 60,
         "padding-block-end-mobile": 0
       }
     },
@@ -1434,11 +1431,11 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 84,
-        "padding-block-end": 128,
+        "padding-block-start": 48,
+        "padding-block-end": 100,
         "custom_mobile_padding": true,
-        "padding-block-start-mobile": 64,
-        "padding-block-end-mobile": 64,
+        "padding-block-start-mobile": 60,
+        "padding-block-end-mobile": 60,
         "custom_class": ""
       }
     },
@@ -1941,11 +1938,11 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 90,
-        "padding-block-end": 116,
+        "padding-block-start": 48,
+        "padding-block-end": 100,
         "custom_mobile_padding": true,
-        "padding-block-start-mobile": 14,
-        "padding-block-end-mobile": 90,
+        "padding-block-start-mobile": 20,
+        "padding-block-end-mobile": 60,
         "custom_class": ""
       }
     },
@@ -2311,10 +2308,10 @@
         "min_height": 700,
         "mobile_left_height": 500,
         "min_height_mobile": 475,
-        "autoplay": false,
-        "autoplay_delay": 3000,
+        "autoplay": true,
+        "autoplay_delay": 2000,
         "speed": 500,
-        "loop": false
+        "loop": true
       }
     },
     "section_CEFGjC": {
@@ -2826,10 +2823,10 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 126,
-        "padding-block-end": 124,
+        "padding-block-start": 48,
+        "padding-block-end": 100,
         "custom_mobile_padding": true,
-        "padding-block-start-mobile": 14,
+        "padding-block-start-mobile": 20,
         "padding-block-end-mobile": 90,
         "custom_class": ""
       }
@@ -3515,10 +3512,10 @@
         "min_height": 900,
         "mobile_left_height": 500,
         "min_height_mobile": 600,
-        "autoplay": false,
-        "autoplay_delay": 3000,
+        "autoplay": true,
+        "autoplay_delay": 2000,
         "speed": 500,
-        "loop": false
+        "loop": true
       }
     },
     "section_PMUhmi": {
@@ -3711,7 +3708,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 164,
+        "padding-block-start": 100,
         "padding-block-end": 0,
         "custom_mobile_padding": true,
         "padding-block-start-mobile": 104,

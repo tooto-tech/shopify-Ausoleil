@@ -1091,7 +1091,13 @@ PC端多属性图片大小 */
 }
 .shopify-section:not(.header-section) :is(.section,.cart__summary-container){
   font-family: 'Popins' !important;
-
+}
+@media (min-width: 769px) {
+  .shopify-section:not(.header-section) :is(.section, .cart__summary-container) {
+    display: flex;
+    align-items: center;
+    padding: 0 240px;
+  }
 }
 .email-signup__input.paragraph,.email-signup__button:not(.button-unstyled){
   font-family: 'Popins' !important;

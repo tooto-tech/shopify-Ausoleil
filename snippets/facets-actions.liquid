@@ -41,17 +41,24 @@
       type="button"
       on:click="dialog-component/closeDialog"
     >
-    {% comment %} 注释原生动态展示选中商品数量的内容 {% endcomment %}
+      {% comment %} 注释原生动态展示选中商品数量的内容 {% endcomment %}
       {% comment %} {{- 'actions.see_items' | t: count: products_count -}} {% endcomment %}
-       CONFIRM
+      CONFIRM
     </button>
   {% endif %}
 </div>
 
 {% stylesheet %}
-facet-remove-component.facet-remove-wrapper{
-  display: flex;
-}
+  /* wrapper 默认不显示，只有当 clear all 激活时才显示 */
+  facet-remove-component.facet-remove-wrapper {
+    display: none;
+  }
+
+  /* 当 clear all 激活时，wrapper 显示并占 30% 宽度 */
+  facet-remove-component.facet-remove-wrapper:has(.facets__clear-all.active) {
+    display: flex;
+    flex: 0 0 30%;
+  }
   /* Facets - Actions */
   .facets__actions {
     --to-top-gradient-background: linear-gradient(
@@ -68,18 +75,18 @@ facet-remove-component.facet-remove-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    /* gap: var(--gap-sm); */
     background-image: var(--to-top-gradient-background);
     z-index: var(--facets-sticky-z-index);
     padding-block-start: var(--padding-xs);
     padding-block-end: var(--padding-md);
     padding-inline: var(--padding-lg);
     margin-top: auto;
-@media (max-width: 768px) {
-
-padding-left: 18px;
-padding-right: 18px;
-}
+    width: 100%;
+    box-sizing: border-box;
+    @media (max-width: 768px) {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
   }
 
   .facets:not(.facets--drawer) .facets__actions {
@@ -145,13 +152,11 @@ padding-right: 18px;
   .facets__clear-all {
     display: none;
     cursor: pointer;
-    min-width: var(--facets-clear-all-min-width);
     transition: transform var(--animation-values), opacity var(--animation-values);
     opacity: 0;
     transform: translateY(100%);
-    flex-grow: 1;
     padding-block: var(--padding-lg);
-    background:white;
+    background: white;
   }
 
   .facets:not(.facets--drawer) .facets__clear-all {
@@ -191,14 +196,14 @@ padding-right: 18px;
   .facets__clear-all.active {
     transform: translateY(0);
     opacity: 1;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Poppins';
     border-radius: 0px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 10px;
     margin-right: 10px;
-      justify-content: center;
-
+    width: 100%;
   }
 
   .facets--horizontal .facets__clear-all.active {
@@ -216,26 +221,24 @@ padding-right: 18px;
     .facets__clear-all.active {
       opacity: 0;
       transform: translateY(100%);
-
     }
 
     .facets--horizontal .facets__clear-all.active {
       @media screen and (min-width: 750px) {
         opacity: 1;
         transform: none;
-
       }
     }
   }
 
   .facets__see-results {
-    min-width: var(--facets-see-results-min-width);
-    flex-grow: 1;
-    padding-block: var(--padding-lg);
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 16px 20px;
     font-family: Mont;
-font-size: 20px;
-font-weight: 900;
-border-radius: 0px;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 0px;
   }
 
   .facets:not(.facets--drawer) .facets__see-results {

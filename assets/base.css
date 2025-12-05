@@ -1684,6 +1684,7 @@ media-gallery.media-gallery--grid .media-gallery__grid .product-media-container 
   .product-media-container img {
     width: 150px;   
     height: 150px; 
+    margin: auto auto;
     /* 如果想保持比例，可以只设置 width 或 height，另一个用 auto */
     /* width: 100px; height: auto; */
   }

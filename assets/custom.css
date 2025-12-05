@@ -1113,22 +1113,12 @@ div[class*="tint-image-source"] {
   margin: 20px !important;
 }
 
-dialog[class^="svelte-"] > :first-child * {
+dialog[class="svelte-"] > :first-child * {
   margin: 20px;
 }
 
 
-
-/* 去掉产品详情页变体选择器中 radio input 的边框 */
-.variant-option__button-label input[type="radio"] {
-  border: none !important;
-}
-
-/* 去掉不可用选项的边框 */
-.variant-option__button-label:has([aria-disabled="true"]) {
-  border: none !important;
-}
-
-.variant-option__button-label:has([data-option-available="false"]) {
-  border: none !important;
+/* 去掉产品详情页变体选择器选中状态 swatch 小图的边框 */
+.variant-option__button-label--has-swatch:has(:checked) .swatch {
+  outline: none !important;
 }

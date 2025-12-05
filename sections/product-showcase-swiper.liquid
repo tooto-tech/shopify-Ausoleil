@@ -63,7 +63,10 @@
 
       function layout() {
         var w = getSeg(), total = realCount * w;
-        tracks.forEach(function(t) { t.style.width = total + 'px'; });
+        tracks.forEach(function(t) { 
+          t.style.width = total + 'px';
+          t.style.setProperty('--track-width', total + 'px');
+        });
         fills.forEach(function(f) { f.style.width = w + 'px'; });
       }
 
@@ -125,6 +128,11 @@
   .pss-swiper .swiper-slide {
     flex-shrink: 0;
     width: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+  .pss-swiper .swiper-slide:hover {
+    transform: scale(1.03);
   }
 </style>
 
@@ -135,7 +143,12 @@
     }
 
     .pss-slide__left { position: relative; width: 100%; height: 100%; overflow: hidden; }
-    .pss-slide__left-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pss-slide__left-img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      display: block; 
+    }
     .pss-slide__left-img--mobile { display: none; }
     .pss-slide__placeholder { width: 100%; height: 100%; min-height: 400px; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; }
     .pss-slide__placeholder svg { width: 100px; opacity: 0.3; }
@@ -159,8 +172,25 @@
     .pss-slide__see-more:hover { opacity: 0.7; }
     .pss-slide__right-content { flex: 1; display: flex; flex-direction: column; width: 100%; position: relative; z-index: 1; }
     .pss-slide__progress { width: 100%; display: flex; justify-content: center; padding: 24px 0;  }
-    .pss-slide__progress-track { height: 2px; background: rgba(0,0,0,0.2); position: relative; cursor: pointer; }
-    .pss-slide__progress-fill { position: absolute; left: 0; top: 0; height: 100%; background: #000; transition: transform 0.3s ease; }
+    .pss-slide__progress-track { 
+      height: 2px; 
+      background: rgba(0,0,0,0.2); 
+      position: relative; 
+      cursor: pointer; 
+      overflow: hidden;
+    }
+    .pss-slide__progress-fill { 
+      position: absolute; 
+      left: 0; 
+      top: 0; 
+      height: 100%; 
+      background: #000; 
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), width 0.6s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform, width;
+    }
+    .pss-slide:hover .pss-slide__progress-fill {
+      width: var(--track-width, 100%) !important;
+    }
 
 
     @media (max-width: 749px) {

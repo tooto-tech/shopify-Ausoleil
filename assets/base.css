@@ -2133,6 +2133,17 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
 .variant-picker .variant-option--buttons label:has(.swatch) {
   border-radius: var(--variant-picker-swatch-radius);
   width: 29%;
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-bottom: 6px;
+
+}
+@media (max-width: 768px) {
+  .variant-picker .variant-option--buttons label:has(.swatch) {
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+  }
 }
 
 .sticky-content {

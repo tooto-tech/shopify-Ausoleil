@@ -1227,8 +1227,33 @@ details-content body, .paragraph:not(.button), .paragraph>*{
   }
 }
 
-@media (min-height: 600px) {
+/* Method 1: Using !important (Most reliable) */
   dialog > :first-child {
     max-height: 100vh !important;
   }
-}
+
+/* Method 2: Increase specificity without !important */
+  dialog[open] > :first-child {
+    max-height: 100vh;
+  }
+
+/* Method 3: Multiple selectors for higher specificity */
+  body dialog > :first-child,
+  html dialog > :first-child {
+    max-height: 100vh;
+  }
+
+/* Method 4: Attribute selector (if dialog has class attribute) */
+  dialog[class] > :first-child {
+    max-height: 100vh;
+  }
+
+/* Method 5: Most specific - combining multiple approaches */
+  html body dialog[open] > :first-child {
+    max-height: 100vh !important;
+  }
+
+/* RECOMMENDED SOLUTION: Simple and effective */
+  dialog > :first-child {
+    max-height: 100vh !important;
+  }

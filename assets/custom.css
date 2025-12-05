@@ -1173,7 +1173,6 @@ dialog[class="svelte-"] > :first-child * {
   --cart-bubble-right: 0px;
   width: 38px;
 }
-/* 产品系列卡片hover放大效果 */
 @media (min-width: 768px) {
   .header-actions__cart-icon {
     --cart-bubble-top: 0px;

@@ -1218,3 +1218,7 @@ dialog[class="svelte-"] > :first-child * {
 .tint-vto-dialog-override > :first-child {
   max-height: 100vh !important;
 }
+/* 去除header的透明背景 */
+button.header-actions__action.button-unstyled[aria-label="Cart"] {
+  overflow: visible;
+}

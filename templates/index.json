@@ -296,7 +296,7 @@
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "custom_class_name": "",
-                "enable_aos_animation": true,
+                "enable_aos_animation": false,
                 "aos_animation_type": "fade-up",
                 "aos_animation_delay": 0,
                 "padding-block-start": 0,

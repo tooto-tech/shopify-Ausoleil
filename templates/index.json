@@ -500,7 +500,7 @@
             "placeholder": "",
             "custom_class_name": "",
             "enable_aos_animation": true,
-            "aos_animation_type": "slide-up",
+            "aos_animation_type": "fade-right",
             "aos_animation_delay": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,

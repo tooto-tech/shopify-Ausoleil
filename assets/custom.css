@@ -1222,3 +1222,9 @@ dialog[class="svelte-"] > :first-child * {
 button.header-actions__action.button-unstyled[aria-label="Cart"] {
   overflow: visible;
 }
+
+.hero-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}

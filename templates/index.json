@@ -446,7 +446,7 @@
         "slide_height": "manual",
         "slide_aspect_ratio_desktop": "1440 / 800",
         "slide_aspect_ratio_mobile": "750 / 979",
-        "custom_class": "",
+        "custom_class": "hero-img",
         "padding-block-start": 0,
         "padding-block-end": 0
       }

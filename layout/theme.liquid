@@ -31,7 +31,19 @@
       {%- render 'theme-editor' -%}
     {% endif %}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      /* 确保 AOS 元素在初始化前不会完全隐藏 */
+      [data-aos] {
+        transition-property: transform, opacity;
+      }
+      /* 在 Shopify 主题编辑器中禁用 AOS 动画，防止元素消失 */
+      .shopify-design-mode [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    </style>
     {{ content_for_header }}
     {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
   </head>
@@ -69,17 +81,46 @@
     {% endif %}
     <script src="{{ 'salesmartly.js' | asset_url }}" async></script>
     <script src="{{ 'tint-vto-fix.js' | asset_url }}" defer></script>
-       <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        if (typeof AOS !== 'undefined') {
-          AOS.init({
-            duration: 800,
-            easing: 'ease-out',
-            once: true,
-            offset: 50,
-          });
+    <script>
+      (function () {
+        function initAOS() {
+          if (typeof AOS !== 'undefined') {
+            AOS.init({
+              duration: 800,
+              easing: 'ease-out',
+              once: true,
+              offset: 50,
+              disable: false,
+            });
+          }
         }
-      });
+
+        // 初始化 AOS
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initAOS);
+        } else {
+          initAOS();
+        }
+
+        // 监听 Shopify 主题编辑器事件，重新初始化 AOS
+        document.addEventListener('shopify:section:load', function () {
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+        });
+
+        document.addEventListener('shopify:section:reorder', function () {
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+        });
+
+        document.addEventListener('shopify:block:select', function () {
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+        });
+      })();
     </script>
   </body>
 </html>

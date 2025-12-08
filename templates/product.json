@@ -492,7 +492,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>{{ metaobjects.icon_list_item[\"lens-width-58-5-mm\"].text.value }}</p>",
+                            "text": "{{ metaobjects.icon_list_item[\"temple-length-147-0-mm\"].text1 | metafield_tag }}",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -611,7 +611,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>{{ metaobjects.icon_list_item[\"bridge-width-15-7-mm\"].text.value }}</p>",
+                            "text": "{{ metaobjects.icon_list_item[\"temple-length-147-0-mm\"].text1 | metafield_tag }}",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -730,7 +730,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>{{ metaobjects.icon_list_item[\"temple-length-147-0-mm\"].text.value }}</p>",
+                            "text": "{{ metaobjects.icon_list_item[\"temple-length-147-0-mm\"].text1 | metafield_tag }}",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",

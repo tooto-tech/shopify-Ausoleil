@@ -1279,7 +1279,7 @@ details .details-content a:hover {
   color: #1226AA;
 }
 a[href="https://www.toototech.com"]{
-  text-decoration-color: none;
+  text-decoration-color: #1226AA;
 }
 a[href="https://www.toototech.com"]:hover {
   color: #FFFFFF !important;

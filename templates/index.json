@@ -2680,7 +2680,7 @@
             "banuba_virtual_try_on_tint_block_XgQYF8": {
               "type": "shopify://apps/banuba-virtual-try-on/blocks/tint-block/822d5f84-4246-4284-af9e-7da386ac1f67",
               "settings": {
-                "product": "verdant-avant-garde-olive-sunglasses-garde-192015",
+                "product": "{{ closest.product }}",
                 "button_text": "virtual try on",
                 "button_font_size": 14,
                 "button_color": "#ffffff",

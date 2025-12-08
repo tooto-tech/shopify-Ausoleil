@@ -789,7 +789,7 @@
                     "text_Mfc3jp": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                        "text": "{{ closest.product.metafields.custom.warrantly | metafield_tag }}",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -840,7 +840,7 @@
                     "text_3U6WQq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>•  This item can be returned for credit card refund.<br/><br/>•  Return Authorization requests must be made within 14     days of shipment and the item must be returned within    21 days of original shipment.<br/>•  See the Return Policy for more details.</p>",
+                        "text": "{{ closest.product.metafields.custom.shipping_returns | metafield_tag }}",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",

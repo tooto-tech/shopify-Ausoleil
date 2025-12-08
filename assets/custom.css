@@ -1386,3 +1386,10 @@ form.cart-discount__form > button.cart-discount__button {
 .facets--drawer accordion-custom details[open] .details-content {
   transition: none !important;
 }
+
+/* 设置header的下边框 */
+@media screen and (min-width: 750px) {
+    .section--full-width.section--full-width-margin>* {
+        box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.24);
+    }
+}

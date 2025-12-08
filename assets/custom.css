@@ -1341,11 +1341,9 @@ zoom-dialog dialog {
 a.button-custom[href="/collections/all"] {
   line-height: 20px !important;
 }
-.header:not([transparent]) .cart-bubble__background,
-.header[transparent][data-sticky-state='active']:not([transparent='always']) .cart-bubble__background {
-  border: 3.5px solid black;
-}
-/* shop more按钮行高调整 */
-a.button-custom[href="/collections/all"] {
-  line-height: 20px !important;
+.klaviyo-form input:focus,
+[class*="kl-private-reset-css"] input:focus {
+  border-color: rgb(96, 106, 114) !important;
+  outline: none !important;
+  box-shadow: none !important;
 }

@@ -1419,3 +1419,7 @@ form.cart-discount__form > button.cart-discount__button {
 .details-content .group-accr:last-child {
   --padding-block-end: 24px !important;
 }
+/* 产品详情手风琴内 group-accr 内容 gap */
+.group-accr .group-block-content {
+  --gap: 18px !important;
+}

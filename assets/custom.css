@@ -1432,3 +1432,20 @@ form.cart-discount__form > button.cart-discount__button {
 .shopify-pc__banner__dialog{
   font-family: 'Popins';
 }
+/* ========================================
+   产品列表页面 - 固定一行四个产品
+   ======================================== */
+
+/* PC端固定4列 */
+@media screen and (min-width: 750px) {
+  .product-grid.product-grid--grid {
+    --product-grid-columns-desktop: repeat(4, 1fr) !important;
+  }
+}
+
+/* 移动端保持2列 */
+@media screen and (max-width: 749px) {
+  .product-grid.product-grid--grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

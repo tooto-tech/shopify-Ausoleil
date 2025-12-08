@@ -935,7 +935,14 @@ summary {
   position: relative;
 }
 
-
+/* 包含 tint 按钮的容器（app block wrapper）绝对定位 */
+.product-card .product-card__content > *:has(.tint-button) {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
 
 @media (max-width: 749px) {
   .product-card .product-card__content > *:has(.tint-button) {

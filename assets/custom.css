@@ -921,7 +921,13 @@ summary {
   width: auto;                    /* 自适应宽度 */
   box-sizing: border-box;
 }
-
+@media screen and (max-width: 750px) {
+  .tint-button {
+    font-size: 12px;      /* 移动端字体更小 */
+    padding: 8px 20px;    /* 也可以让按钮稍微更紧凑 */
+    border-radius: 16px;  /* 根据需要调小圆角 */
+  }
+}
 .tint-button:disabled {
   cursor: not-allowed;
 }

@@ -1415,3 +1415,7 @@ form.cart-discount__form > button.cart-discount__button {
 .details-content .text-block:has(.metafield-rich_text_field) {
   --padding-block-end: 30px !important;
 }
+/* 产品详情手风琴内 group-accr 底部间距 */
+.details-content .group-accr:last-child {
+  --padding-block-end: 24px !important;
+}

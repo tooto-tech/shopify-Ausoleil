@@ -3888,7 +3888,7 @@
         "speed": 30,
         "direction": "normal",
         "aspect_ratio": "1/1",
-        "image_radius": 8,
+        "image_radius": 0,
         "text_align": "center",
         "item_title_color": "#000000",
         "desc_color": "#666666"

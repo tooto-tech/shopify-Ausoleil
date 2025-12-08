@@ -931,29 +931,15 @@ summary {
 .tint-button:disabled {
   cursor: not-allowed;
 }
-/* 首页产品卡片中的 Virtual Try-on 按钮定位 - 在图片内部底部 */
-/* 让图片容器作为定位参考 */
-.product-card .card-gallery {
-  position: relative;
-  z-index: 1;
-}
-
-/* 让按钮容器绝对定位在图片内部底部 */
+/* 首页产品卡片中的 Virtual Try-on 按钮定位 - 使用负 margin 让按钮进入图片区域 */
 .product-card .product-card__content > *:has(.tint-button) {
-  position: absolute !important;
-  top: auto !important;
-  bottom: 110px !important;
-  left: 50% !important;
-  right: auto !important;
-  transform: translateX(-50%) !important;
+  position: relative !important;
   z-index: 10 !important;
-  width: auto !important;
-  margin: 0 !important;
-}
-
-/* 确保产品卡片内容区域作为定位参考 */
-.product-card .product-card__content:has(.tint-button) {
-  position: relative;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: -50px !important;
+  margin-bottom: 0 !important;
 }
 
 @media (max-width: 749px) {

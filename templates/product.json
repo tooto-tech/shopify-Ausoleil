@@ -958,7 +958,7 @@
           "settings": {
             "icon": "price_tag",
             "image_upload": "{{ closest.product.metafields.custom.detail_icon.value }}",
-            "width": 60,
+            "width": 118,
             "height": 0,
             "width_mobile": 0,
             "height_mobile": 0,

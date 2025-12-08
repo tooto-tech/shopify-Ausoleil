@@ -1693,44 +1693,41 @@
         "custom_class": ""
       }
     },
-    "product_recommendations_JMiADH": {
-      "type": "product-recommendations",
+    "product_list_cycgxz": {
+      "type": "product-list",
       "blocks": {
-        "text_BdQkcQ": {
-          "type": "text",
+        "static-header": {
+          "type": "_product-list-content",
           "name": "t:names.header",
+          "static": true,
           "settings": {
-            "text": "",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "font_size_mobile": "",
-            "weight": "",
-            "weight_mobile": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "letter_spacing_custom": "",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "custom_color": "",
-            "custom_color_mobile": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
+            "content_direction": "column",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 0,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "custom_mobile_padding": false,
-            "padding-block-start-mobile": 0,
-            "padding-block-end-mobile": 0,
-            "padding-inline-start-mobile": 0,
-            "padding-inline-end-mobile": 0,
-            "custom_class": ""
+            "padding-inline-end": 0
           },
           "blocks": {}
         },
@@ -1752,14 +1749,14 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_card_gallery_yDfaJb": {
+            "product_card_gallery_x4cynT": {
               "type": "_product-card-gallery",
               "name": "t:names.product_card_media",
               "settings": {
                 "show_badges": true,
                 "show_sold_out_badge": false,
                 "show_sale_badge": false,
-                "custom_badge_text": "HOT",
+                "custom_badge_text": "NEW",
                 "custom_badge_color_scheme": "scheme-1",
                 "image_ratio": "adapt",
                 "border": "none",
@@ -1773,7 +1770,7 @@
               },
               "blocks": {}
             },
-            "banuba_virtual_try_on_tint_block_3aqWpd": {
+            "banuba_virtual_try_on_tint_block_7pEXK6": {
               "type": "shopify://apps/banuba-virtual-try-on/blocks/tint-block/822d5f84-4246-4284-af9e-7da386ac1f67",
               "settings": {
                 "product": "{{closest.product}}",
@@ -1790,7 +1787,7 @@
                 "custom_css": ".tint-button-custom {\nfont-family: Mont;\nfont-weight: 900;\n}"
               }
             },
-            "product_title_EPBGfm": {
+            "product_title_TTzhxk": {
               "type": "product-title",
               "name": "t:names.product_title",
               "settings": {
@@ -1826,7 +1823,7 @@
               },
               "blocks": {}
             },
-            "price_4FUzNj": {
+            "price_KhJnWw": {
               "type": "price",
               "name": "t:names.product_price",
               "settings": {
@@ -1871,39 +1868,33 @@
             }
           },
           "block_order": [
-            "product_card_gallery_yDfaJb",
-            "banuba_virtual_try_on_tint_block_3aqWpd",
-            "product_title_EPBGfm",
-            "price_4FUzNj"
+            "product_card_gallery_x4cynT",
+            "banuba_virtual_try_on_tint_block_7pEXK6",
+            "product_title_TTzhxk",
+            "price_KhJnWw"
           ]
         }
       },
-      "block_order": [
-        "text_BdQkcQ"
-      ],
-      "custom_css": [
-        ".product-badges__badge {background: #121821; font-family: Mont; font-size: 12px; font-weight: 900; color: white; border-radius: 4px; text-align: center;}",
-        "@media screen and (max-width: 749px) {.section-resource-list.spacing-style {padding-block-end: 0; }}"
-      ],
-      "name": "Classic STYLE EVERYDAY",
+      "name": "CLASSIC",
       "settings": {
-        "product": "verdant-avant-garde-olive-sunglasses-garde-192001",
-        "recommendation_type": "related",
+        "collection": "classic-style-everyday",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 3,
-        "columns": 3,
-        "mobile_columns": "1",
-        "columns_gap": 24,
+        "max_products": 4,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 20,
         "rows_gap": 0,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
         "gap": 0,
         "color_scheme": "scheme-4cecf83c-b8df-4344-bea2-d9cded9a87d0",
-        "padding-block-start": 0,
+        "padding-block-start": 50,
         "padding-block-end": 0,
-        "padding-block-start-mobile": 0,
+        "padding-block-start-mobile": 60,
         "padding-block-end-mobile": 0
       }
     },
@@ -3878,7 +3869,7 @@
     "section_Ncd7GN",
     "section_GiVPhW",
     "section_ydCNaQ",
-    "product_recommendations_JMiADH",
+    "product_list_cycgxz",
     "section_WVViqU",
     "product_showcase_swiper_CePYch",
     "section_CEFGjC",

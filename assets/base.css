@@ -1681,9 +1681,9 @@ media-gallery.media-gallery--grid .media-gallery__grid .product-media-container 
   margin: 0 auto;
 }
 @media (max-width: 768px) {
-  .product-media-container img {
-    /* width: 150px;   
-    height: 150px;  */
+  .product-media__drag-zoom-wrapper .product-media__image{
+    width: 150px;   
+    height: 150px; 
     margin: auto auto;
     /* 如果想保持比例，可以只设置 width 或 height，另一个用 auto */
     /* width: 100px; height: auto; */

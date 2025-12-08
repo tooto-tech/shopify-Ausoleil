@@ -960,7 +960,7 @@
             "image_upload": "{{ closest.product.metafields.custom.detail_icon.value }}",
             "width": 118,
             "height": 0,
-            "width_mobile": 0,
+            "width_mobile": 60,
             "height_mobile": 0,
             "link": "",
             "open_in_new_tab": false,

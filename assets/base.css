@@ -3653,7 +3653,8 @@ slideshow-component[autoplay] slideshow-controls {
   padding: var(--padding-sm) var(--padding-lg);
   border-radius: 3rem;
   overflow: hidden;
-  padding-bottom:36px;
+  padding-bottom:50px;
+  padding-right: 36px;
 
   button {
     --size: 0.5rem;

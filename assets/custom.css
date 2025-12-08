@@ -1273,6 +1273,9 @@ button.header-actions__action.button-unstyled[aria-label="Cart"] {
 details .details-content a:hover {
   color: #1226AA;
 }
+a[href="https://www.toototech.com"]:hover {
+  color: #FFFFFF !important;
+}
 
 /* 产品详情大图预览位置调整 - 让图片居中偏上 */
 zoom-dialog dialog {

@@ -1411,6 +1411,7 @@ form.cart-discount__form > button.cart-discount__button {
   margin: 0;
   padding: 0;
 }
-.details-content .accordion--dividers .details-content{
-  padding-block-end: 30px !important;
+/* 产品详情手风琴内文本块底部间距 */
+.details-content .text-block:has(.metafield-rich_text_field) {
+  --padding-block-end: 30px !important;
 }

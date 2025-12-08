@@ -1253,7 +1253,7 @@ zoom-dialog dialog {
   }
 
   .dialog-zoomed-gallery .product-media {
-    max-height: 80vh;
+    max-height: 100vh;
   }
 
   .dialog-zoomed-gallery .product-media__image {

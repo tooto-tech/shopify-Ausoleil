@@ -1226,3 +1226,39 @@ button.header-actions__action.button-unstyled[aria-label="Cart"] {
 .menu{
   white-space: nowrap;
 }
+
+/* 产品详情大图预览位置调整 - 让图片居中偏上 */
+zoom-dialog dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 5vh;
+}
+
+/* PC端大图预览列表居中对齐 */
+@media screen and (min-width: 750px) {
+  .dialog-zoomed-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2vh;
+  }
+
+  .dialog-zoomed-gallery .product-media-container {
+    max-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dialog-zoomed-gallery .product-media {
+    max-height: 80vh;
+  }
+
+  .dialog-zoomed-gallery .product-media__image {
+    max-height: 80vh;
+    width: auto;
+    object-fit: contain;
+  }
+}

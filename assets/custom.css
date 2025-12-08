@@ -1164,6 +1164,9 @@ dialog[class="svelte-"] > :first-child * {
 .variant-option__button-label--has-swatch:has(:checked) .swatch {
   outline: none !important;
 }
+.variant-option__button-label--has-swatch .swatch{
+  border:none;
+}
 
 
 

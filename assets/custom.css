@@ -1347,4 +1347,7 @@ a.button-custom[href="/collections/all"] {
   outline: none !important;
   box-shadow: none !important;
 }
-
+/* 匹配所有 #shopify-section-XXXXXX__header_section 类似的 section */
+[id^="shopify-section-"][id$="__header_section"] button {
+    padding-inline: 0 !important;
+}

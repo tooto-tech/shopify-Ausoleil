@@ -1337,3 +1337,7 @@ zoom-dialog dialog {
 .header[transparent][data-sticky-state='active']:not([transparent='always']) .cart-bubble__background {
   border: 1.5px solid black;
 }
+/* shop more按钮行高调整 */
+a.button-custom[href="/collections/all"] {
+  line-height: 20px;
+}

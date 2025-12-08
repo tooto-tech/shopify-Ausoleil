@@ -638,9 +638,17 @@
   }
 
   /* Facets - Summary */
-      .facets__summary:first-of-type {
+@media screen and (min-width: 750px) {
+    /* 先清除所有 summary 的 border-top */
+    .facets__filters-wrapper .facets__summary {
+        border-top: none;
+    }
+
+    /* 只给第一个 accordion 的 summary 加 border */
+    .facets__filters-wrapper accordion-custom:first-child .facets__summary {
         border-top: 0.5px solid;
     }
+}
 
   .facets__summary {
     --variant-picker-swatch-width: 32px;

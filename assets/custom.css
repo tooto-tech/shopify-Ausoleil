@@ -1275,8 +1275,6 @@ details .details-content a:hover {
 }
 a[href="https://www.toototech.com"]:hover {
   color: #FFFFFF !important;
-  border-bottom: 2px solid white;
-  line-height: 20px;
 }
 
 /* 产品详情大图预览位置调整 - 让图片居中偏上 */

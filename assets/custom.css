@@ -1301,3 +1301,7 @@ zoom-dialog dialog {
     object-fit: contain;
   }
 }
+/* 右上角badge文本居中 */
+.product-badges__badge{
+  line-height: 9px;
+}

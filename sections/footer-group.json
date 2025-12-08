@@ -1421,7 +1421,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>© 2025 Ausoleil. All rights reserved. Designed and developed by toototech.</p>",
+            "text": "<p>© 2025 Ausoleil. All rights reserved. Designed and developed by <a href=\"https://www.toototech.com\" title=\"https://www.toototech.com\">toototech</a>.</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "center",

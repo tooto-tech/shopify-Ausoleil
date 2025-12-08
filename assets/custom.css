@@ -1351,3 +1351,24 @@ a.button-custom[href="/collections/all"] {
 form.cart-discount__form > button.cart-discount__button {
     padding-inline: 24px !important;
 }
+
+/* 修复 filter drawer 内容无法滚动的问题 */
+.facets__form-wrapper {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+/* 确保 form 也能正确滚动 */
+.facets--drawer .facets__form {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+/* 或者针对 filters-wrapper */
+.facets--drawer .facets__filters-wrapper {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}

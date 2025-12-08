@@ -952,7 +952,15 @@ summary {
 
 @media (max-width: 749px) {
   .product-card .product-card__content > *:has(.tint-button) {
-    bottom: 20px !important;
+    bottom: 105px !important;
+  }
+
+  /* 移动端首页产品卡片 tint 按钮缩小 */
+  .product-card .tint-button {
+    font-size: 10px !important;
+    padding: 6px 12px !important;
+    border-radius: 12px !important;
+    white-space: nowrap !important;
   }
 }
 

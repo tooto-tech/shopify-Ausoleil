@@ -1189,26 +1189,11 @@
                 "custom_class": ""
               },
               "blocks": {}
-            },
-            "product_list_button_jrkjed": {
-              "type": "_product-list-button",
-              "name": "t:names.product_list_button",
-              "settings": {
-                "label": "View all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "text_4LnV6X",
-            "text_xwWkpq",
-            "product_list_button_jrkjed"
+            "text_xwWkpq"
           ]
         },
         "static-product-card": {

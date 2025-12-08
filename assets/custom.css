@@ -1423,3 +1423,9 @@ form.cart-discount__form > button.cart-discount__button {
 .group-accr .group-block-content {
   --gap: 18px !important;
 }
+
+/* 去掉 metafield 富文本内 p 标签的下边距 */
+.metafield-rich_text_field p {
+  margin: 0;
+  padding: 0;
+}

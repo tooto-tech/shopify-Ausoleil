@@ -1397,3 +1397,17 @@ form.cart-discount__form > button.cart-discount__button {
         box-shadow: 0px 1px 0px 0px #F3F3F366;
     }
 }
+
+/* 产品详
+情手风琴内 metafield 富文本列表样式 */
+.details-content .metafield-rich_text_field ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.details-content .metafield-rich_text_field li {
+  margin: 0;
+  padding: 0;
+}

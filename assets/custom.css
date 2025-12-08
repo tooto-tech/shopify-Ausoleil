@@ -1222,3 +1222,7 @@ dialog[class="svelte-"] > :first-child * {
 button.header-actions__action.button-unstyled[aria-label="Cart"] {
   overflow: visible;
 }
+/* 底部文字不换行 */
+.menu{
+  white-space: nowrap;
+}

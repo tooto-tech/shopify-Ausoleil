@@ -1284,12 +1284,55 @@ a[href="https://www.toototech.com"]:hover {
 
 }
 
-/* 产品详情大图预览位置调整 - 让图片居中偏上 */
-zoom-dialog dialog {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 5vh;
+
+/* 产品详情大图预览 - PC端全屏显示 */
+@media screen and (min-width: 750px) {
+  zoom-dialog dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+  }
+
+  .dialog-zoomed-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw !important;
+    height: 100vh !important;
+    padding: 0 !important;
+  }
+
+  .dialog-zoomed-gallery .product-media-container {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dialog-zoomed-gallery .product-media {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+  }
+
+  .dialog-zoomed-gallery .product-media__image {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    object-fit: contain !important;
+  }
 }
 
 /* PC端大图预览列表居中对齐 */

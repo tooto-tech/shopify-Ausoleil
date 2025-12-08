@@ -1674,8 +1674,8 @@ media-gallery.media-gallery--grid .media-gallery__grid .product-media-container 
 .product-media-container img {
   aspect-ratio: inherit;
   /* object-fit: contain; */
-  width: fit-content;
-  height: fit-content;
+  /* width: fit-content; */
+  /* height: fit-content; */
   display: flex;
   justify-content: center;
   margin: 0 auto;

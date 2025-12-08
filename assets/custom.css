@@ -1305,3 +1305,14 @@ zoom-dialog dialog {
 .product-badges__badge{
   line-height: 9px;
 }
+
+.product-badges__badge{
+      background: #1226aa;
+    font-family: Mont;
+    font-size: 12px;
+    font-weight: 900;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+}

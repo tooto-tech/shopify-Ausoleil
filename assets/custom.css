@@ -845,7 +845,7 @@ summary {
     align-items: center;     /* 垂直居中（如果需要） */
   }
   .group-block-content.layout-panel-flex--row > .text-block h3 {
-    font-size: 14px !important;
+    font-size: 18px;
 }
 }
 

@@ -957,7 +957,7 @@
           "name": "t:names.icon",
           "settings": {
             "icon": "price_tag",
-            "image_upload": "shopify://shop_images/6_4x_639570f3-5095-492c-b1dc-af5eb29c9986.webp",
+            "image_upload": "{{ closest.product.metafields.custom.detail_icon.value }}",
             "width": 60,
             "height": 0,
             "width_mobile": 0,
@@ -972,7 +972,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Step into curated selections that evolve beyond trends. New Season Picks fuse sharp tailoring with bold textures for the contemporary professional.Step into curated selections that evolve beyond trends. New Season Picks fuse sharp tailoring with bold textures for the contemporary professional.</p>",
+            "text": "{{ closest.product.metafields.custom.detail_description | metafield_tag }}",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
@@ -1010,7 +1010,7 @@
           "type": "image",
           "name": "t:names.image",
           "settings": {
-            "image": "shopify://shop_images/154_2x_7137f43f-259f-4e6c-9e52-84be2ca31f55.webp",
+            "image": "{{ closest.product.metafields.custom.detail_image.value }}",
             "link": "",
             "image_ratio": "adapt",
             "image_ratio_mobile": "",

@@ -1388,7 +1388,12 @@ a[href="https://www.toototech.com"]:hover {
 }
 /* shop more按钮行高调整 */
 a.button-custom[href="/collections/all"] {
-  line-height: 10px !important;
+  line-height: 20px !important;
+}
+@media (max-width: 768px) {
+  a.button-custom[href="/collections/all"] {
+    line-height: 10px !important;
+  }
 }
 .klaviyo-form input:focus,
 [class*="kl-private-reset-css"] input:focus {

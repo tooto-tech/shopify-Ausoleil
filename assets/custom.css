@@ -1386,11 +1386,3 @@ form.cart-discount__form > button.cart-discount__button {
 .facets--drawer accordion-custom details[open] .details-content {
   transition: none !important;
 }
-
-/* 禁用 @starting-style 动画效果 */
-@supports (transition-behavior: allow-discrete) {
-  .facets--drawer accordion-custom details[open]::details-content,
-  .facets--drawer accordion-custom details[open] .details-content {
-    transition-behavior: normal !important;
-  }
-}

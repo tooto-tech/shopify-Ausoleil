@@ -3655,7 +3655,9 @@ slideshow-component[autoplay] slideshow-controls {
   overflow: hidden;
   padding-bottom:50px;
   padding-right: 36px;
-
+  @media (max-width: 768px) {
+    padding-bottom: 20px; 
+  }
   button {
     --size: 0.5rem;
 

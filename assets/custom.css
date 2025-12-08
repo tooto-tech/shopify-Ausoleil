@@ -1424,8 +1424,7 @@ form.cart-discount__form > button.cart-discount__button {
   --gap: 18px !important;
 }
 
-/* 去掉 metafield 富文本内 p 标签的下边距 */
-.metafield-rich_text_field p {
-  margin: 0;
-  padding: 0;
+/* 产品详情手风琴内 metafield 富文本去掉下 padding */
+.details-content .text-block:has(.metafield-rich_text_field) {
+  padding-block-end: 0px !important;
 }

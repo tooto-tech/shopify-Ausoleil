@@ -25,7 +25,7 @@
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.collection_color_scheme
     assign section.settings.color_scheme_transparent = section.settings.collection_color_scheme
-  elsif section.settings.enable_transparent_header_other and template.name != 'index' and template.name != 'product' and template.name != 'collection' and template.name != 'search'
+  elsif section.settings.enable_transparent_header_other and template.name != 'index' and template.name != 'product' and template.name != 'collection' and template.name != 'search' and template.name!='cart'
     assign transparent = 'always'
     assign transparent_color_scheme = section.settings.other_color_scheme
     assign section.settings.color_scheme_transparent = section.settings.other_color_scheme

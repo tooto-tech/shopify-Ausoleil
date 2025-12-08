@@ -651,7 +651,7 @@ gap: 16px;
 .email-signup__input-group input.email-signup__input {
     flex: 7 0 0;
     min-width: 0; /* 防止溢出 */
-    border: 0.5px solid #D1D1D1;
+    border: 0.5px solid #D1D1D1 !important;
 }
 
 /* 按钮占30% */

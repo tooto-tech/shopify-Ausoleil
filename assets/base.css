@@ -1673,7 +1673,7 @@ media-gallery.media-gallery--grid .media-gallery__grid .product-media-container 
 
 .product-media-container img {
   aspect-ratio: inherit;
-  object-fit: contain;
+  /* object-fit: contain; */
   width: fit-content;
   height: fit-content;
   display: flex;

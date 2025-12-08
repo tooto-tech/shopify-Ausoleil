@@ -1321,4 +1321,5 @@ zoom-dialog dialog {
 .header[transparent][data-sticky-state='active']:not([transparent='always']) .header-actions__cart-icon .cart-bubble {
   background-color: #060002;
   color: #ffffff;
+  border: 1.5px solid black;
 }

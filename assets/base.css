@@ -1620,6 +1620,7 @@ media-gallery:where(.media-gallery--grid) .media-gallery__grid {
 media-gallery.media-gallery--grid .media-gallery__grid .product-media-container {
   /* Needed for safari to stretch to full grid height */
   height: 100%;
+  border-radius: 7px;
 }
 
 .product-media :is(deferred-media, product-model) {

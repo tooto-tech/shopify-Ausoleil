@@ -921,6 +921,7 @@ summary {
   padding: 10px 24px;             /* 上下10px，左右24px */
   width: auto;                    /* 自适应宽度 */
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .tint-button:disabled {

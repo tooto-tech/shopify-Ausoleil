@@ -365,7 +365,7 @@
                     "text_tieieg": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>•  Design: Very oversized, angular statement frame<br/>•  Trim: Large detailed, metal icon badge on temple<br/>•  Hardware: OBE fixed hinges<br/>•  Material: Acetate<br/>•  Shape: Square<br/>•  Face Curve: 0 base (flat)<br/>•  Lens Category: CAT3<br/>•  Product SKU: S0932</p>",
+                        "text": "{{ closest.product.metafields.custom.specifications | metafield_tag }}",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",

@@ -1428,3 +1428,7 @@ form.cart-discount__form > button.cart-discount__button {
 .details-content .text-block:has(.metafield-rich_text_field) {
   padding-block-end: 0px !important;
 }
+/* 修改cookie字体 */
+.shopify-pc__banner__dialog{
+  font-family: 'Popins';
+}

@@ -1257,7 +1257,7 @@ zoom-dialog dialog {
   }
 
   .dialog-zoomed-gallery .product-media__image {
-    max-height: 80vh;
+    max-height: 100vh;
     width: auto;
     object-fit: contain;
   }

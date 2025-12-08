@@ -24,6 +24,16 @@
     assign custom_badge_text = ''
     assign custom_badge_color_scheme = 'scheme-1'
   endif
+
+  # 优先从产品 tag 中读取 badge 文本（支持 HOT、NEW、SALE 等）
+  assign badge_tags = 'HOT,NEW,SALE,BEST,TOP' | split: ','
+  for tag in product.tags
+    assign tag_upper = tag | upcase
+    if badge_tags contains tag_upper
+      assign custom_badge_text = tag_upper
+      break
+    endif
+  endfor
 -%}
 
 {%- if show_badges -%}
@@ -50,7 +60,7 @@
 
     {%- comment -%} 自定义标签（有自定义标签时不显示 Sale 标签） {%- endcomment -%}
     {%- if custom_badge_text != blank and product.available -%}
-      <div class="product-badges__badge product-badges__badge--rectangle color-{{ custom_badge_color_scheme }}">
+      <div class="product-badges__badge product-badges__badge--rectangle product-badges__badge--{{ custom_badge_text | downcase }} color-{{ custom_badge_color_scheme }}">
         {{ custom_badge_text }}
       </div>
     {%- elsif is_on_sale and show_sale_badge -%}
@@ -108,15 +118,21 @@
     padding: 8px 12px;
   }
 
-/* PC 默认样式 */
-.product-badges__badge--rectangle {
-  padding: 8px 12px; /* 上下8 左右12 */
-}
-
-/* 移动样式（小于 768px） */
-@media screen and (max-width: 767px) {
+  /* PC 默认样式 */
   .product-badges__badge--rectangle {
-    padding: 4px 6px; /* 上下4 左右6 */
+    padding: 8px 12px; /* 上下8 左右12 */
   }
-}
+
+  /* 移动样式（小于 768px） */
+  @media screen and (max-width: 767px) {
+    .product-badges__badge--rectangle {
+      padding: 4px 6px; /* 上下4 左右6 */
+    }
+  }
+
+  /* HOT 标签样式 - 黑色背景白色文字 */
+  .product-badges__badge--hot {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
 {% endstylesheet %}

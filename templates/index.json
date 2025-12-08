@@ -1364,7 +1364,8 @@
         "padding-block-start": 50,
         "padding-block-end": 0,
         "padding-block-start-mobile": 60,
-        "padding-block-end-mobile": 0
+        "padding-block-end-mobile": 0,
+        "custom_class": "new-arrivals-section"
       }
     },
     "section_Ncd7GN": {
@@ -1860,6 +1861,9 @@
           ]
         }
       },
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.product-card .product-card__content > *:has(.tint-button) {bottom: 154px !important;}}"
+      ],
       "name": "CLASSIC",
       "settings": {
         "collection": "classic-style-everyday",
@@ -1955,7 +1959,7 @@
         "custom_mobile_padding": true,
         "padding-block-start-mobile": 20,
         "padding-block-end-mobile": 60,
-        "custom_class": ""
+        "custom_class": "other-products-section"
       }
     },
     "product_showcase_swiper_CePYch": {
@@ -2797,6 +2801,9 @@
           ]
         }
       },
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.product-card .product-card__content > *:has(.tint-button) {bottom: 152px !important;}}"
+      ],
       "name": "MODERN",
       "settings": {
         "collection": "modren-daujourdhui",
@@ -2892,7 +2899,7 @@
         "custom_mobile_padding": true,
         "padding-block-start-mobile": 20,
         "padding-block-end-mobile": 90,
-        "custom_class": ""
+        "custom_class": "other-products-section"
       }
     },
     "product_showcase_swiper_z79WVN": {

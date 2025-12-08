@@ -1860,9 +1860,7 @@
           ]
         }
       },
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.product-card .product-card__content > *:has(.tint-button) {bottom: 134px !important;}}"
-      ],
+      "custom_css": [],
       "name": "CLASSIC",
       "settings": {
         "collection": "classic-style-everyday",
@@ -2800,9 +2798,7 @@
           ]
         }
       },
-   "custom_css": [
-        "@media screen and (max-width: 749px) {.product-card .product-card__content > *:has(.tint-button) {bottom: 152px !important;}}"
-      ],
+      "custom_css": [],
       "name": "MODERN",
       "settings": {
         "collection": "modren-daujourdhui",

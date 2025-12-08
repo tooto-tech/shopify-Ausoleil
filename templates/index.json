@@ -2800,8 +2800,8 @@
           ]
         }
       },
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.product-card .product-card__content > *:has(.tint-button) {margin-top: -45px !important;}}"
+   "custom_css": [
+        "@media screen and (max-width: 749px) {.product-card .product-card__content > *:has(.tint-button) {bottom: 152px !important;}}"
       ],
       "name": "MODERN",
       "settings": {

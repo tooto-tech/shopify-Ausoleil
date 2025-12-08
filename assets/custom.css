@@ -843,6 +843,7 @@ summary {
     display: flex;
     justify-content: center; /* 水平居中 */
     align-items: center;     /* 垂直居中（如果需要） */
+    font-size: 14px;
   }
 }
 
@@ -1263,9 +1264,9 @@ dialog[class="svelte-"] > :first-child * {
   max-height: 100vh !important;
 }
 /* 去除header的透明背景 */
-/* button.header-actions__action.button-unstyled[aria-label="Cart"] {
+button.header-actions__action.button-unstyled[aria-label="Cart"] {
   overflow: visible;
-} */
+}
 /* 底部文字不换行 */
 .menu{
   white-space: nowrap;

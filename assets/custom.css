@@ -1339,5 +1339,5 @@ zoom-dialog dialog {
 }
 /* shop more按钮行高调整 */
 a.button-custom[href="/collections/all"] {
-  line-height: 20px;
+  line-height: 20px !important;
 }

@@ -1399,7 +1399,7 @@
     text-overflow: ellipsis;
     font-family: Poppins;
     font-size: 36px;
-    font-weight: 400;
+    /* font-weight: 400; */
     line-height: 72px;
     @media (max-width: 768px) {
       line-height: 22px;
@@ -1408,6 +1408,9 @@
       font-weight: normal;
     }
   }
+  .menu-drawer__menu-item--active {
+  font-weight: 600;
+}
 
   /** Styles when the country selector is hidden */
   .menu-drawer .language-selector:not(.menu-drawer__submenu *) {

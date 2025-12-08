@@ -1412,5 +1412,5 @@ form.cart-discount__form > button.cart-discount__button {
   padding: 0;
 }
 .details-content .accordion--dividers .details-content{
-  padding-block-end: 30px;
+  padding-block-end: 30px !important;
 }

@@ -1348,5 +1348,6 @@ a.button-custom[href="/collections/all"] {
   box-shadow: none !important;
 }
 /* 匹配所有 #shopify-section-XXXXXX__header_section 类似的 section */
-[id^="shopify-section-"][id$="__header_section"] button {
+form.cart-discount__form > button.cart-discount__button {
+    padding-inline: 24px !important;
 }

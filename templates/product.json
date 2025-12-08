@@ -840,7 +840,7 @@
                     "text_3U6WQq": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>This item can be returned for credit card refund.<br/><br/>Return Authorization requests must be made within 14 days of shipment and the item must be returned within 21 days of original shipment.<br/>See the Return Policy for more details.</p>",
+                        "text": "<p>•  This item can be returned for credit card refund.<br/><br/>•  Return Authorization requests must be made within 14 days of shipment and the item must be returned within 21 days of original shipment.<br/>•  See the Return Policy for more details.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",

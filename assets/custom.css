@@ -651,7 +651,7 @@ gap: 16px;
 .email-signup__input-group input.email-signup__input {
     flex: 7 0 0;
     min-width: 0; /* 防止溢出 */
-    border: 0.5px solid #D1D1D1 !important;
+    border: 1px solid #D1D1D1 !important;
 }
 
 /* 按钮占30% */
@@ -1274,10 +1274,13 @@ button.header-actions__action.button-unstyled[aria-label="Cart"] {
 details .details-content a:hover {
   color: #1226AA;
 }
-
+a[href="https://www.toototech.com"]{
+  text-decoration: none !important;
+}
 a[href="https://www.toototech.com"]:hover {
   color: #FFFFFF !important;
   line-height: 20px;
+  font-weight:600;
 
 }
 

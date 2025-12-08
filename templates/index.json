@@ -697,7 +697,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>In the fleeting glimmers and soft-whispering shadows along the coast, lies the deep affection so many hold for the sea. He’s the most dedicated of all the “coastal light chasers” — when the morning mist wraps the land like a sheer veil,</p>",
+                "text": "<p>In the fleeting glimmers and soft-whispering shadows along the coast, lies the deep affection so many hold for the sea. He’s the most dedicated of all the “coastal light chasers” — when the morning mist wraps the land like a sheer veil.</p>",
                 "width": "100%",
                 "max_width": "narrow",
                 "alignment": "left",

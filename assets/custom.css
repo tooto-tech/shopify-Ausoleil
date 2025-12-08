@@ -1303,7 +1303,7 @@ zoom-dialog dialog {
   }
 
   .dialog-zoomed-gallery .product-media-container {
-    max-height: 85vh;
+    max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;

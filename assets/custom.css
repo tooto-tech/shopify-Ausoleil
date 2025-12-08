@@ -1278,12 +1278,13 @@ button.header-actions__action.button-unstyled[aria-label="Cart"] {
 details .details-content a:hover {
   color: #1226AA;
 }
-a {
-    text-decoration: none;
+a[href="https://www.toototech.com"]{
+  text-decoration: none !important;
 }
 a[href="https://www.toototech.com"]:hover {
   color: #FFFFFF !important;
   line-height: 20px;
+  font-weight:600;
 
 }
 

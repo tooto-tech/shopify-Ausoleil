@@ -477,7 +477,7 @@
                           "name": "t:names.icon",
                           "settings": {
                             "icon": "price_tag",
-                            "image_upload": "{{ closest.product.metafields.custom.frame_size1.value.icon.value }}",
+                            "image_upload": "{{ metaobjects.icon_list_item[\"lens-width-58-5-mm\"].icon.value }}",
                             "width": 24,
                             "height": 0,
                             "width_mobile": 0,
@@ -492,7 +492,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>{{ closest.product.metafields.custom.frame_size1.value.text.value }}</p>",
+                            "text": "<p>{{ metaobjects.icon_list_item[\"lens-width-58-5-mm\"].text.value }}</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",

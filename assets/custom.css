@@ -1375,6 +1375,17 @@ form.cart-discount__form > button.cart-discount__button {
   min-height: 0;
 }
 
+/* 去掉 filters drawer 中 accordion 默认展开的过渡动画 */
+.facets--drawer accordion-custom details,
+.facets--drawer accordion-custom details::details-content,
+.facets--drawer accordion-custom details .details-content {
+  transition: none !important;
+}
+
+.facets--drawer accordion-custom details[open]::details-content,
+.facets--drawer accordion-custom details[open] .details-content {
+  transition: none !important;
+}
 
 /* 禁用 @starting-style 动画效果 */
 @supports (transition-behavior: allow-discrete) {

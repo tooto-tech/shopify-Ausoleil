@@ -958,7 +958,7 @@ summary {
 
 @media (max-width: 749px) {
   .product-card .product-card__content > *:has(.tint-button) {
-    bottom: 124px !important;
+    bottom: 135px !important;
   }
 
   /* 移动端首页产品卡片 tint 按钮缩小 */

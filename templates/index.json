@@ -1861,7 +1861,7 @@
         }
       },
       "custom_css": [
-        "@media screen and (max-width: 749px) {.product-card .product-card__content > *:has(.tint-button) {bottom: 154px !important;}}"
+        "@media screen and (max-width: 749px) {.product-card .product-card__content > *:has(.tint-button) {bottom: 134px !important;}}"
       ],
       "name": "CLASSIC",
       "settings": {

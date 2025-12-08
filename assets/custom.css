@@ -1269,6 +1269,11 @@ button.header-actions__action.button-unstyled[aria-label="Cart"] {
 .menu{
   white-space: nowrap;
 }
+/* 底部菜单hover效果 */
+details .details-content a:hover {
+  color: #1226AA;
+  font-weight: 600;
+}
 
 /* 产品详情大图预览位置调整 - 让图片居中偏上 */
 zoom-dialog dialog {

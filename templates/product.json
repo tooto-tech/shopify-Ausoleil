@@ -492,7 +492,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Lens Width: 58.5mm</p>",
+                            "text": "<p><strong>Lens Width: </strong>58.5mm</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -611,7 +611,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Bridge Width: 15.7mm</p>",
+                            "text": "<p><strong>Bridge Width:</strong> 15.7mm</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -730,7 +730,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Temple Length: 147.0mm</p>",
+                            "text": "<p><strong>Temple Length: </strong>147.0mm</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",

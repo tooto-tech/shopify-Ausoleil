@@ -1315,4 +1315,9 @@ zoom-dialog dialog {
     border-radius: 4px;
     text-align: center;
 }
+/* 购物车气泡样式 - 非透明状态 */
+.header:not([transparent]) .header-actions__cart-icon .cart-bubble,
+.header[transparent][data-sticky-state='active']:not([transparent='always']) .header-actions__cart-icon .cart-bubble {
+  background-color: #060002;
+  color: #ffffff;
 }

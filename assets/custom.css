@@ -1377,13 +1377,13 @@ form.cart-discount__form > button.cart-discount__button {
   display: block;
 }
 
-/* 某些移动端浏览器不支持 SVG 属性中的 CSS 变量 */
-.account-actions__icon svg path,
-.account-actions__icon svg circle,
-.account-actions__icon svg line,
-.account-actions__icon svg rect {
-  stroke-width: 1px !important;
+/* 只针对 Orders 图标（第一个 li）修复 stroke */
+.account-actions__list-item:first-child .account-actions__icon svg path,
+.account-actions__list-item:first-child .account-actions__icon svg circle,
+.account-actions__list-item:first-child .account-actions__icon svg line,
+.account-actions__list-item:first-child .account-actions__icon svg rect {
+  stroke-width: 1.5px !important;
   stroke: currentColor !important;
-    width: 20px !important;
+  width: 20px !important;
   height: 20px !important;
 }

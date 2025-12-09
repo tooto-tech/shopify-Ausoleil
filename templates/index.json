@@ -962,7 +962,7 @@
                     "icon": "price_tag",
                     "image_upload": "{{ closest.collection.metafields.collection.img.value }}",
                     "width": 148,
-                    "height": 0,
+                    "height": 104,
                     "width_mobile": 0,
                     "height_mobile": 0,
                     "link": "",

@@ -1631,8 +1631,8 @@
           "settings": {
             "icon": "pepper",
             "image_upload": "shopify://shop_images/classic-b.svg",
-            "width": 118,
-            "height": 92,
+            "width": 160,
+            "height": 104,
             "width_mobile": 0,
             "height_mobile": 0,
             "link": "",

@@ -1383,7 +1383,7 @@ form.cart-discount__form > button.cart-discount__button {
 .account-actions__icon svg line,
 .account-actions__icon svg rect {
   stroke-width: 1px !important;
-  stroke: currentColor !important;
+  stroke: none !important;
     width: 20px !important;
   height: 20px !important;
 }

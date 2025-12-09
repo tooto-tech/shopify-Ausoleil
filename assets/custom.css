@@ -1366,8 +1366,8 @@ form.cart-discount__form > button.cart-discount__button {
 /* 某些移动端浏览器不支持 SVG 属性中的 CSS 变量 */
 /* 修复移动端 account-actions 图标不显示的问题 */
 .account-actions__icon {
-  width: 14px !important;
-  height: 14px !important;
+  width: 18px !important;
+  height: 18px !important;
   color: currentColor;
 }
 

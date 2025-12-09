@@ -1360,3 +1360,13 @@ form.cart-discount__form > button.cart-discount__button {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
+
+
+/* 修复移动端 account-actions 图标不显示的问题 */
+/* 某些移动端浏览器不支持 SVG 属性中的 CSS 变量 */
+.account-actions__icon svg path,
+.account-actions__icon svg circle,
+.account-actions__icon svg line,
+.account-actions__icon svg rect {
+  stroke-width: 1.5px;
+}

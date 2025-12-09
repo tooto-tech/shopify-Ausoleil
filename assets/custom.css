@@ -1366,8 +1366,8 @@ form.cart-discount__form > button.cart-discount__button {
 /* 某些移动端浏览器不支持 SVG 属性中的 CSS 变量 */
 /* 修复移动端 account-actions 图标不显示的问题 */
 .account-actions__icon {
-  width: 20px !important;
-  height: 20px !important;
+  width: 14px !important;
+  height: 14px !important;
   color: currentColor;
 }
 
@@ -1384,6 +1384,6 @@ form.cart-discount__form > button.cart-discount__button {
 .account-actions__list-item:first-child .account-actions__icon svg rect {
   stroke-width: 1.5px !important;
   stroke: currentColor !important;
-  width: 20px !important;
-  height: 20px !important;
+  width: 14px !important;
+  height: 14px !important;
 }

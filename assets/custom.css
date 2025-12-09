@@ -1388,6 +1388,7 @@ a.button-custom[href="/collections/all"] {
 @media (max-width: 768px) {
   a.button-custom[href="/collections/all"] {
     line-height: 10px !important;
+    white-space: nowrap;
   }
 }
 .klaviyo-form input:focus,

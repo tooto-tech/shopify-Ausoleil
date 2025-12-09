@@ -3063,8 +3063,8 @@
                   "settings": {
                     "icon": "price_tag",
                     "image_upload": "shopify://shop_images/modern-b.svg",
-                    "width": 118,
-                    "height": 92,
+                    "width": 160,
+                    "height": 104,
                     "width_mobile": 0,
                     "height_mobile": 0,
                     "link": "",
@@ -3410,8 +3410,8 @@
                   "settings": {
                     "icon": "price_tag",
                     "image_upload": "shopify://shop_images/modern-b.svg",
-                    "width": 118,
-                    "height": 92,
+                    "width": 160,
+                    "height": 104,
                     "width_mobile": 0,
                     "height_mobile": 0,
                     "link": "",

@@ -1630,9 +1630,9 @@
           "name": "t:names.icon",
           "settings": {
             "icon": "pepper",
-            "image_upload": "shopify://shop_images/classic-logo.svg",
+            "image_upload": "shopify://shop_images/classic-b.svg",
             "width": 118,
-            "height": 0,
+            "height": 92,
             "width_mobile": 0,
             "height_mobile": 0,
             "link": "",

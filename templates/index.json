@@ -3057,9 +3057,26 @@
                 "padding-inline-end-mobile": 0
               },
               "blocks": {
+                "icon_CbiT3f": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "settings": {
+                    "icon": "price_tag",
+                    "image_upload": "shopify://shop_images/modern-b.svg",
+                    "width": 118,
+                    "height": 92,
+                    "width_mobile": 0,
+                    "height_mobile": 0,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
                 "text_TN7bGi": {
                   "type": "text",
                   "name": "t:names.text",
+                  "disabled": true,
                   "settings": {
                     "text": "<p>MODERN</p>",
                     "width": "fit-content",
@@ -3097,6 +3114,7 @@
                 },
                 "text_w3UmHH": {
                   "type": "text",
+                  "disabled": true,
                   "settings": {
                     "text": "<p>d'aujourd'hui</p>",
                     "width": "100%",
@@ -3134,6 +3152,7 @@
                 }
               },
               "block_order": [
+                "icon_CbiT3f",
                 "text_TN7bGi",
                 "text_w3UmHH"
               ]
@@ -3385,9 +3404,26 @@
                 "padding-inline-end-mobile": 0
               },
               "blocks": {
+                "icon_7AmFwp": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "settings": {
+                    "icon": "price_tag",
+                    "image_upload": "shopify://shop_images/modern-b.svg",
+                    "width": 118,
+                    "height": 92,
+                    "width_mobile": 0,
+                    "height_mobile": 0,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "custom_class": ""
+                  },
+                  "blocks": {}
+                },
                 "text_rzzLbf": {
                   "type": "text",
                   "name": "t:names.text",
+                  "disabled": true,
                   "settings": {
                     "text": "<p>MODERN</p>",
                     "width": "fit-content",
@@ -3425,6 +3461,7 @@
                 },
                 "text_efxgqp": {
                   "type": "text",
+                  "disabled": true,
                   "settings": {
                     "text": "<p>d'aujourd'hui</p>",
                     "width": "100%",
@@ -3462,6 +3499,7 @@
                 }
               },
               "block_order": [
+                "icon_7AmFwp",
                 "text_rzzLbf",
                 "text_efxgqp"
               ]
